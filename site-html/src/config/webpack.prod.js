@@ -11,7 +11,7 @@ module.exports = merge(common, {
     output: {
         filename: 'js/[name].[hash:6].min.js',
         chunkFilename: 'js/[id].[hash:6].min.js',
-        path: path.join(__dirname, "../../dist/"),
+        path: path.join(__dirname, "../../docs/"),
     },
     entry: {
         'service-worker': './src/script/service-worker/index.ts',
