@@ -1,0 +1,30 @@
+script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-117097249-2')
+script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-117097249-2');
+script(type='text/javascript').
+    window.addEventListener('load', function() {
+      jQuery("[href^='tel:']").click(function() {
+        gtag('event', 'click', { 'event_category': 'button', 'event_label': 'phone' });
+      });
+    });
+script(src='js/jquery.js')
+script(src='js/jquery-ui.js')
+script(src='js/jquery.timepicker.js')
+script(src='js/bootstrap.bundle.js')
+// Revolution Slider
+script(src='js/jquery.themepunch.tools.min.js')
+script(src='js/jquery.themepunch.revolution.min.js')
+script(src='js/revolution.extensions.all.js')
+// Animation On Screen
+script(src='js/aos.js')
+// Slick Slider
+script(src='js/slick.js')
+// Masonry
+script(src='js/isotope.pkgd.js')
+// LightGallery
+script(src='js/lightgallery.js')
+// Custom scripts for this template
+script(src='js/main.js')

@@ -1,0 +1,82 @@
+ul.nav.nav-tabs-outline.mb-7
+  li.nav-item
+    a.nav-link.active(data-toggle='tab', href='#price-mo') Monthly
+  li.nav-item
+    a.nav-link(data-toggle='tab', href='#price-yr') Yearly
+.tab-content
+  #price-mo.tab-pane.fade.show.active
+    .row
+      .col-md-4.mx-auto
+        .pricing-1
+          p.plan-name Normal
+          br
+          h2.price
+            span.price-unit $
+            |  9
+          p.small.text-lighter Billed monthly
+          .text-muted
+            small 7 days free trial
+            br
+            small Ticket support
+            br
+            small 100 GB attachment
+            br
+          br
+          p.text-center.py-3
+            a.btn.btn-primary(href='#') Get started
+      .col-md-4.mx-auto
+        .pricing-1.popular
+          p.plan-name Popular
+          br
+          h2.price.text-success
+            span.price-unit $
+            |  39
+          p.small.text-lighter Billed monthly
+          .text-muted
+            small 7 days free trial
+            br
+            small Ticket support
+            br
+            small 100 GB attachment
+            br
+          br
+          p.text-center.py-3
+            a.btn.btn-success(href='#') Get started
+  #price-yr.tab-pane.fade
+    .row
+      .col-md-4.mx-auto
+        .pricing-1
+          p.plan-name Normal
+          br
+          h2.price
+            span.price-unit $
+            |  99
+          p.small.text-lighter Billed yearly
+          .text-muted
+            small 30 days free trial
+            br
+            small Ticket support
+            br
+            small 100 GB attachment
+            br
+          br
+          p.text-center.py-3
+            a.btn.btn-primary(href='#') Get started
+      .col-md-4.mx-auto
+        .pricing-1.popular
+          p.plan-name Popular
+          br
+          h2.price.text-success
+            span.price-unit $
+            |  399
+          p.small.text-lighter Billed yearly
+          .text-muted
+            small 30 days free trial
+            br
+            small Ticket support
+            br
+            small 100 GB attachment
+            br
+          br
+          p.text-center.py-3
+            a.btn.btn-success(href='#') Get started

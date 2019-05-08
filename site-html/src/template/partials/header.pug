@@ -1,0 +1,62 @@
+header.container-fluid.header.js-header-fixsmall.overlayer-fixed
+  // Start Navbar
+  .row.justify-content-center
+    .col-12
+      .row.justify-content-between
+        .col-auto
+          a.navbar-brand(href='index-multipages.html')
+            img.i-logo(src='images/logo-white-t.png', alt='')
+          a.navbar-brand.black(href='index-multipages.html')
+            img.i-logo(src='images/logo-black-t.png', alt='')
+        .d-flex.justify-content-center.onlydesktop
+          ul.navbar
+            li
+              a.nav-link.active(href='about.html') Về HIK Tea
+            li
+              a.nav-link(href='menu.html') Menu
+            li
+              a.nav-link(href='khuyen-mai.html') Khuyến Mãi
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href='gallery.html', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Blog
+              .dropdown-menu
+                a.dropdown-item(href='gallery-two-columns.html') 2 columns
+            li
+              a.nav-link(href='tuyển-dung.html') Tuyển dụng
+            li
+              a.nav-link(href='cua-hang.html') cửa hàng
+        .d-flex.justify-content-end
+          ul.navbar.float-right.onlydesktop
+            li
+              a.bt-orange.bt-menu-reserve(href='booking.html') Order Ngay
+            li
+              a.fb-ic.mr-3(href='https://www.foody.vn/ho-chi-minh/hiktea', target='_blank', role='button')
+                img.rounded-circle.icon-circle(src='/images/foody.png')
+            li
+              a.tw-ic.mr-3(href='https://www.facebook.com/hiktea38/', target='_blank', role='button')
+                i.fab.fa-lg.fa-facebook
+            li
+              a.tw-ic.mr-3(href='https://www.youtube.com/watch?v=ReX3MOTTl5w', role='button')
+                i.fab.fa-lg.fa-youtube
+          .col
+            ul.navbar.float-right
+              li.hambuger.onlyresponsive
+                button#trigger-overlay.trigger-overlay.dropdown-icon
+                  span
+  .overlay.overlay-hugeinc
+    .overlay-content
+      span.trigger-overlay
+      nav#nav
+        ul
+          li.current
+            a(href='about.html') Về HIKTea
+          li
+            a(href='menu.html') Menu
+          li
+            a(href='khuyen-mai.html') Khuyến Mãi
+          li
+            a(href='blog.html') Blog
+          li
+            a(href='cua-hang.html') Cửa Hàng
+          li
+            a(href='lien-he.html') Liên Hệ 
+  // End Navbar
