@@ -88,7 +88,7 @@ a.bt-orange.featured {
 
 .featured-text {
     padding: 15px 0px 0px 10px;
-    width: 70%
+    /*width: 70%*/
 }
 
 .i-text-color {
@@ -150,9 +150,27 @@ section.blog .featured-text {
     top: 96%;
 }
 
-.featured-image img {
-    width: 480px;
-    height: 480px;
+.header {
+    z-index: 1000;
+}
+
+.menu .featured-image img {
+    max-height: 450px;
+    width: 100%;
+}
+
+.blog .big-blog .featured-image img {
+    height: 350px;
+    width: 100%;
+}
+
+.blog .featured-text p:nth-child(2) {
+    font-weight: normal;
+}
+
+.blog .featured-image img {
+    max-height: 350px;
+    width: 100%;
 }
 
 a.bt-orange.featured {
@@ -176,9 +194,11 @@ h4.small a {
     text-decoration-color: #ff7300;
     text-decoration-style: double;
 }
-h4.small:before{
+
+h4.small:before {
     display: none;
 }
+
 @media (max-width: 1300px) {
     .single-testimonial {
         padding-left: 20px;
