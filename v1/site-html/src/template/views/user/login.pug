@@ -1,0 +1,31 @@
+extends ../../layouts/blank
+block page-title
+ title Page 404
+block page-content
+ main.main-content
+  .bg-white.rounded.shadow-7.w-400.mw-100.p-6
+    h5.mb-7 Sign into your account
+    form
+      .form-group
+        input.form-control(type='text', name='username', placeholder='Username')
+      .form-group
+        input.form-control(type='password', name='password', placeholder='Password')
+      .form-group.flexbox.py-3
+        .custom-control.custom-checkbox
+          input.custom-control-input(type='checkbox', checked='')
+          label.custom-control-label Remember me
+        a.text-muted.small-2(href='user-recover.html') Forgot password?
+      .form-group
+        button.btn.btn-block.btn-primary(type='submit') Login
+    .divider Or Login With
+    .text-center
+      a.btn.btn-circle.btn-sm.btn-facebook.mr-2(href='#')
+        i.fa.fa-facebook
+      a.btn.btn-circle.btn-sm.btn-google.mr-2(href='#')
+        i.fa.fa-google
+      a.btn.btn-circle.btn-sm.btn-twitter(href='#')
+        i.fa.fa-twitter
+    hr.w-30
+    p.text-center.text-muted.small-2
+      | Don&apos;t have an account? 
+      a(href='user-register.html') Register here

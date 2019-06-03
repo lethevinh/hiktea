@@ -1,0 +1,19 @@
+#accordion-1.accordion
+  .card
+    h5.card-title
+      a(data-toggle='collapse', href='#collapse-1-1') Is this a secure site for purchases?
+    #collapse-1-1.collapse.show(data-parent='#accordion-1')
+      .card-body
+        | Absolutely! We work with top payment companies which guarantees your safety and security. All billing information is stored on our payment processing partner which has the most stringent level of certification available in the payments industry.
+  .card
+    h5.card-title
+      a.collapsed(data-toggle='collapse', href='#collapse-1-2') How long are your contracts?
+    #collapse-1-2.collapse(data-parent='#accordion-1')
+      .card-body
+        | Currently, we only offer monthly subscription. You can upgrade or cancel your monthly account at any time with no further obligation.
+  .card
+    h5.card-title
+      a.collapsed(data-toggle='collapse', href='#collapse-1-3') Can I cancel my subscription?
+    #collapse-1-3.collapse(data-parent='#accordion-1')
+      .card-body
+        | You can cancel your subscription anytime in your account. Once the subscription is cancelled, you will not be charged next month. You will continue to have access to your account until your current subscription expires.

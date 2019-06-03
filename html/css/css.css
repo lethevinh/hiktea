@@ -1,6 +1,12 @@
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Lobster Two';
   font-style: normal;
   font-weight: 400;
-  src: local('Poppins Regular'), local('Poppins-Regular'), url(../fonts/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+  src: local('Lobster Two'), local('LobsterTwo'), url(../fonts/BngMUXZGTXPUvIoyV6yN5-fN5qA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lobster Two Bold'), local('LobsterTwo-Bold'), url(../fonts/BngRUXZGTXPUvIoyV6yN5-92w7CGwRg.ttf) format('truetype');
 }

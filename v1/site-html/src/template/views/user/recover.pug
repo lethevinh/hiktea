@@ -1,0 +1,11 @@
+extends ../../layouts/blank
+block page-title
+ title Page 404
+block page-content
+ main.main-content
+  .bg-white.rounded.shadow-7.w-400.mw-100.p-6
+    h5.mb-6 Recover your password
+    form.input-line1
+      .form-group
+        input.form-control(type='email', name='email', placeholder='Email Address')
+      button.btn.btn-lg.btn-block.btn-primary(type='submit') Reset Password

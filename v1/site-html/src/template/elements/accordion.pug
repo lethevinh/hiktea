@@ -1,0 +1,21 @@
+extends ../layouts/page
+block page-container
+ main.main-content
+  section#boxed.section.bg-gray
+   .container
+     header.section-header
+       h2 Boxed
+     .row
+      .col-md-8.mx-auto
+        h6.divider Accordion 1
+        include accordion/1.pug
+      .col-md-8.mx-auto
+        h6.divider Accordion 2
+        include accordion/2.pug
+      .col-md-8.mx-auto
+        h6.divider Accordion 3
+        include accordion/3.pug
+      .col-md-8.mx-auto
+        h6.divider Accordion 4
+        include accordion/4.pug
+      

@@ -1,0 +1,36 @@
+extends ../../layouts/blank
+block page-title
+ title Page register
+block page-content
+ main.main-content
+  .bg-white.rounded.shadow-7.w-400.mw-100.p-6
+    h5.mb-7 Create an account
+    form
+      .form-group
+        input.form-control(type='text', name='name', placeholder='Your Name')
+      .form-group
+        input.form-control(type='email', name='email', placeholder='Email Address')
+      .form-group
+        input.form-control(type='password', name='password', placeholder='Password')
+      .form-group
+        input.form-control(type='password', name='password-confirm', placeholder='Password (confirm)')
+      .form-group.py-3
+        .custom-control.custom-checkbox
+          input.custom-control-input(type='checkbox')
+          label.custom-control-label
+            | I agree to the 
+            a.ml-1(href='terms.html') terms of service
+      .form-group
+        button.btn.btn-block.btn-primary(type='submit') Register
+    .divider Or Register With
+    .text-center
+      a.btn.btn-circle.btn-sm.btn-facebook.mr-2(href='#')
+        i.fa.fa-facebook
+      a.btn.btn-circle.btn-sm.btn-google.mr-2(href='#')
+        i.fa.fa-google
+      a.btn.btn-circle.btn-sm.btn-twitter(href='#')
+        i.fa.fa-twitter
+    hr.w-30
+    p.text-center.text-muted.small-2
+      | Already a member? 
+      a(href='user-login.html') Login here

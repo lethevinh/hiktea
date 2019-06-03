@@ -1,0 +1,24 @@
+extends ../layouts/page
+block page-container
+ main.main-content
+  section#boxed.section.bg-gray
+   .container
+     header.section-header
+       h2 Boxed
+     .row
+      .col-md-12.mx-auto
+        h6.divider Blog latest-posts
+        include blog/latest-posts.pug
+      .col-md-12.mx-auto
+        h6.divider Blog popular-posts
+        include blog/popular-posts.pug
+      .col-md-12.mx-auto
+        h6.divider Blog recent-posts
+        include blog/recent-posts.pug
+      .col-md-12.mx-auto
+        h6.divider Blog recent-video
+        include blog/recent-video.pug
+      .col-md-12.mx-auto
+        h6.divider Blog single-post
+        include blog/single-post.pug
+      

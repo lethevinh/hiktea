@@ -1,0 +1,49 @@
+.text-center.mb-7
+  .btn-group.btn-group-toggle(data-toggle='buttons')
+    label.btn.btn-round.btn-outline-dark.w-150.active
+      input(type='radio', name='pricing-1', value='monthly', autocomplete='off', checked='')
+      |  Monthly
+    label.btn.btn-round.btn-outline-dark.w-150
+      input(type='radio', name='pricing-1', value='yearly', autocomplete='off')
+      |  Yearly
+.row
+  .col-md-4.mx-auto
+    .pricing-1
+      p.plan-name Normal
+      br
+      h2.price
+        span.price-unit $
+        span(data-bind-radio='pricing-1', data-monthly='9', data-yearly='99') 9
+      p.small.text-lighter
+        | Billed
+        span(data-bind-radio='pricing-1', data-monthly='monthly', data-yearly='yearly') monthly
+      .text-muted
+        small 30 days free trial
+        br
+        small Ticket support
+        br
+        small 100 GB attachment
+        br
+      br
+      p.text-center.py-3
+        a.btn.btn-primary(href='#', data-bind-href='pricing-1', data-monthly='#monthly', data-yearly='#yearly') Get started
+  .col-md-4.mx-auto
+    .pricing-1.popular
+      p.plan-name Popular
+      br
+      h2.price.text-success
+        span.price-unit $
+        span(data-bind-radio='pricing-1', data-monthly='39', data-yearly='399') 39
+      p.small.text-lighter
+        | Billed
+        span(data-bind-radio='pricing-1', data-monthly='monthly', data-yearly='yearly') yearly
+      .text-muted
+        small 30 days free trial
+        br
+        small Ticket support
+        br
+        small 100 GB attachment
+        br
+      br
+      p.text-center.py-3
+        a.btn.btn-success(href='#', data-bind-href='pricing-1', data-monthly='#monthly', data-yearly='#yearly') Get started

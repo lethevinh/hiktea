@@ -1,0 +1,15 @@
+include ../mixins/common
+doctype html
+html
+  head
+    block page-title
+      title= htmlWebpackPlugin.options.title
+    block head
+      include ../partials/head
+  body.layout-centered.bg-img(style='background-image: url(../images/bg/4.jpg', data-aos-easing='ease', data-aos-duration='1500', data-aos-delay='0')
+    block page-header
+    block page-container
+      block page-content
+    block page-footer
+    block page-foot
+      include ../partials/foot

@@ -1,0 +1,43 @@
+extends ../layouts/page
+block page-container
+ main.main-content
+  section#boxed.section.bg-gray
+   .container
+     header.section-header
+       h2 Boxed
+     .row
+      .col-md-12.mx-auto
+        h6.divider.mt-9 Card basic
+      .col-md-4.mx-auto
+        h6.divider Card basic bordered
+        include card/basic/bordered.pug
+      .col-md-4.mx-auto
+        h6.divider Card basic dark
+        include card/basic/dark.pug
+      .col-md-4.mx-auto
+        h6.divider Card basic default
+        include card/basic/default.pug
+      .col-md-4.mx-auto
+        h6.divider Card basic hover-shadow
+        include card/basic/hover-shadow.pug
+      .col-md-4.mx-auto
+        h6.divider Card basic primary
+        include card/basic/primary.pug
+      .col-md-4.mx-auto
+        h6.divider Card basic shadowed
+        include card/basic/shadowed.pug
+      .col-md-12.mx-auto
+        h6.divider.mt-9 Card image
+      .col-md-4.mx-auto
+        h6.divider Card image at-top-rigth-lable
+        include card/image/at-top-rigth-lable.pug
+      .col-md-4.mx-auto
+        h6.divider Card image at-top-width-lable
+        include card/image/at-top-width-lable.pug
+      .col-md-4.mx-auto
+        h6.divider Card image at-top
+        include card/image/at-top.pug
+      .col-md-4.mx-auto
+        h6.divider Card image background
+        include card/image/background.pug
+      

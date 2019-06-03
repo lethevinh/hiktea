@@ -1,0 +1,415 @@
+#main-left-2col-left
+  .row
+    .col.s12
+      .panel
+        .panel-heading
+          h3.panel-title DÀNH CHO PHỤ HUYNH
+        .panel-body
+          ul.vertical-menu
+            li
+              a(href='/dang-ky-tim-gia-su.html', title='Gia sư Nhân Trí - Đăng ký tìm gia sư') Đăng ký tìm gia sư
+            li
+              a(href='/hoc-phi-tham-khao.html', title='Gia sư Nhân Trí - Học phí tham khảo') Học phí tham khảo
+            li
+              a(href='/gia-su-hien-co.html', title='Gia sư Nhân Trí - Gia sư hiện có') Gia sư hiện có
+            li
+              a(href='/dich-vu-giang-day.html', title='Gia sư Nhân Trí - Dịch vụ giảng dạy') Dịch vụ giảng dạy
+          .clearfix
+      .panel
+        .panel-heading
+          h3.panel-title DÀNH CHO GIA SƯ
+        .panel-body
+          ul.vertical-menu
+            li
+              a(href='/lop-day-hien-co-dang-list.html', title='Gia sư Nhân Trí - Lớp mới chưa giao')
+                | Lớp mới chưa giao 
+                img(src='images/hot.gif', alt='Lớp mới - Gia sư Nhân Trí TP HCM', title='Lớp mới - Gia sư Nhân Trí TP HCM', style='width:60px !important')
+            li
+              a(href='/dang-ky-lam-gia-su.html', title='Gia sư Nhân Trí - Đăng ký làm gia sư') Đăng ký làm gia sư
+            li
+              a(href='/gia-su-nhan-tri-noi-quy-nhan-lop.html', title='Gia sư Nhân Trí - Nội quy nhận lớp') Nội quy nhận lớp
+            li
+              a(href='/gia-su-nhan-tri-tai-khoan-giao-dich.html', title='Tài khoản giao dịch của gia sư Nhân Trí') Tài khoản giao dịch
+            li
+              a(href='/tin-gia-su.html', title='tin tức trung tâm gia sư Nhân Trí') Tin gia sư
+            li
+              a(href='/lien-he-gia-su-nhan-tri.html', title='Liên hệ gia sư Nhân Trí') Liên hệ
+          .clearfix
+      //
+        .panel
+          .panel-heading
+            h3.panel-title GIA SƯ ĐĂNG NHẬP
+          .panel-body(style='padding:0 5%')
+            form(action='/gia-su-dang-nhap.html', method='post', name='fdangnhap', autocomplete='off', onsubmit='return check_dangnhap()')
+              p(style='font-weight:bold; color:blue; font-size:12pt')
+                | Nhập số điện thoại:
+                input#sodienthoai(name='sodienthoai', type='text', value='', onkeypress='return CheckIsNumber(event)', style='width:100%; padding:5px;font-weight: bold; color:#000')
+              p(align='center')
+                input.input_button(type='submit', name='dangnhap', value='Đăng nhập', style='font-weight:bold')
+            .clearfix
+      //
+        .panel
+          .panel-heading
+            h3.panel-title NHẬN LỚP ONLINE
+          .panel-body(style='padding:0 5%')
+            form(action='/nhan-lop.html', method='post', name='fnhanlop', autocomplete='off', onsubmit='return check_nhanlop()')
+              p(style='font-weight:bold; color:blue; font-size:12pt')
+                | Nhập mã lớp:
+                input#malop(name='malop', type='text', value='', style='width:100%; padding:5px', placeholder='Ví dụ: 123')
+              p(style='font-weight:bold; color:blue; font-size:12pt')
+                | Nhập mã bảo mật:
+                input#coding(name='coding', type='text', value='', style='width:100%; padding:5px', placeholder='Ví dụ: 51AF7A329E')
+              p(align='center')
+                input.input_button(type='submit', name='kiemtra', value='Kiểm tra', style='font-weight:bold')
+            .clearfix
+      .panel
+        .panel-heading
+          h3.panel-title GIA SƯ TIÊU BIỂU
+        .panel-body(style='padding:0')
+          .gia-su-tieu-bieu
+            ul
+              li
+                a(href='/gia-su-86.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180604121131.jpg', style='width:100%; height:128px', alt='Phạm Quốc Bảo')
+                a(href='/gia-su-128.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180605145907.jpg', style='width:100%; height:128px', alt='Nguyễn Hoàng Thịnh')
+              li
+                a(href='/gia-su-262.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180609163601.jpg', style='width:100%; height:128px', alt='Lê Hoàng Hải')
+                a(href='/gia-su-268.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180609212836.jpg', style='width:100%; height:128px', alt='Phạm Thị Như Hoa')
+              li
+                a(href='/gia-su-348.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180611142248.jpg', style='width:100%; height:128px', alt='NGUYỄN Thi Hiền')
+                a(href='/gia-su-745.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180624100245.jpg', style='width:100%; height:128px', alt='LÊ MINH TRUNG')
+              li
+                a(href='/gia-su-795.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180626191504.jpg', style='width:100%; height:128px', alt='Nguyễn Thụy Anh Thi')
+                a(href='/gia-su-818.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180627150347.jpg', style='width:100%; height:128px', alt='Phạm Thanh Toàn')
+              li
+                a(href='/gia-su-992.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180704164211.jpg', style='width:100%; height:128px', alt='Phạm Hoàng Ánh Tuyết')
+                a(href='/gia-su-1004.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180704213817.jpeg', style='width:100%; height:128px', alt='Phạm Thị Huyền Trang')
+              li
+                a(href='/gia-su-1066.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180706234430.jpg', style='width:100%; height:128px', alt='Trần Ngọc Đạt')
+                a(href='/gia-su-1156.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180710075842.jpg', style='width:100%; height:128px', alt='DANG MINH QUANG')
+              li
+                a(href='/gia-su-1223.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180711200445.jpg', style='width:100%; height:128px', alt='Vũ Thị Thanh Sen')
+                a(href='/gia-su-1706.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180731220611.jpg', style='width:100%; height:128px', alt='Mai Tiến Thành')
+              li
+                a(href='/gia-su-1915.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180811192130.jpg', style='width:100%; height:128px', alt='Nguyễn Thị Huyền Trang')
+                a(href='/gia-su-1924.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180812001053.jpg', style='width:100%; height:128px', alt='Dương Hoàng Nam')
+              li
+                a(href='/gia-su-1990.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180814182145.jpg', style='width:100%; height:128px', alt='Nguyễn Trung Hiểu')
+                a(href='/gia-su-2028.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180816080949.jpg', style='width:100%; height:128px', alt='Nguyễn Thanh Quí')
+              li
+                a(href='/gia-su-2044.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180816200750.jpeg', style='width:100%; height:128px', alt='Phan Thị Thuỳ')
+                a(href='/gia-su-2087.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180818164204.jpg', style='width:100%; height:128px', alt='Nguyễn Thị Lan Anh')
+              li
+                a(href='/gia-su-2159.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180821195251.jpg', style='width:100%; height:128px', alt='Nguyễn Viết Hai')
+                a(href='/gia-su-2243.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180823204723.jpeg', style='width:100%; height:128px', alt='TRẦN THỊ VỮNG')
+              li
+                a(href='/gia-su-2247.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180823225444.jpeg', style='width:100%; height:128px', alt='Vũ Thị Thu Thanh')
+                a(href='/gia-su-2251.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180823234858.jpg', style='width:100%; height:128px', alt='Phạm Mạnh Cường')
+              li
+                a(href='/gia-su-2596.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180905101628.jpg', style='width:100%; height:128px', alt='Lê Hồ Cẩm Vân')
+                a(href='/gia-su-2606.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180905142859.jpg', style='width:100%; height:128px', alt='Võ hoài phương')
+              li
+                a(href='/gia-su-2607.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180905143923.jpg', style='width:100%; height:128px', alt='Bùi Thị Thu Thủy')
+                a(href='/gia-su-2612.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180905182935.jpg', style='width:100%; height:128px', alt='Đặng văn công')
+              li
+                a(href='/gia-su-2641.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180906104900.jpg', style='width:100%; height:128px', alt='Nguyễn Ánh Dương')
+                a(href='/gia-su-2772.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180909060111.png', style='width:100%; height:128px', alt='Phạm Hoàng Yến')
+              li
+                a(href='/gia-su-2816.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180910023200.jpg', style='width:100%; height:128px', alt='Trần Thị Thanh Nhân')
+                a(href='/gia-su-2829.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180910055600.jpeg', style='width:100%; height:128px', alt='Phạm Thị Thanh Nhàn')
+              li
+                a(href='/gia-su-2837.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180910092710.jpg', style='width:100%; height:128px', alt='La Kỷ Hảo')
+                a(href='/gia-su-2853.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180910133141.jpg', style='width:100%; height:128px', alt='nguyễn xuân mai')
+              li
+                a(href='/gia-su-2881.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180911055740.jpg', style='width:100%; height:128px', alt='Phan Tấn Tín')
+                a(href='/gia-su-2918.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180912045407.jpg', style='width:100%; height:128px', alt='Lương Nguyễn Hữu Phước')
+              li
+                a(href='/gia-su-2919.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180912050623.jpg', style='width:100%; height:128px', alt='Trịnh Thành Danh')
+                a(href='/gia-su-2937.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180912135318.jpg', style='width:100%; height:128px', alt='NGUYỄN VĂN THẮNG')
+              li
+                a(href='/gia-su-3316.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180922063207.jpg', style='width:100%; height:128px', alt='Nguyễn Nhật Quang')
+                a(href='/gia-su-3555.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180927170712.jpg', style='width:100%; height:128px', alt='Nguyễn Vũ Hiếu Nghĩa')
+              li
+                a(href='/gia-su-3564.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180928030632.jpg', style='width:100%; height:128px', alt='Võ hoài phương')
+                a(href='/gia-su-3577.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20180928081412.jpg', style='width:100%; height:128px', alt='Lê Thị Minh Thúy')
+              li
+                a(href='/gia-su-3578.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20180928090046.jpg', style='width:100%; height:128px', alt='Trần Thị Hạnh Chi')
+                a(href='/gia-su-3664.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20181001060812.jpg', style='width:100%; height:128px', alt='Hồ Kim Nhiên')
+              li
+                a(href='/gia-su-4962.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20181112035211.jpg', style='width:100%; height:128px', alt='Bùi Thanh Tấn')
+                a(href='/gia-su-5084.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20181117055101.jpg', style='width:100%; height:128px', alt='Nguyễn Thanh Hùng')
+              li
+                a(href='/gia-su-5273.html')
+                  .giasutieubieu
+                    img(src='images/hinhthegs20181126155605.jpg', style='width:100%; height:128px', alt='Nguyễn Lê Diệu Thúy')
+                a(href='/gia-su-5304.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe20181128040337.jpg', style='width:100%; height:128px', alt='Đỗ Văn Sáu')
+              li
+                a(href='/gia-su-5998.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe201901200556349661.jpg', style='width:100%; height:128px', alt='Lê Sỹ Hoàn')
+                a(href='/gia-su-6108.html')
+                  .giasutieubieu
+                    img(src='images/hinhthe201902110630185940.jpg', style='width:100%; height:128px', alt='Lê Văn Liêl')
+          div(style='width:100%; text-align:center; padding:10px 0; font-weight:bold')
+            a(href='/gia-su-hien-co.html')
+              | <>
+              xem(nhiều='', hơn='') >
+          .clearfix
+      //
+        .panel
+          .panel-heading
+            h3.panel-title TÀI KHOẢN GIAO DỊCH
+          .panel-body
+            ul.vertical-menu
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-nn-va-ptnt.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng NN và PTNT') Ngân Hàng NN và PTNT
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-a-chau-acb.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng Á Châu ACB') Ngân Hàng Á Châu ACB
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-vietinbank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân hàng VIETINBANK') Ngân hàng VIETINBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-vietcombank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng VIETCOMBANK') Ngân Hàng VIETCOMBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-sacombank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng SACOMBANK') Ngân Hàng SACOMBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-bidv.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng BIDV') Ngân Hàng BIDV
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-techcombank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng TECHCOMBANK') Ngân Hàng TECHCOMBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-vibank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng VIBANK') Ngân Hàng VIBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-hdbank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng HDBANK') Ngân Hàng HDBANK
+              li
+                a(href='/gia-su-nhan-tri/ngan-hang-dongabank.html', style='width: 100% !important;', title='Gia sư Nhân Trí - Ngân Hàng DONGABANK') Ngân Hàng DONGABANK
+            .clearfix
+      .panel
+        .panel-heading
+          h3.panel-title LIÊN KẾT FACEBOOK
+        .panel-body(style='padding:5px')
+          iframe(src='//www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/giasunhantri.net&width=208&height=290&colorscheme=light&show_faces=true&header=true&stream=false&show_border=true', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:100%; height:215px;', allowtransparency='true')
+          .clearfix
+      .panel.hide-mobile
+        .panel-heading
+          h3.panel-title THÔNG TIN KHÁC
+        .panel-body
+          ul.vertical-menu
+            li
+              a(href='/gia-su-nhan-tri-guong-sang.html', title='trung tâm gia sư Nhân Trí - Gương sáng') Gương sáng
+            li
+              a(href='/gia-su-nhan-tri-goc-hoc-tap.html', title='trung tâm gia sư - Góc học tập') Góc học tập
+            li
+              a(href='/gia-su-nhan-tri-goc-thu-gian.html', title='trung tâm gia sư Nhân Trí - Góc thư giãn') Góc thư giãn
+            li
+              a(href='/phu-huynh-can-biet.html', title='Gia sư Nhân Trí - Phụ huynh cần biết') Phụ huynh cần biết
+            li
+              a(href='/gia-su-nhan-tri-tuyen-dung.html', title='Gia sư Nhân Trí - Tuyển dụng') Tuyển dụng
+            li
+              a(href='/gia-su-nhan-tri-thong-bao.html', title='trung tâm gia sư Nhân Trí thông báo') Thông báo
+          .clearfix
+      //
+        .panel
+          .panel-heading
+            h3.panel-title THÔNG TIN CHUNG
+          .panel-body
+            ul.vertical-menu
+              li
+                a(href='/Gia-Su-Toan-002.html', title='Gia Sư Toán') Gia Sư Toán
+              li
+                a(href='/Gia-Su-Vat-Ly-002.html', title='Gia Sư Vật Lý') Gia Sư Vật Lý
+              li
+                a(href='/Gia-Su-Hoa-Hoc-002.html', title='Gia Sư Hóa Học') Gia Sư Hóa Học
+              li
+                a(href='/Gia-Su-Sinh-Vat-002.html', title='Gia Sư Sinh Vật') Gia Sư Sinh Vật
+              li
+                a(href='/Gia-Su-Van-Hoc-002.html', title='Gia Sư Văn Học') Gia Sư Văn Học
+              li
+                a(href='/GIa-Su-Lich-Su-002.html', title='GIa Sư Lịch Sử') GIa Sư Lịch Sử
+              li
+                a(href='/Gia-Su-Dia-Ly-002.html', title='Gia Sư Đia Lý') Gia Sư Đia Lý
+              li
+                a(href='/Gia-Su-Ngoai-Ngu-002.html', title='Gia Sư Ngoại Ngữ') Gia Sư Ngoại Ngữ
+              li
+                a(href='/Gia-Su-Tin-Hoc-002.html', title='Gia Sư Tin Học') Gia Sư Tin Học
+              li
+                a(href='/Gia-Su-Dan-Nhac-002.html', title='Gia Sư Đàn - Nhạc') Gia Sư Đàn - Nhạc
+              li
+                a(href='/Gia-Su-Ve-002.html', title='Gia Sư Vẽ') Gia Sư Vẽ
+              li
+                a(href='/Gia-Su-Cap-1-002.html', title='Gia Sư Cấp 1') Gia Sư Cấp 1
+              li
+                a(href='/Gia-Su-Cap-2-002.html', title='Gia Sư Cấp 2') Gia Sư Cấp 2
+              li
+                a(href='/Gia-Su-Cap-3-002.html', title='Gia Sư Cấp 3') Gia Sư Cấp 3
+              li
+                a(href='/Gia-Su-Luyen-Thi-Dai-Hoc-002.html', title='Gia Sư Luyện Thi Đại Học') Gia Sư Luyện Thi Đại Học
+            .clearfix
+      //
+        .panel
+          .panel-heading
+            h3.panel-title GIA SƯ CÁC TỈNH THÀNH
+          .panel-body
+            ul.vertical-menu
+              li
+                a(href='/Gia-Su-nhan-tri-TPHCM-001.html', title='Gia Sư Nhân Trí TPHCM') Gia Sư Nhân Trí TPHCM
+              li
+                a(href='/Gia-Su-nhan-tri-Ha-Noi-001.html', title='Gia Sư Nhân Trí Hà Nội') Gia Sư Nhân Trí Hà Nội
+              li
+                a(href='/Gia-Su-nhan-tri-Hue-001.html', title='Gia Sư Nhân Trí Huế') Gia Sư Nhân Trí Huế
+              li
+                a(href='/Gia-Su-nhan-tri-Da-Nang-001.html', title='Gia Sư Nhân Trí Đà Nẵng') Gia Sư Nhân Trí Đà Nẵng
+              li
+                a(href='/Gia-Su-nhan-tri-Bien-Hoa-001.html', title='Gia Sư Nhân Trí Biên Hòa') Gia Sư Nhân Trí Biên Hòa
+              li
+                a(href='/Gia-Su-nhan-tri-Binh-Duong-001.html', title='Gia Sư Nhân Trí Bình Dương') Gia Sư Nhân Trí Bình Dương
+              li
+                a(href='/Gia-Su-nhan-tri-Vung-Tau-001.html', title='Gia Sư Nhân Trí Vũng Tàu') Gia Sư Nhân Trí Vũng Tàu
+              li
+                a(href='/Gia-Su-nhan-tri-Can-Tho-001.html', title='Gia Sư Nhân Trí Cần Thơ') Gia Sư Nhân Trí Cần Thơ
+            .clearfix
+      .panel.hide-mobile
+        .panel-heading
+          h3.panel-title TIN TỨC - SỰ KIỆN
+        .panel-body
+          ul.listnewstop
+            li
+              .title_news
+                a(href='/tin-gia-su-chi-tiet/GIA-SU-nhan-tri.html', title='GIA SƯ Nhân Trí') GIA SƯ Nhân Trí
+              .block_image_news
+                .thumb
+                  a(href='/tin-gia-su-chi-tiet/GIA-SU-nhan-tri.html', title='GIA SƯ Nhân Trí')
+                    img(src='images/logo.png', alt='GIA SƯ Nhân Trí')
+            li
+              .title_news
+                a(href='/tin-gia-su-chi-tiet/GIA-SU.html', title='GIA SƯ') GIA SƯ
+              .block_image_news
+                .thumb
+                  a(href='/tin-gia-su-chi-tiet/GIA-SU.html', title='GIA SƯ')
+                    img(src='images/logo.png', alt='GIA SƯ')
+            li
+              .title_news
+                a(href='/tin-gia-su-chi-tiet/TRUNG-TAM-GIA-SU.html', title='TRUNG TÂM GIA SƯ') TRUNG TÂM GIA SƯ
+              .block_image_news
+                .thumb
+                  a(href='/tin-gia-su-chi-tiet/TRUNG-TAM-GIA-SU.html', title='TRUNG TÂM GIA SƯ')
+                    img(src='images/logo.png', alt='TRUNG TÂM GIA SƯ')
+            li
+              .title_news
+                a(href='/tin-gia-su-chi-tiet/GIA-SU-nhan-tri.html', title='GIA SƯ Nhân Trí') GIA SƯ Nhân Trí
+              .block_image_news
+                .thumb
+                  a(href='/tin-gia-su-chi-tiet/GIA-SU-nhan-tri.html', title='GIA SƯ Nhân Trí')
+                    img(src='images/logo.png', alt='GIA SƯ Nhân Trí')
+            li
+              .title_news
+                a(href='/tin-gia-su-chi-tiet/DAY-KEM-TAI-NHA.html', title='DẠY KÈM TẠI NHÀ') DẠY KÈM TẠI NHÀ
+              .block_image_news
+                .thumb
+                  a(href='/tin-gia-su-chi-tiet/DAY-KEM-TAI-NHA.html', title='DẠY KÈM TẠI NHÀ')
+                    img(src='images/logo.png', alt='DẠY KÈM TẠI NHÀ')
+          .clearfix
+      .panel.hide-mobile
+        .panel-heading
+          h3.panel-title Dành cho quảng cáo
+        .panel-body(style='padding:0 5%')
+          p
+            img(src='images/gia-su-nhan-tri-quang-cao.png', style='border:0px', alt='Gia sư Nhân Trí - đăng ký quảng cáo', title='Gia sư Nhân Trí - đăng ký quảng cáo')
+          p
+            a(href='http://jubbie.vn', target='_blank', title='jubbie.vn')
+              img(src='images/jubbie.gif', style='border:0px', alt='jubbie.vn', title='jubbie.vn')
+          p
+            a(href='http://jubbie.vn', target='_blank', title='jubbie.vn - The Cotton Pajamas')
+              img(src='images/jubbie-The-Cotton-Pajamas.gif', style='border:0px', alt='jubbie.vn - The Cotton Pajamas', title='jubbie.vn - The Cotton Pajamas')
+          .clearfix

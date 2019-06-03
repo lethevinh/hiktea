@@ -1,0 +1,21 @@
+extends ../layouts/page
+block page-container
+ main.main-content
+  section#boxed.section.bg-gray
+   .container
+     header.section-header
+       h2 Boxed
+     .row
+      .col-md-8.mx-auto
+        h6.divider Alert colors
+        include alert/colors.pug
+      .col-md-8.mx-auto
+        h6.divider Alert content
+        include alert/content.pug
+      .col-md-8.mx-auto
+        h6.divider Alert dismissing
+        include alert/dismissing.pug
+      .col-md-8.mx-auto
+        h6.divider Alert link
+        include alert/link.pug
+      

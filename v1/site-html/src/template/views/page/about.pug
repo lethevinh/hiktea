@@ -1,0 +1,405 @@
+extends ../../layouts/full
+block page-content
+ .row
+  .col.s12
+    .panel
+      .panel-heading
+        h1.panel-title
+          a.breadcrumb(href='https://www.giasunhantri.net') Trang chủ
+          a.breadcrumb(href='https://www.giasunhantri.net/gioi-thieu-trung-tam-gia-su-thang-long.html', title='Trung tâm gia sư Nhân Trí giới thiệu phụ huynh') Giới thiệu phụ huynh
+      .panel-body(style='padding:5px 10px')
+        div
+          p
+            span(style='font-size:18px;')
+              strong
+                span(style='color: rgb(255, 0, 0);') GIA SƯ Nhân Trí
+          p
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')    Kính Gởi Quý Phụ Huynh Cùng Tất Cả Các Em Học Sinh Thân Mến!
+            br
+            span(style='color:#ff0000;')
+              span(style='font-size: 16px;') Gia Sư Nhân Trí
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')  b
+              span(style='font-size: 16px;')
+                | ằng nhiều năm kinh nghiệm trong công tác giảng dạy, chúng tôi hiểu rằng: DẠY KÈM là phương pháp tốt nhất để HỌC SINH YẾU dễ hiểu bài và HỌC SINH GIỎI nhanh nâng cao kiến thức.
+          p
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')    Để đáp ứng nhu cầu học kèm tại nhà,
+            span(style='color:#ee82ee;')
+              span(style='font-size: 16px;')
+                a(href='http://www.giasunhantri.net/', title='trung tam gia su, trung tâm gia sư') Trung Tâm Gia Sư
+            span(style='color:#ee82ee;')
+              span(style='font-size: 16px;')  
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | Nhân Trí cộng tác với rất nhiều Giáo Viên đang giảng dạy tại các trường Phổ Thông và Sinh Viên ưu tú của các trường: ĐH Sư Phạm, ĐH KH Tự Nhiên, ĐH Bách Khoa, ĐH Y Dược, ĐH Kinh Tế, ĐH Kiến Trúc, ĐH Ngoại Thương, ĐH KHXH & NV,... Nhằm tạo ra một đội ngũ
+            span(style='color:#ff0000;')
+              span(style='font-size: 16px;')
+                | Gia Sư
+                span(style='color:#000080;')
+                  span(style='font-size: 16px;')  
+                | dạy kèm
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | có chuyên môn cao đáp ứng mọi nhu cầu học tập và rèn luyện cho tất cả học sinh ở mọi cấp, mọi trình độ.
+          p
+            img(alt='', height='235', src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBhQSEBQUEhQUFBQWFRUWFhcUFBQVFRQVFBUVFRUVGBUXHCYeGBokGRYXHy8gIycpLCwsFR4xNTAqNSYrLCkBCQoKDgwOGg8PGikkHB8sKSkpLCkpKSkpKSkpLCksLCksKSwpKSwpKSkpLCksLCksKSwsKSwpKSwpKSksLCwsKf/AABEIAM0A9gMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAQIDBQYHAAj/xABGEAABAwEFBQUDCAcHBQEAAAABAAIRAwQFEiExBkFRYXEigZGhsRMywQcUI0JS0eHwU2Jyc4KS8TNDk6KywtIVJDRjgxb/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/xAAmEQACAgEDBAEFAQAAAAAAAAAAAQIRAxIhMQQyQVETImGRsfBC/9oADAMBAAIRAxEAPwDoblG5K0rzk8WyB6N2fPZd+0g36Iq4Dk/qqlwSHIu03udy53U1PVdF2m9wLnNU5nqnYe0zdT3DCUrNU1xyQrbZ2oTWzKi0Ycx1C6RYT2G9Fy02sNzeY5b/AMO9EW35SKoaG0QGAfWycfw8FhzZ4cWdTp8E+aOrNU7SuGt2+tQd/wCQ/wAiP5YWruT5Q62QqBr+nZMciMvJZvniavgl4OkhPCBuy82V2YmdCDkWkaghHtTk7EtVyKUqRKoUeSOSpHKEICkSlIoQ8kKVeVljSonqUqJ6hCIrIbe+7S/eD0K15WQ2+92l+8HoU3D3/n9AZO38GJq+8eqanVPeKarRzp9zFSLy8rAPLy8vKEOpsXivRCaShOkxj0RcX1+qFeUTcZ9/qpLgkOSXab+zC5vV1PVdC2tqYaMrkVe+jiIAJM/FNw9pm6lPUW7hkqa2Xo1khhl290T3N+9evG8CG4Z7Udr7ugWetFRc/qOoc3pjwdDpelUFqnyS17cSdT4oc1+ZPiUNBPT1T2OAWWjdYXSk/wBQrWjbjTbMHJVtmd+dFYMqRx8AFGrCTo3uxu1ImQRLoEF2EOOcZ5iYXTrHahUYHN0I8OIXznQJpVGuB7DjnyK65sVfocwMnMazvExI6ZSn4ZNfSxGaCa1I26VNBTloMZ5I5KkKhCEpqcUihYi8vLxUIIVC9TFQvUIRFZDb73aX7wehWvcsjt77lL94PQpuHv8A70Dk7fwYir7x6pqfV949UxEjmz7meSpF5WAeXl5eVEOqFMKe5McFR0yJ6kuT3n9yY5S3Ie09U+CR5F2vH0C43TZhc6ofqkho4uM+mq7RtQJoLjt7Nw9nqT1OvlASsmTTjpeRsMerJb8FTXqTmd/mUL7Lee/7gpqlUT0Q9R85fkLnHQBqzidMh5lRYwNPxUtpyMb/AEQj3QjiAwujac+ataBkZqgojejG1zkAioiZobK4GWnMHIj7uavdnKzqdSIPZOW/I6eRIVHs5ZS5wXT7Fs6w9rRxGvOMlXPAyttzc2epia08QD5KZDWCnhptEzDQJ45IlbTmvk8kKVIVCiEpEpSKFnkhSpFCCFRPUpUTlCIiKyG33uUv3g9Cte5ZDb/3KX7wehTcPf8An9AZO0xFX3j1TU6r7xTUSOdPuZ5KvLysAReXivKiHVXJjkWbA7gmPu9/BDaOpQG5JdLgKjhyRn/THlR2a6yx5c7gqbVES3F2od/25PALi17VZe4/nX8F2ban/wAV37JXFLyynkM/BYc73SNuBbMrDnG8nQfFPwhrZ8/ilpU9XHgB8ShLdaRv0Hrw7kmrHgtqrAfnM9UPQpl55JrKReZJhWdmshOTQeiZ2qgK1MhbSnJozWiubZZz4c/Ief4I247jwmXDP0Wss1ONEtyHRh7H3LczacQNFq7HVzCprOVZ2Z2aKDoOatGrsjpYPBTqquO1Y/aR7rXYJ4uHvx0kDuKtVtW6OTNVI8kKVIVYJCUickUIIvLyRQsQqNwUhKHrWhrfeIHUgeqhaEcFj9v/AHKX7wehWoN5Uv0tP/EZ96y23zwadIggj2gzBBGh3hNw94vJ2mJq+8U1Oqe8U1EuDnT7meSpEqsAReXl5UQ7vhSYVMvJB1yHAU19CUQvKFFNf9HDZapiYY6B3ZLgN6z2uJML6Hv4j5vUnIYT5Z/BfPN8CHxwJJ8ST5rLn5RrwcMCtNSGwNw84+9VFtoktyOYnLf1R9of2eZ++fgpbrsOI4tZlp5RBBHI6JSdbj6vYFuKwe0IBK3l3XAxsHeqK7LNhqaaHVbGznJLnK2OxwpDmWcDRStrNGrgOpAQ1rrwPdc7k05qrZe1EmBRcXcDSdM+CkdwpOjT0Lzpj67Z4Az6Ii2Wqp7Mewbic4kTOENG8yszSoPHaLQwE9lo3AbjH5zWxuGuDRM5FuefAo1zRT4sv9kLE6lQh5k5ZNnC3LRoPrvV6grpZFMHjn3bkat0eDk5O5nkhSpCiAISvJSkULEKz+0m1dKyNl5kkGGjU8zwCK2lv9tkol5GJ5kU2/adxPBo3/iuL3pjrF1SsS55Mxu8PgglKhkIWE378ploqkhrzTb9mkO13u/FZh+0FQmS1zjxe4k+AQtqpwShWt5+KC7D42L2ybRv3gDuM+M/ctDYdoMfZeQR+tlnyzKxlChP4H4SraxWZwzxOHUZK064JVmjttCDiHunhnHeq1950wYxZ8vvVjd9ckGm+CHCDBz6ZrG39Yfm73NkkGMMiDB3HmDKasj4Mc+mi5WaSjbmOORlELEWO0kSOPwGatmW0jCWE4c5HGEetgS6aL4ZoUihs1rDxwdAkcJXkdpmSWNxdH0EobZbGUmOfUcGsaJJP515KYlcl2zvH51VOIn2TSRTZJAj7ZG8nyEBIbo6sI6mX9r+VSnP0VMOaN7nZnubIHiVS338qdV7S2g0Uyd4M1B+ySMM908FgbfZsObDhI0j7kPRtftBBEPaRiHLc4cvRBqY/REsXbSVHmKlV78z75khyr7fmCeIH3Qqm86haQ7UTO/LfG/JEUbbip5xr4DI+qTkVqxsHTogtj8h3KS7rW5oeWxkGlsiYLnBp8gfFCXg/szwKgst5YRhOhLQTwAdPxKCMbQbdM2V018WZ13rS2ZyzFks5EOb/ULQ3faAQs8jTBlh7KdUbZKDRoEM1RV7eWe60niQRl3EqRGOiS31JfAGisLiqYXicwciDoZyghVljp+0+sW6zLXAiDHn1R1qBEYHaN1GUuknuyTYxbdi5tJbnTAMk5cxG09qmGVTIAhpDSHAa4cWjuuvJbHZTaYWumdA9phwG/nG7mFvTORLG1uXqQpUhViyJIUqCvi0mnZ6rxqGGOpyHqo9gkrdGH2vrNr1zvawYG5mMpxEdTPgFlrRdupE9FcxKR9Nc2eRtnWhjUVRzy9KMOMhAUqdI5EQe9dGtd1sqDtDosle2zuHFGRGYO4hMhPwIyY3yimqWPDm05I27bW4EAzHJVjapaYP4qysIxHIwfX4J5nL7DDwQToCMwQmbXUC+ix5BxNMAkycJ3ZRAkb56oY1naFpy0II78wtCKIrWJ7Xg5iMsjnlkSDnruRIpnMrKyXgk/WPpuVnZju3aTvQ1su11CoDm5pza6AJGmY3Hl8EV7GDPQ5+iKxaiG0XltV8GZA+C8jdlrjNpqPJMAN38SQlV39yOF+Du21VuNKyvI1dDB/FM+QK5PayukfKC+LK0/8AsbrpmCFy2vWcMyQWnQx68PRDLkbiWxX24KgtTCHBzcnDThzB5FX1qzVVaGIRjIKjhUpkxuMg6gjUKnouwujdHi0/cVYM7L+Tsj13H4eCGNIYiOGY6ESrKYtYS08/VVRp5qwsb8Qg8pRlK72FAlXAV2WGzF9wBTqGCPdneFq6TwTkscLG2OPVXd021pOESI4jI9CkTh5Hwn4NRQa4js5x3ealbzyPNMstTs5LNbVVXhwwlzYGrSQZPRLQ1ukbaz0mtGItmATAGsCSAN5yQ1K04nVuZDx0e0wfRUuydtJpAudLizIuJJkSHZnuP8QRlsreyqNfHZIDXcpOU9Dl3LZCOlGec9QxlQwTzKl2Zt5o2sPBIc8w4ky1xMgTwk6xx8BqjoxDnPcZz8lX1bSwHNzRnxHojQt7ndLBbhVZiGR0c06tcNQUQVzvZS96zD2wYiMRIkxoHCZJ3TqtrRvim4hpOFzvdnRx3gHjy1R2ZZQaewUVQbcW72ViqOIJBdTaYEwHPbn8O9X5VRtXY/aWSs3G5n0bySwNJOFpMQ4ERI6jco1aKi6aZz6naG4MU9kiZ6qJ150z9ceKhuqmRSAeQ4w3EQIGIiXZdUBUovfaDTZSa4Cn7QmYIE4YzynlyXNUbdHVcqVmgokEAhC3pdmNsjUJLpLRuLTvH4K6a3JRbBco5ZetzmSfyFX2aWu1PeAY8lt9o7P2jGuXeqGy3BVc6Ywt1JM5AamBmtEZqtzJPG72I6lqIie1IHL4q/uG2PAcciwNLiDnIaCdOgU1fZykaBcwvxtaX9qA17W5vAjNpAzjPRUl9Xh83sT8EB1QYJmSGu7Lt3Ax3pkWpcCpxcOSK5qwtjXNd70mo2Tz7TfMI60XC90MDdYB6rObA2ottNIcXYe5zSPUBdZbVwvY1oGImc9wbqUrJNxY/DBTiNu7ZV1OzNaymHPLpcS4tMQRuXld2K8nEuOesZRENyyXktZLQ2WNp0G/KLUIsmQkYtfsnC4N8SfJcgFdxybnE5SMtd3f5Lq3ylAmjTYCc3OMbjGGOpzy6lc5s2zT8iWnSADhbrBOpncOC1zaTMmFNxKms7e5pbz3HXuUD6MiQQRxGf8ARaCrd7me81zR0keKDrWECXDT63LmOXEeHOkxjRlrXTieI0848wgsebHfabHe3+qtLaJe7kY8Afiqt9P6L9l3rkoCyGzMw1XDdn949VZ0yhBTlzXdxRgMZbz5KERKXzl4/cj7haA8iM4y7iPgq2kIRVitOCpiHf0OqFq1Qa2aZsWWkNas5tBeIciLXacis5bakkrMkaJPY02yJLrOHN95r3CJgE6tnqCW+HBWV+VXGiXMggjPFMtBOFwjiDGuiptjKsUanDHHfCt75tP0JG9+GRxMh2MHpke5a1wZiotlP2lJr8TjGThJjiDAVdZ2jFVgAdkAQN+Xnkj7prwSx/uuy6FNs9l9nWfP1SMP6zj7nxPcoUbCy26HPAMw+BzOc+a0VktYe2HZjXvGYI4ELntC0YYG/wCOp71d2G8oj8/n8ESZdHTLnvA1A8O95jgJG8ES09U++6uGzVT+o4d7uz8Vl7kvIhxM8JPE/wBFeXoX1aJY2DOvE5z6q5S2E/H9VmFbQDRC8LGCZIBy4J1SoZILcxlGYg6IiynJc2zp0eo2YDcB0COaxRUypy5WimjP2izY7SQdAR8CnXpSfjZTogknETGQAbEHFuzlW9OgMeJOo0YcXSd5hWXtZT2u0FllOPJ0ua2YmHtAcTHKfLiuW7X3z7UhjT2W+bt/h8Vrtr70Lqj2aANcABkB3dVzV4LieefRa8SpGHqJapFpsnVw2mlvh7DHEg/cSur2YODX1ajSXnsjg0HMAd2q5Xsm3/vKJ3e0BHRucrs1ezEuZGN2eIiCByB7ln6l7jukWxFaGNZSYMTpBjKYGUpEbarPVcIawDOdBw5ryxaf7c3Wv6jR7UNHtKZOoa6OUnM+SoDqrzaY/Sj9gepVGuhlf1GHp1UEeDVntorOKVJ72wMtN0nIGOGei0bQhdoLB7SyVhvwOI6t7Q9EEG0NmrRyQZ5cJKisdDEHt4tJHUZoprYnoUtzCKgPVaTICXaRiwv0J8Pz8UVbrvLXYhmDmorfZsFVwHGR0R9CtiZDlZAEZid6cw59y9UZBUYdmVRYdarRkqiu9S2mrn3D0Q9FmJ4Hik1uG3sajZqiW0oE5uxdXHJo8PVWFuonGZ6RwlOueqGADeBnyJ18oUtqrBzpT1wLBX3UHZjIptuBbEnMCJg+OW+MltNjdm/bu9pUH0TT/O4fV6cfBa689i7LaHF1Sl2jqWktnuGXkiUQJZEnRwp1rAy06kA/nuRVmt+eRknlHmdy6lavkpsrvcdUp94ePAifNZG+fk8qWcz77NzmD1G785oXsXGalsgi4LWSQ2eZ4Z/nzK2Vntyw9z3NXLewGtbuxuLcXMZEnqr6zXfXbGM0m8ZfJA7gUluTd0aUoJU2R7WUi1za1NrXl3Ze1xc1sxIdiboTH5lZ+7rXWL+2xjBwa4u81u22MPpObixFwMHdIzkDkYWYfSIMEQQgyRa5GY5J7eienVU3tlVV7WGamPXwQbr2nSUoYaH24U9N41Oiz1mtJJRgrGtVZZma1TDiNW09ajv5ZjmQiXJUuDL/ACk7Pvp06FqYPoqzW4v1Kj+1B4NcMweRHBc3DgvrK8bso1aDqNVjXUnNDSx2kNjCO4gR0CxLPkruz2heaD8MYcDatQMDiffHaxA7omOS6GmjltuW5xvZVg+dMPAxPr6r6EoDsNPEA+WaylL5GKDKrn0bTUaz6rXMa8g7+3ibI7p5rb0bl+jaCcUTmHOaIknRLcG3YyM1GNMBqVUiOFws4O/xClQ/EwlniVl+W0PtFRo/u4YeZjFPnHcq1V1ivV1W1VXOiagDstJbAgdx8lZFJy9w/D2pD2IljQRB0OvTehGoqi5BEdI5Fedi9lUfTP1HOb4GB5IeyDCR1Wn29sWG1Yt1RjXd4lh/0jxWaC0oxsmvFodBQLDBRL6uSiwoiD9dUO6j2iOSlATmiT0GahRU2gEvgZmAI36Kyu6xlhBcNQTroRoI4/ciaUMJLW9rQnfw1SF8qq8kNjcN9WV1MUrTSGUAPAOW6cTe00yZ3hNZddJ9YCnVimXQPaZGJ1Dhk7yPJZ2w05XVdidmqfzYvqsa/wBpkA4SAwHI9SZM8gqjjadphPJFL6l+C4soDGNbTyY0Q0A5QphWdxPiqK2XM+i8/NqhaP0dQlzOgdqPNLZdqfZS20U8DzoXf2Z/iTNdOmKeDUrg7/ZZ3jfPsWYnOcScmtGbnu+y0fmFU0bXaH9us/DOlNpMNHAxqfzloiKtbGcZLNIkRk3gOSCsF4h9RzYnnv6yhnNJh4sLp/Ydaq2ENPAjw7tMlGXkVCDv06hLedPs/ngm2psGkeJZ5hEWuCGjaHFz8zkQ0QBGQknxPkm35db7RZnNpmH4HYSCQcWEkZ9fVLSoEEkZSXE89Y75I81d2AFobxAHkq5CeytHDtm7QcMOJJ1k5nPmtG1WO0Ow3zZ7qtETQc4nnSLjOE/qzkD0BVc2msWRVI043cdhzrbgBW7+T24HUw60Vh9JUENB1YzXPgXZHoBzVVsxsmXPFasOyINNh+sdzyOG8D4a9EpCFowY/wDTM+fJ/lAt5P8ARA4oa0DUuPkCfiibyqwQMJM9w8VW0HOxsxgA4HuIbo3E5oAk65StNiYrYsLRXgho5T8B+eKsalWANBxWedWJrnu8IRQBfUgmGjIZ6niSpZTiW9KsHaFeUDG4eXReVitKOQ2K14LRTM5F0HhDuz8fJa9y5rWtBmZ6RyW/sNt9pTY/7TQe/f5yseU3Yn4CpTmV4UTnpmJIs0MC2iun50WHHgLA4e7inEQeI4eazlo2Jqj3HMf3lp88vNa5z0oqo1kaFuCZzu03LWpf2lNzRxiW/wAwkIMujRdSbaELaLps9TN1Js8QMJ/ywmLL7FvF6OZvrGNAoqReXgEgDInTPgPHJb61bE0n+497ORwuHwPmq5+xFQGWupv11xNIkRO8aFGpxAcJFC2zk/1CkFmhaKy7KVCQ12Bu7EXSBzMCVpLBsZZqfaq1DUO5rCGiepkx4I00wGmij2P2ZdaHiezTBGN3AfZH6x/FdfpNa1oDYDWgAAaAAQFmqD2tAawBrRo0aD88dUUyqeQ/O9GmkKlFyYl52gYzBEbzuVHabXjkGMJyggGRzlQWi+jXe7CCKegPZHtI+vGGQOGekZIasNx0WbLkvZGvDj07hljsgpgCm0NbwAgIxkB0hrJPIAqjdY2nMn/MfvRd2WGm131SN5MHzKUhzLe8GB1IQO1OY5Rqh71MNb+qaX+oSn22zUhFVgDagLc2GA8D6rm6Oy5SENWtrK2JkOY7FGYGGRBB4wYWhZK2YjRe8Qut2ACBJB0O+ToOaJo2lpGKecHXwUdVoORUFChDndfVNFWgoXqTIAEaQRikd6rG3XR9oH+zaCPqgfRzMglmnw5IunQGOe7XJQXvWDGjvzGpjQBDPi2HDmkWYvWD7vgfvRVlvhh+0OrfiFivnzjo0gcSR6KwsNYzkUpZ/sG8CNEbd7SpDJwjN5IOm5oB3nWeSFbUl7ncAB5klRMtmRB3jP8AqvUqjRPPNNWRMX8bQ7DFWeSZY60l87nH1Kk9oJBTKtvbTafo8QOZGQz4zmVeuPsmlvwGsqZTKRTXLaKVpaS1pa5sBwy3iQRG7XholRrdWhLdOmcJqGRlrpHFaXY23Yqb6Z1YQR+y+fiD4ptk2AtDs6mGkOfbf/K3LxKvrFs2yzNcWe0c8gAl2hAMwGgQM+qROLaGQmlImlLKpq17hroLXjqx/rCkp3wz7Q9PVZKfk2Wi0KYUK23sOjh4hPFqad6hZLK8FGKwThUCshMKi97VQe0TcShAr2yaa6FNRexqECfnRTPnbj9Y+KHlKCqthUE00+pSnUqNpTmslUUPFNjdSxp4uIB80bYLW0OyxPnKGNJ/CEHQuwOM4QTxIkq5u+7nAyAR3fmU6KbeyFSkkt2Vt60qntMQp4ZaA0SDMEmTGhz8AFHYrI4ZvwyN4ZhJIzzM5rVGwBwGNrjGmca9Cl/6Uz7J8StKxMz/ADorG1sWYyncCckRSpYssRnhO9Hsu9g0YO8z6lStogaNaOgHwCetSMstDd0U1RjhqT5IO9bOfZuOImM4Wmh24BRV6rwCHUw9pBBAOoOuSkk2miQcYtNI55jdwA8/NFWeRnKlvbZ5zmh1kfWd2odSwtDmj9swoLNYatOG1KdRvN3aPqSue8ckzpLLGS5LBjyppQvzlrPekdWuA8SITm3kw6GemavSyOaCmPKfUEtI4hB1LYBvb/M2fCUNadoKTB2nR+eSji14IpI0GyB/taYdDg7FoO02APIg+IXkBsfbMVSpVbk2A0FwjFJxEidYgeK8tOO9KMmXvdGjc1IKamcF4NRiCE0BwUbrEw6taeoCLwr2FVRdsrKlxUHa0aZ6sb9yHdspZT/cU+5seiu8K9hVaUXqfsoDsdZv0cdHvHo5MdsbQ3CoOlV/3rQlIq0R9F65ezNO2Np7nVh/9J9QonbHN3Vaw/kP+xaleVfHH0X8svZlP/yPCrU72sPwCY7ZV36U99MfArXQkwqvij6L+afsxztman6Qf4Z/5KF9wVdzmnucPvW3wJfZhD8MQlnkYOpdtobo1h/icP8Aairou6q4n2jcEb5xT4Qtn7EJzaYUWFF/PIBs1nFP3WudxPZB8yEX89/9T+40/wDkpMATgE9bcCHvyDPvAj+5qnp7P/moBeFZxhllq9XPosHjiKsQFM2puyRp2A9jPWm2W76lkp/xVwfINVVabbe/1aNBvRrn/wC4ei2zqkIepb4+r5/grBMO28L6BzZSdyNB0eIctDc9+2o9m1WQt/XpYiO9jhI7iVYf9Y/U/wA34KRt5T9Xz/BQhnL6NYvOVcMmYo0cRPNz3ZdwQbLJOZbaZ/Xs7J8mfFbinXnd5qWFZDCCi1v6Rv8A8KrfNkJ7bWRpVcOprj/Wxy3KUFQhjWXhU/SA/tNpn/UwFTNvR+8UHdWN+D1rJSKEKCz3tH91T/gBHwK8r8BKoQ//2Q==', width='389')
+        p
+          br
+          span(style='color:#ff0000;')
+            span(style='font-size: 16px;') Trung tâm gia sư Nhân Trí
+          span(style='color:#000080;')
+            span(style='font-size: 16px;')  :Với phương châm “
+          span(style='color:#ff0000;')
+            span(style='font-size: 16px;') UY TÍN - TẬN TÂM - NHIỆT TÌNH - CHU ĐÁO - TRÁCH NHIỆM
+          span(style='color:#000080;')
+            span(style='font-size: 16px;')
+              | ” Gia Sư Nhân Trí mong muốn được đóng góp một phần nhỏ trên bước thành đạt của con em Quý Phụ Huynh.
+        p
+          span(style='color:#0000ff;')
+            span(style='font-size: 16px;')   
+          span(style='color:#000080;')
+            span(style='font-size: 16px;')  Đến với 
+          span(style='color:#ee82ee;')
+            span(style='font-size: 16px;')
+              a(href='http://www.giasunhantri.net/', title='gia su, gia sư') Gia Sư
+          span(style='color:#000080;')
+            span(style='font-size: 16px;')
+              | Nhân Trí, chắc chắn Quý Phụ Huynh sẽ hài lòng bởi sự tư vấn tận tình và phương pháp giảng dạy chuyên nghiệp.
+        p
+          span(style='color:#ff0000;')
+            span(style='font-size: 16px;')
+              u *Gia Sư Nhân Trí chuyên cung cấp gia sư dạy kèm:
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm từ lớp 1 đến lớp 12 và luyện thi đại học tất cả các môn.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm Toán, Lý, Hóa, Văn, Sinh, Sử, Địa, Lý... Từ lớp 1 đến lớp 12.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;')
+              | - Dạy kèm Toán, Tiếng việt, Chính tả, rèn chữ đẹp, Dạy báo bài Từ lớp 1 đến lớp 5.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm cho các em chuẩn bị vào lớp 1, Rèn chữ đẹp.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Luyện thi cấp tốc các chứng chỉ tiếng anh: Toiec, Ielts, Toefl...
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm anh văn căn bản và nâng cao, anh văn thiếu nhi.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm các ngoại ngữ: Hoa, Hàn, Nhật, Pháp...
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm Tin Học từ căn bản đến nâng cao.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy kèm các môn năng khiếu: Đàn: Organ, Piano...Dạy vẻ: Mỹ thuật, Hội họa.
+        p
+          span(style='color:#ff0000;')
+            span(style='font-size: 16px;')
+              u *Trọng tâm giảng dạy của Gia Sư Nhân Trí:
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Ôn tập lại những kiến thức đã học ở trường.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Dạy sát chương trình, dạy sâu kiến thức, dạy kỹ chuyên môn.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Kỹ năng làm bài thi trắc nghiệm.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Luôn nâng cao và mở rộng kiến thức cho các em.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Thường xuyên báo cáo kết quả học tập đến Quý Phụ Huynh.
+        p
+          span(style='color:#000080;')
+            span(style='font-size: 16px;') - Nhận dạy thử tuần đầu không thu phí.
+        p(style='text-align: center;')
+          strong
+            span(style='color:#ff0000;')
+              u
+                span(style='font-size:20px;') BẢNG HỌC PHÍ THAM KHẢO
+        div
+          strong
+            span(style='color:#ff0000;')
+              span(style='font-size: 16px;') Trung Tâm Gia Sư Nhân Trí
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | đưa ra bảng học phí 1 tháng dạy của gia sư cho Quý Phụ Huynh và các bạn gia sư tham khảo (1 buổi dạy 2 tiết = 1h30')
+        div
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | Mức học phí chỉ áp dụng cho 1 học sinh, nếu học nhóm hoặc có nhu cầu khác xin liên hệ đến trung tâm.
+        div
+          strong
+            span(style='color:#ff0000;')
+              span(style='font-size:16px;') 1/ Gia sư 3 buổi một tuần:
+        table(border='1', cellpadding='1', cellspacing='1', style='width:500px;')
+          tbody
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp Học
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Sinh Viên
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Giáo Viên
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: Lá, 1, 2, 3, 4
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.200.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.800.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 5, 6, 7, 8
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.400.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.000.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 9, 10, 11
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.500.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.200.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 12
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.600.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.400.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: LTDH
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.800.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.500.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: Ngoại Ngữ, Tin Học
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.500.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.200.000
+        h3
+          strong
+            span(style='color:#ff0000;')
+              span(style='font-size: 16px;') 2) Gia sư dạy 5 buổi một tuần:
+        table(border='1', cellpadding='1', cellspacing='1', height='193', width='500')
+          tbody
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp Học
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Sinh Viên
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Giáo Viên
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: Lá, 1, 2, 3, 4
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.600.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 3.000.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 5, 6, 7, 8
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 1.800.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 3.200.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 9, 10, 11
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.000.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 3.500.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: 12
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.200.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 3.800.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: LTDH
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.500.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 4.000.000
+            tr
+              td
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') Lớp: Ngoại Ngữ, Tin Học
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 2.000.000
+              td(style='text-align: center;')
+                strong
+                  span(style='color:#000080;')
+                    span(style='font-size: 16px;') 3.500.000
+        p
+          strong
+            span(style='color:#ff0000;')
+              span(style='font-size: 16px;')
+                | Đối với gia sư là giáo viên có thâm niên, thạc sỹ, giáo viên dạy tại trường có kinh nghiệm dạy kèm thật hiệu quả mức học phí được tính theo tiết (1 tiết = 45 phút).
+        p
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                u Cấp 1:
+                |  100.000 - 120.000/1 tiết(45 phút) = 200.000 - 240.000/1 buổi 
+                br
+                u Cấp 2:
+                |  120.000 - 150.000/1 tiết(45 phút) = 240.000 - 300.000/1 buổi 
+                br
+                u Cấp 3 - LTĐH:
+                |  150.000 - 200.000/1 tiết(45 phút) = 300.000 - 400.000/1 buổi
+        p
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                em
+                  u Lưu Ý :
+                  |  Bảng học phí trên chỉ có tính chất tham khảo, học phí sẽ tăng hoặc giảm tùy theo số môn học và yêu cầu của quý phụ huynh.
+        hr
+        div(style='text-align: center;')
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 14px;') PHỤ HUYNH HỌC SINH CÓ NHU CẦU XIN LIÊN HỆ:
+        div(style='text-align: center;')
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 14px;') ĐIỆN THOẠI ĐỂ TƯ VÂN - ĐĂNG KÝ GIA SƯ TRỰC TIẾP
+        div(style='text-align: center;')
+          strong
+            span(style='font-size:22px;')
+              span(style='color:#ff0000;')  0932279249 - 0909767159
+        div(style='text-align: center;')
+          span(style='font-size:14px;')
+            strong
+              span(style='color:#000080;') (THẦY LONG - CÔ MINH THƯ)
+        div(style='text-align: center;')
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | Vì Tất Cả Học Sinh Thân Yêu Hãy Để Cho Chúng Tôi Thắp Sáng Ước Mơ Của Các Em Bằng Con Đường "Giáo Dục"
+        hr
+        p
+          strong
+            span(style='color:#000080;')
+              span(style='font-size: 16px;')
+                | Chân thành cảm ơn Quý Bậc Phụ Huynh và Học Sinh đã quan tâm và tín nhiệm chúng tôi trong suốt thời gian qua. Kính chúc Quý bậc Phụ Huynh và các em Học Sinh sức khỏe, thành đạt.
+        h3(style='text-align: center;')
+          span(style='font-size:18px;')
+            big
+              a(href='http://www.giasunhantri.net/') www.giasunhantri.net
+        div
+          span(style='font-size:10px;')
+            a(href='http://www.giasunhantri.net/', title='trung tâm gia sư') trung tâm gia sư
+            |  – 
+            a(href='http://www.giasunhantri.net/', title='gia su') gia su
+            |  – 
+            a(href='http://www.giasunhantri.net/', title='trung tam gia su') trung tam gia su
+            |  – 
+            a(href='http://www.giasunhantri.net/', title='gia sư') gia sư
+            |  – 
+            a(href='http://www.giasunhantri.net/', title='dạy kèm') dạy kèm
+            |  – 
+            a(href='http://www.giasunhantri.net/', title='day kem') day kem
+            |  - day kem thang long - dạy kèm Nhân Trí - gia su thang long - gia sư Nhân Trí - trung tam gia su thang long - trung tâm gia sư Nhân Trí - trung tam day kem thang long - trung tâm dạy kèm Nhân Trí - gia su toan tam - gia sư toàn tâm - trung tam gia su toan tam - trung tâm gia sư toàn tâm - gia sư dạy kèm - gia su day kem - gia sư tại nhà - gia su tai nha - day kem tai nha - dạy kèm tại nhà - gia sư uy tín - gia su uy tin
+        .clearfix

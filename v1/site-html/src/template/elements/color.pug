@@ -1,0 +1,21 @@
+extends ../layouts/page
+block page-container
+ main.main-content
+  section#boxed.section.bg-gray
+   .container
+     header.section-header
+       h2 Boxed
+     .row
+      .col-md-8.mx-auto
+        h6.divider Color default
+        include color/default.pug
+      .col-md-8.mx-auto
+        h6.divider Color gradient-backgrounds
+        include color/gradient-backgrounds.pug
+      .col-md-8.mx-auto
+        h6.divider Color pale-backgrounds
+        include color/pale-backgrounds.pug
+      .col-md-8.mx-auto
+        h6.divider Color text-colors
+        include color/text-colors.pug
+      
