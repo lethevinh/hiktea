@@ -7,11 +7,11 @@
     "start": "webpack-dev-server --inline --progress --port 8080 --config src/config/webpack.dev.js",
     "build": "webpack --inline --progress --config src/config/webpack.prod.js",
     "watch:build": "webpack-dev-server --config src/config/webpack.prod.js  --inline --progress --port 8080",
-    "watch:dev": "webpack-dev-server --env.dev --config src/configs/webpack.dev.js --inline --progress --port 8080",
-    "watch:theme": "webpack-dev-server  --config src/configs/webpack.theme.js --inline --progress --port 8080",
-    "build:theme": "rimraf dist && webpack --config src/configs/webpack.theme.js --bail",
-    "build:dev": "rimraf dist && webpack --env.dev --config src/configs/webpack.dev.js --bail",
-    "build:product": "rimraf dist && webpack --env.prod --config src/configs/webpack.prod.js --bail",
+    "watch:dev": "webpack-dev-server --env.dev --config src/config/webpack.dev.js --inline --progress --port 8080",
+    "watch:theme": "webpack-dev-server  --config src/config/webpack.theme.js --inline --progress --port 8080",
+    "build:theme": "rimraf dist && webpack --config src/config/webpack.theme.js --bail",
+    "build:dev": "rimraf dist && webpack --env.dev --config src/config/webpack.dev.js --bail",
+    "build:product": "rimraf dist && webpack --env.prod --config src/config/webpack.prod.js --bail",
     "serve": "lite-server -c=bs-config.json",
     "test": "karma start karma.webpack.conf.js",
     "pretest:once": "npm run build",
@@ -74,7 +74,7 @@
     "granim": "^1.1.1",
     "imagesloaded": "^4.1.4",
     "jarallax": "^1.10.4",
-    "jquery": "^3.3.1",
+    "jquery": "^1.12.4",
     "lity": "^2.3.1",
     "objectFitPolyfill": "^2.1.1",
     "perfect-scrollbar": "^1.4.0",
@@ -83,6 +83,7 @@
     "shuffle": "^0.2.2",
     "shufflejs": "^5.2.0",
     "slick-carousel": "^1.8.1",
-    "typed": "^0.3.3"
+    "typed": "^0.3.3",
+    "waypoints": "^4.0.1"
   }
 }

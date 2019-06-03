@@ -1,28 +1,23 @@
 const merge = require('webpack-merge'),
     common = require('./webpack.common.js'),
+   ExtractTextPlugin = require('extract-text-webpack-plugin'),
     path = require("path");
 
 const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
 
 const extractAppStyle = new ExtractTextPlugin({
-    filename: "assets/css/app.css"
+    filename: "css/app.css"
 });
 
 module.exports = merge(common, {
     devtool: 'inline-source-map',
     mode: 'development',
     output: {
-        filename: '[name].min.js',
-        path: path.join(__dirname, "../../dist/"),
-        publicPath: 'http://localhost:' + port + '/',
+        filename: 'js/[name].min.js',
+        path: path.join(__dirname, "../../../theme/"),
         libraryTarget: 'umd',
         umdNamedDefine: true,
     },
-    devServer: {
-        contentBase: path.join(__dirname, "../../dist/"),
-        port: port
-    },
-
     plugins: [
         new HtmlBeautifyPlugin({
             config: {

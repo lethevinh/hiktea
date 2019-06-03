@@ -8,8 +8,8 @@ module.exports = merge(common, {
     devtool: 'source-map',
     mode: 'development',
     output: {
-        filename: 'js/[name].min.js',
-        chunkFilename: 'js/[name].min.js',
+        filename: '[name].min.js',
+        chunkFilename: '[name].min.js',
         path: path.join(__dirname, "../../dist/"),
         publicPath: 'http://localhost:' + port + '/',
         libraryTarget: 'umd',
@@ -23,6 +23,6 @@ module.exports = merge(common, {
     },
     watch: true,
     plugins: [
-        new ExtractTextPlugin("css/[name].min.css")
+        new ExtractTextPlugin("[name].min.css")
     ]
 });

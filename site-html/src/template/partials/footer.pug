@@ -1,39 +1,155 @@
-// Footer Section Start
-footer
-  .voffset-50
-  .row
+// START FOOTER
+footer.bg_black.txt_white
+  .top_footer.small_pt.small_pb
     .container
       .row
-        .voffset-50
-        .col-footer-1
-          .col-auto
-              a(href='index.html')
-                img.logo(src='images/logo-white-t.png', alt='')
-        .col-footer-2
-          h4 HIK Tea
-          ul.navbar-vertical
+        .col-lg-4
+          .footer_logo
+            a(href='index.html')
+              img(alt='logo', src='images/logo_dark.png')
+          .footer_desc
+            p
+              | Phasellus blandit massa enim. elit id varius nunc. Lorems ipsum dolor sit consectetur industry. If you are going to use a passage of Lorem Ipsum.
+          ul.contact_info.list_none
             li
-              a(href='#') Giới Thiệu
+              span.ti-mobile
+              p +123 456 7890
             li
-              a(href='#') Menu
+              span.ti-email
+              a(href='mailto:info@yourmail.com') info@yourmail.com
             li
-              a(href='#') Blog
+              span.ti-location-pin
+              address 123 Street, Old Trafford, NewYork, USA
+        .col-lg-2.col-md-3.col-sm-4
+          h5.widget_title Vế HIK TEA
+          ul.list_none.widget_links
             li
-              a(href='#') Cửa hàng
-        .col-lg-5.col-footer-3.footer-contact
-          h4 Liên Hệ
-          p
-            span 38 Đường Số 10, Bình Hưng, 
-            span  0869.269.168
-            span Bình Chánh, HCM
-            span
-              a(href='mailto:hiktea38@gmail.com') hiktea38@gmail.com
-            span.margintop Thứ 2 - Chủ Nhật 
-            span 7:30 - 22:00
-      .voffset-50
-    .container-fluid
-      .col-12.copyright
-        .voffset-20
-        .row
-          p Copyright 2019 HIK Tea
-// Booking Section End
+              a(href='#') Delivery Information
+            li
+              a(href='#') Secure Payment
+            li
+              a(href='#') About Us
+            li
+              a(href='#') Top Sellers
+            li
+              a(href='#') Privacy Policy
+            li
+              a(href='#') Our Sitemap
+        .col-lg-2.col-md-3.col-sm-4
+          h5.widget_title Delivery
+          ul.list_none.widget_links
+            li
+              a(href='#') My Account
+            li
+              a(href='#') Shopping Cart
+            li
+              a(href='#') Addresses
+            li
+              a(href='#') Discount
+            li
+              a(href='#') Orders History
+            li
+              a(href='#') Order Tracking
+        .col-lg-4.col-md-6.col-sm-4
+          h5.widget_title Instagram
+          ul.list_none.instafeed
+            li
+              a(href='#')
+                img(src='images/insta_img1.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img2.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img3.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img4.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img5.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img6.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img7.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+            li
+              a(href='#')
+                img(src='images/insta_img8.jpg', alt='insta_img')
+                span.insta_icon
+                  i.ti-instagram
+  .middle_footer
+    .container
+      .row
+        .col-12
+          .shopping_info
+  .bottom_footer
+    .container
+      .row.align-items-center
+        .col-lg-4
+          p.copyright.m-lg-0.text-center Copyright © 2019 All Rights Reserved 
+        .col-lg-4.order-lg-first
+          ul.list_none.footer_payment.text-center.text-lg-left
+            li
+              a(href='#')
+                img(src='images/visa.png', alt='visa')
+            li
+              a(href='#')
+                img(src='images/discover.png', alt='discover')
+            li
+              a(href='#')
+                img(src='images/master_card.png', alt='master_card')
+            li
+              a(href='#')
+                img(src='images/paypal.png', alt='paypal')
+            li
+              a(href='#')
+                img(src='images/amarican_express.png', alt='amarican_express')
+        .col-lg-4
+          ul.list_none.social_icons.radius_social.text-center.text-lg-right
+            li
+              a.sc_facebook(href='#')
+                i.fab.fa-facebook-f
+            li
+              a.sc_twitter(href='#')
+                i.fab.fa-twitter
+            li
+              a.sc_google(href='#')
+                i.fab.fa-google-plus-g
+            li
+              a.sc_instagram(href='#')
+                i.fab.fa-instagram
+            li
+              a.sc_pinterest(href='#')
+                i.fab.fa-pinterest
+  .overlap_shape
+    .ol_shape21
+      .animation
+        img(data-parallax="{'y': 20, 'smoothness': 20}", src='images/shape36.png', alt='shape36')
+    .ol_shape22
+      .animation
+        img(data-parallax="{'y': 20, 'smoothness': 20}", src='images/shape37.png', alt='shape37')
+    .ol_shape23
+      .animation
+        img(data-parallax="{'y': 20, 'smoothness': 20}", src='images/shape38.png', alt='shape38')
+    .ol_shape24
+      .animation
+        img(data-parallax="{'y': 20, 'smoothness': 20}", src='images/shape39.png', alt='shape39')
+// END FOOTER
+a.scrollup(href='#', style='display: none;')
+  i.ion-ios-arrow-up

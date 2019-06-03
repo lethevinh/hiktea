@@ -1,13 +1,21 @@
-require('./script/jquery');
-require('./style/site.css');
-import { editor } from "./script/editor";
-editor.init();
-/*
-import { page } from "./script/page";
-import * as serviceworker from "./script/service-worker/register";
-
-page.init();
-if (process.env.NODE_ENV === 'production') {
-	serviceworker.register();
-}
+/*require('./script/jquery');
+require('./assets/js/jquery-ui.js');
+require('./assets/js/popper.min.js');
+require('./assets/js/bootstrap.min.js'); 
+require('./assets/js/owl.carousel.min.js'); 
+require('./assets/js/magnific-popup.min.js'); 
+require('./assets/js/jquery.waypoints.min.js'); 
+require('./assets/js/parallax.js'); 
+// require('./assets/js/jquery.dd.min.js');
+require('./assets/js/jquery.countdown.min.js'); 
+require('./assets/js/jquery.counterup.min.js');
+require('./assets/js/jquery.parallax-scroll.js');
+require('./assets/js/jquery.elevatezoom.js');
+require('./assets/js/jquery.fitvids.js');
+require('./assets/js/imagesloaded.pkgd.min.js');
+require('./assets/js/isotope.min.js');
+require('./assets/js/js.cookie.js');
+require('./assets/js/scripts.js');
+console.log(12313)
 */
+require('./style/site.css');

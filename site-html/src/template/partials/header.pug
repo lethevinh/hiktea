@@ -1,62 +1,60 @@
-header.container-fluid.header.js-header-fixsmall.overlayer-fixed
-  // Start Navbar
-  .row.justify-content-center
-    .col-12
-      .row.justify-content-between
-        .col-auto
-          a.navbar-brand(href='index-multipages.html')
-            img.i-logo(src='images/logo-white-t.png', alt='')
-          a.navbar-brand.black(href='index-multipages.html')
-            img.i-logo(src='images/logo-black-t.png', alt='')
-        .d-flex.justify-content-center.onlydesktop
-          ul.navbar
-            li
-              a.nav-link.active(href='about.html') Về HIK Tea
-            li
-              a.nav-link(href='menu.html') Menu
-            li
-              a.nav-link(href='khuyen-mai.html') Khuyến Mãi
-            li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href='gallery.html', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Blog
-              .dropdown-menu
-                a.dropdown-item(href='gallery-two-columns.html') 2 columns
-            li
-              a.nav-link(href='tuyển-dung.html') Tuyển dụng
-            li
-              a.nav-link(href='cua-hang.html') cửa hàng
-        .d-flex.justify-content-end
-          ul.navbar.float-right.onlydesktop
-            li
-              a.bt-orange.bt-menu-reserve(href='booking.html') Order Ngay
-            li
-              a.fb-ic.mr-3(href='https://www.foody.vn/ho-chi-minh/hiktea', target='_blank', role='button')
-                img.rounded-circle.icon-circle(src='images/foody.png')
-            li
-              a.tw-ic.mr-3(href='https://www.facebook.com/hiktea38/', target='_blank', role='button')
-                i.fab.fa-lg.fa-facebook
-            li
-              a.tw-ic.mr-3(href='https://www.youtube.com/watch?v=ReX3MOTTl5w', role='button')
-                i.fab.fa-lg.fa-youtube
-          .col
-            ul.navbar.float-right
-              li.hambuger.onlyresponsive
-                button#trigger-overlay.trigger-overlay.dropdown-icon
-                  span
-  .overlay.overlay-hugeinc
-    .overlay-content
-      span.trigger-overlay
-      nav#nav
-        ul
-          li.current
-            a(href='about.html') Về HIKTea
-          li
-            a(href='menu.html') Menu
-          li
-            a(href='khuyen-mai.html') Khuyến Mãi
-          li
-            a(href='blog.html') Blog
-          li
-            a(href='cua-hang.html') Cửa Hàng
-          li
-            a(href='lien-he.html') Liên Hệ 
-  // End Navbar
+// START HEADER
+header.header_wrap.dark_skin.main_menu_uppercase.bg_black
+  .container
+    nav.navbar.navbar-expand-lg.txt_white
+      a.navbar-brand(href='index.html')
+        img.logo_light(src='images/logo_white.png', alt='logo')
+        img.logo_dark(src='images/logo_dark.png', alt='logo')
+        img.logo_default(src='images/logo_dark.png', alt='logo')
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.ion-android-menu
+      include ../components/menu-main
+      ul.navbar-nav.attr-nav.align-items-center
+        li
+          a.nav-link.search_trigger(href='javascript:void(0);')
+            i.ion-ios-search-strong
+          .search-overlay
+            .search_wrap
+              form
+                .rounded_input
+                  input#search_input.form-control(type='text', placeholder='Search')
+                button.search_icon(type='submit')
+                  i.fas.fa-search
+        li.dropdown.cart_wrap
+          a.nav-link(href='#', data-toggle='dropdown')
+            i.ion-bag
+            span.cart_count 2
+          .cart_box.dropdown-menu.dropdown-menu-right.bg_white
+            ul.cart_list
+              li
+                a.item_remove(href='#')
+                  i.ion-close
+                a(href='#')
+                  img(src='images/cart_thamb1.jpg', alt='cart_thumb1')
+                  | Fresh Organic Strawberry
+                span.cart_quantity
+                  | 1 x 
+                  span.cart_amount
+                    span.price_symbole $
+                    | 78.00
+              li
+                a.item_remove(href='#')
+                  i.ion-close
+                a(href='#')
+                  img(src='images/cart_thamb2.jpg', alt='cart_thumb2')
+                  | Fresh Organic Grapes
+                span.cart_quantity
+                  | 1 x 
+                  span.cart_amount
+                    span.price_symbole $
+                    | 81.00
+            .cart_footer
+              p.cart_total
+                | Total: 
+                span.cart_amount
+                  span.price_symbole $
+                  | 159.00
+              p.cart_buttons
+                a.btn.btn-default.btn-radius.view-cart(href='cart.html') View Cart
+                a.btn.btn-dark.btn-radius.checkout(href='checkout.html') Checkout
+// END HEADER

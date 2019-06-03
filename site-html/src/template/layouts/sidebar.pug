@@ -1,0 +1,27 @@
+extends ../layouts/full
+block page-container
+ // START SECTION BANNER
+ section.bg_light_orange.breadcrumb_section.background_bg.bg_fixed.bg_size_contain(data-img-src='/images/breadcrumb_bg.png')
+  .container
+    .row.align-items-center
+      .col-sm-12.text-center
+        .page-title
+          h1 Blog List Right Sidebar
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb.justify-content-center
+            li.breadcrumb-item
+              a(href='#') Home
+            li.breadcrumb-item
+              a(href='#') Blog
+            li.breadcrumb-item.active(aria-current='page') Blog List Right Sidebar
+ // END SECTION BANNER
+ // START SECTION BLOG
+ section
+  .container
+    .row
+      .col-lg-9
+       block page-content
+      .col-lg-3.mt-5.mt-lg-0
+        .sidebar
+          block sidebar-content
+ // END SECTION BLOG

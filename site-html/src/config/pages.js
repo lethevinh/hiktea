@@ -30,7 +30,7 @@ module.exports = [
             return {
                 ...baseConfig,
                 ...route,
-                title: `${title.toLowerCase()} | Giasunhantri.net`,
+                title: `${title.toLowerCase()} | misscharminternational.com`,
                 filename: `${route.slug}.html`,
                 template: getTemplatePath(route.template),
                 chunks: [...baseConfig.chunks, ...(route.chunks || [])],

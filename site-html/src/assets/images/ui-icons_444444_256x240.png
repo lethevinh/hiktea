@@ -1,808 +1,664 @@
 
 
 
-
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://github.githubassets.com">
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
 
-
-
-  <link crossorigin="anonymous" media="all" integrity="sha512-pWLt6abkYhNeAHaDrPVG0yXCtIGRuCkwSUqQpsyN6smAIpIt+Iuq2IZKmoH9l3Cy/9ZnjvVrFZnvFFjGiqE3EA==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-a3b8a10d4a9e37a78f033ef4a4f525f5.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-lmIgV56oKD4WZEZlZb6hUL/P5RBj3xJuQoNAO9swMntkkYcVw+H6s8THUbeRy7ehcCFQHllAw09J/27g3Zv0Cw==" rel="stylesheet" href="https://github.githubassets.com/assets/github-0ac541dd7881677a0084d618a9ab634d.css" />
-  
-  
-  <link crossorigin="anonymous" media="all" integrity="sha512-L+Xfjk72/sIPS5T8Z8Wy/+/78ngrN7jAjVpE5Zoo2KfZYqr9s8p6selV7sLydYrh0Y3Pu02CuEa7uuq70RjSxg==" rel="stylesheet" href="https://github.githubassets.com/assets/site-278e4176d194ae782983c71f1f767503.css" />
-  
-  
-
-  <meta name="viewport" content="width=device-width">
-  
-  <title>jquery-ui/ui-icons_444444_256x240.png at master · jquery/jquery-ui · GitHub</title>
-    <meta name="description" content="The official jQuery user interface library. Contribute to jquery/jquery-ui development by creating an account on GitHub.">
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528">
-
-    
-    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/70142?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="jquery/jquery-ui" /><meta property="og:url" content="https://github.com/jquery/jquery-ui" /><meta property="og:description" content="The official jQuery user interface library. Contribute to jquery/jquery-ui development by creating an account on GitHub." />
-
-  <link rel="assets" href="https://github.githubassets.com/">
-  
-  <meta name="pjax-timeout" content="1000">
-  
-  <meta name="request-id" content="23AA:4079D:7202645:AE39467:5C47056C" data-pjax-transient>
-
-
-  
-
-  <meta name="selected-link" value="repo_source" data-pjax-transient>
-
-      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
-
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="23AA:4079D:7202645:AE39467:5C47056C" /><meta name="octolytics-dimension-region_edge" content="ams" /><meta name="octolytics-dimension-region_render" content="iad" />
-<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
-
-
-
-    <meta name="google-analytics" content="UA-3769691-2">
-
-
-<meta class="js-ga-set" name="dimension1" content="Logged Out">
-
-
-
-  
-
-      <meta name="hostname" content="github.com">
-    <meta name="user-login" content="">
-
-      <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="NTliYzA3ZTA3ZDhmNmYzMGNmMDE5MmJkNTc0NTQ5M2I5YjE3OGFjOGU1MDhhYjQ3MGI1ZGM2OTdhMDM4ZmQ3N3x7InJlbW90ZV9hZGRyZXNzIjoiMTk1LjUzLjEyOC40IiwicmVxdWVzdF9pZCI6IjIzQUE6NDA3OUQ6NzIwMjY0NTpBRTM5NDY3OjVDNDcwNTZDIiwidGltZXN0YW1wIjoxNTQ4MTU4MzIxLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
-
-    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
-
-  <meta name="html-safe-nonce" content="08e328d7f2c050a3230e93263d90ac8cb2a5fa4f">
-
-  <meta http-equiv="x-pjax-version" content="3f614c7ffba1ad5a936b917ed237b851">
-  
-
-      <link href="https://github.com/jquery/jquery-ui/commits/master.atom" rel="alternate" title="Recent Commits to jquery-ui:master" type="application/atom+xml">
-
-  <meta name="go-import" content="github.com/jquery/jquery-ui git https://github.com/jquery/jquery-ui.git">
-
-  <meta name="octolytics-dimension-user_id" content="70142" /><meta name="octolytics-dimension-user_login" content="jquery" /><meta name="octolytics-dimension-repository_id" content="478996" /><meta name="octolytics-dimension-repository_nwo" content="jquery/jquery-ui" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="478996" /><meta name="octolytics-dimension-repository_network_root_nwo" content="jquery/jquery-ui" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
-
-
-    <link rel="canonical" href="https://github.com/jquery/jquery-ui/blob/master/themes/base/images/ui-icons_444444_256x240.png" data-pjax-transient>
-
-
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
-  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
-
-<meta name="theme-color" content="#1e2327">
-
-
-  <meta name="u2f-support" content="true">
-
-  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
-
-  </head>
-
-  <body class="logged-out env-production page-blob">
-    
-
-  <div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
-
-    
-    
-    
-
-
-        
-<header class="Header header-logged-out  position-relative f4 py-3" role="banner">
-  <div class="container-lg d-flex px-3">
-    <div class="d-flex flex-justify-between flex-items-center">
-        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
-          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-        </a>
-    </div>
-
-    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
-      <div class="d-none">
-        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
-          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-        </button>
-      </div>
-
-        <nav class="mt-0" aria-label="Global">
-          <ul class="d-flex list-style-none">
-              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
-                    Why GitHub?
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
-                      <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0  p-4 left-n4 position-absolute">
-                    <a href="/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
-                    <ul class="list-style-none f5 pb-3">
-                      <li class="edge-item-fix"><a href="/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
-                      <li class="edge-item-fix"><a href="/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
-                      <li class="edge-item-fix"><a href="/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
-                      <li class="edge-item-fix"><a href="/features/actions" class="py-2 lh-condensed-ultra d-block link-gray" data-ga-click="(Logged out) Header, go to Actions">Actions</a>
-                      <li class="edge-item-fix"><a href="/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
-                      <li class="edge-item-fix"><a href="/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
-                      <li class="edge-item-fix"><a href="/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
-                      <li class="edge-item-fix"><a href="/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
-                    </ul>
-
-                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
-                      <li class="edge-item-fix"><a href="/case-studies" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Case studies">Case Studies <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                      <li class="edge-item-fix"><a href="/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-              <li class=" mr-3 mr-lg-3">
-                <a href="/enterprise" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, click, go to Enterprise">Enterprise</a>
-              </li>
-
-              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
-                    Explore
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
-                      <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0  p-4 left-n4 position-absolute">
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-
-                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
-                      <li class="edge-item-fix"><a href="/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
-                      <li class="edge-item-fix"><a href="/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
-                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
-                      <li class="edge-item-fix"><a href="https://opensource.guide" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
-                    </ul>
-
-                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
-                    <ul class="list-style-none mb-0">
-                      <li class="edge-item-fix"><a href="/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
-                      <li class="edge-item-fix"><a href="https://github.community" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
-                      <li class="edge-item-fix"><a href="https://education.github.com" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-
-              <li class=" mr-3 mr-lg-3">
-                <a href="/marketplace" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
-              </li>
-
-              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
-                    Pricing
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
-                       <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0  p-4 left-n4 position-absolute">
-                    <a href="/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
-
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare features">Compare plans</a></li>
-                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare features">Contact Sales</a></li>
-                    </ul>
-
-                    <ul class="list-style-none mb-0  border-top pt-3">
-                      <li class="edge-item-fix"><a href="/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                      <li class="edge-item-fix"><a href="https://education.github.com" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover"  data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-          </ul>
-        </nav>
-
-      <div class="d-flex flex-items-center px-0 text-center text-left">
-          <div class="d-lg-flex mr-3">
-            <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to"
-  role="combobox"
-  aria-owns="jump-to-results"
-  aria-label="Search or jump to"
-  aria-haspopup="listbox"
-  aria-expanded="false"
->
-  <div class="position-relative">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="478996" data-scoped-search-url="/jquery/jquery-ui/search" data-unscoped-search-url="/search" action="/jquery/jquery-ui/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
-        <input type="text"
-          class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
-          data-hotkey="s,/"
-          name="q"
-          value=""
-          placeholder="Search"
-          data-unscoped-placeholder="Search GitHub"
-          data-scoped-placeholder="Search"
-          autocapitalize="off"
-          aria-autocomplete="list"
-          aria-controls="jump-to-results"
-          aria-label="Search"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=duS5isOzSFFo+bzy+pFJ4VPsLdUCYN/tS6cnrh7/C0v6Gq4bQh2ZNDqGvVGnDNVBmMVL+0LR+2AwXvOiazOg1g=="
-          spellcheck="false"
-          autocomplete="off"
-          >
-          <input type="hidden" class="js-site-search-type-field" name="type" >
-            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
-
-            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
-              
-<ul class="d-none js-jump-to-suggestions-template-container">
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-</ul>
-
-<ul class="d-none js-jump-to-no-results-template-container">
-  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
-    <span class="text-gray">No suggested jump to results</span>
-  </li>
-</ul>
-
-<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-
-</ul>
-
-            </div>
-      </label>
-</form>  </div>
+<!--[if IE 7]>
+
+<html class="ie ie7" lang="en-US" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<![endif]-->
+
+<!--[if IE 8]>
+
+<html class="ie ie8" lang="en-US" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<![endif]-->
+
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<!--<![endif]-->
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://bestwebcreator.com/xmlrpc.php">
+
+	<title>Page not found - Best Web Creator</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v9.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="object">
+<meta property="og:title" content="Page not found - Best Web Creator">
+<meta property="og:site_name" content="Best Web Creator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Page not found - Best Web Creator">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Best Web Creator &raquo; Feed" href="https://bestwebcreator.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Best Web Creator &raquo; Comments Feed" href="https://bestwebcreator.com/comments/feed/">
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-106310707-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-106310707-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('set', 'anonymizeIp', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview','/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer);
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bestwebcreator.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="layerslider-css" href="../css/layerslider.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-preloader-css" href="../css/thegem-preloader.css" type="text/css" media="all">
+<style id="thegem-preloader-inline-css" type="text/css">
+
+		body:not(.compose-mode) .gem-icon .gem-icon-half-1,
+		body:not(.compose-mode) .gem-icon .gem-icon-half-2 {
+			opacity: 0 !important;
+			}
+</style>
+<link rel="stylesheet" id="thegem-reset-css" href="../css/thegem-reset.css" type="text/css" media="all">
+<style id="thegem-reset-inline-css" type="text/css">
+
+		.fullwidth-block {
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+</style>
+<link rel="stylesheet" id="thegem-grid-css" href="../css/thegem-grid.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-style-css" href="../css/style_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-child-style-css" href="../css/style_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-header-css" href="../css/thegem-header.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-widgets-css" href="../css/thegem-widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-new-css-css" href="../css/thegem-new-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="perevazka-css-css-css" href="../css/thegem-perevazka-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-google-fonts-css" href="../css/css_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-custom-css" href="../css/custom-XjpcS68H.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="../css/js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-additional-blog-1-css" href="../css/thegem-additional-blog-1.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-hovers-css" href="../css/thegem-hovers.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-lazy-loading-animations-css" href="../css/thegem-lazy-loading-animations.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-fancybox-css" href="../css/jquery.fancybox.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="thegem-vc_elements-css" href="../css/thegem-vc_elements.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="../css/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="../css/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="../css/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+</style>
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type="text/javascript">
+/* <![CDATA[ */
+var gemSettings = {"isTouch":"","forcedLasyDisabled":"","tabletPortrait":"1","tabletLandscape":"","topAreaMobileDisable":"","parallaxDisabled":"","fillTopArea":"","themePath":"https:\/\/bestwebcreator.com\/wp-content\/themes\/thegem","rootUrl":"https:\/\/bestwebcreator.com","mobileEffectsEnabled":"","isRTL":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/thegem-settings-init.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.8.1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/greensock.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../js/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript" src="../js/layerslider.transitions.js"></script>
+<script type="text/javascript" src="../js/thegem-fullwidth-loader.js"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://bestwebcreator.com/wp-content/themes/thegem/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/bestwebcreator.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/frontend.min.js"></script>
+<script type="text/javascript" src="../js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var zilla_likes = {"ajaxurl":"https:\/\/bestwebcreator.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/zilla-likes.js"></script>
+<meta name="generator" content="Powered by LayerSlider 6.8.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel="https://api.w.org/" href="https://bestwebcreator.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bestwebcreator.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bestwebcreator.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.0.4">
+		<!-- Start of StatCounter Code -->
+		<script>
+			<!--
+			var sc_project=11921154;
+			var sc_security="6c07f98b";
+						var scJsHost = (("https:" == document.location.protocol) ?
+				"https://secure." : "http://www.");
+			//-->
+			
+document.write("<sc"+"ript src='" +scJsHost +"statcounter.com/counter/counter.js'></"+"script>");		</script>
+				<noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/"><img class="statcounter" src="../0" alt="web analytics"></a></div></noscript>
+		<!-- End of StatCounter Code -->
+		<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//bestwebcreator.com/?wordfence_lh=1&hid=A65B43E4B435E2DE277CF8D987A921C6');
+</script>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://bestwebcreator.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.4.8.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<link rel="icon" href="favicon_1.png" sizes="32x32">
+<link rel="icon" href="favicon_1.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="favicon_1.png">
+<meta name="msapplication-TileImage" content="https://bestwebcreator.com/wp-content/uploads/2018/12/favicon.png">
+
+<!-- BEGIN ExactMetrics v5.3.7 Global Site Tag - https://exactmetrics.com/ -->
+<script async src="../js_1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-106310707-1', {
+	'allow_display_features': false, 
+	'anonymize_ip': true
+  });
+
+  if (window.performance) {
+    var timeSincePageLoad = Math.round(performance.now());
+    gtag('event', 'timing_complete', {
+      'name': 'load',
+      'value': timeSincePageLoad,
+      'event_category': 'JS Dependencies'
+    });
+  }
+</script>
+<!-- END ExactMetrics Global Site Tag -->
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
+		<style type="text/css" id="wp-custom-css">
+			span.statcounter {
+	    display: none;
+}		</style>
+	<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+
+
+	<!-- Global site tag (gtag.js) - Google Ads: 765794681 -->
+<script async src="../js_2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-765794681');
+</script>
+
+
+<!-- Event snippet for bestwebcreator conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-765794681/Ch9vCMnhsJQBEPmylO0C',
+      'value': 1.0,
+      'currency': 'INR',
+      'transaction_id': ''
+  });
+</script>
+
+</head>
+
+
+
+
+
+
+<body data-rsssl="1" class="error404 wpb-js-composer js-comp-ver-5.6 vc_responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="page" class="layout-fullwidth header-style-3">
+
+
+
+	
+		<a href="#page" class="scroll-top-button"></a>
+
+	
+
+
+	
+
+
+		
+			<div id="top-area" class="top-area top-area-style-default top-area-alignment-left">
+	<div class="container">
+		<div class="top-area-items inline-inside">
+							<div class="top-area-block top-area-contacts"><div class="gem-contacts inline-inside"><div class="gem-contacts-item gem-contacts-address">f10,Ridham Residency, Utran Road, Amroli, Surat, Gujarat</div></div></div>
+										<div class="top-area-block top-area-socials socials-colored-hover">	<div class="socials inline-inside">
+									<a class="socials-item" href="#" target="_blank" title="facebook"><i class="socials-item-icon facebook "></i></a>
+												<a class="socials-item" href="#" target="_blank" title="linkedin"><i class="socials-item-icon linkedin "></i></a>
+												<a class="socials-item" href="#" target="_blank" title="twitter"><i class="socials-item-icon twitter "></i></a>
+												<a class="socials-item" href="#" target="_blank" title="instagram"><i class="socials-item-icon instagram "></i></a>
+												<a class="socials-item" href="#" target="_blank" title="pinterest"><i class="socials-item-icon pinterest "></i></a>
+												<a class="socials-item" href="#" target="_blank" title="googleplus"><i class="socials-item-icon googleplus "></i></a>
+																																
+	</div>
+</div>
+										<div class="top-area-block top-area-menu">
+											<nav id="top-area-menu">
+							<ul id="top-area-navigation" class="nav-menu styled inline-inside"><li id="menu-item-24426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24426"><a href="#">Home</a></li>
+<li id="menu-item-24427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24427"><a href="#">Contact Us</a></li>
+<li id="menu-item-24428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24428"><a href="#">Sign In</a></li>
+<li id="menu-item-24429" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24429"><a href="#">Add More</a></li>
+</ul>						</nav>
+																<div class="top-area-button"><div class="gem-button-container gem-button-position-inline"><a class="gem-button gem-button-size-tiny gem-button-style-flat gem-button-text-weight-normal gem-button-no-uppercase" style="border-radius: 3px;" onmouseleave onmouseenter href="#" target="_self">Join Now</a></div> </div>
+									</div>
+					</div>
+	</div>
+</div>
+		
+
+
+		<div id="site-header-wrapper" class=" ">
+
+
+
+			
+
+
+			
+
+
+			<header id="site-header" class="site-header animated-header mobile-menu-layout-default" role="banner">
+
+				
+				
+
+
+				
+				<div class="container">
+
+					<div class="header-main logo-position-left header-layout-default header-style-3">
+
+						
+							<div class="site-title">
+
+								<div class="site-logo" style="width:200px;">
+	<a href="https://bestwebcreator.com/" rel="home">
+					<span class="logo"><img src="logo_6bb69e8624c5d0cacd42ecda9da95334_1x.png" srcset="logo_6bb69e8624c5d0cacd42ecda9da95334_1x.png 1x, logo_6bb69e8624c5d0cacd42ecda9da95334_2x.png 2x, logo_6bb69e8624c5d0cacd42ecda9da95334_3x.png 3x" alt="Best Web Creator" style="width:200px;" class="default"><img src="logo_6bb69e8624c5d0cacd42ecda9da95334_1x.png" srcset="logo_6bb69e8624c5d0cacd42ecda9da95334_1x.png 1x, logo_6bb69e8624c5d0cacd42ecda9da95334_2x.png 2x, logo_6bb69e8624c5d0cacd42ecda9da95334_3x.png 3x" alt="Best Web Creator" style="width:140px;" class="small"></span>
+			</a>
 </div>
 
-          </div>
+							</div>
 
-        <a class="HeaderMenu-link no-underline mr-3" href="/login?return_to=%2Fjquery%2Fjquery-ui%2Fblob%2Fmaster%2Fthemes%2Fbase%2Fimages%2Fui-icons_444444_256x240.png" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign&nbsp;in</a>
-          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign&nbsp;up</a>
-      </div>
-    </div>
-  </div>
-</header>
+							
+								
+									<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 
-  </div>
+										<button class="menu-toggle dl-trigger">Primary Menu<span class="menu-line-1"></span><span class="menu-line-2"></span><span class="menu-line-3"></span></button>
+										<ul id="primary-menu" class="nav-menu styled no-responsive dl-menu"><li id="menu-item-24699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-24699 megamenu-first-element"><a href="https://bestwebcreator.com/">Home</a></li>
+<li id="menu-item-24701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24701 megamenu-first-element"><a href="https://bestwebcreator.com/about-us/">About Us</a></li>
+<li id="menu-item-24702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24702 megamenu-first-element"><a href="https://bestwebcreator.com/services/">Services</a></li>
+<li id="menu-item-24839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24839 megamenu-first-element"><a href="https://bestwebcreator.com/projects/">Projects</a></li>
+<li id="menu-item-24708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24708 megamenu-first-element"><a href="https://bestwebcreator.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-search"><a href="#"></a><div class="minisearch"><form role="search" id="searchform" class="sf" action="https://bestwebcreator.com/" method="GET"><input id="searchform-input" class="sf-input" type="text" placeholder="Search..." name="s"><span class="sf-submit-icon"></span><input id="searchform-submit" class="sf-submit" type="submit" value></form></div></li></ul>
+										
+									</nav>
 
-  <div id="start-of-content" class="show-on-focus"></div>
+								
+							
+						
+					</div>
 
-    <div id="js-flash-container">
+				</div>
 
+				
+			</header><!-- #site-header -->
+
+			
+		</div><!-- #site-header-wrapper -->
+
+
+
+	
+
+
+	<div id="main" class="site-main">
+
+
+<div id="main-content" class="main-content">
+
+<div id="page-title" class="page-title-block page-title-alignment-center page-title-style-1 " style><div class="container"><div class="page-title-title" style><h1 style>  Page not found</h1></div></div><div class="breadcrumbs-container"><div class="container"><div class="breadcrumbs"><span><a href="https://bestwebcreator.com/" itemprop="url"><span itemprop="title">Home</span></a></span> <span class="divider"><span class="bc-devider"></span></span> <span class="current">404</span></div><!-- .breadcrumbs --></div></div></div>
+<div class="block-content">
+	<div class="container">
+		<div class="entry-content page-content content-none">
+			<p>It looks like nothing was found at this location. Maybe try a search?</p>
+			<form role="search" method="get" class="searchform" action="https://bestwebcreator.com/">
+	<table><tr>
+		<td><input type="text" value name="s" placeholder="Search..."></td>
+		<td><div class="gem-button-container gem-button-position-inline searchform-submit"><button class="gem-button gem-button-size-medium gem-button-style-flat gem-button-text-weight-normal" style="border-radius: 3px;" onmouseleave onmouseenter type="submit" value="Search">Search</button></div> </td>
+	</tr></table>
+</form>
+		</div><!-- .entry-content -->
+	</div>
 </div>
 
-
-
-  <div role="main" class="application-main " data-commit-hovercards-enabled>
-        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
-    <div id="js-repo-pjax-container" data-pjax-container >
-      
-
-
-  
-
-
-  
-
-
-
-
-  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
-    <div class="repohead-details-container clearfix container">
-
-      <ul class="pagehead-actions">
-  <li>
-      <a href="/login?return_to=%2Fjquery%2Fjquery-ui"
-    class="btn btn-sm btn-with-count tooltipped tooltipped-s"
-    aria-label="You must be signed in to watch a repository" rel="nofollow">
-    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
-    Watch
-  </a>
-  <a class="social-count" href="/jquery/jquery-ui/watchers"
-     aria-label="699 users are watching this repository">
-    699
-  </a>
-
-  </li>
-
-  <li>
-        <a href="/login?return_to=%2Fjquery%2Fjquery-ui"
-      class="btn btn-sm btn-with-count tooltipped tooltipped-s"
-      aria-label="You must be signed in to star a repository" rel="nofollow">
-      <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
-      Star
-    </a>
-
-    <a class="social-count js-social-count" href="/jquery/jquery-ui/stargazers"
-      aria-label="10599 users starred this repository">
-      10,599
-    </a>
-
-  </li>
-
-  <li>
-      <a href="/login?return_to=%2Fjquery%2Fjquery-ui"
-        class="btn btn-sm btn-with-count tooltipped tooltipped-s"
-        aria-label="You must be signed in to fork a repository" rel="nofollow">
-        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-        Fork
-      </a>
-
-    <a href="/jquery/jquery-ui/network/members" class="social-count"
-       aria-label="4951 users forked this repository">
-      4,951
-    </a>
-  </li>
-</ul>
-
-      <h1 class="public ">
-  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/jquery/hovercard" href="/jquery">jquery</a></span><!--
---><span class="path-divider">/</span><!--
---><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/jquery/jquery-ui">jquery-ui</a></strong>
-
-</h1>
-
-    </div>
-    
-<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
-     itemscope
-     itemtype="http://schema.org/BreadcrumbList"
-    aria-label="Repository"
-     data-pjax="#js-repo-pjax-container">
-
-  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /jquery/jquery-ui" href="/jquery/jquery-ui">
-      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
-      <span itemprop="name">Code</span>
-      <meta itemprop="position" content="1">
-</a>  </span>
-
-
-  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /jquery/jquery-ui/pulls" href="/jquery/jquery-ui/pulls">
-      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-      <span itemprop="name">Pull requests</span>
-      <span class="Counter">40</span>
-      <meta itemprop="position" content="3">
-</a>  </span>
-
-
-    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /jquery/jquery-ui/projects" href="/jquery/jquery-ui/projects">
-      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-      Projects
-      <span class="Counter" >0</span>
-</a>
-
-
-    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security people /jquery/jquery-ui/pulse" href="/jquery/jquery-ui/pulse">
-      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
-      Insights
-</a>
-
-</nav>
-
-
-  </div>
-
-<div class="container new-discussion-timeline experiment-repo-nav  ">
-  <div class="repository-content ">
-
-    
-    
-
-
-
-  
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/jquery/jquery-ui/blob/74f8a0ac952f6f45f773312292baef1c26d81300/themes/base/images/ui-icons_444444_256x240.png">Permalink</a>
-
-    <!-- blob contrib key: blob_contributors:v21:129b00a2ddc78e72a1ffe2409691cad3 -->
-
-        <div class="signup-prompt-bg rounded-1">
-      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
-        <div class="position-relative">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="jJca+wGJ2xz1oYicfC30mF/xFcmlxtxJpVuQbve2utsotiVMtnFg1cazEhEk36MdaoLm2nzPbGEVlCp9bpsq3A==" />
-            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
-              Dismiss
-            </button>
-</form>          <h3 class="pt-2">Join GitHub today</h3>
-          <p class="col-6 mx-auto">GitHub is home to over 28 million developers working together to host and review code, manage projects, and build software together.</p>
-          <a class="btn btn-primary" href="/join?source=prompt-blob-show" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="file-navigation">
-      
-<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left js-load-contents"
-  data-contents-url="/jquery/jquery-ui/ref-list/master/themes/base/images/ui-icons_444444_256x240.png?source_action=show&amp;source_controller=blob">
-  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
-    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
-    <i>Branch:</i>
-    <span class="js-select-button css-truncate-target">master</span>
-  </button>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-    <div class="select-menu-modal">
-      <div class="js-select-menu-deferred-content"></div>
-      <div class="select-menu-loading-overlay anim-pulse">
-        <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <div class="BtnGroup float-right">
-        <a href="/jquery/jquery-ui/find/master"
-              class="js-pjax-capture-input btn btn-sm BtnGroup-item"
-              data-pjax
-              data-hotkey="t">
-          Find file
-        </a>
-        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
-          Copy path
-        </clipboard-copy>
-      </div>
-      <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/jquery/jquery-ui"><span>jquery-ui</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/jquery/jquery-ui/tree/master/themes"><span>themes</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/jquery/jquery-ui/tree/master/themes/base"><span>base</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/jquery/jquery-ui/tree/master/themes/base/images"><span>images</span></a></span><span class="separator">/</span><strong class="final-path">ui-icons_444444_256x240.png</strong>
-      </div>
-    </div>
-
-
-    
-  <div class="commit-tease">
-      <span class="float-right">
-        <a class="commit-tease-sha" href="/jquery/jquery-ui/commit/cc37fe76aac4a09c37de83178e2c818c4400dff6" data-pjax>
-          cc37fe7
-        </a>
-        <relative-time datetime="2016-11-29T14:42:36Z">Nov 29, 2016</relative-time>
-      </span>
-      <div>
-        <a rel="contributor" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=524783" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/joliss"><img class="avatar" src="https://avatars2.githubusercontent.com/u/524783?s=40&amp;v=4" width="20" height="20" alt="@joliss" /></a>
-        <a class="user-mention" rel="contributor" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=524783" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/joliss">joliss</a>
-          <a data-pjax="true" title="Themes: Optimize PNG files with zopflipng
-
-Closes gh-1772" class="message" href="/jquery/jquery-ui/commit/cc37fe76aac4a09c37de83178e2c818c4400dff6">Themes: Optimize PNG files with zopflipng</a>
-      </div>
-
-    <div class="commit-tease-contributors">
-      
-<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
-  <summary class="btn-link" aria-haspopup="dialog"  >
-    
-    <span><strong>5</strong> contributors</span>
-  </summary>
-  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file">
-    <div class="Box-header">
-      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
-        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-      </button>
-      <h3 class="Box-title">Users who have contributed to this file</h3>
-    </div>
-    
-        <ul class="list-style-none overflow-auto">
-            <li class="Box-row">
-              <a class="link-gray-dark no-underline" href="/scottgonzalez">
-                <img class="avatar mr-2" alt="" src="https://avatars0.githubusercontent.com/u/141167?s=40&amp;v=4" width="20" height="20" />
-                scottgonzalez
-</a>            </li>
-            <li class="Box-row">
-              <a class="link-gray-dark no-underline" href="/peritpatrio">
-                <img class="avatar mr-2" alt="" src="https://avatars3.githubusercontent.com/u/729565?s=40&amp;v=4" width="20" height="20" />
-                peritpatrio
-</a>            </li>
-            <li class="Box-row">
-              <a class="link-gray-dark no-underline" href="/jaspermdegroot">
-                <img class="avatar mr-2" alt="" src="https://avatars0.githubusercontent.com/u/1296793?s=40&amp;v=4" width="20" height="20" />
-                jaspermdegroot
-</a>            </li>
-            <li class="Box-row">
-              <a class="link-gray-dark no-underline" href="/joliss">
-                <img class="avatar mr-2" alt="" src="https://avatars2.githubusercontent.com/u/524783?s=40&amp;v=4" width="20" height="20" />
-                joliss
-</a>            </li>
-            <li class="Box-row">
-              <a class="link-gray-dark no-underline" href="/PeterDaveHello">
-                <img class="avatar mr-2" alt="" src="https://avatars3.githubusercontent.com/u/3691490?s=40&amp;v=4" width="20" height="20" />
-                PeterDaveHello
-</a>            </li>
-        </ul>
-
-  </details-dialog>
-</details>
-          <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=141167" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png?author=scottgonzalez">
-      <img class="avatar" src="https://avatars0.githubusercontent.com/u/141167?s=40&amp;v=4" width="20" height="20" alt="@scottgonzalez" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=729565" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png?author=peritpatrio">
-      <img class="avatar" src="https://avatars3.githubusercontent.com/u/729565?s=40&amp;v=4" width="20" height="20" alt="@peritpatrio" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=1296793" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png?author=jaspermdegroot">
-      <img class="avatar" src="https://avatars0.githubusercontent.com/u/1296793?s=40&amp;v=4" width="20" height="20" alt="@jaspermdegroot" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=524783" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png?author=joliss">
-      <img class="avatar" src="https://avatars2.githubusercontent.com/u/524783?s=40&amp;v=4" width="20" height="20" alt="@joliss" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=3691490" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png?author=PeterDaveHello">
-      <img class="avatar" src="https://avatars3.githubusercontent.com/u/3691490?s=40&amp;v=4" width="20" height="20" alt="@PeterDaveHello" /> 
-</a>
-
-    </div>
-  </div>
-
-
-
-
-    <div class="file ">
-      
-<div class="file-header">
-
-  <div class="file-actions">
-
-
-    <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/jquery/jquery-ui/raw/master/themes/base/images/ui-icons_444444_256x240.png">Download</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/jquery/jquery-ui/commits/master/themes/base/images/ui-icons_444444_256x240.png">History</a>
-    </div>
-
-        <a class="btn-octicon tooltipped tooltipped-nw"
-           href="https://desktop.github.com"
-           aria-label="Open this file in GitHub Desktop"
-           data-ga-click="Repository, open with desktop, type:windows">
-            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
-        </a>
-
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/jquery/jquery-ui/delete/master/themes/base/images/ui-icons_444444_256x240.png" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="m36jmfBTB/0xjUaMBaKSycxAIJYQ5Fz2gLh88htr02SL3S2kBAGl0racUB1p37IJAEMQ3XoSqpyql42g/AqsIw==" />
-          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
-            aria-label="You must be signed in to make or propose changes" data-disable-with>
-            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
-          </button>
-</form>  </div>
-
-  <div class="file-info">
-    3.19 KB
-  </div>
-</div>
-
-      
-
-  <div itemprop="text" class="blob-wrapper data type-text ">
-      <div class="image">
-          <span class="border-wrap"><img src="/jquery/jquery-ui/blob/master/themes/base/images/ui-icons_444444_256x240.png?raw=true" alt="ui-icons_444444_256x240.png"></span>
-      </div>
-  </div>
-
-    </div>
-
-  
-
-  <details class="details-reset details-overlay details-overlay-dark">
-    <summary data-hotkey="l" aria-label="Jump to line"></summary>
-    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
-        <button type="submit" class="btn" data-close-dialog>Go</button>
-</form>    </details-dialog>
-  </details>
-
-
-
-  </div>
-  <div class="modal-backdrop js-touch-events"></div>
-</div>
-
-    </div>
-  </div>
-
-  </div>
-
-        
-<div class="footer container-lg px-3" role="contentinfo">
-  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
-    <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2019 <span title="0.21724s from unicorn-65cb75f89-nqhdt">GitHub</span>, Inc.</li>
-        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
-        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
-        <li class="mr-3"><a href="/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
-        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
-    </ul>
-
-    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
-      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-</a>
-   <ul class="list-style-none d-flex flex-wrap ">
-        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
-        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
-      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-        <li class="mr-3"><a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
-
-    </ul>
-  </div>
-  <div class="d-flex flex-justify-center pb-6">
-    <span class="f6 text-gray-light"></span>
-  </div>
-</div>
-
-
-
-  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
-    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-    </button>
-    You can’t perform that action at this time.
-  </div>
-
-
-    
-    <script crossorigin="anonymous" integrity="sha512-3wgtWW5loG8Clfq/c7EBLsxN//2dHrHnWZYEQJAm/N6xftU0RloC1R1P3VdvqAlaBbARZO962vvmj2aWdc89Mw==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-c2be165e13b944c2a95ecf55c257be15.js"></script>
-    
-    <script crossorigin="anonymous" async="async" integrity="sha512-OVom1EjMVGuAhxgj+IUZGLWX+Y2YCwA5HczPO5EkywA3LpBr+opzeA2g7YZmzT0TR0w94V9UGCvzNux1BO80gw==" type="application/javascript" src="https://github.githubassets.com/assets/github-ff2a16ee220770be00aef7ab3773f297.js"></script>
-    
-    
-    
-  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
-    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-  </div>
-  <div class="facebox" id="facebox" style="display:none;">
-  <div class="facebox-popup">
-    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
-    </div>
-    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-    </button>
-  </div>
-</div>
-
-  <template id="site-details-dialog">
-  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
-    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
-    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
-      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
-        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-      </button>
-      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
-    </details-dialog>
-  </details>
-</template>
-
-  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
-  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
-  </div>
-</div>
-
-<div id="hovercard-aria-description" class="sr-only">
-  Press h to open a hovercard with more details.
-</div>
-
-  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
-
-  </body>
+</div><!-- #main-content -->
+
+
+		</div><!-- #main -->
+		<div id="lazy-loading-point"></div>
+
+														<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="container">
+					
+<div class="row inline-row footer-widget-area" role="complementary">
+	<div id="text-1" class="widget inline-column col-md-3 col-sm-6 col-xs-12 count-4 widget_text">			<div class="textwidget"><img src="webcreator-light.png" alt class="small light">
+<p>We develop websites that ignite your business. We host, launch and promote websites for small to large size Business. We also provide custom web design and WordPress Installation services . We install powerful SEO and social networking plugins.</p></div>
+		</div><div id="text-3" class="widget inline-column col-md-3 col-sm-6 col-xs-12 count-4 widget_text"><h3 class="widget-title">Useful links</h3>			<div class="textwidget"><ul>
+<li><a href="https://bestwebcreator.com/">Home</a></li>
+<li><a href="https://bestwebcreator.com/about-us/">About Us</a></li>
+<li><a href="https://bestwebcreator.com/services/">Services</a></li>
+<li><a href="https://bestwebcreator.com/projects/">Projects</a></li>
+<li><a href="https://bestwebcreator.com/contact-us/">Contact Us</a></li>
+</ul></div>
+		</div><div id="mc4wp_form_widget-2" class="widget inline-column col-md-3 col-sm-6 col-xs-12 count-4 widget_mc4wp_form_widget"><h3 class="widget-title">Newsletter</h3><script>(function() {
+	if (!window.mc4wp) {
+		window.mc4wp = {
+			listeners: [],
+			forms    : {
+				on: function (event, callback) {
+					window.mc4wp.listeners.push({
+						event   : event,
+						callback: callback
+					});
+				}
+			}
+		}
+	}
+})();
+</script><!-- MailChimp for WordPress v4.3.3 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-47" method="post" data-id="47" data-name><div class="mc4wp-form-fields"><p>Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox:</p>
+<p class="mc-form">
+	<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address" required>
+
+	<input id="mc4wp_submit" type="submit" value="&#xe634">
+</p>
+<p class="mc-text small-body"> <span>*</span> Personal data will be encrypted </p></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1559367941"><input type="hidden" name="_mc4wp_form_id" value="47"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin --></div><div id="project_slider-2" class="widget inline-column col-md-3 col-sm-6 col-xs-12 count-4 widget_project_slider"><h3 class="widget-title">Latest Projects</h3><div class="widget-portfolio-carousel-grid carousel-disabled"><div class="widget-portfolio-carousel-slide"><div class="clearfix">			<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/scrivenersaccountancy.png" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="scrivenersaccountancy-thegem-widget-column-1x.png" srcset="scrivenersaccountancy-thegem-widget-column-2x.png 2x" width="80" height="80" alt="scrivenersaccountancy">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/Food-Aroma.png" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="Food-Aroma-thegem-widget-column-1x.png" srcset="Food-Aroma-thegem-widget-column-2x.png 2x" width="80" height="80" alt="Food Aroma">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/AUSTIN-SON-AUTOMOTIVE-REPAIR.jpg" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="AUSTIN-SON-AUTOMOTIVE-REPAIR-thegem-widget-column-1x.jpg" srcset="AUSTIN-SON-AUTOMOTIVE-REPAIR-thegem-widget-column-2x.jpg 2x" width="80" height="80" alt="AUSTIN &#038; SON AUTOMOTIVE REPAIR">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/Erotic-adult-travel.jpg" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="Erotic-adult-travel-thegem-widget-column-1x.jpg" srcset="Erotic-adult-travel-thegem-widget-column-2x.jpg 2x" width="80" height="80" alt="Erotic adult travel">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/US-container-sales.png" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="US-container-sales-thegem-widget-column-1x.png" srcset="US-container-sales-thegem-widget-column-2x.png 2x" width="80" height="80" alt="container sales US">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/Vendors-Destination-Weddingdetails.jpg" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="Vendors-Destination-Weddingdetails-thegem-widget-column-1x.jpg" srcset="Vendors-Destination-Weddingdetails-thegem-widget-column-2x.jpg 2x" width="80" height="80" alt="Vendors Destination Weddingdetails">
+
+			</a>
+						<a style="width: 80px" class="widget-gem-portfolio-item   fancy" href="https://bestwebcreator.com/wp-content/uploads/2016/04/thumbnail_original.jpg" target="_self">
+				<span class="widget-gem-portfolio-item-hover"></span>
+				<img src="thumbnail_original-thegem-widget-column-1x.jpg" srcset="thumbnail_original-thegem-widget-column-2x.jpg 2x" width="80" height="80" alt="Going420">
+
+			</a>
+			</div></div></div></div></div><!-- .footer-widget-area -->
+				</div>
+			</footer><!-- #colophon -->
+			
+			
+			<footer id="footer-nav" class="site-footer">
+				<div class="container"><div class="row">
+
+					<div class="col-md-3 col-md-push-9">
+													<div id="footer-socials"><div class="socials inline-inside socials-colored">
+																														<a href="#" target="_blank" title="facebook" class="socials-item"><i class="socials-item-icon facebook"></i></a>
+																																								<a href="#" target="_blank" title="linkedin" class="socials-item"><i class="socials-item-icon linkedin"></i></a>
+																																								<a href="#" target="_blank" title="twitter" class="socials-item"><i class="socials-item-icon twitter"></i></a>
+																																								<a href="#" target="_blank" title="instagram" class="socials-item"><i class="socials-item-icon instagram"></i></a>
+																																								<a href="#" target="_blank" title="pinterest" class="socials-item"><i class="socials-item-icon pinterest"></i></a>
+																																								<a href="#" target="_blank" title="googleplus" class="socials-item"><i class="socials-item-icon googleplus"></i></a>
+																																																																																																																																		</div></div><!-- #footer-socials -->
+											</div>
+
+					<div class="col-md-6">
+											</div>
+
+					<div class="col-md-3 col-md-pull-9"><div class="footer-site-info">2018 &copy; Copyrights Best Webcreator</div></div>
+
+				</div></div>
+			</footer><!-- #footer-nav -->
+						
+			</div><!-- #page -->
+
+	
+	<script>(function() {function addEventListener(element,event,handler) {
+	if(element.addEventListener) {
+		element.addEventListener(event,handler, false);
+	} else if(element.attachEvent){
+		element.attachEvent('on'+event,handler);
+	}
+}function maybePrefixUrlField() {
+	if(this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if( urlFields && urlFields.length > 0 ) {
+	for( var j=0; j < urlFields.length; j++ ) {
+		addEventListener(urlFields[j],'blur',maybePrefixUrlField);
+	}
+}/* test if browser supports date fields */
+var testInput = document.createElement('input');
+testInput.setAttribute('type', 'date');
+if( testInput.type !== 'date') {
+
+	/* add placeholder & pattern to all date fields */
+	var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+	for(var i=0; i<dateFields.length; i++) {
+		if(!dateFields[i].placeholder) {
+			dateFields[i].placeholder = 'YYYY-MM-DD';
+		}
+		if(!dateFields[i].pattern) {
+			dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+		}
+	}
+}
+
+})();</script><script type="text/javascript" src="../js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thegem_dlmenu_settings = {"backLabel":"Back","showCurrentLabel":"Show this page"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/thegem-menu_init.js"></script>
+<script type="text/javascript" src="../js/svg4everybody.js"></script>
+<script type="text/javascript" src="../js/thegem-form-elements.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="../js/thegem-header.js"></script>
+<script type="text/javascript" src="../js/thegem-lazyLoading.js"></script>
+<script type="text/javascript" src="../js/jquery.transform.js"></script>
+<script type="text/javascript" src="../js/effect.min.js"></script>
+<script type="text/javascript" src="../js/effect-drop.min.js"></script>
+<script type="text/javascript" src="../js/odometer.js"></script>
+<script type="text/javascript" src="../js/thegem-sticky.js"></script>
+<script type="text/javascript" src="../js/functions.js"></script>
+<script type="text/javascript" src="../js/jquery.mousewheel.pack.js"></script>
+<script type="text/javascript" src="../js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="../js/jquery.fancybox-init.js"></script>
+<script type="text/javascript" src="../js/thegem-vc_elements_init.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/bestwebcreator.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/scripts_1.js"></script>
+<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+<script type="text/javascript" src="../js/isotope.min_1.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mc4wp_forms_config = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="../js/forms-api.min.js"></script>
+<!--[if lte IE 9]>
+<script type='text/javascript' src='https://bestwebcreator.com/wp-content/plugins/mailchimp-for-wp/assets/js/third-party/placeholders.min.js?ver=4.3.3'></script>
+<![endif]-->
+</body>
 </html>
-
