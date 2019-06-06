@@ -1,0 +1,13 @@
+
+-- Technical:
+ 	1* :  Laravel full site server render.
+
+ 	2* 
+ 		- Vue SPA(frontend, admin editor).
+ 		- Laravel API: RESTFul API
+-- Feature:
+	- Display Post Content: product, page, gallery, blog
+	- Display Post Content Category: product, blog 
+	- Admin edit Content
+
+
