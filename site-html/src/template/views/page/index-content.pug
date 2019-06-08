@@ -1,6 +1,6 @@
 // START SECTION BANNER
 section.banner_slider.p-0
-  #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
+  #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel',v-shortcode='slide')
     .carousel-inner
       .carousel-item.active.bg_light_orange.background_bg(data-img-src='images/slide_bg_pattern.png')
         .banner_slide_content
@@ -109,7 +109,7 @@ section.pb_20
           h2 MENU
     .row.justify-content-center
       .col-12
-        .product_content
+        .product_content(v-shortcode='product')
           ul.nav.nav-tabs.justify-content-center.animation(data-animation='fadeInUp', data-animation-delay='0.04s', role='tablist')
             li.nav-item
               a#tab1.nav-link.active(data-toggle='tab', href='#tab-1', role='tab', aria-controls='tab-1', aria-selected='true')
@@ -690,7 +690,7 @@ section.bg_black.pb_20
           .heading_s1.text-center.animation(data-animation='fadeInUp', data-animation-delay='0.02s')
             h2 Tin Tức
           .small_divider
-    .row
+    .row(v-shortcode='post')
       .col-lg-8.col-md-8
         .blog_post
           .blog_img
@@ -826,7 +826,7 @@ section.bg_black.pb_20
       .animation(data-animation='fadeInRight', data-animation-delay='0.5s')
         img(data-parallax="{'y': 30, 'smoothness': 20}", src='images/shape36.png', alt='shape36')
 // END SECTION BLOG
-// START SECTION BLOG
+// START SECTION BRANCH
 section.bg_gray
   .container
     .row.justify-content-center
@@ -835,7 +835,7 @@ section.bg_gray
           .heading_s1.text-center.animation(data-animation='fadeInUp', data-animation-delay='0.02s')
             h2 Cửa Hàng
           .small_divider
-    .row.justify-content-center.testimonial_slider.testimonial_style1.carousel_slide3.owl-carousel.owl-theme(data-margin='30', data-loop='true', data-autoplay='true', data-dots='true')
+    .row.justify-content-center.testimonial_slider.testimonial_style1.carousel_slide3.owl-carousel.owl-theme(data-margin='30', data-loop='true', data-autoplay='true', data-dots='true', v-shortcode='branch')
         .blog_post.blog_style1.radius_all_10.animation(data-animation='fadeInUp', data-animation-delay='0.04s')
           .blog_img
             a(href='#')
@@ -1068,5 +1068,5 @@ section.bg_gray
    .ol_shape16
       .animation(data-animation='fadeInRight', data-animation-delay='0.5s')
         img(data-parallax="{'y': 30, 'smoothness': 20}", src='images/testimonial_bg_img1.jpg', alt='shape33')
-// END SECTION BLOG
+// END SECTION BRANCH
 

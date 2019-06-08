@@ -6,7 +6,8 @@ const path = require('path'),
     CopyWebpackPlugin = require('copy-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     CleanWebpackPlugin = require("clean-webpack-plugin"),
-    WriteFilePlugin = require("write-file-webpack-plugin");
+    WriteFilePlugin = require("write-file-webpack-plugin"),
+    VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 var configs = require('./configs');
 var package = require('../../package.json');
@@ -31,7 +32,8 @@ var plugins = _.concat([
         'window.objectFitPolyfill': 'objectFitPolyfill',
     }),
     copyFiles,
-    new WriteFilePlugin()
+    new WriteFilePlugin(),
+    new VueLoaderPlugin(),
 ], configs.pages);
 
 module.exports = {
@@ -44,13 +46,18 @@ module.exports = {
         'app': './src/main.ts',
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', ".scss", '.pug', '.css']
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        },
+        extensions: ['*', '.vue', '.tsx', '.ts', '.js', ".scss", '.pug', '.css'],
     },
     module: {
-        rules: [{
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
+        rules: [
+            { test: /\.vue$/, loader: "vue-loader" },
+            {
+                test: /\.ts$/,
+                loader: "ts-loader",
+                options: { appendTsSuffixTo: [/\.vue$/] }
             }, {
                 test: /\.html$/,
                 loader: 'html-loader'

@@ -1,42 +1,37 @@
 extends ../../layouts/page
 block page-content
- section
-  .container
-    .row
-      .col-lg-4.col-md-6
-        .heading_s2.mb-3.animation(data-animation='fadeInUp', data-animation-delay='0.1s')
-          h3 Get In touch
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.
-        ul.contact_info.contact_info_style2.list_none
-          li
-            span.ti-mobile
-            p +123 456 7890
-          li
-            span.ti-email
-            a(href='mailto:info@yourmail.com') info@yourmail.com
-          li
-            span.ti-location-pin
-            address 123 Street, Old Trafford, NewYork, USA
-      .col-lg-8.col-md-6.mt-4.mt-lg-0
-        .field_form.animation(data-animation='fadeInLeft', data-animation-delay='0.1s')
-          form(method='post', name='enq')
-            .row
-              .form-group.col-lg-6
-                input#first-name.form-control(required='required', placeholder='Enter Name *', name='name', type='text')
-              .form-group.col-lg-6
-                input#email.form-control(required='required', placeholder='Enter Email *', name='email', type='email')
-              .form-group.col-12
-                input#subject.form-control(placeholder='Enter Subject', name='subject', type='text')
-              .form-group.col-lg-12
-                textarea#description.form-control(required='required', placeholder='Message *', name='message', rows='5')
-              .col-lg-12
-                button#submitButton.btn.btn-default(type='submit', title='Submit Your Message!', name='submit', value='Submit') Submit
-              .col-lg-12.text-center
-                #alert-msg.alert-msg.text-center
- .p-0
-   .container-fluid.p-0
-    .row.no-gutters
-      .col-md-12
+  .row
+    .col-lg-4.col-md-6
+      .heading_s2.mb-3.animation(data-animation='fadeInUp', data-animation-delay='0.1s')
+        h3 Get In touch
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.
+      ul.contact_info.contact_info_style2.list_none
+        li
+          span.ti-mobile
+          p +123 456 7890
+        li
+          span.ti-email
+          a(href='mailto:info@yourmail.com') info@yourmail.com
+        li
+          span.ti-location-pin
+          address 123 Street, Old Trafford, NewYork, USA
+    .col-lg-8.col-md-6.mt-4.mt-lg-0
+      .field_form.animation(data-animation='fadeInLeft', data-animation-delay='0.1s')
+        form(method='post', name='enq')
+          .row
+            .form-group.col-lg-6
+              input#first-name.form-control(required='required', placeholder='Enter Name *', name='name', type='text')
+            .form-group.col-lg-6
+              input#email.form-control(required='required', placeholder='Enter Email *', name='email', type='email')
+            .form-group.col-12
+              input#subject.form-control(placeholder='Enter Subject', name='subject', type='text')
+            .form-group.col-lg-12
+              textarea#description.form-control(required='required', placeholder='Message *', name='message', rows='5')
+            .col-lg-12
+              button#submitButton.btn.btn-default(type='submit', title='Submit Your Message!', name='submit', value='Submit') Submit
+            .col-lg-12.text-center
+              #alert-msg.alert-msg.text-center
+    .col-md-12
         .map
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.4712458185345!2d106.72219114731881!3d10.741346892555724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175257e2c96eb2d%3A0xc31b5ab184b5a6b5!2zMzggxJDGsOG7nW5nIHPhu5EgMTAsIELDrG5oIFRodeG6rW4sIFF14bqtbiA3LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1559390720187!5m2!1svi!2s', allowfullscreen='')

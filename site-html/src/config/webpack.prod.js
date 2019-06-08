@@ -13,14 +13,11 @@ module.exports = merge(common, {
         chunkFilename: 'js/[id].[hash:6].min.js',
         path: path.join(__dirname, "../../../docs/"),
     },
-    entry: {
-        'service-worker': './src/script/service-worker/index.ts',
-    },
     mode: 'production',
     devtool: 'source-map',
     watch: false,
     stats: {
-        colors: false,
+        colors: true,
         hash: true,
         timings: true,
         assets: true,
@@ -28,6 +25,7 @@ module.exports = merge(common, {
         chunkModules: true,
         modules: true,
         children: true,
+        errorDetails: true
     },
     optimization: {
         minimizer: [
@@ -53,7 +51,7 @@ module.exports = merge(common, {
         }
     },
     plugins: [
-        
+
         new ExtractTextPlugin('[name].min.css'),
         new webpack.DefinePlugin({
             'process.env': {

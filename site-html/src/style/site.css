@@ -315,11 +315,12 @@ section .heading_s1 h2,
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: #ff7300;
+    text-transform: uppercase;
     /*text-decoration-style: double;*/
 }
 
-.contact_info i+*,
-.contact_info span+* {
+footer .contact_info i+*,
+footer .contact_info span+* {
     color: white;
 }
 
@@ -354,4 +355,8 @@ h5 {
 .bg_black .section-title p,
 .bg_black .heading_s1 h2 {
     color: white;
+}
+
+.product_content .nav-tabs li.nav-item a {
+    text-transform: uppercase;
 }

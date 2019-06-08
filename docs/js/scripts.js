@@ -256,7 +256,7 @@ PAGE JS
             });
         });
 
-        $('.carousel_slide3').each(function() {
+        $('.carousel_slide3_').each(function() {
             var $carousel = $(this);
             $carousel.owlCarousel({
                 loop: $carousel.data("loop"),
@@ -846,46 +846,5 @@ PAGE JS
         });
     });
 
-    $('.widget.menu ul li a').click(function(e) {
-        e.preventDefault();
-        $('.widget.menu ul li a').removeClass('active');
-        $(this).addClass('active');
-        // $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top - 150 }, "500");
-    });
-    // Select all links with hashes
-    $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function(event) {
-            // On-page links
-            if (
-                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-                location.hostname == this.hostname
-            ) {
-                // Figure out element to scroll to
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    event.preventDefault();
-                    var scrollTop = target.offset().top - 150;
-                    $('html, body').animate({
-                        scrollTop: scrollTop
-                    }, 2000, function() {
-                        // Callback after animation
-                        // Must change focus!
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        };
-                    });
-                }
-            }
-        });
+    
 })(jQuery);

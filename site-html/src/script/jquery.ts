@@ -6,6 +6,7 @@ interface JQuery {
     fullHTML(): JQuery;
     scrollToEnd(): JQuery;
     countup(params: any): JQuery;
+    owlCarousel(params: any): JQuery;
 }
 
 namespace JquerySpace {

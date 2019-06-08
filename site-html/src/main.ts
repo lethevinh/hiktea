@@ -1,21 +1,30 @@
-/*require('./script/jquery');
-require('./assets/js/jquery-ui.js');
-require('./assets/js/popper.min.js');
-require('./assets/js/bootstrap.min.js'); 
-require('./assets/js/owl.carousel.min.js'); 
-require('./assets/js/magnific-popup.min.js'); 
-require('./assets/js/jquery.waypoints.min.js'); 
-require('./assets/js/parallax.js'); 
-// require('./assets/js/jquery.dd.min.js');
-require('./assets/js/jquery.countdown.min.js'); 
-require('./assets/js/jquery.counterup.min.js');
-require('./assets/js/jquery.parallax-scroll.js');
-require('./assets/js/jquery.elevatezoom.js');
-require('./assets/js/jquery.fitvids.js');
-require('./assets/js/imagesloaded.pkgd.min.js');
-require('./assets/js/isotope.min.js');
-require('./assets/js/js.cookie.js');
-require('./assets/js/scripts.js');
-console.log(12313)
-*/
 require('./style/site.css');
+import { Page } from './script/page';
+require('./mock/index');
+
+//shortcode
+import branch from './script/components/shortcode/branch.vue';
+import post from './script/components/shortcode/post.vue';
+import product from './script/components/shortcode/product.vue';
+import slide from './script/components/shortcode/slide.vue';
+
+//page
+import pagemenu from './script/components/page/menu.vue';
+import pageblog from './script/components/page/post.vue';
+import pagekhuyenmai from './script/components/page/post.vue';
+import pagetuyendung from './script/components/page/post.vue';
+import pagecuahang from './script/components/page/branch.vue';
+
+
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
+
+var page = new Page({
+    conponents: { branch, post, product, slide },
+    pages: { pagemenu, pageblog, pagekhuyenmai, pagetuyendung, pagecuahang }
+});
+
+$(document).ready(function() {
+    page.init().run();
+});
