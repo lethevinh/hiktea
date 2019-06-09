@@ -25,7 +25,6 @@ class Page {
 
     init() {
         console.log('init');
-
         Vue.filter('formatDate', function(value, format = 'MM/DD/YYYY hh:mm') {
             if (value) {
                 return moment(String(value)).format(format);
@@ -44,30 +43,21 @@ class Page {
                 template,
                 components: $this.config.conponents
             });
-            //new Vue(branch).$mount('[v-shortcode="' + name + '"]');
         });
         // register main page
-        $('.page-content').each(function() {
-
+        $('[v-page-content]').each(function() {
             console.log("page content render");
-
-            var url = window.location;
-            var pageName = url.pathname.replace('.html', '').replace('/', '').replace('-', '');
-            var template = '<page' + pageName + '/>'
+            var el = $(this);
+            var name = el.attr('v-page-content');
+            var template = '<page' + name + '/>'
             new Vue({
-                'el': '[v-content="page"]',
+                'el': '[v-page-content]',
                 template,
                 components: $this.config.pages
             });
         });
         return this;
     }
-
-    run() {
-
-    }
 }
-
-declare var window: any;
 
 export { Page };

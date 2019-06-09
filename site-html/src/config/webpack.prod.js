@@ -29,29 +29,12 @@ module.exports = merge(common, {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true // set to true if you want JS source maps
-            }),
             new OptimizeCSSAssetsPlugin({})
         ],
         minimize: true,
         runtimeChunk: false,
-        splitChunks: {
-            cacheGroups: {
-                default: false,
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendor_app',
-                    chunks: 'all',
-                    minChunks: 2
-                }
-            }
-        }
     },
     plugins: [
-
         new ExtractTextPlugin('[name].min.css'),
         new webpack.DefinePlugin({
             'process.env': {

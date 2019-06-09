@@ -5,7 +5,7 @@ const merge = require('webpack-merge'),
 const port = process.env.NODE_PORT ? process.env.NODE_PORT : '8080';
 
 module.exports = merge(common, {
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     mode: 'development',
     output: {
         filename: '[name].min.js',

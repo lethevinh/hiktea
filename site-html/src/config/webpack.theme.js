@@ -10,8 +10,6 @@ const extractAppStyle = new ExtractTextPlugin({
 });
 
 module.exports = merge(common, {
-    devtool: 'inline-source-map',
-    mode: 'development',
     output: {
         filename: 'js/[name].min.js',
         path: path.join(__dirname, "../../../theme/"),

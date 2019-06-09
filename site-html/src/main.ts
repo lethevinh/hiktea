@@ -13,18 +13,20 @@ import pagemenu from './script/components/page/menu.vue';
 import pageblog from './script/components/page/post.vue';
 import pagekhuyenmai from './script/components/page/post.vue';
 import pagetuyendung from './script/components/page/post.vue';
-import pagecuahang from './script/components/page/branch.vue';
+import pagebranch from './script/components/page/branch.vue';
 
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-
 var page = new Page({
     conponents: { branch, post, product, slide },
-    pages: { pagemenu, pageblog, pagekhuyenmai, pagetuyendung, pagecuahang }
+    pages: { pagemenu, pageblog, pagekhuyenmai, pagetuyendung, pagebranch }
 });
 
+declare var window: any;
+window.page = page;
+
 $(document).ready(function() {
-    page.init().run();
+    page.init();
 });

@@ -113,7 +113,6 @@ export default {
                 if ($(this).offset().top < fromTop)
                     return this;
             });
-            console.log(cur)
             // Get the id of the current element
             cur = cur[cur.length - 1];
             var id = cur && cur.length ? cur[0].id : "";
