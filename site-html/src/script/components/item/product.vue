@@ -17,9 +17,7 @@
             <div class="product_info">
                 <h6><a :href="product.link">{{product.name}}</a></h6>
                 <p class="price">{{product.price}} Đ</p>
-                <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">
-                    Đặt Ngay
-                </a>
+                <cart-button :product="product"></cart-button>
                 <a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" :href="product.link">
                     Tìm Hiểu
                 </a>
@@ -28,10 +26,10 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
-import $ from 'jquery';
+import cartButton  from './cart-button.vue'
 export default {
-    name: 'productitem',
+    name: 'productItem',
+    components: { cartButton },
     data: function() {
         return {};
     },

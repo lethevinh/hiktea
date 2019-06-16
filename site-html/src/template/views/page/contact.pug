@@ -1,74 +1,35 @@
-extends ../../layouts/full
+extends ../../layouts/page
 block page-content
  .row
-  .col.s12
-    .panel
-      .panel-heading
-        h1.panel-title
-          a.breadcrumb(href='https://www.giasunhantri.net') Trang chủ
-          a.breadcrumb(href='https://www.giasunhantri.net/lien-he-gia-su-nhan-tri.html', title='Gia sư Nhân Trí - Liên hệ') Liên hệ
-      .panel-body(style='padding:5px 10px')
-        p
-          strong
-            span(style='font-size:16px;')
-              span(style='color:#ff0000;') CÔNG TY DỊCH VỤ TƯ VẤN VÀ PHÁT TRIỂN GIÁO DỤC NHÂN TRÍ
-        p
-          strong
-            span(style='font-size:16px;')
-              span(style='color:#0000ff;') LIÊN HỆ TÌM GIA SƯ
-        p
-          span(style='font-size:16px;')
-            span(style='color:#ff0000;')   0932.279.249 - 0707.722.456
-        p
-          strong
-            span(style='font-size:16px;')
-              span(style='color:#0000ff;') LIÊN HỆ LÀM GIA SƯ
-        p
-          span(style='font-size:16px;')
-            span(style='color:#ff0000;')  0932.279.249 - 0707.722.456
-        p
-          strong
-            span(style='font-size:16px;')
-              span(style='color:#0000ff;') LIÊN HỆ BÁO HỦY LỚP
-        p
-          span(style='color:#ff0000;')
-            span(style='font-size:16px;') 0932.279.249 - 0707.722.456
-        p
-          span(style='color:#0000ff;')
-            span(style='font-size:16px;') Website:
-          span(style='color:#ff0000;')
-            span(style='font-size:16px;')  www.giasunhantri.net
-        p
-          span(style='color:#0000ff;')
-            span(style='font-size:16px;') Emaill:
-          span(style='color:#ff0000;')
-            span(style='font-size:16px;')  giasunhantri@gmail.com
-        p
-          span(style='color:#0000ff;')
-            span(style='font-size:16px;') *
-          span(style='color:#ff0000;')
-            span(style='font-size:16px;')
-              u Liên Hệ TPHCM
-              | :
-          span(style='color:#0000ff;')
-            span(style='font-size:16px;') Làng Đại Học, Quận Thủ Đức, Tp Hồ Chí Minh
-        hr
-        p
-          span(style='font-size:16px;')
-            strong
-              span(style='color:#ff0000;') LIÊN HỆ NHẬN LỚP TẠI TPHCM
-        p
-          span(style='font-size:16px;')
-            span(style='color:#0000ff;') ĐC: Làng Đại Học, Quận Thủ Đức, Tp Hồ Chí Minh
-        p
-          span(style='color:#ff0000;')
-            span(style='font-size:16px;') ĐT: 0932.279.249 - 0707.722.456
-        hr
-        p
-        div(style='padding:10px 0px;')
-          p(align='center')
-            strong(style='color: #0000ff; font-size: large;') BẢN ĐỒ LIÊN HỆ
-          p(align='center')
-            a(href='https://www.google.com/maps/place/Gia+S%C6%B0+Th%C4%83ng+Long/@10.7908542,106.6530652,17z/data=!3m1!4b1!4m5!3m4!1s0x31752ecad912e1a1:0x424b10e939eaaeb8!8m2!3d10.7908542!4d106.6552539', target='_blank')
-              img(src='images/logo.png', alt='Bản đồ Gia Sư Nhân Trí', width='100px')
-        .clearfix
+  .col-lg-4.col-md-6
+    .heading_s2.mb-3.animation(data-animation='fadeInUp', data-animation-delay='0.1s')
+      h3 Get In touch
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.
+    ul.contact_info.contact_info_style2.list_none
+      li
+        span.ti-mobile
+        p +123 456 7890
+      li
+        span.ti-email
+        a(href='mailto:info@yourmail.com') info@yourmail.com
+      li
+        span.ti-location-pin
+        address 123 Street, Old Trafford, NewYork, USA
+  .col-lg-8.col-md-6.mt-4.mt-lg-0
+    .field_form.animation(data-animation='fadeInLeft', data-animation-delay='0.1s')
+      form(method='post', name='enq')
+        .row
+          .form-group.col-lg-6
+            input#first-name.form-control(required='required', placeholder='Enter Name *', name='name', type='text')
+          .form-group.col-lg-6
+            input#email.form-control(required='required', placeholder='Enter Email *', name='email', type='email')
+          .form-group.col-12
+            input#subject.form-control(placeholder='Enter Subject', name='subject', type='text')
+          .form-group.col-lg-12
+            textarea#description.form-control(required='required', placeholder='Message *', name='message', rows='5')
+          .col-lg-12
+            button#submitButton.btn.btn-default(type='submit', title='Submit Your Message!', name='submit', value='Submit') Submit
+          .col-lg-12.text-center
+            #alert-msg.alert-msg.text-center
+

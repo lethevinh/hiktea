@@ -360,3 +360,6 @@ h5 {
 .product_content .nav-tabs li.nav-item a {
     text-transform: uppercase;
 }
+.cart_buttons .view-cart, .cart_buttons .checkout {
+    font-size: 14px;
+}

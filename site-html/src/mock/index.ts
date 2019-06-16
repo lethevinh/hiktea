@@ -84,6 +84,16 @@ var slide = {
     'image': "@image()"
 };
 
+var categoryGallery = {
+    'id|+1': 2,
+    'name': '@title(2)',
+    'link': '@url()',
+    'description': '@sentence()',
+    'content': '@paragraph()',
+    'thumbnail': '@IMAGE(350x200)',
+    'images|1-10': [image]
+};
+
 //user
 Mock.mock(/api\/db\/user/, {
     'list|1-10': [user]
@@ -119,12 +129,14 @@ Mock.mock(/api\/db\/post\/([1-9]+)/, {
 Mock.mock(/api\/db\/gallery/, {
     'data': galleries
 });
+Mock.mock(/api\/db\/category\/gallery/, {
+    'list|5-10': [categoryGallery]
+});
 // Slide
 Mock.mock(/api\/db\/slide/, {
     'list|5-10': [slide]
 });
 // About
-
 Mock.mock(/api\/db\/about/, {
     'data': {
         infor: {

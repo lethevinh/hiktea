@@ -29,6 +29,16 @@ module.exports = [{
     template: 'page/blog',
     class: "page-content"
 }, {
+    title: 'Hình ảnh',
+    slug: 'hinh-anh',
+    template: 'page/gallery',
+    class: "page-content"
+}, {
+    title: 'Đặt món',
+    slug: 'dat-mon',
+    template: 'page/booking',
+    class: "page-content"
+}, {
     title: 'Về HIK TEA',
     slug: 've-hik-tea',
     template: 'page/',

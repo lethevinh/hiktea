@@ -1,3 +1,196 @@
-extends ../../layouts/full
+extends ../../layouts/page
 block page-content
- include index-content
+ div(v-page-content="gallery")
+  .row
+    .col-md-12.text-center
+      ul.list_none.grid_filter
+        li
+          a.current(href='#', data-filter='*') all
+        li
+          a(href='#', data-filter='.vegetables') Vegetables
+        li
+          a(href='#', data-filter='.fruits') Fruits
+        li
+          a(href='#', data-filter='.juices') Juices
+        li
+          a(href='#', data-filter='.tea') Tea
+  .row
+    .col-md-12
+      ul.grid_container.gutter_medium.work_col4
+        li.grid-sizer
+        // START GALLERY ITEM
+        li.grid_item.fruits
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small1.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item1.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Grapes
+              .pr_categories
+                a(href='#') Fruits
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.juices
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small2.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item2.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Fresh Juices
+              .pr_categories
+                a(href='#') Juices
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.vegetables
+          .gallery_item
+            .carousel_slide1.owl-carousel.owl-theme.dots_white(data-autoplay='true', data-loop='true', data-animate-in='fadeIn', data-animate-out='fadeOut', data-autoplay-timeout='3000')
+              a.image_link(href='#')
+                img(src='images/gallery_item_small3.jpg', alt='image')
+              a.image_link(href='#')
+                img(src='images/gallery_item_small4.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item3.jpg')
+                  i.ion-images
+                a.image_popup.d-none(href='assets/images/gallery_item4.jpg')
+              h5
+                a(href='#') Fresh vegetables
+              .pr_categories
+                a(href='#') vegetables
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.fruits
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small5.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item5.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Stawberry
+              .pr_categories
+                a(href='#') Fruits
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.fruits
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small6.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item6.jpg')
+                  i.ion-image
+              h5
+                a(href='#') berry
+              .pr_categories
+                a(href='#') Fruits
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.tea
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small7.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item7.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Green Tea
+              .pr_categories
+                a(href='#') Tea
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.juices
+          .gallery_item
+            .carousel_slide1.owl-carousel.owl-theme.dots_white(data-autoplay='true', data-loop='true', data-autoplay-timeout='3000')
+              a.image_link(href='#')
+                img(src='images/gallery_item_small8.jpg', alt='image')
+              a.image_link(href='#')
+                img(src='images/gallery_item_small9.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item8.jpg')
+                  i.ion-images
+                a.image_popup.d-none(href='assets/images/gallery_item9.jpg')
+              h5
+                a(href='#') Fresh Juices
+              .pr_categories
+                a(href='#') Juices
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.fruits
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small10.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item10.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Lemon
+              .pr_categories
+                a(href='#') Fruits
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.vegetables
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small11.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item11.jpg')
+                  i.ion-image
+              h5
+                a(href='#') chilli
+              .pr_categories
+                a(href='#') vegetables
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.tea
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small12.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item12.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Herbal Tea
+              .pr_categories
+                a(href='#') Tea
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.vegetables
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small13.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item13.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Organic vegetables
+              .pr_categories
+                a(href='#') vegetables
+        // END GALLERY ITEM
+        // START GALLERY ITEM
+        li.grid_item.juices
+          .gallery_item
+            a.image_link(href='#')
+              img(src='images/gallery_item_small14.jpg', alt='image')
+            .gallery_content
+              .link_container
+                a.image_popup(href='assets/images/gallery_item14.jpg')
+                  i.ion-image
+              h5
+                a(href='#') Organic Juices
+              .pr_categories
+                a(href='#') Juices
+        // END GALLERY ITEM
