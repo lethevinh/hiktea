@@ -62,8 +62,8 @@ var product = {
         { key: 'bg_orange', value: '-20%' },
         { key: 'bg_orange', value: '-30%' },
     ],
-    'topping|5-10':[topping],
-    'sizes|3':[size],
+    'topping|5-10': [topping],
+    'sizes|3': [size],
 };
 
 var post = {
@@ -129,12 +129,10 @@ Mock.mock(/api\/db\/product\/([1-9]+)/, {
     'data': product
 });
 Mock.mock(/api\/db\/category\/product/, {
-    'list': [
-        {
+    'list': [{
             "id": 118891,
             "name": "Milk tea",
-            "products": [
-                {
+            "products": [{
                     "description": "Lần đầu tiền có mặt tại Việt Nam mà chỉ có ở Hiktea/trà sữa làm từ đường mía nâu Taiwan/trân châu tưoi làm tại quầy/100% thiên nhiên từ bột nếp,bột sắn dây tưoi/không chất bảo quản/Hiktea”thương hiệu đến từ niềm đam mê của cô chủ nhỏ Dược Sĩ/với phưong châm”Drink Heathy Stay Heathy/uống lành để khỏe mạnh”",
                     "price": {
                         "text": "30,000đ",
@@ -142,8 +140,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/353b4306-be27-4b91-a76b-d14b0c64d980.jpg",
                             "height": 120
@@ -169,16 +166,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -225,8 +220,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -471,8 +465,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -555,8 +548,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -636,8 +628,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -687,8 +678,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/ae038702-36f2-4739-aedd-f1d06af3603e.jpg",
                             "height": 120
@@ -714,16 +704,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -770,8 +758,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1016,8 +1003,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1100,8 +1086,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1181,8 +1166,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -1232,8 +1216,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/110c0c41-af06-439d-a066-2f7ab05e4dae.jpg",
                             "height": 120
@@ -1259,16 +1242,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1315,8 +1296,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1561,8 +1541,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1645,8 +1624,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1726,8 +1704,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -1777,8 +1754,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/799f75cb-901d-4d90-8985-886e320da3c8.jpg",
                             "height": 120
@@ -1804,16 +1780,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -1860,8 +1834,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2106,8 +2079,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2190,8 +2162,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2271,8 +2242,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -2322,8 +2292,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/4bb5c8d7-34e0-439a-8ee3-b00a71eee00b.jpg",
                             "height": 120
@@ -2349,16 +2318,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2405,8 +2372,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2651,8 +2617,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2735,8 +2700,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2816,8 +2780,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -2867,8 +2830,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/5702dfa6-d4c4-457b-b0e8-9bb652fcc25f.jpg",
                             "height": 120
@@ -2894,16 +2856,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -2950,8 +2910,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3196,8 +3155,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3280,8 +3238,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3361,8 +3318,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -3412,8 +3368,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/d40c5a17-c6e7-4420-8a56-680257f18883.jpg",
                             "height": 120
@@ -3439,16 +3394,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3495,8 +3448,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3741,8 +3693,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3825,8 +3776,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -3906,8 +3856,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -3957,8 +3906,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/a214893e-aaa1-4cea-895a-6caadbfbaff0.jpg",
                             "height": 120
@@ -3984,16 +3932,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4040,8 +3986,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4286,8 +4231,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4370,8 +4314,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4451,8 +4394,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -4502,8 +4444,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/942fc3e5-1eb4-49b4-934b-77145e543e47.jpg",
                             "height": 120
@@ -4529,16 +4470,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4585,8 +4524,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4831,8 +4769,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4915,8 +4852,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -4996,8 +4932,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -5047,8 +4982,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 27000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/907968bc-27cc-422f-b2d9-d4b3d9c79c7d.jpg",
                             "height": 120
@@ -5074,16 +5008,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -5130,8 +5062,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -5376,8 +5307,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -5460,8 +5390,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -5541,8 +5470,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -5592,8 +5520,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/80a11acf-3992-4f99-b990-20446226e83a.jpg",
                             "height": 120
@@ -5623,8 +5550,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -5674,8 +5600,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/39651781-a676-4917-aa1c-25137eb1a27e.jpg",
                             "height": 120
@@ -5705,8 +5630,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -5753,8 +5677,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 118890,
             "name": "Fresh milk Hik",
-            "products": [
-                {
+            "products": [{
                     "description": "Sữa tươi thanh trùng của ĐalatMilk/trân châu tươi làm tại quầy 100% thiên nhiên từ bột nếp ,bột sắn dây tươi,không chất bảo quản/hoà cùng vị đường mía nâu Taiwan tốt cho sức khỏe mọi nhà/Hikte “người đầu tiên mang món này về Việt Nam",
                     "price": {
                         "text": "32,000đ",
@@ -5762,8 +5685,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 32000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/944b0171-a477-43d9-a556-124655b66ed0.jpg",
                             "height": 120
@@ -5789,16 +5711,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -5845,8 +5765,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6091,8 +6010,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6175,8 +6093,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6256,8 +6173,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -6307,8 +6223,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 29000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/509a1426-490c-4cca-9925-28e70dfe8fb6.jpg",
                             "height": 120
@@ -6334,16 +6249,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6390,8 +6303,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6636,8 +6548,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6702,8 +6613,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6783,8 +6693,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -6834,8 +6743,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 29000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/f99ed0cd-cb0a-4afe-8746-37c3bfc08b70.jpg",
                             "height": 120
@@ -6861,16 +6769,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -6917,8 +6823,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7163,8 +7068,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7229,8 +7133,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7310,8 +7213,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -7361,8 +7263,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 29000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/d4c72e4f-8555-4821-9654-254f1dfe4f1f.jpg",
                             "height": 120
@@ -7388,16 +7289,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7444,8 +7343,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7690,8 +7588,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7756,8 +7653,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7837,8 +7733,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -7888,8 +7783,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 29000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/28d110b6-e738-466a-ab41-cfcecb04130c.jpg",
                             "height": 120
@@ -7915,16 +7809,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -7971,8 +7863,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8217,8 +8108,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8301,8 +8191,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8382,8 +8271,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -8433,8 +8321,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 29000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/4d32cdaa-1a90-4f87-9803-598738bc9ec1.jpg",
                             "height": 120
@@ -8460,16 +8347,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": true,
                             "id": 11701,
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Size M",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8516,8 +8401,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8762,8 +8646,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8828,8 +8711,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -8909,8 +8791,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -8957,8 +8838,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 118886,
             "name": "Fruit tea",
-            "products": [
-                {
+            "products": [{
                     "description": "Được làm từ bí quyết gia truyền của người Dược Sĩ yêu trà/thanh lọc cơ thể/dễ ngủ/mát gan/tốt cho tiêu hoá/đẹp da/giảm cân/chiết xuất từ 100% thiên nhiên/Hikte”thương hiệu được xây dựng từ niềm đam mê của cô chủ nhỏ Dược Sĩ/với phương châm”Drink Heathy Stay Heathy/uống lành mạnh để khỏe mạnh”",
                     "price": {
                         "text": "35,000đ",
@@ -8966,8 +8846,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/5c661ec0-9689-4a6d-918e-4349d845eeae.jpg",
                             "height": 120
@@ -8993,16 +8872,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -9247,8 +9124,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -9331,8 +9207,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -9412,8 +9287,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -9463,8 +9337,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/0b080844-2b7f-4c74-b9f1-30462d4ba5e8.jpg",
                             "height": 120
@@ -9490,43 +9363,38 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
-                            "ntop": "",
-                            "mandatory": false,
-                            "id": 11374,
-                            "option_items": {
-                                "min_select": 0,
-                                "max_select": 0,
-                                "items": [
-                                    {
-                                        "name": "Trân châu tươi khoai môn",
-                                        "weight": 1,
-                                        "ntop_price": {
-                                            "text": "0đ",
-                                            "value": 0,
-                                            "unit": "đ"
-                                        },
-                                        "max_quantity": 1,
-                                        "id": 299786,
-                                        "is_default": false,
-                                        "top_order": 0,
-                                        "price": {
-                                            "text": "5,000đ",
-                                            "value": 5000,
-                                            "unit": "đ"
-                                        }
-                                    }
-                                ]
-                            },
-                            "name": "Thêm topping"
-                        }
-                    ],
+                    "options": [{
+                        "ntop": "",
+                        "mandatory": false,
+                        "id": 11374,
+                        "option_items": {
+                            "min_select": 0,
+                            "max_select": 0,
+                            "items": [{
+                                "name": "Trân châu tươi khoai môn",
+                                "weight": 1,
+                                "ntop_price": {
+                                    "text": "0đ",
+                                    "value": 0,
+                                    "unit": "đ"
+                                },
+                                "max_quantity": 1,
+                                "id": 299786,
+                                "is_default": false,
+                                "top_order": 0,
+                                "price": {
+                                    "text": "5,000đ",
+                                    "value": 5000,
+                                    "unit": "đ"
+                                }
+                            }]
+                        },
+                        "name": "Thêm topping"
+                    }],
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -9576,8 +9444,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/f93b038c-1f76-4657-b9fc-f29b41ce1b34.jpg",
                             "height": 120
@@ -9603,43 +9470,38 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
-                            "ntop": "",
-                            "mandatory": false,
-                            "id": 11374,
-                            "option_items": {
-                                "min_select": 0,
-                                "max_select": 0,
-                                "items": [
-                                    {
-                                        "name": "Trân châu tươi khoai môn",
-                                        "weight": 1,
-                                        "ntop_price": {
-                                            "text": "0đ",
-                                            "value": 0,
-                                            "unit": "đ"
-                                        },
-                                        "max_quantity": 1,
-                                        "id": 299786,
-                                        "is_default": false,
-                                        "top_order": 0,
-                                        "price": {
-                                            "text": "5,000đ",
-                                            "value": 5000,
-                                            "unit": "đ"
-                                        }
-                                    }
-                                ]
-                            },
-                            "name": "Thêm topping"
-                        }
-                    ],
+                    "options": [{
+                        "ntop": "",
+                        "mandatory": false,
+                        "id": 11374,
+                        "option_items": {
+                            "min_select": 0,
+                            "max_select": 0,
+                            "items": [{
+                                "name": "Trân châu tươi khoai môn",
+                                "weight": 1,
+                                "ntop_price": {
+                                    "text": "0đ",
+                                    "value": 0,
+                                    "unit": "đ"
+                                },
+                                "max_quantity": 1,
+                                "id": 299786,
+                                "is_default": false,
+                                "top_order": 0,
+                                "price": {
+                                    "text": "5,000đ",
+                                    "value": 5000,
+                                    "unit": "đ"
+                                }
+                            }]
+                        },
+                        "name": "Thêm topping"
+                    }],
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -9689,8 +9551,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/e119d4a5-930a-45aa-b4ed-043ecf64c2d4.jpg",
                             "height": 120
@@ -9716,16 +9577,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -9970,8 +9829,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10054,8 +9912,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10135,8 +9992,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -10186,8 +10042,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/33e2a921-945c-4bfc-8dc1-cab086e1438b.jpg",
                             "height": 120
@@ -10213,16 +10068,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10467,8 +10320,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10551,8 +10403,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10632,8 +10483,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -10683,8 +10533,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/20171124172940-rubi-red-grapefruit-tea-buoi-hong-tuoi.jpg",
                             "height": 120
@@ -10710,16 +10559,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -10964,8 +10811,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11048,8 +10894,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11129,8 +10974,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -11180,8 +11024,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/201811017310-tra-nhiet-doi.jpg",
                             "height": 120
@@ -11207,16 +11050,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11461,8 +11302,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11545,8 +11385,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11626,8 +11465,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -11677,8 +11515,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/661cf011-88bb-4453-8f08-008a3abecb4d.jpg",
                             "height": 120
@@ -11704,16 +11541,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -11958,8 +11793,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -12042,8 +11876,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -12123,8 +11956,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -12174,8 +12006,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/633a8960-8066-4a66-949f-13ce13de1e8a.jpg",
                             "height": 120
@@ -12201,43 +12032,38 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
-                            "ntop": "",
-                            "mandatory": false,
-                            "id": 11374,
-                            "option_items": {
-                                "min_select": 0,
-                                "max_select": 0,
-                                "items": [
-                                    {
-                                        "name": "Trân châu tươi khoai môn",
-                                        "weight": 1,
-                                        "ntop_price": {
-                                            "text": "0đ",
-                                            "value": 0,
-                                            "unit": "đ"
-                                        },
-                                        "max_quantity": 1,
-                                        "id": 299786,
-                                        "is_default": false,
-                                        "top_order": 0,
-                                        "price": {
-                                            "text": "5,000đ",
-                                            "value": 5000,
-                                            "unit": "đ"
-                                        }
-                                    }
-                                ]
-                            },
-                            "name": "Thêm topping"
-                        }
-                    ],
+                    "options": [{
+                        "ntop": "",
+                        "mandatory": false,
+                        "id": 11374,
+                        "option_items": {
+                            "min_select": 0,
+                            "max_select": 0,
+                            "items": [{
+                                "name": "Trân châu tươi khoai môn",
+                                "weight": 1,
+                                "ntop_price": {
+                                    "text": "0đ",
+                                    "value": 0,
+                                    "unit": "đ"
+                                },
+                                "max_quantity": 1,
+                                "id": 299786,
+                                "is_default": false,
+                                "top_order": 0,
+                                "price": {
+                                    "text": "5,000đ",
+                                    "value": 5000,
+                                    "unit": "đ"
+                                }
+                            }]
+                        },
+                        "name": "Thêm topping"
+                    }],
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -12287,8 +12113,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/992ae4f7-4a7d-46a5-9aa0-fe929c39be3f.jpg",
                             "height": 120
@@ -12314,16 +12139,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -12568,8 +12391,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -12652,8 +12474,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -12733,8 +12554,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -12784,8 +12604,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/19a2322d-7531-4ccd-846e-66e0c11da1d0.jpg",
                             "height": 120
@@ -12811,16 +12630,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13065,8 +12882,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13149,8 +12965,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13230,8 +13045,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -13281,8 +13095,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/1e22680c-3286-4613-ba9e-a48ba4a1a174.jpg",
                             "height": 120
@@ -13308,16 +13121,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13562,8 +13373,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13646,8 +13456,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -13727,8 +13536,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -13778,8 +13586,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/2018227143338-tra-dua-taiwan.jpg",
                             "height": 120
@@ -13805,16 +13612,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14059,8 +13864,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14143,8 +13947,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14224,8 +14027,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -14275,8 +14077,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/302ede70-2716-4651-868a-85d3b3d87da0.jpg",
                             "height": 120
@@ -14302,16 +14103,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14538,8 +14337,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14604,8 +14402,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -14685,8 +14482,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -14736,8 +14532,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 30000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/7429fdb3-ce3d-455e-a670-478bcb40d848.jpg",
                             "height": 120
@@ -14763,16 +14558,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 13,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -15017,8 +14810,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -15101,8 +14893,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -15182,8 +14973,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15233,8 +15023,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -15259,8 +15048,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15310,8 +15098,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 45000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/08c9271d-530e-4fc0-8feb-7023b1788abc.jpg",
                             "height": 120
@@ -15341,8 +15128,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15389,8 +15175,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 330168,
             "name": "Yakult",
-            "products": [
-                {
+            "products": [{
                     "description": "Yakult nhật bản tốt cho hệ tiêu hoá/đào tươi/thanh lọc hệ tiêu hoá tốt/Hikte” thương hiệu đến từ niềm đam mê của cô chủ nhỏ Dược Sĩ/với phương châm”Drink Heathy Stay Heathy/uống lành mạnh để khỏe mạnh”",
                     "price": {
                         "text": "35,000đ",
@@ -15398,8 +15183,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/82974e9b-cf92-445a-b5d3-7a3643948e4d.jpg",
                             "height": 120
@@ -15429,8 +15213,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15480,8 +15263,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/4d2d65d8-4934-4242-812c-07917d317402.jpg",
                             "height": 120
@@ -15511,8 +15293,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15562,8 +15343,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/d1f81b4e-9f47-4021-b8de-151a749c7a87.jpg",
                             "height": 120
@@ -15593,8 +15373,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15641,8 +15420,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 118888,
             "name": "Coffee",
-            "products": [
-                {
+            "products": [{
                     "description": "100% thiên nhiên từ sữa và cacao",
                     "price": {
                         "text": "20,000đ",
@@ -15650,8 +15428,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/9b283214-5f6e-4f49-9a34-08c847517189.jpg",
                             "height": 120
@@ -15681,8 +15458,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15732,8 +15508,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/9bd7eafd-2e7b-44ab-b3aa-8142deb70e02.jpg",
                             "height": 120
@@ -15763,8 +15538,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15814,8 +15588,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 17000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/db69e45a-cf2e-44d1-a8da-9ef466c6b4a0.jpg",
                             "height": 120
@@ -15845,8 +15618,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15896,8 +15668,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/98d3d179-864b-46e0-abd6-8bc8b88c7aa9.jpg",
                             "height": 120
@@ -15927,8 +15698,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -15978,8 +15748,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/ad6d1e71-89eb-4733-8dfa-28721bcd5e21.jpg",
                             "height": 120
@@ -16009,8 +15778,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -16060,8 +15828,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/ff35d465-7beb-433f-b867-7727181792ea.jpg",
                             "height": 120
@@ -16091,8 +15858,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -16142,8 +15908,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 17000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/e336269d-fe32-48f8-9854-6857d44ecdc9.jpg",
                             "height": 120
@@ -16173,8 +15938,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -16224,8 +15988,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/6b758d81-c561-4f38-885e-d9af660f295f.jpg",
                             "height": 120
@@ -16255,8 +16018,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -16303,8 +16065,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 118887,
             "name": "Tea & foam cheese",
-            "products": [
-                {
+            "products": [{
                     "description": "Matcha Nhật Bản/foam cheese Newzaland theo công thức đặt trưng của Hiktea béo béo,mặn mặn ăn là nhớ  thử là ghiền",
                     "price": {
                         "text": "40,000đ",
@@ -16312,8 +16073,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/9c83902f-a78a-4bfe-94c0-6c4da7189feb.jpg",
                             "height": 120
@@ -16339,16 +16099,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -16593,8 +16351,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -16677,8 +16434,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -16758,8 +16514,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -16809,8 +16564,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/4a3272ac-5ece-4f03-a83f-d3d141967b26.jpg",
                             "height": 120
@@ -16836,16 +16590,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17090,8 +16842,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17174,8 +16925,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17255,8 +17005,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -17306,8 +17055,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/4743704a-911a-4a29-8879-0e527560acb0.jpg",
                             "height": 120
@@ -17333,16 +17081,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17587,8 +17333,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17671,8 +17416,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -17752,8 +17496,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -17803,8 +17546,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/0f3798ac-0dca-46ea-9075-cb0f1d0916b4.jpg",
                             "height": 120
@@ -17830,16 +17572,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18084,8 +17824,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18168,8 +17907,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18249,8 +17987,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -18300,8 +18037,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/e8a15c9b-f5a1-4dd5-b01e-57219b4239b7.jpg",
                             "height": 120
@@ -18327,16 +18063,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18581,8 +18315,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18665,8 +18398,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -18746,8 +18478,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -18797,8 +18528,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/721cfb2c-0212-4d69-9df4-344f75acb850.jpg",
                             "height": 120
@@ -18824,16 +18554,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19078,8 +18806,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19162,8 +18889,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19243,8 +18969,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -19294,8 +19019,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/9c1132f6-78b6-4e0e-a21a-d87d33f746ce.jpg",
                             "height": 120
@@ -19321,16 +19045,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19575,8 +19297,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19659,8 +19380,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -19740,8 +19460,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -19788,8 +19507,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 171265,
             "name": "Fruit & foam cheese",
-            "products": [
-                {
+            "products": [{
                     "description": "Lựu nhập khẩu Israel/Kem phô mai nhập khẩu Newzaland/đẹp da/chống lão hoá/tốt cho hệ tiêu hoá/tim mạch/Hiktea”thương hiệu đến từ niềm đam mê của cô chủ nhỏ Dược Sĩ/với phương châm”Drink Heathy Stay Heathy/uống lành mạnh để khỏe mạnh”",
                     "price": {
                         "text": "40,000đ",
@@ -19797,8 +19515,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 40000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/2018110171821-luu-israel-kem-pho-mai-2.jpg",
                             "height": 120
@@ -19824,16 +19541,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20078,8 +19793,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20162,8 +19876,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20243,8 +19956,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -20294,8 +20006,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 35000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/5a46e2b7-056c-4d85-a0b1-49dc5e260d1d.jpg",
                             "height": 120
@@ -20321,16 +20032,14 @@ Mock.mock(/api\/db\/category\/product/, {
                             "height": 1242
                         }
                     ],
-                    "options": [
-                        {
+                    "options": [{
                             "ntop": "",
                             "mandatory": false,
                             "id": 11374,
                             "option_items": {
                                 "min_select": 0,
                                 "max_select": 5,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "Trân châu tươi khoai môn",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20575,8 +20284,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đường",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20659,8 +20367,7 @@ Mock.mock(/api\/db\/category\/product/, {
                             "option_items": {
                                 "min_select": 1,
                                 "max_select": 1,
-                                "items": [
-                                    {
+                                "items": [{
                                         "name": "70% đá",
                                         "weight": 1,
                                         "ntop_price": {
@@ -20740,8 +20447,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -20788,8 +20494,7 @@ Mock.mock(/api\/db\/category\/product/, {
         {
             "id": 574915,
             "name": "Fast food",
-            "products": [
-                {
+            "products": [{
                     "description": "",
                     "price": {
                         "text": "10,000đ",
@@ -20797,8 +20502,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 10000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/5b58f789-c6ef-4b8e-9713-44a1259351be.jpg",
                             "height": 120
@@ -20828,8 +20532,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -20879,8 +20582,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/7470d617-215a-4b5d-a65b-888332961384.jpg",
                             "height": 120
@@ -20910,8 +20612,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -20961,8 +20662,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 10000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/38e00ecc-3d81-4fbf-9a6d-0cde0ab1e21e.jpg",
                             "height": 120
@@ -20992,8 +20692,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21043,8 +20742,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 15000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21069,8 +20767,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21120,8 +20817,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 65000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/d4927167-0ad2-4a00-a8c7-22d0a234759e.jpg",
                             "height": 120
@@ -21151,8 +20847,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21202,8 +20897,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 69000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21228,8 +20922,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21279,8 +20972,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 15000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/302d96cc-bf67-4013-abaa-4dd153f9d7f6.jpg",
                             "height": 120
@@ -21310,8 +21002,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21361,8 +21052,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/0d3c2e2a-bac4-4b2a-9f1f-02432e851e7a.jpg",
                             "height": 120
@@ -21392,8 +21082,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21443,8 +21132,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 25000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/74b4c7c6-2550-45a1-bd94-f97809494f2c.jpg",
                             "height": 120
@@ -21474,8 +21162,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21525,8 +21212,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 20000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21551,8 +21237,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21602,8 +21287,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 60000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21628,8 +21312,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21679,8 +21362,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 15000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21705,8 +21387,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21756,8 +21437,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 65000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21782,8 +21462,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21833,8 +21512,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 55000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/default/s120x120/deli-dish-no-image.png",
                             "height": 120
@@ -21859,8 +21537,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21910,8 +21587,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 25000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/50ded81a-e27f-40b4-ab21-eb769d39171b.jpg",
                             "height": 120
@@ -21941,8 +21617,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -21992,8 +21667,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 10000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/2d7941d6-f2a7-4ce9-87d1-988e908a335d.jpg",
                             "height": 120
@@ -22023,8 +21697,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
@@ -22074,8 +21747,7 @@ Mock.mock(/api\/db\/category\/product/, {
                         "value": 10000
                     },
                     "properties": [],
-                    "photos": [
-                        {
+                    "photos": [{
                             "width": 120,
                             "value": "https://images.foody.vn/res/g70/699753/s120x120/aefa174c-ce8c-4ba3-8659-826a9a5423e3.jpg",
                             "height": 120
@@ -22105,8 +21777,7 @@ Mock.mock(/api\/db\/category\/product/, {
                     "is_available": true,
                     "time": {
                         "available": [],
-                        "week_days": [
-                            {
+                        "week_days": [{
                                 "start": "00:00",
                                 "week_day": 1,
                                 "end": "23:59"
