@@ -1,25 +1,15 @@
 <template>
     <div class="product_content">
         <ul class="nav nav-tabs justify-content-center animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.04s" role="tablist" style="animation-delay: 0.04s; opacity: 1;">
-            <li class="nav-item">
-                <a class="nav-link active" id="tab1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
-                    <span class="pr_icon1"></span>TẤT CẢ
-                </a>
-            </li>
-            <li v-for='post in posts' class="nav-item">
-                <a class="nav-link" :id="'tab'+post.id" data-toggle="tab" :href="'#tab-'+post.id" role="tab" :aria-controls="'tab-'+post.id" aria-selected="false">
+            <li v-for='(post,index) in posts' class="nav-item">
+                <a :class="index==0?'nav-link  active':'nav-link '" :id="'tab'+post.id" data-toggle="tab" :href="'#tab-'+post.id" role="tab" :aria-controls="'tab-'+post.id" :aria-selected="index==0">
                     <span :class="'pr_icon'+post.id"></span>{{post.name}}
                 </a>
             </li>
         </ul>
         <div class="small_divider clearfix"></div>
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab1">
-                <div class="row animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.05s" style="animation-delay: 0.05s; opacity: 1;">
-                    <productitem v-for="(product, index) in products" :key="index" :product="product" />
-                </div>
-            </div>
-            <div v-for="post in posts" class="tab-pane fade" :id="'tab-'+post.id" role="tabpanel" :aria-labelledby="'tab'+post.id">
+            <div v-for="(post,index) in posts" :class="index==0?'tab-pane fade active show':'tab-pane fade '" :id="'tab-'+post.id" role="tabpanel" :aria-labelledby="'tab'+post.id">
                 <div class="row animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.05s" style="animation-delay: 0.05s; opacity: 1;">
                     <productitem v-for="(product, index) in post.products" :key="index" :product="product" />
                 </div>
@@ -48,8 +38,11 @@ export default {
                 this.posts = categories;
                 let self = this;
                 categories.forEach(function(category, index) {
-                    self.products.push(...category.products);
+                    if (index <= 6) {
+                        self.products.push(...category.products);
+                    }
                 });
+                console.log(this.products)
             });
     },
     updated() {

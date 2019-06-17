@@ -43,8 +43,9 @@ export default {
         axios
             .get('api/db/category/product')
             .then(response => {
-                let categories = response.data.list
+                let categories = response.data.list;
                 this.posts = categories;
+                console.log(categories[1].products[1])
                 let self = this;
                 categories.forEach(function(category, index) {
                     self.posts[index].countproduct = category.products.length;

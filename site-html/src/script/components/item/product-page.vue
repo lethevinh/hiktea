@@ -1,13 +1,11 @@
 <template>
     <div class="col-lg-4 col-sm-6">
         <div class="product">
-            <span :class="'pr_flash '+product.status.key">
-                {{product.status.value}}
-            </span>
+
 
             <div class="product_img">
                 <a href="#">
-                    <img src="images/product_img2.jpg" alt="product_img2">
+                    <img :src="product.photos[0].value" alt="product_img2">
                 </a>
                 <div class="product_action_box">
                     <ul class="list_none pr_action_btn">
@@ -17,7 +15,7 @@
             </div>
             <div class="product_info">
                 <h6><a :href="product.link">{{product.name}}</a></h6>
-                <p class="price">{{product.price}} Đ</p>
+                <p class="price">{{product.price.text}} Đ</p>
                 <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
                 <div class="pr_desc">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
