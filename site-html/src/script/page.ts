@@ -3,11 +3,22 @@ import * as moment from 'moment'
 import http from './api/request'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+import '../style/element-variables.scss'
+import localStorage from './localstorage';
 
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
+locale.use(lang)
+Vue.use(ElementUI);
+// Vue.locale('en', locale)
 Vue.prototype.$http = http;
 import store from './store';
 
+store.subscribe((mutation, state) => {
+    if (mutation.type.indexOf('cart') != -1){
+        localStorage.setItem('store', JSON.stringify(state));
+    }
+});
 class Page {
     name: 'Editor Webaseline Site';
     version: '0.0.1';
@@ -57,7 +68,10 @@ class Page {
                 el: '[v-page-content]',
                 store,
                 template,
-                components: $this.config.pages
+                components: $this.config.pages,
+                beforeCreate() {
+                    this.$store.commit('initialiseStore');
+                }
             });
         });
 
@@ -66,7 +80,13 @@ class Page {
             el: '.cart_wrap',
             template:'<cart/>',
             store,
-            components: $this.config.components
+            components: $this.config.components,
+            beforeCreate() {
+                this.$store.commit('initialiseStore');
+            },
+            beforeMount() {
+                this.$store.commit('initialiseStore');
+            },
         });
 
         // add dialog
@@ -75,7 +95,7 @@ class Page {
             el: '#v-dialog',
             template:'<modal/>',
             store,
-            components: $this.config.components
+            components: $this.config.components,
         });
         return this;
     }

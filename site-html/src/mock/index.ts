@@ -19,6 +19,17 @@ var galleries = {
     'images|1-10': [image]
 };
 
+var topping = {
+    'id|+1': 1,
+    'name': '@title(2)',
+    'price': /\d{2}\.000/,
+};
+var size = {
+    'id|+1': 1,
+    'name': '@title(2)',
+    'price': /\d{2}\.000/,
+};
+
 var branch = {
     'id|+1': 1,
     'name': '@title',
@@ -50,7 +61,9 @@ var product = {
         { key: 'bg_orange', value: '-10%' },
         { key: 'bg_orange', value: '-20%' },
         { key: 'bg_orange', value: '-30%' },
-    ]
+    ],
+    'topping|5-10':[topping],
+    'sizes|3':[size],
 };
 
 var post = {
