@@ -5,10 +5,11 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '../style/element-variables.scss'
 import localStorage from './localstorage';
-
+import buttonAddCart from './components/item/cart-button.vue';
+Vue.component(buttonAddCart.name,buttonAddCart);
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
-locale.use(lang)
+locale.use(lang);
 Vue.use(ElementUI);
 // Vue.locale('en', locale)
 Vue.prototype.$http = http;

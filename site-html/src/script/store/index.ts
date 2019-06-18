@@ -15,8 +15,7 @@ export default new Vuex.Store({
         modal,
         system:{
             mutations:{
-                initialiseStore(state) {
-                    console.log(state)
+                initialiseStore() {
                     let store = this;
                     localStorage.getItem('store')
                         .then(function (value) {
