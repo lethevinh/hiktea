@@ -44,7 +44,6 @@ export default {
         axios
             .get('api/db/category/product')
             .then(response => {
-                console.log(response.data.list)
                 let categories = response.data.list
                 this.posts = categories;
                 let self = this;

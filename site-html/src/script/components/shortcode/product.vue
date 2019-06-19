@@ -42,7 +42,6 @@ export default {
                         self.products.push(...category.products);
                     }
                 });
-                console.log(this.products)
             });
     },
     updated() {

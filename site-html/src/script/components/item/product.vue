@@ -4,7 +4,7 @@
 
             <div class="product_img">
                 <a href="#">
-                    <img :src="product.photos[4].value" alt="product_img2">
+                    <img :src="product.photos[3].value" alt="product_img2">
                 </a>
                 <div class="product_action_box">
                     <ul class="list_none pr_action_btn">

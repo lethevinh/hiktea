@@ -9,13 +9,14 @@ const _products = [
 import request from './request';
 
 export default {
-    getProducts (callback) {
-        request.get('/api/db/products').then(function (response) {
-           // callback(response.data.list);
+    async getProducts (callback) {
+        var categories = await request.get('/api/db/category/product/');
+        var products = [];
+        await categories.data.list.forEach(function (category) {
+            products.push(...category.products)
         });
-        setTimeout(() => callback(_products), 100)
+        callback(products)
     },
-
     buyProducts (products, cb, errorCb) {
         setTimeout(() => {
             // simulate random checkout failure.

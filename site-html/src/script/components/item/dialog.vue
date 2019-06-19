@@ -116,13 +116,16 @@
                 'addProductToCart',
             ]),
             addToCart() {
-                this.addProductToCart({
-                    id: this.product.id,
-                    quantity: this.form.quality,
-                    topping: this.form.topping,
-                    size: this.form.size,
-                    note: this.form.desc
-                });
+                if(this.product.is_available){
+                    this.addProductToCart({
+                        id: this.product.id,
+                        name:this.product.name,
+                        quantity: this.form.quality,
+                        options: this.form.options,
+                        note: this.form.desc,
+                        price:this.totalCart
+                    });
+                }
             },
             changeCheckbox(item, option) {
                 if (this.$refs['checkbox_' + item.id][0].isChecked === false) {

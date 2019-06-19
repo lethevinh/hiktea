@@ -8,10 +8,10 @@
             <ul class="cart_list">
                 <li v-for="product in products" v-if="total">
                     <a class="item_remove" v-on:click="removeProductToCart(product)">
-                        <i class="ion-close"></i>
+                        <i class="el-icon-circle-close"></i>
                     </a>
                     <a href="#">
-                        <img src="images/cart_thamb1.jpg" alt="cart_thumb1">{{product.title}}
+                        <img :src="product.image" alt="cart_thumb1">{{product.name}}
                     </a>
                     <span class="cart_quantity">{{product.quantity}} x
                         <span class="cart_amount">
@@ -31,11 +31,11 @@
                     <span class="cart_amount">{{totalPrice | currency}} <span class="price_symbole">VND</span></span>
                 </p>
                 <p class="cart_buttons">
-                    <button v-on:click="checkout" class="btn btn-default btn-radius view-cart" href="cart.html">
-                        View Cart
+                    <button class="btn btn-default btn-radius view-cart" href="cart.html">
+                        Xem giở hàng
                     </button>
-                    <button class="btn btn-dark btn-radius checkout" href="checkout.html">
-                        Checkout
+                    <button class="btn btn-dark btn-radius checkout" v-on:click="checkout">
+                        Đặt Hàng
                     </button>
                 </p>
             </div>

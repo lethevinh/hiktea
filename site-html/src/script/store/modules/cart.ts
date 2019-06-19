@@ -11,15 +11,17 @@ const state = {
 const getters = {
     cartProducts: (state, getters, rootState) => {
         var products = [];
-        state.items.map(({id, quantity}) => {
+        state.items.map((productCart) => {
             if (rootState.products) {
-                const product = rootState.products.all.find(product => product.id === id);
+                const product = rootState.products.all.find(product => product.id === productCart.id);
                 if (product) {
                     products.push({
                         id: product.id,
-                        title: product.title,
-                        price: product.price,
-                        quantity
+                        name: product.name,
+                        price: productCart.price,
+                        quantity:productCart.quantity,
+                        options:productCart.options,
+                        image:product.photos[3].value
                     });
                 }
             }
@@ -63,20 +65,19 @@ const actions = {
             if (!cartItem) {
                 commit('pushProductToCart', {product})
             } else {
-                commit('incrementItemQuantity', cartItem)
+                commit('incrementItemQuantity', product)
             }
             Message({
-                message: 'Congrats, this is a success message.',
+                message: 'Thêm giỏ hàng thành công.',
                 type: 'success'
             });
+            commit('modal/cartStatus', false, {root: true});
         } else {
             Message({
-                message: 'Congrats, this is a success message.',
+                message: 'Thất bại.',
                 type: 'warning'
             });
         }
-
-        commit('modal/cartStatus', false, {root: true});
 
         // remove 1 item from stock
         // commit('product/decrementProductInventory', { id: product.id }, { root: true })

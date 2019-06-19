@@ -14390,6 +14390,9 @@ h5 {
 
 .cart_buttons .view-cart, .cart_buttons .checkout {
   font-size: 14px; }
+
+.nav-tabs [class*=pr_] {
+  background-position: -118px -175px; }
 .el-pager, .el-table th {
   -moz-user-select: none;
   -ms-user-select: none; }
