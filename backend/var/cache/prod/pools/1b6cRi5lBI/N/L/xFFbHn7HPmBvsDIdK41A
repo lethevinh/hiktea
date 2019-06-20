@@ -1,0 +1,76 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+            clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Greenhouse',
+                    'id',
+                    'code',
+                    'acreage',
+                    'unit',
+                    'harvests',
+                    'pollinates',
+                    'transplants',
+                    'createdBy',
+                    'updatedBy',
+                    'createdAt',
+                    'updatedAt',
+                ],
+                'attributesMetadata' => [
+                    [
+                        'id' => $o[1],
+                        'code' => $o[2],
+                        'acreage' => $o[3],
+                        'unit' => $o[4],
+                        'harvests' => $o[5],
+                        'pollinates' => $o[6],
+                        'transplants' => $o[7],
+                        'createdBy' => $o[8],
+                        'updatedBy' => $o[9],
+                        'createdAt' => $o[10],
+                        'updatedAt' => $o[11],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    10 => [
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

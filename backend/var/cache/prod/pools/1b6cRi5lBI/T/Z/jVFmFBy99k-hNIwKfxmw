@@ -1,0 +1,143 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+            clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Sheet',
+                    'id',
+                    'sownAt',
+                    'plantedAt',
+                    'stockSeedReceivedAt',
+                    'stockMaleSeedsCount',
+                    'stockFemaleSeedsCount',
+                    'plantsCount',
+                    'note',
+                    'smallTransplantedAt',
+                    'bigTransplantedAt',
+                    'pollinateStartedAt',
+                    'pollinateEndedAt',
+                    'harvestStartedAt',
+                    'harvestEndedAt',
+                    'progressions',
+                    'assignments',
+                    'createdBy',
+                    'updatedBy',
+                    'createdAt',
+                    'updatedAt',
+                ],
+                'attributesMetadata' => [
+                    [
+                        'id' => $o[1],
+                        'sownAt' => $o[2],
+                        'plantedAt' => $o[3],
+                        'stockSeedReceivedAt' => $o[4],
+                        'stockMaleSeedsCount' => $o[5],
+                        'stockFemaleSeedsCount' => $o[6],
+                        'plantsCount' => $o[7],
+                        'note' => $o[8],
+                        'smallTransplantedAt' => $o[9],
+                        'bigTransplantedAt' => $o[10],
+                        'pollinateStartedAt' => $o[11],
+                        'pollinateEndedAt' => $o[12],
+                        'harvestStartedAt' => $o[13],
+                        'harvestEndedAt' => $o[14],
+                        'progressions' => $o[15],
+                        'assignments' => $o[16],
+                        'createdBy' => $o[17],
+                        'updatedBy' => $o[18],
+                        'createdAt' => $o[19],
+                        'updatedAt' => $o[20],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    19 => [
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

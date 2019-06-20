@@ -1,0 +1,112 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Assignment',
+                    'phase',
+                    3 => 'unit',
+                    5 => 'sheet',
+                ],
+                'defaultGroup' => [
+                    'Assignment',
+                ],
+                'members' => [
+                    [
+                        'phase' => [
+                            $o[1],
+                        ],
+                        'unit' => [
+                            $o[3],
+                        ],
+                        'sheet' => [
+                            $o[5],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'phase' => $o[1],
+                        'unit' => $o[3],
+                        'sheet' => $o[5],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Assignment',
+                    3 => 'App\\Entity\\Assignment',
+                    5 => 'App\\Entity\\Assignment',
+                ],
+                'property' => [
+                    1 => 'phase',
+                    3 => 'unit',
+                    5 => 'sheet',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Assignment' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Assignment' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Assignment' => [
+                            $o[6],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Assignment',
+                    ],
+                    4 => [
+                        'Default',
+                        'Assignment',
+                    ],
+                    6 => [
+                        'Default',
+                        'Assignment',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

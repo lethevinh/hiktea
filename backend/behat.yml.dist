@@ -1,0 +1,57 @@
+default:
+    suites:
+        default:
+            contexts:
+                - FeatureContext:
+                    jwtManager: '@lexik_jwt_authentication.jwt_manager'
+                - StateContext:
+                    doctrine: '@doctrine'
+                - UserContext:
+                    doctrine: '@doctrine'
+                    jwtManager: '@lexik_jwt_authentication.jwt_manager'
+                    encoder: '@security.user_password_encoder.generic'
+                - CustomerContext:
+                    doctrine: '@doctrine'
+                - OrderContext:
+                    doctrine: '@doctrine'
+                - OrderItemContext:
+                    doctrine: '@doctrine'
+                - PhaseContext:
+                    doctrine: '@doctrine'
+                - CropContext:
+                    doctrine: '@doctrine'
+                - VarietyContext:
+                    doctrine: '@doctrine'
+                - FarmContext:
+                    doctrine: '@doctrine'
+                - UnitContext:
+                    doctrine: '@doctrine'
+                - GreenhouseContext:
+                    doctrine: '@doctrine'
+                - SheetContext:
+                    doctrine: '@doctrine'
+                - ProgressionContext:
+                    doctrine: '@doctrine'
+                - AssignmentContext:
+                    doctrine: '@doctrine'
+                - HarvestContext:
+                    doctrine: '@doctrine'
+                - PollinateContext:
+                    doctrine: '@doctrine'
+                - TransplantContext:
+                    doctrine: '@doctrine'
+                - SowingContext:
+                    doctrine: '@doctrine'
+                - Behat\MinkExtension\Context\MinkContext
+                - Behatch\Context\RestContext
+                - Behatch\Context\JsonContext
+
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://webserver:81'
+            goutte: ~
+        Behatch\Extension: ~
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: features/bootstrap/bootstrap.php
+                class: App\Kernel

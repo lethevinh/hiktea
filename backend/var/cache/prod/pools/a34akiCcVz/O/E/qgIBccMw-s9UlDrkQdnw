@@ -1,0 +1,131 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Unit',
+                    'name',
+                    3 => 'farm',
+                    5 => 'user',
+                ],
+                'defaultGroup' => [
+                    'Unit',
+                ],
+                'members' => [
+                    [
+                        'name' => [
+                            $o[1],
+                        ],
+                        'farm' => [
+                            $o[3],
+                        ],
+                        'user' => [
+                            $o[5],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'name' => $o[1],
+                        'farm' => $o[3],
+                        'user' => $o[5],
+                    ],
+                ],
+                'constraints' => [
+                    [
+                        $o[7],
+                    ],
+                    [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    [
+                        'Default' => [
+                            $o[7],
+                        ],
+                        'Unit' => [
+                            $o[7],
+                        ],
+                    ],
+                    [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Unit' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Unit' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Unit' => [
+                            $o[6],
+                        ],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Unit',
+                    3 => 'App\\Entity\\Unit',
+                    5 => 'App\\Entity\\Unit',
+                ],
+                'property' => [
+                    1 => 'name',
+                    3 => 'farm',
+                    5 => 'user',
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Unit',
+                    ],
+                    4 => [
+                        'Default',
+                        'Unit',
+                    ],
+                    6 => [
+                        'Default',
+                        'Unit',
+                    ],
+                    [
+                        'Default',
+                        'Unit',
+                    ],
+                ],
+                'fields' => [
+                    7 => 'name',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

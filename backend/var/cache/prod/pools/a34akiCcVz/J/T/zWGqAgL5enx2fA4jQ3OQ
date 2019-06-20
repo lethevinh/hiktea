@@ -1,0 +1,88 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Progression',
+                    'sheet',
+                    3 => 'month',
+                ],
+                'defaultGroup' => [
+                    'Progression',
+                ],
+                'members' => [
+                    [
+                        'sheet' => [
+                            $o[1],
+                        ],
+                        'month' => [
+                            $o[3],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'sheet' => $o[1],
+                        'month' => $o[3],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Progression',
+                    3 => 'App\\Entity\\Progression',
+                ],
+                'property' => [
+                    1 => 'sheet',
+                    3 => 'month',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Progression' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Progression' => [
+                            $o[4],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Progression',
+                    ],
+                    4 => [
+                        'Default',
+                        'Progression',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

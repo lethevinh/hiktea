@@ -1,0 +1,155 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Order',
+                    'number',
+                    3 => 'contract',
+                    5 => 'season',
+                    7 => 'customer',
+                ],
+                'defaultGroup' => [
+                    'Order',
+                ],
+                'members' => [
+                    [
+                        'number' => [
+                            $o[1],
+                        ],
+                        'contract' => [
+                            $o[3],
+                        ],
+                        'season' => [
+                            $o[5],
+                        ],
+                        'customer' => [
+                            $o[7],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'number' => $o[1],
+                        'contract' => $o[3],
+                        'season' => $o[5],
+                        'customer' => $o[7],
+                    ],
+                ],
+                'constraints' => [
+                    [
+                        $o[9],
+                    ],
+                    [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                    7 => [
+                        $o[8],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    [
+                        'Default' => [
+                            $o[9],
+                        ],
+                        'Order' => [
+                            $o[9],
+                        ],
+                    ],
+                    [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Order' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Order' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Order' => [
+                            $o[6],
+                        ],
+                    ],
+                    7 => [
+                        'Default' => [
+                            $o[8],
+                        ],
+                        'Order' => [
+                            $o[8],
+                        ],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Order',
+                    3 => 'App\\Entity\\Order',
+                    5 => 'App\\Entity\\Order',
+                    7 => 'App\\Entity\\Order',
+                ],
+                'property' => [
+                    1 => 'number',
+                    3 => 'contract',
+                    5 => 'season',
+                    7 => 'customer',
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Order',
+                    ],
+                    4 => [
+                        'Default',
+                        'Order',
+                    ],
+                    6 => [
+                        'Default',
+                        'Order',
+                    ],
+                    8 => [
+                        'Default',
+                        'Order',
+                    ],
+                    [
+                        'Default',
+                        'Order',
+                    ],
+                ],
+                'fields' => [
+                    9 => 'number',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

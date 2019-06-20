@@ -1,0 +1,99 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+            clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\User',
+                    'id',
+                    'email',
+                    'username',
+                    'roles',
+                    'password',
+                    'isActive',
+                    'farms',
+                    'units',
+                    'greenhouses',
+                    'createdBy',
+                    'updatedBy',
+                    'createdAt',
+                    'updatedAt',
+                    'salt',
+                    'accountNonExpired',
+                    'accountNonLocked',
+                    'credentialsNonExpired',
+                    'enabled',
+                ],
+                'attributesMetadata' => [
+                    [
+                        'id' => $o[1],
+                        'email' => $o[2],
+                        'username' => $o[3],
+                        'roles' => $o[4],
+                        'password' => $o[5],
+                        'isActive' => $o[6],
+                        'farms' => $o[7],
+                        'units' => $o[8],
+                        'greenhouses' => $o[9],
+                        'createdBy' => $o[10],
+                        'updatedBy' => $o[11],
+                        'createdAt' => $o[12],
+                        'updatedAt' => $o[13],
+                        'salt' => $o[14],
+                        'accountNonExpired' => $o[15],
+                        'accountNonLocked' => $o[16],
+                        'credentialsNonExpired' => $o[17],
+                        'enabled' => $o[18],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    5 => [
+                        'write',
+                    ],
+                    [
+                        'read',
+                    ],
+                    12 => [
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

@@ -1,0 +1,46 @@
+version: "3"
+volumes:
+  lamdai-db:
+    external: true
+services:
+  mysql:
+    image: mysql:5.7
+    working_dir: /application
+    volumes:
+      - .:/application
+      - lamdai-db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=lamdai
+      - MYSQL_USER=lamdai
+      - MYSQL_PASSWORD=password
+    ports:
+      - "8002:3306"
+
+  webserver:
+    image: nginx:alpine
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8000:80"
+      - "8001:81"
+
+  php-fpm-dev:
+    build: .docker/php-fpm
+    working_dir: /application
+    environment:
+      - DATABASE_URL=mysql://root:root@mysql:3306/lamdai
+    volumes:
+      - .:/application
+      - ./.docker/php-fpm/99-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+
+  php-fpm-test:
+    build: .docker/php-fpm
+    working_dir: /application
+    environment:
+      - DATABASE_URL=mysql://root:root@mysql:3306/lamdai_test
+    volumes:
+      - .:/application
+      - ./.docker/php-fpm/99-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini

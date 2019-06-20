@@ -1,0 +1,136 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Transplant',
+                    'gender',
+                    3 => 'isApproved',
+                    5 => 'assignment',
+                    7 => 'greenhouse',
+                ],
+                'defaultGroup' => [
+                    'Transplant',
+                ],
+                'members' => [
+                    [
+                        'gender' => [
+                            $o[1],
+                        ],
+                        'isApproved' => [
+                            $o[3],
+                        ],
+                        'assignment' => [
+                            $o[5],
+                        ],
+                        'greenhouse' => [
+                            $o[7],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'gender' => $o[1],
+                        'isApproved' => $o[3],
+                        'assignment' => $o[5],
+                        'greenhouse' => $o[7],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Transplant',
+                    3 => 'App\\Entity\\Transplant',
+                    5 => 'App\\Entity\\Transplant',
+                    7 => 'App\\Entity\\Transplant',
+                ],
+                'property' => [
+                    1 => 'gender',
+                    3 => 'isApproved',
+                    5 => 'assignment',
+                    7 => 'greenhouse',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                    7 => [
+                        $o[8],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Transplant' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Transplant' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Transplant' => [
+                            $o[6],
+                        ],
+                    ],
+                    7 => [
+                        'Default' => [
+                            $o[8],
+                        ],
+                        'Transplant' => [
+                            $o[8],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Transplant',
+                    ],
+                    4 => [
+                        'Default',
+                        'Transplant',
+                    ],
+                    6 => [
+                        'Default',
+                        'Transplant',
+                    ],
+                    8 => [
+                        'Default',
+                        'Transplant',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

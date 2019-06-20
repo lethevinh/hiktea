@@ -1,0 +1,75 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+            clone ($p['ApiPlatform\\Core\\Annotation\\ApiFilter'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiFilter')),
+            clone $p['ApiPlatform\\Core\\Annotation\\ApiFilter'],
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+            clone $p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'attributes' => [
+                    [
+                        'normalization_context' => [
+                            'groups' => [
+                                'read',
+                            ],
+                        ],
+                        'denormalization_context' => [
+                            'groups' => [
+                                'write',
+                            ],
+                        ],
+                    ],
+                ],
+                'filterClass' => [
+                    1 => 'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\OrderFilter',
+                    'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\SearchFilter',
+                ],
+                'properties' => [
+                    1 => [
+                        'id',
+                    ],
+                    [
+                        'id' => 'exact',
+                        'email' => 'partial',
+                    ],
+                ],
+                'arguments' => [
+                    1 => [
+                        'orderParameterName' => 'order',
+                    ],
+                ],
+                'repositoryClass' => [
+                    3 => 'App\\Repository\\UserRepository',
+                ],
+                'fields' => [
+                    4 => 'email',
+                    'username',
+                ],
+                'groups' => [
+                    4 => [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
+            $o[3],
+            $o[4],
+            $o[5],
+        ],
+        []
+    );
+
+}];

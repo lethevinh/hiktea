@@ -1,0 +1,72 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata')),
+        ],
+        null,
+        [
+            'ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata' => [
+                'shortName' => [
+                    'Progression',
+                ],
+                'description' => [
+                    '',
+                ],
+                'itemOperations' => [
+                    [
+                        'get' => [
+                            'method' => 'GET',
+                        ],
+                        'delete' => [
+                            'method' => 'DELETE',
+                        ],
+                        'put' => [
+                            'method' => 'PUT',
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'get' => [
+                            'method' => 'GET',
+                        ],
+                        'post' => [
+                            'method' => 'POST',
+                        ],
+                    ],
+                ],
+                'graphql' => [
+                    [
+                        'query' => [],
+                        'delete' => [],
+                        'update' => [],
+                        'create' => [],
+                    ],
+                ],
+                'attributes' => [
+                    [
+                        'normalization_context' => [
+                            'groups' => [
+                                'read',
+                            ],
+                        ],
+                        'denormalization_context' => [
+                            'groups' => [
+                                'write',
+                            ],
+                        ],
+                        'input' => null,
+                        'output' => null,
+                        'filters' => [
+                            'annotated_app_entity_progression_api_platform_core_bridge_doctrine_orm_filter_order_filter',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

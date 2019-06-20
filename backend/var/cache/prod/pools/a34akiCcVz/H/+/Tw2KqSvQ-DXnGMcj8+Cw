@@ -1,0 +1,64 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Phase',
+                    'orderItem',
+                ],
+                'defaultGroup' => [
+                    'Phase',
+                ],
+                'members' => [
+                    [
+                        'orderItem' => [
+                            $o[1],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'orderItem' => $o[1],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Phase',
+                ],
+                'property' => [
+                    1 => 'orderItem',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Phase' => [
+                            $o[2],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Phase',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

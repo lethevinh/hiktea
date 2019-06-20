@@ -1,0 +1,109 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+            clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Sowing',
+                    'id',
+                    'gender',
+                    'sownAt',
+                    'sownSmallPotAt',
+                    'sownLargePotAt',
+                    'plantsCount',
+                    'traysCount',
+                    'note',
+                    'isApproved',
+                    'orderItem',
+                    'createdBy',
+                    'updatedBy',
+                    'createdAt',
+                    'updatedAt',
+                ],
+                'attributesMetadata' => [
+                    [
+                        'id' => $o[1],
+                        'gender' => $o[2],
+                        'sownAt' => $o[3],
+                        'sownSmallPotAt' => $o[4],
+                        'sownLargePotAt' => $o[5],
+                        'plantsCount' => $o[6],
+                        'traysCount' => $o[7],
+                        'note' => $o[8],
+                        'isApproved' => $o[9],
+                        'orderItem' => $o[10],
+                        'createdBy' => $o[11],
+                        'updatedBy' => $o[12],
+                        'createdAt' => $o[13],
+                        'updatedAt' => $o[14],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    13 => [
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

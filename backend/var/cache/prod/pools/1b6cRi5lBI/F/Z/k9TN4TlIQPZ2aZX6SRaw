@@ -1,0 +1,94 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+            clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+            clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Pollinate',
+                    'id',
+                    'startedAt',
+                    'endedAt',
+                    'plantsCount',
+                    'note',
+                    'isApproved',
+                    'greenhouse',
+                    'assignment',
+                    'createdBy',
+                    'updatedBy',
+                    'createdAt',
+                    'updatedAt',
+                ],
+                'attributesMetadata' => [
+                    [
+                        'id' => $o[1],
+                        'startedAt' => $o[2],
+                        'endedAt' => $o[3],
+                        'plantsCount' => $o[4],
+                        'note' => $o[5],
+                        'isApproved' => $o[6],
+                        'greenhouse' => $o[7],
+                        'assignment' => $o[8],
+                        'createdBy' => $o[9],
+                        'updatedBy' => $o[10],
+                        'createdAt' => $o[11],
+                        'updatedAt' => $o[12],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    [
+                        'write',
+                        'read',
+                    ],
+                    11 => [
+                        'read',
+                    ],
+                    [
+                        'read',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

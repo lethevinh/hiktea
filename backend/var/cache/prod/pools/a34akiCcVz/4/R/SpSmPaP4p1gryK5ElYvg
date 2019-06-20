@@ -1,0 +1,112 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Pollinate',
+                    'isApproved',
+                    3 => 'greenhouse',
+                    5 => 'assignment',
+                ],
+                'defaultGroup' => [
+                    'Pollinate',
+                ],
+                'members' => [
+                    [
+                        'isApproved' => [
+                            $o[1],
+                        ],
+                        'greenhouse' => [
+                            $o[3],
+                        ],
+                        'assignment' => [
+                            $o[5],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'isApproved' => $o[1],
+                        'greenhouse' => $o[3],
+                        'assignment' => $o[5],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Pollinate',
+                    3 => 'App\\Entity\\Pollinate',
+                    5 => 'App\\Entity\\Pollinate',
+                ],
+                'property' => [
+                    1 => 'isApproved',
+                    3 => 'greenhouse',
+                    5 => 'assignment',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Pollinate' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Pollinate' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Pollinate' => [
+                            $o[6],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Pollinate',
+                    ],
+                    4 => [
+                        'Default',
+                        'Pollinate',
+                    ],
+                    6 => [
+                        'Default',
+                        'Pollinate',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

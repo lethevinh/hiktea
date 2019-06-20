@@ -1,0 +1,83 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Crop',
+                    'name',
+                ],
+                'defaultGroup' => [
+                    'Crop',
+                ],
+                'members' => [
+                    [
+                        'name' => [
+                            $o[1],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'name' => $o[1],
+                    ],
+                ],
+                'constraints' => [
+                    [
+                        $o[3],
+                    ],
+                    [
+                        $o[2],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    [
+                        'Default' => [
+                            $o[3],
+                        ],
+                        'Crop' => [
+                            $o[3],
+                        ],
+                    ],
+                    [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Crop' => [
+                            $o[2],
+                        ],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Crop',
+                ],
+                'property' => [
+                    1 => 'name',
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Crop',
+                    ],
+                    [
+                        'Default',
+                        'Crop',
+                    ],
+                ],
+                'fields' => [
+                    3 => 'name',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

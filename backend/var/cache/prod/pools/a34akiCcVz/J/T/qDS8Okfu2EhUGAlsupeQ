@@ -1,0 +1,160 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\Sowing',
+                    'gender',
+                    3 => 'sownAt',
+                    5 => 'plantsCount',
+                    7 => 'isApproved',
+                    9 => 'orderItem',
+                ],
+                'defaultGroup' => [
+                    'Sowing',
+                ],
+                'members' => [
+                    [
+                        'gender' => [
+                            $o[1],
+                        ],
+                        'sownAt' => [
+                            $o[3],
+                        ],
+                        'plantsCount' => [
+                            $o[5],
+                        ],
+                        'isApproved' => [
+                            $o[7],
+                        ],
+                        'orderItem' => [
+                            $o[9],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'gender' => $o[1],
+                        'sownAt' => $o[3],
+                        'plantsCount' => $o[5],
+                        'isApproved' => $o[7],
+                        'orderItem' => $o[9],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\Sowing',
+                    3 => 'App\\Entity\\Sowing',
+                    5 => 'App\\Entity\\Sowing',
+                    7 => 'App\\Entity\\Sowing',
+                    9 => 'App\\Entity\\Sowing',
+                ],
+                'property' => [
+                    1 => 'gender',
+                    3 => 'sownAt',
+                    5 => 'plantsCount',
+                    7 => 'isApproved',
+                    9 => 'orderItem',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                    7 => [
+                        $o[8],
+                    ],
+                    9 => [
+                        $o[10],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'Sowing' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'Sowing' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'Sowing' => [
+                            $o[6],
+                        ],
+                    ],
+                    7 => [
+                        'Default' => [
+                            $o[8],
+                        ],
+                        'Sowing' => [
+                            $o[8],
+                        ],
+                    ],
+                    9 => [
+                        'Default' => [
+                            $o[10],
+                        ],
+                        'Sowing' => [
+                            $o[10],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Sowing',
+                    ],
+                    4 => [
+                        'Default',
+                        'Sowing',
+                    ],
+                    6 => [
+                        'Default',
+                        'Sowing',
+                    ],
+                    8 => [
+                        'Default',
+                        'Sowing',
+                    ],
+                    10 => [
+                        'Default',
+                        'Sowing',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

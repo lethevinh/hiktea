@@ -1,0 +1,160 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\OrderItem',
+                    'quantity',
+                    3 => 'order',
+                    5 => 'crop',
+                    7 => 'variety',
+                    9 => 'farm',
+                ],
+                'defaultGroup' => [
+                    'OrderItem',
+                ],
+                'members' => [
+                    [
+                        'quantity' => [
+                            $o[1],
+                        ],
+                        'order' => [
+                            $o[3],
+                        ],
+                        'crop' => [
+                            $o[5],
+                        ],
+                        'variety' => [
+                            $o[7],
+                        ],
+                        'farm' => [
+                            $o[9],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'quantity' => $o[1],
+                        'order' => $o[3],
+                        'crop' => $o[5],
+                        'variety' => $o[7],
+                        'farm' => $o[9],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\OrderItem',
+                    3 => 'App\\Entity\\OrderItem',
+                    5 => 'App\\Entity\\OrderItem',
+                    7 => 'App\\Entity\\OrderItem',
+                    9 => 'App\\Entity\\OrderItem',
+                ],
+                'property' => [
+                    1 => 'quantity',
+                    3 => 'order',
+                    5 => 'crop',
+                    7 => 'variety',
+                    9 => 'farm',
+                ],
+                'constraints' => [
+                    1 => [
+                        $o[2],
+                    ],
+                    3 => [
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                    ],
+                    7 => [
+                        $o[8],
+                    ],
+                    9 => [
+                        $o[10],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    1 => [
+                        'Default' => [
+                            $o[2],
+                        ],
+                        'OrderItem' => [
+                            $o[2],
+                        ],
+                    ],
+                    3 => [
+                        'Default' => [
+                            $o[4],
+                        ],
+                        'OrderItem' => [
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                        ],
+                        'OrderItem' => [
+                            $o[6],
+                        ],
+                    ],
+                    7 => [
+                        'Default' => [
+                            $o[8],
+                        ],
+                        'OrderItem' => [
+                            $o[8],
+                        ],
+                    ],
+                    9 => [
+                        'Default' => [
+                            $o[10],
+                        ],
+                        'OrderItem' => [
+                            $o[10],
+                        ],
+                    ],
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'OrderItem',
+                    ],
+                    4 => [
+                        'Default',
+                        'OrderItem',
+                    ],
+                    6 => [
+                        'Default',
+                        'OrderItem',
+                    ],
+                    8 => [
+                        'Default',
+                        'OrderItem',
+                    ],
+                    10 => [
+                        'Default',
+                        'OrderItem',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];
