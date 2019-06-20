@@ -13,5 +13,9 @@ TODO
 ###< friendsofphp/php-cs-fixer ###
 
 ###> lexik/jwt-authentication-bundle ###
-/config/jwt/*.pem
+/backend/config/__jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###

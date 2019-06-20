@@ -1,0 +1,57 @@
+{
+  "field": {
+    "id": "ID",
+    "email": "Email"
+  },
+  "user": {
+    "title": "User",
+    "field": {
+      "isActive": "Active",
+      "username": "Username"
+    }
+  },
+  "farm": {
+    "title": "Farm",
+    "field": {
+      "name": "Name",
+      "user": "User"
+    }
+  },
+  "unit": {
+    "title": "Unit",
+    "field": {
+      "name": "Name"
+    }
+  },
+  "customer": {
+    "title": "Customer",
+    "field": {
+      "name": "Name",
+      "type": "Type"
+    }
+  },
+  "crop": {
+    "title": "Crop",
+    "field": {
+      "name": "Name",
+      "type": "Type"
+    }
+  },
+  "variety": {
+    "title": "Variety",
+    "field": {
+      "name": "Name",
+      "code": "Code",
+      "customer": "Customer"
+    }
+  },
+  "order": {
+    "title": "Order",
+    "field": {
+      "number": "Order Number",
+      "customer": "Order Customer",
+      "season": "Order Season",
+      "contract": "Contract Number"
+    }
+  }
+}

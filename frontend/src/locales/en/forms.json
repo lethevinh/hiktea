@@ -1,0 +1,22 @@
+{
+  "login": {
+    "field": {
+      "username": "Email",
+      "password": "Password"
+    }
+  },
+  "title": {
+    "edit": "Edit {name}",
+    "create": "Create {name}",
+    "remove": "Delete {name}"
+  },
+  "actions": {
+    "edit": "Edit",
+    "close": "Close",
+    "save": "Save",
+    "create": "Create"
+  },
+  "messages": {
+    "warning_delete_post": "Are you sure you want to move the {name} to trash?"
+  }
+}

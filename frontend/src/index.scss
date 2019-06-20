@@ -1,0 +1,25 @@
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.is-min-height-50 {
+  min-height: 50px;
+  @include mobile {
+    min-height: auto;
+  }
+}
+.modal {
+  .modal-card {
+    overflow: visible;
+    .modal-card-body {
+      overflow: visible;
+    }
+  }
+  .modal-content {
+    overflow: visible;
+  }
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
