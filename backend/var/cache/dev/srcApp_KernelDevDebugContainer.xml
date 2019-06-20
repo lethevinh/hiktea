@@ -518,6 +518,9 @@
     <service id="App\DataFixtures\PollinateFixtures" class="App\DataFixtures\PollinateFixtures" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
+    <service id="App\DataFixtures\PostFixtures" class="App\DataFixtures\PostFixtures" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
     <service id="App\DataFixtures\ProgressionFixtures" class="App\DataFixtures\ProgressionFixtures" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -577,6 +580,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\PollinateRepository" class="App\Repository\PollinateRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PostRepository" class="App\Repository\PostRepository" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -3597,7 +3604,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.0CEJhxd"/>
+      <argument type="service" id=".service_locator.lk5zITa"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4886,6 +4893,10 @@
             <argument key="groups" type="collection"/>
           </argument>
           <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\PostFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+          <argument type="collection">
             <argument key="fixture" type="service" id="App\DataFixtures\ProgressionFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
@@ -5427,6 +5438,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\PhaseFixtures" class="App\DataFixtures\PhaseFixtures" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\PollinateFixtures" class="App\DataFixtures\PollinateFixtures" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\PollinateFixtures" class="App\DataFixtures\PollinateFixtures" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\PostFixtures" class="App\DataFixtures\PostFixtures" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\PostFixtures" class="App\DataFixtures\PostFixtures" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\ProgressionFixtures" class="App\DataFixtures\ProgressionFixtures" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\ProgressionFixtures" class="App\DataFixtures\ProgressionFixtures" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\SheetFixtures" class="App\DataFixtures\SheetFixtures" public="false" autowire="true" abstract="true"/>
@@ -5461,6 +5474,8 @@
     <service id=".abstract.instanceof.App\Repository\PhaseRepository" class="App\Repository\PhaseRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PollinateRepository" class="App\Repository\PollinateRepository" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PollinateRepository" class="App\Repository\PollinateRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PostRepository" class="App\Repository\PostRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PostRepository" class="App\Repository\PostRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProgressionRepository" class="App\Repository\ProgressionRepository" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProgressionRepository" class="App\Repository\ProgressionRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SheetRepository" class="App\Repository\SheetRepository" public="false" autowire="true" abstract="true"/>
@@ -5727,7 +5742,7 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.0CEJhxd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.lk5zITa" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AssignmentRepository" type="service" id="App\Repository\AssignmentRepository"/>
@@ -5740,6 +5755,7 @@
         <argument key="App\Repository\OrderRepository" type="service" id="App\Repository\OrderRepository"/>
         <argument key="App\Repository\PhaseRepository" type="service" id="App\Repository\PhaseRepository"/>
         <argument key="App\Repository\PollinateRepository" type="service" id="App\Repository\PollinateRepository"/>
+        <argument key="App\Repository\PostRepository" type="service" id="App\Repository\PostRepository"/>
         <argument key="App\Repository\ProgressionRepository" type="service" id="App\Repository\ProgressionRepository"/>
         <argument key="App\Repository\SheetRepository" type="service" id="App\Repository\SheetRepository"/>
         <argument key="App\Repository\SowingRepository" type="service" id="App\Repository\SowingRepository"/>
