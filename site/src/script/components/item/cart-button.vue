@@ -1,10 +1,10 @@
 <template>
     <span>
-    <button v-on:click="addToCart()" class="btn btn-default rounded-0 btn-borderd btn-sm">
-        Đặt Ngay
-    </button>
         <dialog-add-cart :product="product" :dialogFormVisible="dialogFormVisible"></dialog-add-cart>
-        </span>
+        <button v-on:click="addToCart()" class="btn btn-default rounded-0 btn-borderd btn-sm">
+            Đặt Ngay
+        </button>
+    </span>
 </template>
 <script>
 import { mapGetters, mapState, mapActions } from 'vuex'
