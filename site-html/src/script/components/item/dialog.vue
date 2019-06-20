@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-dialog :title="product.name" :visible="cartStatus" @close="setCartStatus(false)">
+        <el-dialog v-if="product" :title="product.name" :visible="isShow" @close="close" :append-to-body="true">
             <el-form :model="form" :rules="rules" ref="form" label-width="60px" class="demo-form">
                 <template v-for="(option,index) in product.options">
                     <el-divider content-position="left">{{option.name}}</el-divider>
@@ -8,6 +8,7 @@
                         <el-checkbox-group v-model="form.topping[index]" :name="option.id" :ref="'group_'+option.id"
                                            :max="option.option_items.max_select">
                             <el-checkbox v-for="topping in option.option_items.items"
+                                         :checked="topping.is_default"
                                          @change="changeCheckbox(topping,option)" :key="topping.id"
                                          :label="topping.name + '( + '+topping.price.text+')'"
                                          :ref="'checkbox_'+topping.id"></el-checkbox>
@@ -30,10 +31,17 @@
 <script>
     import {mapGetters, mapState, mapActions} from 'vuex';
     export default {
-        name: "modal",
+        name: "dialog-add-cart",
+        props:{
+            product:{},
+            dialogFormVisible:{
+                type: Boolean,
+                default: false
+            }
+        },
         data: function () {
             return {
-                dialogFormVisible: false,
+                isShow:false,
                 form: {
                     name: '',
                     region: '',
@@ -80,14 +88,16 @@
                 totalCart: 0
             }
         },
+        created() {
+          console.log(this.product,this.product)
+        },
         computed: {
             ...mapState({
                 checkoutStatus: state => state.cart.checkoutStatus
             }),
             ...mapGetters('modal', {
                 cartStatus: 'getCartStatus',
-                product: 'getCartProduct',
-            })
+            }),
         },
         watch: {
             product: function (product) {
@@ -105,6 +115,9 @@
                     minimumFractionDigits: 0
                 });
                 this.nameButtonCart = formatter.format(total) + ' Thêm vào giỏ';
+            },
+            dialogFormVisible:function (value) {
+             this.isShow = value;
             }
         },
         methods: {
@@ -125,6 +138,7 @@
                         note: this.form.desc,
                         price:this.totalCart
                     });
+                    this.close();
                 }
             },
             changeCheckbox(item, option) {
@@ -163,6 +177,10 @@
                 });
                 this.totalCart = (this.product.price.value + totalOption) * this.form.quality;
             },
+            close(){
+                 this.isShow =  false;
+                 this.$emit('dialogFormVisible', false);
+            }
         },
     }
 </script>

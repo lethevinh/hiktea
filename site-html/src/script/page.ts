@@ -7,6 +7,8 @@ import '../style/element-variables.scss'
 import localStorage from './localstorage';
 import buttonAddCart from './components/item/cart-button.vue';
 Vue.component(buttonAddCart.name,buttonAddCart);
+import dialogAddCart from './components/item/dialog.vue';
+Vue.component(dialogAddCart.name,dialogAddCart);
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 locale.use(lang);
@@ -88,15 +90,6 @@ class Page {
             beforeMount() {
                 this.$store.commit('initialiseStore');
             },
-        });
-
-        // add dialog
-        $('body').append('<div id="v-dialog"></div>');
-        new Vue({
-            el: '#v-dialog',
-            template:'<modal/>',
-            store,
-            components: $this.config.components,
         });
         return this;
     }

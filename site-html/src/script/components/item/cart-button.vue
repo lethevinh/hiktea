@@ -1,7 +1,10 @@
 <template>
-    <button v-on:click="addToCart()" class="btn btn-default rounded-0 btn-borderd btn-sm" :disabled="isLoading">
+    <span>
+    <button v-on:click="addToCart()" class="btn btn-default rounded-0 btn-borderd btn-sm">
         Đặt Ngay
     </button>
+        <dialog-add-cart :product="product" :dialogFormVisible="dialogFormVisible"></dialog-add-cart>
+        </span>
 </template>
 <script>
 import { mapGetters, mapState, mapActions } from 'vuex'
@@ -10,6 +13,7 @@ export default {
     data: function() {
         return {
             isLoading: false,
+            dialogFormVisible:false
         };
     },
     methods: {
@@ -21,8 +25,9 @@ export default {
             'setCartProduct',
         ]),
         addToCart(){
-            this.setCartStatus(true);
-            this.setCartProduct(this.product);
+            this.dialogFormVisible = !this.dialogFormVisible;
+          //  this.setCartStatus(true);
+          //  this.setCartProduct(this.product);
         }
     },
     computed: {
