@@ -18,3 +18,4 @@ yarn-error.log
 /public/mix-manifest.json
 /public/fonts
 /resources/wechat_pay
+/storage/*

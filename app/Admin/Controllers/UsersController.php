@@ -40,15 +40,15 @@ class UsersController extends Controller
         $grid->id('ID');
 
         // 创建一个列名为 用户名 的列，内容是用户的 name 字段。下面的 email() 和 created_at() 同理
-        $grid->name('用户名');
+        $grid->name('name');
 
-        $grid->email('邮箱');
+        $grid->email('email');
 
-        $grid->email_verified_at('已验证邮箱')->display(function ($value) {
+        $grid->email_verified_at('email verified at')->display(function ($value) {
             return $value ? '是' : '否';
         });
 
-        $grid->created_at('注册时间');
+        $grid->created_at('created_at');
 
         // 不在页面显示 `新建` 按钮，因为我们不需要在后台新建用户
         $grid->disableCreateButton();

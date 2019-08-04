@@ -19,7 +19,7 @@ class OrdersController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('订单列表')
+            ->header('Order list')
             ->body($this->grid());
     }
 
@@ -38,15 +38,15 @@ class OrdersController extends Controller
         // 只展示已支付的订单，并且默认按支付时间倒序排序
         $grid->model()->whereNotNull('paid_at')->orderBy('paid_at', 'desc');
 
-        $grid->no('订单流水号');
+        $grid->no('No');
         // 展示关联关系的字段时，使用 column 方法
-        $grid->column('user.name', '买家');
-        $grid->total_amount('总金额')->sortable();
-        $grid->paid_at('支付时间')->sortable();
-        $grid->ship_status('物流')->display(function($value) {
+        $grid->column('user.name', 'Owner');
+        $grid->total_amount('total_amount')->sortable();
+        $grid->paid_at('paid_at')->sortable();
+        $grid->ship_status('ship_status')->display(function($value) {
             return Order::$shipStatusMap[$value];
         });
-        $grid->refund_status('退款状态')->display(function($value) {
+        $grid->refund_status('refund_status')->display(function($value) {
             return Order::$refundStatusMap[$value];
         });
         // 禁用创建按钮，后台不需要创建订单
@@ -81,8 +81,8 @@ class OrdersController extends Controller
             'express_company' => ['required'],
             'express_no'      => ['required'],
         ], [], [
-            'express_company' => '物流公司',
-            'express_no'      => '物流单号',
+            'express_company' => 'express_company',
+            'express_no'      => 'express_no',
         ]);
         // 将订单发货状态改为已发货，并存入物流信息
         $order->update([
