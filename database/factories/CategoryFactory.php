@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Models\Product::class, function (Faker $faker) {
+$factory->define(App\Models\Category::class, function (Faker $faker) {
     $image = $faker->randomElement([
         "https://iocaffcdn.phphub.org/uploads/images/201806/01/5320/7kG1HekGK6.jpg",
         "https://iocaffcdn.phphub.org/uploads/images/201806/01/5320/1B3n0ATKrn.jpg",
@@ -22,10 +22,9 @@ $factory->define(App\Models\Product::class, function (Faker $faker) {
         'description'  => $faker->sentence,
         'content'  => $faker->sentence,
         'image'        => $image,
-        'on_sale'      => true,
+        'status'      => true,
         'rating'       => $faker->numberBetween(0, 5),
         'sold_count'   => 0,
-        'review_count' => 0,
-        'price'        => 0,
+        'review_count' => 0
     ];
 });

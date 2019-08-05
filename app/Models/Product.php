@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     protected $fillable = [
-        'title', 'description', 'image', 'on_sale',
+        'title', 'description','content', 'image', 'on_sale',
         'rating', 'sold_count', 'review_count', 'price'
     ];
     protected $casts = [
@@ -27,5 +27,13 @@ class Product extends Model
             return $this->attributes['image'];
         }
         return \Storage::disk('public')->url($this->attributes['image']);
+    }
+
+    public function orderItems(){
+        return $this->hasMany(OrderItem::class);
+    }
+
+    public function categories() {
+        return $this->belongsToMany(Category::class)->withTimestamps();
     }
 }
