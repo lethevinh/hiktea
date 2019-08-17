@@ -10,7 +10,7 @@ class Product extends Model {
 	use Sluggable;
 
 	protected $fillable = [
-		'title', 'description', 'content', 'image', 'on_sale',
+		'title','slug', 'description', 'content', 'image', 'on_sale',
 		'rating', 'sold_count', 'review_count', 'price',
 	];
 	protected $casts = [
@@ -45,4 +45,8 @@ class Product extends Model {
 	public function categories() {
 		return $this->belongsToMany(Category::class)->withTimestamps();
 	}
+
+	public function toLink(){
+        return url('san-pham/'.$this->categories()->first()->slug.'/'.$this->slug.'.html');
+    }
 }

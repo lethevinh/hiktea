@@ -23,7 +23,7 @@ class CouponCodesController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('优惠券列表')
+            ->header('List CouponCodes')
             ->body($this->grid());
     }
 
@@ -37,7 +37,7 @@ class CouponCodesController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('编辑优惠券')
+            ->header('Edit CouponCodes')
             ->body($this->form()->edit($id));
     }
 
@@ -50,7 +50,7 @@ class CouponCodesController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('新增优惠券')
+            ->header('Create CouponCode')
             ->body($this->form());
     }
 

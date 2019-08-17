@@ -19,6 +19,18 @@ Route::group([
     $router->get('products/{id}/edit', 'ProductsController@edit');
     $router->put('products/{id}', 'ProductsController@update');
 
+    $router->get('pages', 'PagesController@index');
+    $router->get('pages/create', 'PagesController@create');
+    $router->post('pages', 'PagesController@store');
+    $router->get('pages/{id}/edit', 'PagesController@edit');
+    $router->put('pages/{id}', 'PagesController@update');
+
+    $router->get('categories', 'CategoriesController@index');
+    $router->get('categories/create', 'CategoriesController@create');
+    $router->post('categories', 'CategoriesController@store');
+    $router->get('categories/{id}/edit', 'CategoriesController@edit');
+    $router->put('categories/{id}', 'CategoriesController@update');
+
     $router->get('orders', 'OrdersController@index')->name('admin.orders.index');
     $router->get('orders/{order}', 'OrdersController@show')->name('admin.orders.show');
     $router->post('orders/{order}/ship', 'OrdersController@ship')->name('admin.orders.ship');

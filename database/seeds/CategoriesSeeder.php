@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\Storage;
 class CategoriesSeeder extends Seeder {
 	/**
 	 * Run the database seeds.
@@ -9,7 +9,6 @@ class CategoriesSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		factory(\App\Models\Category::class, 10)->create();
 		$categories = config('categories');
 		foreach ($categories as $categoryData) {
 			$category = \App\Models\Category::create([
@@ -27,7 +26,6 @@ class CategoriesSeeder extends Seeder {
 				$price = str_replace('đ', '', $price);
 				$product = \App\Models\Product::create([
 					'title' => $item['name'],
-
 					'description' => $item['name'],
 					'content' => $item['name'],
 					'image' => $item['image'],
@@ -46,6 +44,16 @@ class CategoriesSeeder extends Seeder {
 				]);
 				$product->categories()->attach($category->id);
 				$product->update(['price' => $sku->price]);
+				// upload file
+                try{
+                    $fileContents =  file_get_contents($item['image']);
+                    $nameFile = "image-".$product->slug.'.jpg';
+                    Storage::put('uploads/'.$nameFile, $fileContents);
+                    $product->update(['image' => 'uploads/'.$nameFile]);
+                }catch (Exception $e) {
+//                    throwException($e);
+                }
+                // update content
 			}
 			echo $category['name'];
 		}

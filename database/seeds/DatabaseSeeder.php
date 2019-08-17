@@ -9,7 +9,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersSeeder::class);
         $this->call(CategoriesSeeder::class);
         $this->call(UserAddressesSeeder::class);
-        $this->call(ProductsSeeder::class);
+//        $this->call(ProductsSeeder::class);
+        $this->call(PagesSeeder::class);
         $this->call(CouponCodesSeeder::class);
         $this->call(OrdersSeeder::class);
     }

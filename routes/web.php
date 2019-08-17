@@ -11,10 +11,11 @@
 |
 */
 
-Route::redirect('/', '/products')->name('root');
-Route::get('products', 'ProductsController@index')->name('products.index');
-Route::get('products', 'ProductsController@index')->name('products.index');
-
+Route::redirect('/', '/san-pham.html')->name('root');
+Route::get('san-pham.html', 'ProductsController@index')->name('products.index');
+Route::get('san-pham/{category}.html', 'ProductsController@category')->name('products.category');
+Route::get('san-pham/{category}/{product}.html', 'ProductsController@product')->name('products.product');
+Route::get('{page}.html', 'PagesController@page')->name('pages.page');
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['auth', 'verified']], function() {
@@ -44,7 +45,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
     Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
 });
-Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+Route::get('san-pham/{product}', 'ProductsController@show')->name('products.show');
 Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('payment.alipay.notify');
 Route::post('payment/wechat/notify', 'PaymentController@wechatNotify')->name('payment.wechat.notify');
 Route::post('payment/wechat/refund_notify', 'PaymentController@wechatRefundNotify')->name('payment.wechat.refund_notify');

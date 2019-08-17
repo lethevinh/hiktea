@@ -19,11 +19,24 @@ class Category extends Model {
 	protected $table = 'categories';
 
 	protected $fillable = [
-		'title', 'description', 'content', 'image', 'on_sale',
+		'title', 'slug', 'description', 'content', 'image', 'on_sale',
 		'rating', 'sold_count', 'review_count',
 	];
 
 	public function products() {
 		return $this->belongsToMany(Product::class)->withTimestamps();
 	}
+
+    public function children()
+    {
+        return $this->hasMany(Category::class, 'parent_id', 'id');
+    }
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
+
+	public function toLink(){
+	    return url('san-pham/'.$this->slug.'.html');
+    }
 }

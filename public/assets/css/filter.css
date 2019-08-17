@@ -1,0 +1,42 @@
+.filter-container {margin-bottom: 30px; margin-top: 10px; border: 1px solid #e5e5e5; } 
+.filter-group {margin-bottom: 20px; padding: 10px 20px 0px 20px; } 
+.filter-group ul {list-style: none; max-height:350px; overflow: overlay; } 
+.filter-group-title {border-radius: 3px; display: block; clear: both; color: #333333; font-weight: 600; font-size: 16px; margin-bottom: 9px; line-height: 25px; border-bottom: 1px solid #e5e5e5; }
+.filter-group-title--green {/*color: #fff !important; background: #59b210;*/ }
+.filter-item {margin: 0; cursor: pointer; line-height: 35px; }
+.filter-item * {color: #6f6f6f; cursor: pointer; font-size: 16px; font-weight: normal;display: inline-flex; line-height: 18px; }
+.filter-item--green *:hover {color: #41b75e; }
+.filter-item--half {display: inline-block; width: 100%; white-space: nowrap; overflow: hidden; }
+.filter-item--check-box input {display: none; }
+.filter-item--check-box .fa {margin-right: 5px; width: 14px; }
+.filter-item--check-box input + .fa:before {content: "\f096"; }
+.filter-item--check-box input[type="radio"] + .fa:before {content: "\f10c";}
+.filter-item--check-box input:checked + .fa:before {content: "\f14a"; color: #41b75e; }
+.filter-item--check-box input[type="radio"]:checked + .fa:before {content: "\f192"; }
+#nprogress .bar {background: #41b75e; }
+#nprogress .spinner-icon {border-top-color: #41b75e; border-left-color: #41b75e; }
+.filter-container__selected-filter {margin-bottom: 10px;padding: 10px;border-bottom: 1px solid #eee;}
+.filter-container__selected-filter-header {margin-bottom: 5px;}
+.filter-container__selected-filter-header-title {font-size: 18px;font-weight: bold;color: #0038AE;}
+.filter-container__clear-all {float: right;color: #333;margin-top: 3px;}
+.filter-container__selected-filter-item {padding: 3px 0;}
+.filter-container__selected-filter-item > a {color: #333;font-size: 13px;}
+.filter-container__selected-filter-item .fa {margin-right: 10px;color: #F44336;}
+.filter-item--half:first-child {display:block;}
+#sort-by .button-asc{background-color:#f8f8f8;box-shadow:none;float:right;height:30px;line-height:28px;margin-left:5px;text-align:center;width:30px}
+#sort-by .button-desc{background-color:#f8f8f8;box-shadow:none;float:right;height:30px;line-height:28px;margin-left:5px;text-align:center;width:30px}
+#sort-by{float:right;font-size:12px; padding-right:0;    display: inline-table;} #sort-by ul{margin:0;padding:0;list-style:none;    display: table-cell;
+    vertical-align: middle;} #sort-by a:link,#sort-by a:visited{color:#333;text-decoration:none} #sort-by li li{min-width:145px;margin-top:0;border-top:none;border-right:none;border-left:none} #sort-by li li a:hover{color:#007fb8} #sort-by li:hover{background-color:#fff} #sort-by li li:hover{background-color:#fff;color:#007fb8}
+#sort-by ul ul{position:absolute;visibility:hidden;left:-1px;top:38px;background:none repeat scroll 0 0 #F8F8F8;z-index:10000;border-top:none;border:1px #F0F0F0 solid} #sort-by ul ul ul{position:absolute;left:100%;top:-2px;border:solid 1px transparent} #sort-by li {min-width:145px; padding: 9px 10px !important; opacity: 1; top: auto; left: 0 !important; height: 100%; border: solid 1px #e8e8e8; box-shadow: none; color: #545454; font-size: 12px; background: #fff; z-index: 9999; font-size: 14px; font-weight: normal; }
+@media (max-width:767px){
+	#sort-by {
+		float: left;
+	}
+	#sort-by li {
+		z-index:9999;
+	}
+
+}
+@media (max-width:1190px){
+	.filter-group {margin-bottom: 20px; padding: 10px 15px 0px; }
+}

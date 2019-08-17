@@ -23,7 +23,7 @@ class ProductsController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('商品列表')
+            ->header('List Products')
             ->body($this->grid());
     }
 
@@ -37,7 +37,7 @@ class ProductsController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('编辑商品')
+            ->header('Edit Product')
             ->body($this->form()->edit($id));
     }
 
@@ -50,7 +50,7 @@ class ProductsController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('创建商品')
+            ->header('Create Product')
             ->body($this->form());
     }
 
@@ -66,7 +66,7 @@ class ProductsController extends Controller
         $grid->id('ID')->sortable();
         $grid->title('title');
         $grid->on_sale('on_sale')->display(function ($value) {
-            return $value ? '是' : '否';
+            return $value ? 'Yes' : 'No';
         });
         $grid->price('price');
         $grid->rating('rating');

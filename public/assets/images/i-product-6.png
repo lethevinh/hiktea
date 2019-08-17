@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html dir="ltr" lang="vi" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>
+<html dir="ltr" lang="vi" class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>
+<html dir="ltr" lang="vi" class="no-js lt-ie9"> <![endif]--><!--[if IE 9 ]>
+<html dir="ltr" lang="vi" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="vi"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Trang bạn yêu cầu không tồn tại!</title>
+    
+            <!-- Style -->
+            <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/blogmate.css" rel="stylesheet">
+        <link href="../css/kiti.scss.css" rel="stylesheet">
+        
+        <!--<link href="catalog/view/theme/maxstore/stylesheet/style.css?v=1522720225" rel="stylesheet" />-->
+        <link href="../css/flexslider.css" rel="stylesheet">
+        <link href="../css/owl.carousel.min.css" rel="stylesheet">
+        <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+        <link href="../css/jquery.jgrowl.min.css" rel="stylesheet">
+        <link href="../css/clockdown.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/stylesheet.css" rel="stylesheet">
+        <!-- Script -->
+            <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="../js/double_tab_togo.js"></script>
+        <script type="text/javascript" src="../js/common_base.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="../js/cloud-zoom.js"></script>
+        <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="../js/parallax.js"></script>
+        <script type="text/javascript" src="../js/jquery.jgrowl.min.js"></script>
+        <script type="text/javascript" src="../js/cs.script.js"></script>
+        <script type="text/javascript" src="../js/api.jquery.js"></script>
+        <script type="text/javascript" src="../js/jquery.countdown.min.js"></script>
+        
+                <link href="53218883_304042716926447_6851595756319539200_n.jpg" rel="icon">
+            <script type="text/javascript">
+        /*remove owl css, js default in head*/
+        $('head link[href="catalog\/view\/javascript\/jquery\/owl-carousel\/owl.carousel\.css?v=1522720225"]').remove();
+        $('head script[src="catalog\/view\/javascript\/jquery\/owl-carousel\/owl.carousel\.js?v=1522720225"]').remove();
+    </script>
+    
+            <link href="../css/stylesheet_1.css" rel="stylesheet">
+</head>
+<body id="revo" class="cms-index-index cms-home-page error-not_found">
+<header>
+    <div class="header-container">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-6">
+                        <div class="row">
+                            <ul class="list-inline welcome-msg toplinks">
+                                <li>
+                                    <div class="dropdown">
+                                        <a href="http://www.hangmyauthentic.vn/index.php?route=account/account" title="Tài khoản" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span>Tài khoản</span> <span class="caret"></span></a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="http://www.hangmyauthentic.vn/index.php?route=account/wishlist" id="wishlist-total" title="Yêu thích (0)">
+                                                    <i class="fa fa-heart"></i>
+                                                    <span>Yêu thích (0)</span></a></li>
+                                            <li><a href="http://www.hangmyauthentic.vn/index.php?route=checkout/checkout" title="Thanh toán">
+                                                    <i class="fa fa-share"></i>
+                                                    <span>Thanh toán</span></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </li>
+                                <li>    <form action="http://www.hangmyauthentic.vn/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                <span class>Tiền tệ</span>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                                    
+                                            <li>
+                            <a class="currency-select" name="EUR">
+                                €                                
+                                Euro                            </a>
+                        </li>
+                                    
+                                    
+                                            <li>
+                            <a class="currency-select" name="GBP">
+                                £                                
+                                Pound Sterling                            </a>
+                        </li>
+                                    
+                                    
+                                            <li>
+                            <a class="currency-select" name="USD">
+                                $                                
+                                US Dollar                            </a>
+                        </li>
+                                    
+                                    
+                                            <li>
+                            <a class="currency-select" name="VND">
+                                đ                                
+                                VND                            </a>
+                        </li>
+                                    
+                            </ul>
+            <input type="hidden" name="code" value>
+            <input type="hidden" name="redirect" value="http://www.hangmyauthentic.vn/index.php?route=error/not_found">
+        </div>
+    </form>
+</li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-6">
+                        <div class="row">
+                            <div class="toplinks">
+                                <div class="links">
+                                                                            <div><span class><a href="http://www.hangmyauthentic.vn/index.php?route=account/login" id="customer_login_link">Đăng nhập</a></span></div>
+                                        <div><span class><a href="http://www.hangmyauthentic.vn/index.php?route=account/register" id="customer_register_link">Đăng ký</a></span></div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container header-mid">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-12 col-sm-4">
+                    <!-- Header Logo -->
+                    <div class="logo" id="logo">
+                        <a href="http://www.hangmyauthentic.vn/">
+                                                            <img src="logo-maxstore-500px-01%20%281%29.png" alt="Hàng Mỹ Authentic" itemprop="logo">
+                                                    </a>
+                    </div>
+                    <!-- End Header Logo -->
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-8 hidden-xs search"><div class="header_search">
+    <div class="input-group search-bar">
+        <div class="collection-selector">
+            <select name="category_id" class="search_text">
+                <option class="item-cate search_item" value="0">Tất cả</option>
+                                    
+                                            <option class="item-cate search_item" value="173">Bath &amp; Body works - Victoria's Secret</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="168">Bộ quà tặng</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="89">Chăm sóc cá nhân và làm đẹp </option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="100">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nam)</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="95">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nữ)</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="169">Chăm sóc da mặt</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="129">Chăm sóc sức khoẻ gia đình</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="134">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc gia đình</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="133">&nbsp;&nbsp;&nbsp;&nbsp;Thuốc bổ, Vitamin</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="167">Chăm sóc tóc</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="136">Thế giới cho bé</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="158">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé gái</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="157">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé trai</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="147">Thời trang và Phụ kiện</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="165">&nbsp;&nbsp;&nbsp;&nbsp;Phụ kiện, Trang sức, Trang điểm</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="148">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nam</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="149">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nữ</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="160">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nam)</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="159">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nữ)</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="166">Thực phẩm, Bánh kẹo</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="170">Điện gia dụng </option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="109">Đồ gia dụng</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="162">&nbsp;&nbsp;&nbsp;&nbsp;Bếp</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="163">&nbsp;&nbsp;&nbsp;&nbsp;Phòng tắm</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="161">&nbsp;&nbsp;&nbsp;&nbsp;Đồ dùng gia đình</option>
+                                                
+                                            
+                                    
+                            </select>
+        </div>
+        <input type="text" name="search" value placeholder="Tìm kiếm" class="input-group-field st-default-search-input search-text" autocomplete="off">
+        <span class="input-group-btn">
+            <button class="btn icon-fallback-text" type="button">
+                <span class="fa fa-search"></span>
+                <span class="hidden-lg hidden-md">Tìm kiếm</span>
+            </button>
+        </span>
+    </div>
+</div></div>
+                <div class="col-lg-3 col-md-3 cart"><div class="top-cart-contain">
+    <div class="top_phone_number mini-cart" id="cart">
+        <a data-toggle="dropdown" data-loading-text="Đang tải" class="basket dropdown-toggle">
+            <div class="phone-img">
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div class="text" id="cart-total">
+                                <p class="phone-box"><strong><span>0 sản phẩm </span></strong></p>
+                <p class="email-box"><strong><span> 0đ</span></strong></p>
+            </div>
+        </a>
+        
+        <div class="top-cart-content arrow_box dropdown-menu">
+            <ul id="cart-sidebar" class="mini-products-list">
+                                    <li class="item">
+                        <p class="text-center" style="padding: 15px; font-size: 16px;">Giỏ hàng của bạn trống!</p>
+                    </li>
+                            </ul>
+                    </div>
+    </div>
+</div></div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav id="menu_header">
+    <div class="nav-menu container">
+        <div class="nav-inner row">
+            <div class="hidden-md" id="mobile-menu">
+                <ul class="navmenu">
+                    <li>
+                        <div class="menutop">
+                            <div class="toggle">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <h2>Menu</h2>
+                        </div>
+                        <ul style="display:none;" class="submenu">
+                            <li>
+                                <ul class="topnav">
+                                                                            <li class="level0 level-top parent">
+                                            <a class="level-top" href="http://www.hangmyauthentic.vn/"><span>Trang chủ</span></a>
+                                                                                    </li>
+                                                                            <li class="level0 level-top parent">
+                                            <a class="level-top" href="http://www.hangmyauthentic.vn/gioi-thieu"><span>Giới thiệu</span></a>
+                                                                                    </li>
+                                                                            <li class="level0 level-top parent">
+                                            <a class="level-top" href="http://www.hangmyauthentic.vn/san-pham"><span>Sản phẩm</span></a>
+                                                                                    </li>
+                                                                            <li class="level0 level-top parent">
+                                            <a class="level-top" href="http://www.hangmyauthentic.vn/tin-tuc"><span>Tin tức</span></a>
+                                                                                    </li>
+                                                                            <li class="level0 level-top parent">
+                                            <a class="level-top" href="http://www.hangmyauthentic.vn/lien-he"><span>Liên hệ</span></a>
+                                                                                    </li>
+                                    
+                                    <li id="search_mobile"><div class="header_search">
+    <div class="input-group search-bar">
+        <div class="collection-selector">
+            <select name="category_id" class="search_text">
+                <option class="item-cate search_item" value="0">Tất cả</option>
+                                    
+                                            <option class="item-cate search_item" value="173">Bath &amp; Body works - Victoria's Secret</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="168">Bộ quà tặng</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="89">Chăm sóc cá nhân và làm đẹp </option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="100">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nam)</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="95">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nữ)</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="169">Chăm sóc da mặt</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="129">Chăm sóc sức khoẻ gia đình</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="134">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc gia đình</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="133">&nbsp;&nbsp;&nbsp;&nbsp;Thuốc bổ, Vitamin</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="167">Chăm sóc tóc</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="136">Thế giới cho bé</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="158">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé gái</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="157">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé trai</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="147">Thời trang và Phụ kiện</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="165">&nbsp;&nbsp;&nbsp;&nbsp;Phụ kiện, Trang sức, Trang điểm</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="148">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nam</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="149">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nữ</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="160">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nam)</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="159">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nữ)</option>
+                                                
+                                            
+                                    
+                                    
+                                            <option class="item-cate search_item" value="166">Thực phẩm, Bánh kẹo</option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="170">Điện gia dụng </option>
+                                        
+                                    
+                                    
+                                            <option class="item-cate search_item" value="109">Đồ gia dụng</option>
+                                        
+                                            
+                                                    <option class="item-cate search_item" value="162">&nbsp;&nbsp;&nbsp;&nbsp;Bếp</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="163">&nbsp;&nbsp;&nbsp;&nbsp;Phòng tắm</option>
+                                                
+                                            
+                                            
+                                                    <option class="item-cate search_item" value="161">&nbsp;&nbsp;&nbsp;&nbsp;Đồ dùng gia đình</option>
+                                                
+                                            
+                                    
+                            </select>
+        </div>
+        <input type="text" name="search" value placeholder="Tìm kiếm" class="input-group-field st-default-search-input search-text" autocomplete="off">
+        <span class="input-group-btn">
+            <button class="btn icon-fallback-text" type="button">
+                <span class="fa fa-search"></span>
+                <span class="hidden-lg hidden-md">Tìm kiếm</span>
+            </button>
+        </span>
+    </div>
+</div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="side-nav-categories hidden-xs hidden-sm" onclick>
+                <div class="spverticalmenu">
+                    <div class="block-title">Danh mục</div>
+                </div>
+                <div class="box-content box-category">
+                                        <ul id="left-menu">
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/bath-body-works-victoria-s-secret">
+                                        <span class="child-title">Bath &amp; Body works - Victoria's Secret</span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/bo-qua-tang">
+                                        <span class="child-title">Bộ quà tặng</span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/cham-soc-ca-nhan-va-lam-dep">
+                                        <span class="child-title">Chăm sóc cá nhân và làm đẹp </span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/cham-soc-ca-nhan-nam">
+                                                    <span class="lv1-title">Chăm sóc cá nhân (Nam)</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/cham-soc-ca-nhan-nu">
+                                                    <span class="lv1-title">Chăm sóc cá nhân (Nữ)</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/cham-soc-da-mat">
+                                        <span class="child-title">Chăm sóc da mặt</span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/cham-soc-suc-khoe-gia-dinh">
+                                        <span class="child-title">Chăm sóc sức khoẻ gia đình</span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/cham-soc-gia-dinh">
+                                                    <span class="lv1-title">Chăm sóc gia đình</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/thuoc-bo-vitamin">
+                                                    <span class="lv1-title">Thuốc bổ, Vitamin</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/cham-soc-toc">
+                                        <span class="child-title">Chăm sóc tóc</span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/the-gioi-cho-be">
+                                        <span class="child-title">Thế giới cho bé</span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/quan-ao-be-gai">
+                                                    <span class="lv1-title">Quần áo bé gái</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/quan-ao-be-trai">
+                                                    <span class="lv1-title">Quần áo bé trai</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/thoi-trang-va-phu-kien">
+                                        <span class="child-title">Thời trang và Phụ kiện</span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/phu-kien-trang-suc-trang-diem">
+                                                    <span class="lv1-title">Phụ kiện, Trang sức, Trang điểm</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/thoi-trang-nam">
+                                                    <span class="lv1-title">Thời trang Nam</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/thoi-trang-nu">
+                                                    <span class="lv1-title">Thời trang Nữ</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/underwear-nam">
+                                                    <span class="lv1-title">Underwear (Nam)</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/underwear-nu">
+                                                    <span class="lv1-title">Underwear (Nữ)</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/thuc-pham-banh-keo">
+                                        <span class="child-title">Thực phẩm, Bánh kẹo</span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/dien-gia-dung">
+                                        <span class="child-title">Điện gia dụng </span>
+                                    </a>
+                                </li>
+                                                    
+                                                    
+                                                            <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="http://www.hangmyauthentic.vn/do-gia-dung">
+                                        <span class="child-title">Đồ gia dụng</span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/bep">
+                                                    <span class="lv1-title">Bếp</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/phong-tam">
+                                                    <span class="lv1-title">Phòng tắm</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                                    <li class="lv1 open">
+                                                <a class="lv1" href="http://www.hangmyauthentic.vn/do-dung-gia-dinh">
+                                                    <span class="lv1-title">Đồ dùng gia đình</span>
+                                                    <ul class="lv2"></ul>
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                                                    
+                                            </ul>
+                </div>
+            </div>
+
+            <ul id="nav" class="hidden-xs hidden-sm row">
+                                    
+                                            <li class="level0 parent">
+                            <a href="http://www.hangmyauthentic.vn/"><span>Trang chủ</span></a>
+                        </li>
+                                    
+                                    
+                                            <li class="level0 parent">
+                            <a href="http://www.hangmyauthentic.vn/gioi-thieu"><span>Giới thiệu</span></a>
+                        </li>
+                                    
+                                    
+                                            <li class="level0 parent">
+                            <a href="http://www.hangmyauthentic.vn/san-pham"><span>Sản phẩm</span></a>
+                        </li>
+                                    
+                                    
+                                            <li class="level0 parent">
+                            <a href="http://www.hangmyauthentic.vn/tin-tuc"><span>Tin tức</span></a>
+                        </li>
+                                    
+                                    
+                                            <li class="level0 parent">
+                            <a href="http://www.hangmyauthentic.vn/lien-he"><span>Liên hệ</span></a>
+                        </li>
+                                    
+                            </ul>
+            <div class="pull-right menu-img hidden-md hidden-lg" id="cart_mobile"></div>
+        </div>
+    </div>
+</nav><div class="row">
+</div><div class="container">
+  <ul class="breadcrumb hidden">
+        <li><a href="http://www.hangmyauthentic.vn/"><i class="fa fa-home"></i></a></li>
+        <li><a href="http://www.hangmyauthentic.vn/index.php?route=error/not_found">Trang bạn yêu cầu không tồn tại!</a></li>
+      </ul>
+  <div class="row">
+                          <div id="content" class="col-sm-12 col-xs-12 col-md-12">      <h1>Trang bạn yêu cầu không tồn tại!</h1>
+      <p>Trang bạn yêu cầu không tồn tại.</p>
+      <div class="buttons clearfix">
+        <div class="pull-right"><a href="http://www.hangmyauthentic.vn/" class="button btn-primary">Tiếp tục</a></div>
+      </div>
+      </div>
+          </div>
+</div>
+<footer id="footer">
+    <div class="newsletter-wrap">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="newsletter">
+                        <form id="formNewLestter1491068743" method="post" class="formNewLestter form-khuyen-mai">
+                            <h3 class="title">Đăng ký nhận tin</h3>
+                            <div class="khuyen-mai">
+                                <input type="email" placeholder="Email..." class="input-text email" name="email" id="newsletter1">
+                                <button type="submit" name="submitNewsletter" class="subscribe" value="Đăng ký!">
+                                    <span>Đăng ký!</span></button>
+                                <input type="hidden" value="1" name="action">
+                                <div class="valid clearfix"></div>
+                            </div>
+                        </form>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                var id = '#formNewLestter1491068743';
+                                $(id + ' .title').bind('click', function () {
+                                    $(id).toggleClass('active');
+                                });
+                                $(id).on('submit', function () {
+                                    var email = $(id + ' .email').val();
+                                    $(".success_inline, .warning_inline, .error").remove();
+                                    if (!isValidEmailAddress(email)) {
+                                        $(id + ' .valid').html("Email không hợp lệ");
+                                        $(id + ' .email').focus();
+                                        return false;
+                                    }
+                                    var url = "index.php?route=tool/newsletter";
+                                    $.ajax({
+                                        type    : "post",
+                                        url     : url,
+                                        data    : $(id).serialize(),
+                                        dataType: 'json',
+                                        success : function (json) {
+                                            $(".success_inline, .warning_inline, .error").remove();
+                                            if (json['error']) {
+                                                $(id + ' .valid').html(json['error']);
+                                            }
+                                            if (json['success']) {
+                                                $(id + ' .valid').html(json['success']);
+                                                $(id)[0].reset();
+                                            }
+                                        }
+                                    });
+                                    return false;
+                                });
+                            });
+                            function isValidEmailAddress(emailAddress) {
+                                var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+                                return pattern.test(emailAddress);
+                            }
+                        </script>
+                    </div>
+                    <!--newsletter-->
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="inner">
+                        <div class>
+                            <div class="social pull-right">
+                                <h3 class="title"></h3>
+                                <ul class="link">
+                                                                            <li class="fb pull-left"><a href="https://www.facebook.com/sieuthihangmychinhgoc/"><i class="fa fa-facebook"></i></a></li>
+                                                                                                                <li class="tw pull-left"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                                                                <li class="googleplus pull-left"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                                                                <li class="youtube pull-left"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                                                                                                <li class="instagram pull-left"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="footer-column-last pull-left">
+                        <h4>Hàng Mỹ Authentic</h4>
+                        <div class="info_footer">
+                                                            <address>
+                                    <i class="add-icon">&nbsp;</i>
+                                    Ho Chi Minh                                </address>
+                                <div class="phone-footer">
+                                    <i class="phone-icon">&nbsp;</i>
+                                    <a href="tel:085 7691229">085 7691229</a></div>
+                                <div class="email-footer">
+                                    <i class="email-icon">&nbsp;</i>
+                                    <a href="mailto:hangmyauthentic5@gmail.com">hangmyauthentic5@gmail.com</a></div>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-5">
+                            <div class="fix-mobile5">
+                                <div class="footer-column pull-left">
+                                                                                                                                                                                                                                                                <h4>Thông tin</h4>
+                                                <ul class="links">
+                                                                                                            <li><a href="http://www.hangmyauthentic.vn/gioi-thieu">Giới thiệu</a></li>
+                                                                                                            <li><a href="http://www.hangmyauthentic.vn/van-chuyen">Chính sách vận chuyển</a></li>
+                                                                                                            <li><a href="http://www.hangmyauthentic.vn/quy-dinh">Quy định &amp; Chính sách</a></li>
+                                                                                                            <li><a href="http://www.hangmyauthentic.vn/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                                                                                                    </ul>
+                                                                                                                                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-7">
+                            <div class=" fix-mobile5">
+                                <div class="footer-column pull-left">
+                                    <h4></h4>
+                                    <div class="fb_block_f" style="overflow:hidden">
+                                                                                    <div class="fb-page" data-href="https://www.facebook.com/sieuthihangmychinhgoc/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="coppyright">&copy; Copyright 2019 Hàng Mỹ Authentic. Thiết kế bởi <a target="_blank" href="https://www.zozo.vn?utm_source=www.hangmyauthentic.vn&utm_medium=referral&utm_campaign=copyrightwebdesign&utm_term=footerurl&utm_content=footer">Zozo</a></div>
+                    <div class="text-center">
+                        <div>
+                            <img class="first" src="payments-1.png" alt="payments-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="../css/social_login_button.css">
+<!-- Facebook Login -->
+
+<!-- Google Login -->
+
+<a href="javascript:void(0)" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0.7;"></span></a>
+
+<script type="text/javascript" src="../js/custom.js"></script>
+
+<!-- Facebook script -->
+<div id="fb-root"></div>
+<script type="text/javascript">
+    (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=829732533863539";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Zalo -->
+<script src="../js/sdk.js"></script>
+
+<!-- Show Popup Cart -->
+<button id="btn_show_cart" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-popupcart-modal-lg" style="display: none;"></button>
+
+<div class="modal fade bs-popupcart-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</h4>
+            </div>
+            <div class="modal-body" id="load_info_cart"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tiếp tục mua hàng</button>
+                <a href="index.php?route=checkout/checkout" class="btn btn-primary">Tiến hành thanh toán</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /* Sau khi tat khung popup cart, cap nhat lai gio hang tren header */
+    $('.bs-popupcart-modal-lg').on('hidden.bs.modal', function (e) {
+        $.ajax({
+            url       : 'index.php?route=checkout/cart/getTotalProductInCart',
+            type      : 'post',
+            dataType  : 'json',
+            beforeSend: function () {
+            },
+            complete  : function () {
+            },
+            success   : function (json) {
+                var out = json['total'].substr(0, json['total'].indexOf(' '));
+                $('#cart-total').html(out);
+                $('#cart > ul').load('index.php?route=common/cart/info ul li');
+            }
+        });
+    });
+</script>
+
+</body></html>

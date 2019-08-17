@@ -26,7 +26,7 @@ class OrdersController extends Controller
     public function show(Order $order, Content $content)
     {
         return $content
-            ->header('查看订单')
+            ->header('Show Orders')
             // body 方法可以接受 Laravel 的视图作为参数
             ->body(view('admin.orders.show', ['order' => $order]));
     }

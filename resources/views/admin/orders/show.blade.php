@@ -1,9 +1,11 @@
 <div class="box box-info">
   <div class="box-header with-border">
-    <h3 class="box-title">订单流水号：{{ $order->no }}</h3>
+    <h3 class="box-title">OrderNumber：#{{ $order->no }}</h3>
     <div class="box-tools">
       <div class="btn-group float-right" style="margin-right: 10px">
-        <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-default"><i class="fa fa-list"></i> 列表</a>
+        <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-default">
+            <i class="fa fa-list"></i> List
+        </a>
       </div>
     </div>
   </div>
@@ -11,26 +13,26 @@
     <table class="table table-bordered">
       <tbody>
       <tr>
-        <td>买家：</td>
+        <td> Buyer：</td>
         <td>{{ $order->user->name }}</td>
-        <td>支付时间：</td>
+        <td>Payment time ：</td>
         <td>{{ $order->paid_at->format('Y-m-d H:i:s') }}</td>
       </tr>
       <tr>
-        <td>支付方式：</td>
+        <td> Payment method：</td>
         <td>{{ $order->payment_method }}</td>
-        <td>支付渠道单号：</td>
+        <td>Payment channel number：</td>
         <td>{{ $order->payment_no }}</td>
       </tr>
       <tr>
-        <td>收货地址</td>
+        <td>Shipping address</td>
         <td colspan="3">{{ $order->address['address'] }} {{ $order->address['zip'] }} {{ $order->address['contact_name'] }} {{ $order->address['contact_phone'] }}</td>
       </tr>
       <tr>
-        <td rowspan="{{ $order->items->count() + 1 }}">商品列表</td>
-        <td>商品名称</td>
-        <td>单价</td>
-        <td>数量</td>
+        <td rowspan="{{ $order->items->count() + 1 }}">Product list	</td>
+        <td>Product name</td>
+        <td>unit price</td>
+        <td>Quantity</td>
       </tr>
       @foreach($order->items as $item)
         <tr>
@@ -40,9 +42,9 @@
         </tr>
       @endforeach
       <tr>
-        <td>订单金额：</td>
-        <td>￥{{ $order->total_amount }}</td>
-        <td>发货状态：</td>
+        <td>order amount：</td>
+        <td>{{ $order->total_amount }} vnd</td>
+        <td>Delivery status：</td>
         <td>{{ \App\Models\Order::$shipStatusMap[$order->ship_status] }}</td>
       </tr>
       <!-- 订单发货开始 -->
@@ -56,8 +58,8 @@
               <!-- 别忘了 csrf token 字段 -->
               {{ csrf_field() }}
               <div class="form-group {{ $errors->has('express_company') ? 'has-error' : '' }}">
-                <label for="express_company" class="control-label">物流公司</label>
-                <input type="text" id="express_company" name="express_company" value="" class="form-control" placeholder="输入物流公司">
+                <label for="express_company" class="control-label">Logistics company</label>
+                <input type="text" id="express_company" name="express_company" value="" class="form-control" placeholder="Input logistics company">
                 @if($errors->has('express_company'))
                   @foreach($errors->get('express_company') as $msg)
                     <span class="help-block">{{ $msg }}</span>
@@ -65,15 +67,15 @@
                 @endif
               </div>
               <div class="form-group {{ $errors->has('express_no') ? 'has-error' : '' }}">
-                <label for="express_no" class="control-label">物流单号</label>
-                <input type="text" id="express_no" name="express_no" value="" class="form-control" placeholder="输入物流单号">
+                <label for="express_no" class="control-label">shipment number</label>
+                <input type="text" id="express_no" name="express_no" value="" class="form-control" placeholder="Enter the logistics order number">
                 @if($errors->has('express_no'))
                   @foreach($errors->get('express_no') as $msg)
                     <span class="help-block">{{ $msg }}</span>
                   @endforeach
                 @endif
               </div>
-              <button type="submit" class="btn btn-success" id="ship-btn">发货</button>
+              <button type="submit" class="btn btn-success" id="ship-btn">Ship</button>
             </form>
           </td>
         </tr>
@@ -82,22 +84,22 @@
       @else
         <!-- 否则展示物流公司和物流单号 -->
         <tr>
-          <td>物流公司：</td>
+          <td>Logistics company：</td>
           <td>{{ $order->ship_data['express_company'] }}</td>
-          <td>物流单号：</td>
+          <td>Shipment number：</td>
           <td>{{ $order->ship_data['express_no'] }}</td>
         </tr>
       @endif
       <!-- 订单发货结束 -->
       @if($order->refund_status !== \App\Models\Order::REFUND_STATUS_PENDING)
         <tr>
-          <td>退款状态：</td>
+          <td>Refund status：</td>
           <td colspan="2">{{ \App\Models\Order::$refundStatusMap[$order->refund_status] }}，理由：{{ $order->extra['refund_reason'] }}</td>
           <td>
             <!-- 如果订单退款状态是已申请，则展示处理按钮 -->
             @if($order->refund_status === \App\Models\Order::REFUND_STATUS_APPLIED)
-              <button class="btn btn-sm btn-success" id="btn-refund-agree">同意</button>
-              <button class="btn btn-sm btn-danger" id="btn-refund-disagree">不同意</button>
+              <button class="btn btn-sm btn-success" id="btn-refund-agree">agree</button>
+              <button class="btn btn-sm btn-danger" id="btn-refund-disagree">disagree</button>
             @endif
           </td>
         </tr>
