@@ -22,7 +22,11 @@
     <div class="category-description std">
         <div class="slider-items-products"></div>
         <div class>
-            <h1 class="cat-heading">Sản phẩm</h1>
+            @if($category)
+                <h1 class="cat-heading">Sản phẩm - {{$category->title}}</h1>
+            @else
+                <h1 class="cat-heading">Sản phẩm </h1>
+            @endif
         </div>
     </div>
     <div class="category-products">

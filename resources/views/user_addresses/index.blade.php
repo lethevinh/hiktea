@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 @section('title', '收货地址列表')
 
 @section('content')

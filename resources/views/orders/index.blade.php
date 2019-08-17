@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 @section('title', 'Danh sách đặt hàng')
 
 @section('content')

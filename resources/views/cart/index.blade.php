@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 @section('title', '购物车')
 
 @section('content')

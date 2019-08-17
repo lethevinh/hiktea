@@ -16,6 +16,7 @@ class PagesController extends Controller
       $page=  Page::where('slug',$page)->first();
       if ($page){
           return view('pages.page',[
+              'categories' => $this->getCategories(),
               'page' => $page,
           ]);
       }

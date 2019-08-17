@@ -51,20 +51,6 @@
                         <div class="row">
                             <ul class="list-inline welcome-msg toplinks">
                                 <li>
-                                    <div class="dropdown">
-                                        <a href="tai-khoan.html" title="Tài khoản" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span>Tài khoản</span> <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="wishlist.html" id="wishlist-total" title="Yêu thích (0)">
-                                                    <i class="fa fa-heart"></i>
-                                                    <span>Yêu thích (0)</span></a></li>
-                                            <li><a href="thanh-toan.html" title="Thanh toán">
-                                                    <i class="fa fa-share"></i>
-                                                    <span>Thanh toán</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
                                     <form action="https://usmartcindy.com/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
                                         <div class="dropdown">
                                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
@@ -73,24 +59,16 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="currency-select" name="EUR">
-                                                        €
-                                                        Euro </a>
+                                                    <a class="currency-select" name="EUR">€ Euro </a>
                                                 </li>
                                                 <li>
-                                                    <a class="currency-select" name="GBP">
-                                                        £
-                                                        Pound Sterling </a>
+                                                    <a class="currency-select" name="GBP">£ Pound Sterling </a>
                                                 </li>
                                                 <li>
-                                                    <a class="currency-select" name="USD">
-                                                        $
-                                                        US Dollar </a>
+                                                    <a class="currency-select" name="USD">$ US Dollar </a>
                                                 </li>
                                                 <li>
-                                                    <a class="currency-select" name="VND">
-                                                        đ
-                                                        VND </a>
+                                                    <a class="currency-select" name="VND">đ VND </a>
                                                 </li>
                                             </ul>
                                             <input type="hidden" name="code" value>
@@ -106,8 +84,23 @@
                         <div class="row">
                             <div class="toplinks">
                                 <div class="links">
-                                    <div><span class><a href="dang-nhap.html" id="customer_login_link">Đăng nhập</a></span></div>
-                                    <div><span class><a href="/dang-ky.html" id="customer_register_link">Đăng ký</a></span></div>
+                                    @guest
+                                        <div><span class><a href="{{ route('login') }}" id="customer_login_link">Đăng nhập</a></span></div>
+                                        <div><span class><a href="{{ route('register') }}" id="customer_register_link">Đăng ký</a></span></div>
+                                    @else
+                                        <a href="tai-khoan.html" title="Tài khoản" class="dropdown-toggle " data-toggle="dropdown">
+                                            <span>Tài khoản  {{ Auth::user()->name }}</span> <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu account">
+                                            <li><a href="{{ route('user_addresses.index') }}" class="dropdown-item">Shipping address</a></li>
+                                            <li><a href="{{ route('orders.index') }}" class="dropdown-item">My Order</a></li>
+                                            <li><a href="{{ route('products.favorites') }}" class="dropdown-item">my collection</a></li>
+                                            <li><a class="dropdown-item" id="logout" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">sign out</a></li>
+                                            <li><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form></li>
+                                        </ul>
+                                    @endguest
                                 </div>
                             </div>
                         </div>
@@ -220,19 +213,19 @@
                             <li>
                                 <ul class="topnav">
                                     <li class="level0 level-top parent">
-                                        <a class="level-top" href="index.html"><span>Trang chủ</span></a>
+                                        <a class="level-top" href="{{url('/')}}"><span>Trang chủ</span></a>
                                     </li>
                                     <li class="level0 level-top parent">
-                                        <a class="level-top" href="gioi-thieu.html"><span>Giới thiệu</span></a>
+                                        <a class="level-top" href="{{url('gioi-thieu.html')}}"><span>Giới thiệu</span></a>
                                     </li>
                                     <li class="level0 level-top parent">
-                                        <a class="level-top" href="san-pham.html"><span>Sản phẩm</span></a>
+                                        <a class="level-top" href="{{url('san-pham.html')}}"><span>Sản phẩm</span></a>
                                     </li>
                                     <li class="level0 level-top parent">
-                                        <a class="level-top" href="tin-tuc.html"><span>Tin tức</span></a>
+                                        <a class="level-top" href="{{url('tin-tuc.html')}}"><span>Tin tức</span></a>
                                     </li>
                                     <li class="level0 level-top parent">
-                                        <a class="level-top" href="lien-he.html"><span>Liên hệ</span></a>
+                                        <a class="level-top" href="{{url('lien-he.html')}}"><span>Liên hệ</span></a>
                                     </li>
                                     <li id="search_mobile">
                                         <div class="header_search">
@@ -288,191 +281,53 @@
                     <div class="block-title">Danh mục</div>
                 </div>
                 <div class="box-content box-category">
+                    @if($categories)
                     <ul id="left-menu">
-                        <li class="lv0">
-                            <a class="lv0" href="bath-body-works-victoria-s-secret.html">
-                                <span class="child-title">Bath &amp; Body works - Victoria's Secret</span>
-                            </a>
-                        </li>
-                        <li class="lv0">
-                            <a class="lv0" href="bo-qua-tang.html">
-                                <span class="child-title">Bộ quà tặng</span>
-                            </a>
-                        </li>
-                        <li class="lv0 open menu-icon">
-                            <a class="lv0" href="cham-soc-ca-nhan-va-lam-dep.html">
-                                <span class="child-title">Chăm sóc cá nhân và làm đẹp </span>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <ul class="lv1">
-                                <li class="lv1 open">
-                                    <a class="lv1" href="cham-soc-ca-nhan-nam.html">
-                                        <span class="lv1-title">Chăm sóc cá nhân (Nam)</span>
-                                        <ul class="lv2"></ul>
+                        @foreach($categories as $category)
+                            @if(count($category->children) > 0)
+                                <li class="lv0 open menu-icon">
+                                    <a class="lv0" href="{{$category->toLink()}}">
+                                        <span class="child-title">{{$category->title}} </span>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="lv1">
+                                        @foreach($category->children as $child)
+                                        <li class="lv1 open">
+                                            <a class="lv1" href="{{$child->toLink()}}">
+                                                <span class="lv1-title">{{$child->title}}</span>
+                                                <ul class="lv2"></ul>
+                                            </a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @else
+                                <li class="lv0">
+                                    <a class="lv0" href="{{$category->toLink()}}">
+                                        <span class="child-title">{{$category->title}}</span>
                                     </a>
                                 </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="cham-soc-ca-nhan-nu.html">
-                                        <span class="lv1-title">Chăm sóc cá nhân (Nữ)</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="lv0">
-                            <a class="lv0" href="cham-soc-da-mat.html">
-                                <span class="child-title">Chăm sóc da mặt</span>
-                            </a>
-                        </li>
-                        <li class="lv0 open menu-icon">
-                            <a class="lv0" href="cham-soc-suc-khoe-gia-dinh.html">
-                                <span class="child-title">Chăm sóc sức khoẻ gia đình</span>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <ul class="lv1">
-                                <li class="lv1 open">
-                                    <a class="lv1" href="cham-soc-gia-dinh.html">
-                                        <span class="lv1-title">Chăm sóc gia đình</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="thuoc-bo-vitamin.html">
-                                        <span class="lv1-title">Thuốc bổ, Vitamin</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="lv0">
-                            <a class="lv0" href="cham-soc-toc.html">
-                                <span class="child-title">Chăm sóc tóc</span>
-                            </a>
-                        </li>
-                        <li class="lv0 open menu-icon">
-                            <a class="lv0" href="the-gioi-cho-be.html">
-                                <span class="child-title">Thế giới cho bé</span>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <ul class="lv1">
-                                <li class="lv1 open">
-                                    <a class="lv1" href="quan-ao-be-gai.html">
-                                        <span class="lv1-title">Quần áo bé gái</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="quan-ao-be-trai.html">
-                                        <span class="lv1-title">Quần áo bé trai</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="lv0 open menu-icon">
-                            <a class="lv0" href="thoi-trang-va-phu-kien.html">
-                                <span class="child-title">Thời trang và Phụ kiện</span>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <ul class="lv1">
-                                <li class="lv1 open">
-                                    <a class="lv1" href="phu-kien-trang-suc-trang-diem.html">
-                                        <span class="lv1-title">Phụ kiện, Trang sức, Trang điểm</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="thoi-trang-nam.html">
-                                        <span class="lv1-title">Thời trang Nam</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="thoi-trang-nu.html">
-                                        <span class="lv1-title">Thời trang Nữ</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="underwear-nam.html">
-                                        <span class="lv1-title">Underwear (Nam)</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="underwear-nu.html">
-                                        <span class="lv1-title">Underwear (Nữ)</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="mat-kinh.html">
-                                        <span class="lv1-title">Mắt Kính</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="tui-sach.html">
-                                        <span class="lv1-title">Túi Xách</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="lv0">
-                            <a class="lv0" href="thuc-pham-banh-keo.html">
-                                <span class="child-title">Thực phẩm, Bánh kẹo</span>
-                            </a>
-                        </li>
-                        <li class="lv0">
-                            <a class="lv0" href="dien-gia-dung.html">
-                                <span class="child-title">Điện gia dụng </span>
-                            </a>
-                        </li>
-                        <li class="lv0 open menu-icon">
-                            <a class="lv0" href="do-gia-dung.html">
-                                <span class="child-title">Đồ gia dụng</span>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <ul class="lv1">
-                                <li class="lv1 open">
-                                    <a class="lv1" href="bep.html">
-                                        <span class="lv1-title">Bếp</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="phong-tam.html">
-                                        <span class="lv1-title">Phòng tắm</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                                <li class="lv1 open">
-                                    <a class="lv1" href="do-dung-gia-dinh.html">
-                                        <span class="lv1-title">Đồ dùng gia đình</span>
-                                        <ul class="lv2"></ul>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                            @endif
+                        @endforeach
                     </ul>
+                    @endif
                 </div>
             </div>
             <ul id="nav" class="hidden-xs hidden-sm row">
                 <li class="level0 parent">
-                    <a href="index.html"><span>Trang chủ</span></a>
+                    <a href="{{url('/')}}"><span>Trang chủ</span></a>
                 </li>
                 <li class="level0 parent">
-                    <a href="gioi-thieu.html"><span>Giới thiệu</span></a>
+                    <a href="{{url('gioi-thieu.html')}}"><span>Giới thiệu</span></a>
                 </li>
                 <li class="level0 parent">
-                    <a href="san-pham.html"><span>Sản phẩm</span></a>
+                    <a href="{{url('san-pham.html')}}"><span>Sản phẩm</span></a>
                 </li>
                 <li class="level0 parent">
-                    <a href="tin-tuc.html"><span>Tin tức</span></a>
+                    <a href="{{url('tin-tuc.html')}}"><span>Tin tức</span></a>
                 </li>
                 <li class="level0 parent">
-                    <a href="lien-he.html"><span>Liên hệ</span></a>
+                    <a href="{{url('lien-he.html')}}"><span>Liên hệ</span></a>
                 </li>
             </ul>
             <div class="pull-right menu-img hidden-md hidden-lg" id="cart_mobile"></div>

@@ -48,7 +48,7 @@ class ProductsController extends Controller {
 
 		return view('products.index', [
 			'products' => $products,
-			'categories' => $this->getAllCategory(),
+			'categories' => $this->getCategories(),
 			'category' => '',
 			'filters' => [
 				'search' => $search,
@@ -99,7 +99,7 @@ class ProductsController extends Controller {
 
 		return view('products.index', [
 			'products' => $products,
-			'categories' => $this->getAllCategory(),
+            'categories' => $this->getCategories(),
 			"category" => $cat,
 			'filters' => [
 				'search' => $search,
@@ -136,7 +136,7 @@ class ProductsController extends Controller {
 		return view('products.show', [
 			'product' => $product,
 			'category' => $category,
-			'categories' => $this->getAllCategory(),
+            'categories' => $this->getCategories(),
 			'favored' => $favored,
 			'reviews' => $reviews,
 		]);
@@ -165,7 +165,7 @@ class ProductsController extends Controller {
 
 		return view('products.show', [
 			'product' => $product,
-			'categories' => $this->getAllCategory(),
+            'categories' => $this->getCategories(),
 			'favored' => $favored,
 			'reviews' => $reviews,
 		]);

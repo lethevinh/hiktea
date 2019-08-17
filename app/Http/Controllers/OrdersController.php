@@ -43,13 +43,13 @@ class OrdersController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate();
 
-        return view('orders.index', ['orders' => $orders]);
+        return view('orders.index', ['orders' => $orders,'categories' => $this->getCategories(),]);
     }
 
     public function show(Order $order, Request $request)
     {
         $this->authorize('own', $order);
-        return view('orders.show', ['order' => $order->load(['items.productSku', 'items.product'])]);
+        return view('orders.show', ['order' => $order->load(['items.productSku', 'items.product']),'categories' => $this->getCategories(),]);
     }
 
     public function received(Order $order, Request $request)

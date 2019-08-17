@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 @section('title', ($address->id ? '修改': '新增') . '收货地址')
 
 @section('content')
