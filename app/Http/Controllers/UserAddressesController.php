@@ -12,6 +12,7 @@ class UserAddressesController extends Controller
     {
         return view('user_addresses.index', [
             'addresses' => $request->user()->addresses,
+            'categories' => $this->getCategories()
         ]);
     }
 
