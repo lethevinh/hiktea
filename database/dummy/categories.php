@@ -6482,7 +6482,7 @@ return [
 			],
 			[
 				"url" => "http://www.hangmyauthentic.vn/bo-ba-tui-dung-do-trang-diem-cua-victoria-s-secret?limit=1200",
-				"filename" => "bo-ba-tui-dung-do-trang-diem-cua-victoria-s-secret",
+				"filename" => "bo-ba-tui-dung-do-trang-diem-cua-victoria-s-secret-s",
 				"name" => "Bộ ba túi đựng đồ trang điểm của Victoria's Secret.",
 				"price" => "1,150,000đ",
 				"image" => "http://www.hangmyauthentic.vn/image/cache/catalog/hang%20moi/59812155_1092980974223639_751084858314326016_n-400x400.jpg",
