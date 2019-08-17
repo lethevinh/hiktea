@@ -852,7 +852,7 @@ return [
 				"price" => "395,000đ",
 				"image" => "http://www.hangmyauthentic.vn/image/cache/catalog/san-pham/Cham%20soc%20nu/Patchouli-400x400.jpg",
 			]],
-		"slug" => "bath-body-works-victoria-s-secret",
+		"slug" => "bath-body-works-victoria-s-secret-s",
 	],
 	[
 		"url" => "http://www.hangmyauthentic.vn/bo-qua-tang?limit=1200",
