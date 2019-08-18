@@ -124,31 +124,12 @@
                             <div class="collection-selector">
                                 <select name="category_id" class="search_text">
                                     <option class="item-cate search_item" value="0">Tất cả</option>
-                                    <option class="item-cate search_item" value="173">Bath &amp; Body works - Victoria's Secret</option>
-                                    <option class="item-cate search_item" value="168">Bộ quà tặng</option>
-                                    <option class="item-cate search_item" value="89">Chăm sóc cá nhân và làm đẹp </option>
-                                    <option class="item-cate search_item" value="100">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nam)</option>
-                                    <option class="item-cate search_item" value="95">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nữ)</option>
-                                    <option class="item-cate search_item" value="169">Chăm sóc da mặt</option>
-                                    <option class="item-cate search_item" value="129">Chăm sóc sức khoẻ gia đình</option>
-                                    <option class="item-cate search_item" value="134">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc gia đình</option>
-                                    <option class="item-cate search_item" value="133">&nbsp;&nbsp;&nbsp;&nbsp;Thuốc bổ, Vitamin</option>
-                                    <option class="item-cate search_item" value="167">Chăm sóc tóc</option>
-                                    <option class="item-cate search_item" value="136">Thế giới cho bé</option>
-                                    <option class="item-cate search_item" value="158">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé gái</option>
-                                    <option class="item-cate search_item" value="157">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé trai</option>
-                                    <option class="item-cate search_item" value="147">Thời trang và Phụ kiện</option>
-                                    <option class="item-cate search_item" value="165">&nbsp;&nbsp;&nbsp;&nbsp;Phụ kiện, Trang sức, Trang điểm</option>
-                                    <option class="item-cate search_item" value="148">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nam</option>
-                                    <option class="item-cate search_item" value="149">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nữ</option>
-                                    <option class="item-cate search_item" value="160">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nam)</option>
-                                    <option class="item-cate search_item" value="159">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nữ)</option>
-                                    <option class="item-cate search_item" value="166">Thực phẩm, Bánh kẹo</option>
-                                    <option class="item-cate search_item" value="170">Điện gia dụng </option>
-                                    <option class="item-cate search_item" value="109">Đồ gia dụng</option>
-                                    <option class="item-cate search_item" value="162">&nbsp;&nbsp;&nbsp;&nbsp;Bếp</option>
-                                    <option class="item-cate search_item" value="163">&nbsp;&nbsp;&nbsp;&nbsp;Phòng tắm</option>
-                                    <option class="item-cate search_item" value="161">&nbsp;&nbsp;&nbsp;&nbsp;Đồ dùng gia đình</option>
+                                    @foreach($categories as $category)
+                                        <option class="item-cate search_item" value="{{$category->toLink()}}">{{$category->title}}</option>
+                                        @foreach($category->children  as $child)
+                                            <option class="item-cate search_item" value="{{$child->toLink()}}">&nbsp;&nbsp;&nbsp;&nbsp;{{$child->title}}</option>
+                                        @endforeach
+                                    @endforeach
                                 </select>
                             </div>
                             <input type="text" name="search" value placeholder="Tìm kiếm" class="input-group-field st-default-search-input search-text" autocomplete="off">
@@ -232,31 +213,12 @@
                                                 <div class="collection-selector">
                                                     <select name="category_id" class="search_text">
                                                         <option class="item-cate search_item" value="0">Tất cả</option>
-                                                        <option class="item-cate search_item" value="173">Bath &amp; Body works - Victoria's Secret</option>
-                                                        <option class="item-cate search_item" value="168">Bộ quà tặng</option>
-                                                        <option class="item-cate search_item" value="89">Chăm sóc cá nhân và làm đẹp </option>
-                                                        <option class="item-cate search_item" value="100">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nam)</option>
-                                                        <option class="item-cate search_item" value="95">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc cá nhân (Nữ)</option>
-                                                        <option class="item-cate search_item" value="169">Chăm sóc da mặt</option>
-                                                        <option class="item-cate search_item" value="129">Chăm sóc sức khoẻ gia đình</option>
-                                                        <option class="item-cate search_item" value="134">&nbsp;&nbsp;&nbsp;&nbsp;Chăm sóc gia đình</option>
-                                                        <option class="item-cate search_item" value="133">&nbsp;&nbsp;&nbsp;&nbsp;Thuốc bổ, Vitamin</option>
-                                                        <option class="item-cate search_item" value="167">Chăm sóc tóc</option>
-                                                        <option class="item-cate search_item" value="136">Thế giới cho bé</option>
-                                                        <option class="item-cate search_item" value="158">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé gái</option>
-                                                        <option class="item-cate search_item" value="157">&nbsp;&nbsp;&nbsp;&nbsp;Quần áo bé trai</option>
-                                                        <option class="item-cate search_item" value="147">Thời trang và Phụ kiện</option>
-                                                        <option class="item-cate search_item" value="165">&nbsp;&nbsp;&nbsp;&nbsp;Phụ kiện, Trang sức, Trang điểm</option>
-                                                        <option class="item-cate search_item" value="148">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nam</option>
-                                                        <option class="item-cate search_item" value="149">&nbsp;&nbsp;&nbsp;&nbsp;Thời trang Nữ</option>
-                                                        <option class="item-cate search_item" value="160">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nam)</option>
-                                                        <option class="item-cate search_item" value="159">&nbsp;&nbsp;&nbsp;&nbsp;Underwear (Nữ)</option>
-                                                        <option class="item-cate search_item" value="166">Thực phẩm, Bánh kẹo</option>
-                                                        <option class="item-cate search_item" value="170">Điện gia dụng </option>
-                                                        <option class="item-cate search_item" value="109">Đồ gia dụng</option>
-                                                        <option class="item-cate search_item" value="162">&nbsp;&nbsp;&nbsp;&nbsp;Bếp</option>
-                                                        <option class="item-cate search_item" value="163">&nbsp;&nbsp;&nbsp;&nbsp;Phòng tắm</option>
-                                                        <option class="item-cate search_item" value="161">&nbsp;&nbsp;&nbsp;&nbsp;Đồ dùng gia đình</option>
+                                                        @foreach($categories as $category)
+                                                            <option class="item-cate search_item" value="{{$category->toLink()}}">{{$category->title}}</option>
+                                                            @foreach($category->children  as $child)
+                                                                <option class="item-cate search_item" value="{{$child->toLink()}}">&nbsp;&nbsp;&nbsp;&nbsp;{{$child->title}}</option>
+                                                            @endforeach
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                                 <input type="text" name="search" value placeholder="Tìm kiếm" class="input-group-field st-default-search-input search-text" autocomplete="off">

@@ -37,19 +37,11 @@ $(document).ready(function () {
         $('#form-language').submit();
     });
     $('.header_search input[name=\'search\']').parent().find('button').on('click', function () {
-        var url = $('base').attr('href') + 'index.php?route=product/search';
-        var search_form = $(this).closest('.header_search');
-        var value        = search_form.find('input[name=\'search\']').val(),
-            category_id  = search_form.find('select[name=\'category_id\']').val(),
-            sub_category = search_form.find('input[name=\'sub_category\']').val();
-        if (category_id !== undefined) {
-            url += '&category_id=' + category_id;
-        }
-        if (sub_category !== undefined) {
-            url += '&sub_category=' + sub_category;
-        }
-        if (value) {
-            url += '&search=' + encodeURIComponent(value);
+        let form = $(this).parents('.header_search');
+        var url = form.find('select[name=category_id] option:selected').val();
+        var search = form.find('input[name="search"]').val();
+        if (search) {
+            url += '?search=' + encodeURIComponent(search);
         }
         location = url;
     });
