@@ -16,7 +16,7 @@
           <h1>{{$page->title}}</h1>
       </div>
       <p style="margin-bottom: 10px; padding: 0px; color: #525252; font-family: Arial, Helvetica, sans-serif;">
-        {{$page->content}}
+        {!!$page->content!!}
       </p>
   </div>
 @stop
