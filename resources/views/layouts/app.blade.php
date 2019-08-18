@@ -60,6 +60,8 @@
 
     </script>
     <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="642873192843355">
+    </div>
 </head>
 
 <body id="revo" class="cms-index-index cms-home-page product-productall">
