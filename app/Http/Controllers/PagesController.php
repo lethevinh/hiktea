@@ -18,6 +18,12 @@ class PagesController extends Controller
             'categories' => $this->getCategories(),
         ]);
     }
+    public function contact()
+    {
+        return view('pages.contact', [
+            'categories' => $this->getCategories(),
+        ]);
+    }
 
     public function page(Request $request, $page){
       $page=  Page::where('slug',$page)->first();

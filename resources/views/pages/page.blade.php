@@ -4,7 +4,7 @@
     <div class="bg_breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="{{url('/')}}"><i class="fa fa-home"></i></a></li>
                 <li><a href="{{$page->toLink()}}">{{$page->title}}</a></li>
             </ul>
         </div>

@@ -51,7 +51,7 @@
                         <div class="row">
                             <ul class="list-inline welcome-msg toplinks">
                                 <li>
-                                    <form action="https://usmartcindy.com/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+
                                         <div class="dropdown">
                                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                                                 <span class>Tiền tệ</span>
@@ -74,7 +74,6 @@
                                             <input type="hidden" name="code" value>
                                             <input type="hidden" name="redirect" value="https://usmartcindy.com/">
                                         </div>
-                                    </form>
                                 </li>
                                 <li></li>
                             </ul>
@@ -113,7 +112,7 @@
                 <div class="col-lg-3 col-md-3 col-xs-12 col-sm-4">
                     <!-- Header Logo -->
                     <div class="logo" id="logo">
-                        <a href="index.html">
+                        <a href="{{url('/')}}">
                             <img src="{{url('assets/images/logo.png')}}" alt="Siêu Thị Hàng Mỹ US Mart Cindy" itemprop="logo">
                         </a>
                     </div>

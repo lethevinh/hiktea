@@ -13,6 +13,7 @@
 
 //Route::redirect('/', '/san-pham.html')->name('root');
 Route::get('/', 'PagesController@home')->name('pages.home');
+Route::get('/lien-he.html', 'PagesController@contact')->name('pages.contact');
 Route::get('san-pham.html', 'ProductsController@index')->name('products.index');
 Route::get('san-pham/{category}.html', 'ProductsController@category')->name('products.category');
 Route::get('san-pham/{category}/{product}.html', 'ProductsController@product')->name('products.product');
