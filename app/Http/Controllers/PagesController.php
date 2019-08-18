@@ -12,6 +12,13 @@ class PagesController extends Controller
         return view('pages.root');
     }
 
+    public function home()
+    {
+        return view('pages.home', [
+            'categories' => $this->getCategories(),
+        ]);
+    }
+
     public function page(Request $request, $page){
       $page=  Page::where('slug',$page)->first();
       if ($page){
