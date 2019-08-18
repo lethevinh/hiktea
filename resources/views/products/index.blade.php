@@ -98,7 +98,7 @@
                                             <div class="item-price">
                                                 <div class="price-box">
                                                     <span class="regular-price">
-                                                        <span class="price">{{ $product->price }}</span>
+                                                        <span class="price">{{ number_format($product->price, 0) }} đ</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -137,7 +137,7 @@
                                     <a href="{{$product->toLink()}}" title="{{ $product->title }} ">{{ $product->title }} </a></h3>
                                 <div class="price-box">
                                     <span class="regular-price">
-                                        <span class="price">{{ $product->price }}</span>
+                                        <span class="price">{{ number_format($product->price, 0) }} đ</span>
                                     </span>
                                 </div>
                                 <div class="desc std">
