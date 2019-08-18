@@ -103,10 +103,10 @@
                                 <div class="footer-column pull-left">
                                     <h4>Thông tin</h4>
                                     <ul class="links">
-                                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                                        <li><a href="van-chuyen.html">Chính sách vận chuyển</a></li>
-                                        <li><a href="quy-dinh.html">Quy định &amp; Chính sách</a></li>
-                                        <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
+                                        <li><a href="{{url('gioi-thieu.html')}}">Giới thiệu</a></li>
+                                        <li><a href="{{url('van-chuyen.html')}}">Chính sách vận chuyển</a></li>
+                                        <li><a href="{{url('quy-dinh.html')}}">Quy định &amp; Chính sách</a></li>
+                                        <li><a href="{{url('chinh-sach-bao-mat.html')}}">Chính sách bảo mật</a></li>
                                     </ul>
                                 </div>
                             </div>
