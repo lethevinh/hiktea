@@ -52,25 +52,25 @@
                         <label class="left" for="input-sort">Sắp xếp theo: </label>
                         <span class="right-arrow"></span>
                         <select id="input-sort" class="form-control" onchange="location = this.value;">
-                            <option value="https://usmartcindy.com/san-pham?sort=p.date_added&amp;order=DESC&amp;limit=1200" selected="selected">Mặc định</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=pd.name&amp;order=ASC&amp;limit=1200">Tên (A - Z)</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=pd.name&amp;order=DESC&amp;limit=1200">Tên (Z - A)</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=p.price&amp;order=ASC&amp;limit=1200">Giá (Thấp &gt; Cao)</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=p.price&amp;order=DESC&amp;limit=1200">Giá (Cao &gt; Thấp)</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=p.model&amp;order=ASC&amp;limit=1200">Dòng sản phẩm (A - Z)</option>
-                            <option value="https://usmartcindy.com/san-pham?sort=p.model&amp;order=DESC&amp;limit=1200">Dòng sản phẩm (Z - A)</option>
+                            <option value="{{url('san-pham.html?sort=p.date_added&order=DESC')}}" selected="selected">Mặc định</option>
+                            <option value="{{url('san-pham.html?sort=pd.name&order=ASC')}}">Tên (A - Z)</option>
+                            <option value="{{url('san-pham.html?sort=pd.name&amp;order=DESC')}}">Tên (Z - A)</option>
+                            <option value="{{url('san-pham.html?sort=p.price&amp;order=ASC')}}">Giá (Thấp &gt; Cao)</option>
+                            <option value="{{url('san-pham.html?sort=p.price&amp;order=DESC')}}">Giá (Cao &gt; Thấp)</option>
+                            <option value="{{url('san-pham.html?sort=p.model&amp;order=ASC')}}">Dòng sản phẩm (A - Z)</option>
+                            <option value="{{url('san-pham.html?sort=p.model&amp;order=DESC')}}">Dòng sản phẩm (Z - A)</option>
                         </select>
                     </div>
                     <div id="limit" class="custom-select">
                         <label class="left" for="input-limit">Hiển thị: </label>
                         <span class="right-arrow"></span>
                         <select id="input-limit" class="form-control" onchange="location = this.value;">
-                            <option value="https://usmartcindy.com/san-pham?limit=12">12</option>
-                            <option value="https://usmartcindy.com/san-pham?limit=24">24</option>
-                            <option value="https://usmartcindy.com/san-pham?limit=36">36</option>
-                            <option value="https://usmartcindy.com/san-pham?limit=48">48</option>
-                            <option value="https://usmartcindy.com/san-pham?limit=60">60</option>
-                            <option value="https://usmartcindy.com/san-pham?limit=120">120</option>
+                            <option selected value="{{url('san-pham.html?limit=12')}}">12</option>
+                            <option value="{{url('san-pham.html?limit=12')}}">24</option>
+                            <option value="{{url('san-pham.html?limit=36')}}">36</option>
+                            <option value="{{url('san-pham.html?limit=48')}}">48</option>
+                            <option value="{{url('san-pham.html?limit=60')}}">60</option>
+                            <option value="{{url('san-pham.html?limit=120')}}">120</option>
                         </select>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
         });
 
         </script>
-        <link rel="stylesheet" type="text/css" href="assets/css/filter.css">
+        <link rel="stylesheet" type="text/css" href="{{url('assets/css/filter.css')}}">
         <div class="filter-container danh-muc-blog ">
             <div class="color-blog">
                 <h2 class="title-blog">Lọc sản phẩm</h2>
@@ -273,7 +273,7 @@
             </form>
             <script type="text/javascript">
             function loadFilter() {
-                var url = 'https://usmartcindy.com/san-pham?path=0&limit=1200';
+                var url = '{{url('san-pham.html')}}';
                 var arr = [];
 
                 var price = $('input[name^=\'price\']:checked').val();
