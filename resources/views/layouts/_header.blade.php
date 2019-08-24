@@ -72,7 +72,7 @@
                                                 </li>
                                             </ul>
                                             <input type="hidden" name="code" value>
-                                            <input type="hidden" name="redirect" value="https://usmartcindy.com/">
+                                            <input type="hidden" name="redirect" value="#">
                                         </div>
                                 </li>
                                 <li></li>
@@ -147,7 +147,7 @@
                         <div class="top_phone_number mini-cart" id="cart" style="margin-left: 4px;">
                             <a data-toggle="dropdown" data-loading-text="Đang tải" class="basket dropdown-toggle">
                                 <div class="text" id="cart-total-phone">
-                                    <p class="phone-box"><strong><span>0914.880.818 <br> 0901777965</span></strong></p>
+                                    <p class="phone-box"><strong><span>0962 274 274 <br> 0901777965</span></strong></p>
                                 </div>
                             </a>
                         </div>

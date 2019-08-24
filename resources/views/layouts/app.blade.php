@@ -2,9 +2,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#FFFFFF" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Shop US Mart Cindy') - Shop US Mart Cindy </title>
@@ -23,6 +25,7 @@
     <link href="{{ url('assets/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/stylesheet.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/stylesheet_1.css')}}" rel="stylesheet">
+    <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet">
     <!-- Script -->
     <script type="text/javascript" src="{{ url('assets/js/jquery-3.3.1.min.js')}}"></script>
     <script type="text/javascript" src="{{ url('assets/js/bootstrap.min.js')}}"></script>
@@ -65,11 +68,9 @@
 </head>
 
 <body id="revo" class="cms-index-index cms-home-page product-productall">
-    <div id="app" class="{{ route_class() }}-page">
         @include('layouts._header')
         @yield('container')
         @include('layouts._footer')
-    </div>
     <!-- JS 脚本 -->
     <!-- <script src="{{ mix('js/app.js') }}"></script> -->
     @yield('scriptsAfterJs')

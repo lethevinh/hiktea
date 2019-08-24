@@ -1,0 +1,15 @@
+.logo a img {
+    height: 120px;
+    width: auto;
+}
+
+@media (max-width: 991px) {
+    .header-mid>.row>.cart {
+        top: 50%;
+    }
+}
+
+.hidden-lg,
+.hidden-md {
+    display: none;
+}
