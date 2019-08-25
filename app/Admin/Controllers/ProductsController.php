@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -98,15 +99,18 @@ class ProductsController extends Controller
 
         // 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
         $form->text('title', 'title')->rules('required');
+        $form->text('code', 'Code')->rules('required');
+        $form->currency('price', 'Price')->symbol('VND')->rules('required');
 
         // 创建一个选择图片的框
         $form->image('image', 'image')->rules('required|image');
 
         // 创建一个富文本编辑器
-        $form->editor('description', 'description')->rules('required');
-
+        $form->textarea('description', 'description')->rules('required');
+        $form->editor('content', 'Content')->rules('required');
+        $form->multipleSelect('categories')->options(Category::all()->pluck('title', 'id'));
         // 创建一组单选框
-        $form->radio('on_sale', 'on_sale')->options(['1' => 'Yes', '0'=> 'No'])->default('0');
+        $form->radio('on_sale', 'on_sale')->options(['1' => 'Yes', '0'=> 'No'])->default('1');
 
         // 直接添加一对多的关联模型
         $form->hasMany('skus', 'SKU ', function (Form\NestedForm $form) {
@@ -114,8 +118,8 @@ class ProductsController extends Controller
             $form->text('description', 'SKU description')->rules('required');
             $form->text('price', 'price')->rules('required|numeric|min:0.01');
             $form->text('stock', 'stock')->rules('required|integer|min:0');
+            $form->text('sku_code', 'SKU')->rules('required|string');
         });
-
         // 定义事件回调，当模型即将保存时会触发这个回调
         $form->saving(function (Form $form) {
             $form->model()->price = collect($form->input('skus'))->where(Form::REMOVE_FLAG_NAME, 0)->min('price') ?: 0;

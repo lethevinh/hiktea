@@ -39,6 +39,17 @@
                                 <li>Mã sản phẩm: {{ $product->title }}</li>
                                 <li>Tình trạng: Còn trong kho</li>
                             </ul>
+                            @foreach($product->skus as $sku)
+                                <label
+                                    class="btn sku-btn"
+                                    data-price="{{ $sku->price }}"
+                                    data-stock="{{ $sku->stock }}"
+                                    data-toggle="tooltip"
+                                    title="{!! $sku->description !!}"
+                                    data-placement="bottom">
+                                    <input type="radio" name="skus" autocomplete="off" value="{{ $sku->id }}"> {{ $sku->title }}
+                                </label>
+                            @endforeach
                             <div class="price-block" itemscope itemtype="http://schema.org/Offer">
                                 <div class="qv_price">
                                 <span class="regular-price">

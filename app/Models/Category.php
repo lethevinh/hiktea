@@ -19,7 +19,7 @@ class Category extends Model {
 	protected $table = 'categories';
 
 	protected $fillable = [
-		'title', 'slug', 'description', 'content', 'image', 'on_sale',
+		'title', 'slug', 'code', 'description', 'content', 'image', 'on_sale',
 		'rating', 'sold_count', 'review_count',
 	];
 

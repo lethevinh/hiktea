@@ -65,7 +65,7 @@ class PagesController extends Controller
 
         $grid->id('ID')->sortable();
         $grid->title('title');
-        $grid->title('slug');
+        $grid->slug('slug');
 
         $grid->actions(function ($actions) {
             $actions->disableView();
@@ -91,15 +91,15 @@ class PagesController extends Controller
         $form = new Form(new Page);
 
         // 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
-        $form->text('title', 'title')->rules('required');
-        $form->text('slug', 'slug')->rules('required');
+        $form->text('title', 'Title')->rules('required');
+        $form->text('slug', 'Slug')->rules('required');
 
         // 创建一个选择图片的框
-        $form->image('image', 'image')->rules('required|image');
+        $form->image('image', 'Image')->rules('required|image');
 
         // 创建一个富文本编辑器
-        $form->editor('description', 'description')->rules('required');
-        $form->editor('content', 'content')->rules('required');
+        $form->editor('description', 'Description')->rules('required');
+        $form->editor('content', 'Content')->rules('required');
 
         // 定义事件回调，当模型即将保存时会触发这个回调
         $form->saving(function (Form $form) {

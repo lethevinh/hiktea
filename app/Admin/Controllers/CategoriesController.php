@@ -65,8 +65,9 @@ class CategoriesController extends Controller
         $grid = new Grid(new Category);
 
         $grid->id('ID')->sortable();
-        $grid->title('title');
-        $grid->title('slug');
+        $grid->title('Title');
+        $grid->slug('Slug');
+        $grid->code('Code');
 
         $grid->actions(function ($actions) {
             $actions->disableView();
@@ -92,8 +93,9 @@ class CategoriesController extends Controller
         $form = new Form(new Category);
 
         // 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
-        $form->text('title', 'title')->rules('required');
-        $form->text('slug', 'slug')->rules('required');
+        $form->text('title', 'Title')->rules('required');
+        $form->text('slug', 'Slug')->rules('required');
+        $form->text('code', 'Code')->rules('required');
 
         // 创建一个选择图片的框
         $form->image('image', 'image')->rules('required|image');
