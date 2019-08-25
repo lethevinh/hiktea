@@ -44613,4 +44613,3 @@ var countries = [
         }
     ]
 ];
-console.log(countries[230])

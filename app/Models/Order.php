@@ -120,7 +120,10 @@ class Order extends Model
         return $no;
     }
 
-    public function getContactNameAttribute($value){
-        return 'sdsd';
+    public function toLink(){
+        if ($this->user){
+            return url('orders/'.$this->id);
+        }
+        return url('don-hang/'.$this->no);
     }
 }

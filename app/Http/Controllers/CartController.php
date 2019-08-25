@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\CouponCodeUnavailableException;
 use App\Exceptions\InvalidRequestException;
+use App\Models\CouponCode;
 use App\Models\Order;
 use App\Models\UserAddress;
 use Carbon\Carbon;
@@ -81,17 +82,30 @@ class CartController extends Controller
                     throw new InvalidRequestException('Hàng tồn kho không đủ');
                 }
             }
-
+            if (!empty($input['coupon_code'])) {
+                $coupon = CouponCode::where('code', $input['coupon_code'])->first();
+                if ($coupon){
+                    // 总金额已经计算出来了，检查是否符合优惠券规则
+//                    $coupon->checkAvailable($user, $totalAmount);
+                    // 把订单金额修改为优惠后的金额
+                    $totalAmount = $coupon->getAdjustedPrice($totalAmount);
+                    // 将订单与优惠券关联
+                    $order->couponCode()->associate($coupon);
+                    // 增加优惠券的用量，需判断返回值
+                    if ($coupon->changeUsed() <= 0) {
+                        throw new CouponCodeUnavailableException('该优惠券已被兑完');
+                    }
+                }
+            }
             // 更新订单总金额
             $order->update(['total_amount' => $totalAmount]);
 
             // 将下单的商品从购物车中移除
             $skuIds = collect($items)->pluck('sku_id')->all();
 //            app(CartService::class)->remove($skuIds);
-
             return $order;
         });
-
+        $order->link= $order->toLink();
         return response()->json($order);
     }
     public function remove(ProductSku $sku, Request $request)

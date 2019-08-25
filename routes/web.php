@@ -25,7 +25,8 @@ Auth::routes(['verify' => true]);
 
 Route::get('thanh-toan.html', 'OrdersController@page')->name('orders.guest');
 Route::get('gio-hang.html', 'CartController@page')->name('carts.guest');
-
+Route::get('don-hang/{no}', 'OrdersController@viewOrder')->name('orders.view.guest');
+Route::get('coupon_codes/{code}', 'CouponCodesController@check')->name('coupon_codes.check');
 Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
     Route::get('user_addresses/create', 'UserAddressesController@create')->name('user_addresses.create');
@@ -53,7 +54,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
     Route::get('payment/{order}/wechat', 'PaymentController@payByWechat')->name('payment.wechat');
 
-    Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
+//    Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
 });
 Route::get('san-pham/{product}', 'ProductsController@show')->name('products.show');
 Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('payment.alipay.notify');

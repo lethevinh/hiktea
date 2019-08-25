@@ -13,7 +13,12 @@
 @section('content')
     <div id="content" class="col-sm-12">
         <div class="row">
-            <form method="post" action="" name="checkout_form" id="checkout_form" enctype="multipart/form-data" class="form-horizontal">
+            <div class="col-md-12" id="message-alert">
+            </div>
+            <br>
+            <br>
+            <form method="post" action="" name="checkout_form" id="checkout_form" enctype="multipart/form-data"
+                  class="form-horizontal">
                 <div class="col-md-8 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -25,7 +30,8 @@
                             <div class="form-group required">
                                 <label class="control-label col-md-2" for="input-firstname">Tên đầy đủ</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="fullname" id="input-firstname" value="" placeholder="Ví dụ: Nguyễn Văn A" class="form-control" />
+                                    <input type="text" required name="fullname" id="input-firstname" value=""
+                                           placeholder="Ví dụ: Nguyễn Văn A" class="form-control"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -33,15 +39,17 @@
                                     <div class="form-group required">
                                         <label class="control-label col-sm-4" for="input-email">Email</label>
                                         <div class="col-sm-8">
-                                            <input type="email" name="email" id="input-email" value="" placeholder="contact@yourdomain.com" class="form-control" />
+                                            <input type="email" required name="email" id="input-email" value=""
+                                                   placeholder="contact@yourdomain.com" class="form-control"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group required">
-                                        <label class="control-label col-sm-4" for="input-telephone">Điện thoại</label>
+                                        <label class="control-label col-sm-4"  for="input-telephone">Điện thoại</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="telephone" id="input-telephone" value="" placeholder="Ví dụ: 01234567890" class="form-control" />
+                                            <input type="text" name="telephone" required id="input-telephone" value=""
+                                                   placeholder="Ví dụ: 01234567890" class="form-control"/>
                                         </div>
                                     </div>
                                 </div>
@@ -311,10 +319,12 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group required">
-                                        <label class="control-label col-md-4" for="input-zoneid" id="label-zone">Tỉnh / TP</label>
+                                        <label class="control-label col-md-4" for="input-zoneid" id="label-zone">Tỉnh /
+                                            TP</label>
                                         <div class="col-md-8">
                                                     <span id="load-ajax-zone">
-                                                        <select name="zone_id" id="input-zoneid" class="form-control"></select>
+                                                        <select name="zone_id" id="input-zoneid"
+                                                                class="form-control"></select>
                                                     </span>
                                         </div>
                                     </div>
@@ -326,32 +336,41 @@
                                         <label class="control-label col-md-4" for="input-address">Quận / Huyện</label>
                                         <div class="col-sm-8">
                                                     <span id="load-ajax-ward">
-                                                        <select name="ward_id" id="input-wardid" onchange="loadListShipping()" class="form-control"></select>
+                                                        <select name="ward_id" id="input-wardid"
+                                                                onchange="loadListShipping()"
+                                                                class="form-control"></select>
                                                     </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group required">
-                                        <label class="control-label col-md-4" for="input-address">Địa chỉ chi tiết</label>
+                                        <label class="control-label col-md-4" for="input-address">Địa chỉ chi
+                                            tiết</label>
                                         <div class="col-sm-8">
-                                            <input type="text" name="address_1" value="" id="input-address" placeholder="Ví dụ: Số 247, Cầu Giấy, Q. Cầu Giấy" class="form-control" />
+                                            <input type="text" name="address_1" value="" id="input-address"
+                                                   placeholder="Ví dụ: Số 247, Cầu Giấy, Q. Cầu Giấy"
+                                                   class="form-control"/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2" for="input-zoneid" id="label-zone">Lời nhắn</label>
+                                <label class="control-label col-md-2" for="input-zoneid" id="label-zone">Lời
+                                    nhắn</label>
                                 <div class="col-sm-10">
-                                    <textarea name="comment" id="input-comment" rows="3" class="form-control" placeholder="Ví dụ: Chuyển hàng ngoài giờ hành chính"></textarea>
+                                    <textarea name="comment" id="input-comment" rows="3" class="form-control"
+                                              placeholder="Ví dụ: Chuyển hàng ngoài giờ hành chính"></textarea>
                                 </div>
                             </div>
-                            <hr />
+                            <hr/>
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="adr-oms checkbox">
-                                        <input type="checkbox" name="same_info_as_buyer_toggle" id="is-delivery-address" onclick="showHideDeliveryAddress()" checked />
-                                        <label for="is-delivery-address"><strong>Địa chỉ nhận hàng và thanh toán giống nhau</strong></label>
+                                        <input type="checkbox" name="same_info_as_buyer_toggle" id="is-delivery-address"
+                                               onclick="showHideDeliveryAddress()" checked/>
+                                        <label for="is-delivery-address"><strong>Địa chỉ nhận hàng và thanh toán giống
+                                                nhau</strong></label>
                                     </div>
                                 </div>
                             </div>
@@ -359,25 +378,31 @@
                                 <h4>Thông tin thanh toán</h4>
                                 <!-- Apply for VN -->
                                 <div class="form-group required">
-                                    <label class="control-label col-md-2" for="input-payment-firstname">Tên đầy đủ</label>
+                                    <label class="control-label col-md-2" for="input-payment-firstname">Tên đầy
+                                        đủ</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="payment_firstname" id="input-payment-firstname" value="" placeholder="Ví dụ: Nguyễn Văn A" class="form-control" />
+                                        <input type="text" name="payment_firstname" id="input-payment-firstname"
+                                               value="" placeholder="Ví dụ: Nguyễn Văn A" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group required">
-                                    <label class="control-label col-md-2" for="input-payment-telephone">Điện thoại</label>
+                                    <label class="control-label col-md-2" for="input-payment-telephone">Điện
+                                        thoại</label>
                                     <div class="col-md-4">
-                                        <input type="text" name="payment_telephone" id="input-payment-telephone" value="" placeholder="Ví dụ: 01234567890" class="form-control" />
+                                        <input type="text" name="payment_telephone" id="input-payment-telephone"
+                                               value="" placeholder="Ví dụ: 01234567890" class="form-control"/>
                                     </div>
                                     <label class="control-label col-md-2" for="input-payment-email">Email</label>
                                     <div class="col-md-4">
-                                        <input type="email" name="payment_email" id="input-payment-email" value="" placeholder="contact@yourdomain.com" class="form-control" />
+                                        <input type="email" name="payment_email" id="input-payment-email" value=""
+                                               placeholder="contact@yourdomain.com" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group required">
                                     <label class="control-label col-md-2" for="input-countryid">Quốc gia</label>
                                     <div class="col-md-4">
-                                        <select name="payment_country_id" id="input-payment-countryid" class="form-control">
+                                        <select name="payment_country_id" id="input-payment-countryid"
+                                                class="form-control">
                                             <option value="244">Aaland Islands</option>
                                             <option value="1">Afghanistan</option>
                                             <option value="2">Albania</option>
@@ -633,23 +658,29 @@
                                             <option value="239">Zimbabwe</option>
                                         </select>
                                     </div>
-                                    <label class="control-label col-md-2" for="input-payment-zoneid" id="label-payment-zone">Tỉnh / TP</label>
+                                    <label class="control-label col-md-2" for="input-payment-zoneid"
+                                           id="label-payment-zone">Tỉnh / TP</label>
                                     <div class="col-md-4">
                                                 <span id="load-ajax-payment-zone">
-                                                    <select name="payment_zone_id" id="input-payment-zoneid" class="form-control"></select>
+                                                    <select name="payment_zone_id" id="input-payment-zoneid"
+                                                            class="form-control"></select>
                                                 </span>
                                     </div>
                                 </div>
                                 <div class="form-group required">
-                                    <label class="control-label col-md-2" for="input-payment-address">Địa chỉ chi tiết</label>
+                                    <label class="control-label col-md-2" for="input-payment-address">Địa chỉ chi
+                                        tiết</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="payment_address_1" value="" id="input-payment-address" placeholder="Ví dụ: Số 247, Cầu Giấy, Q. Cầu Giấy" class="form-control" />
+                                        <input type="text" name="payment_address_1" value="" id="input-payment-address"
+                                               placeholder="Ví dụ: Số 247, Cầu Giấy, Q. Cầu Giấy" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="adr-oms checkbox">
-                                            <input type="checkbox" name="update_address" id="update-address" checked />&nbsp;&nbsp;<label for="update-address">Cập nhật thông tin trên làm địa chỉ hiện tại của tôi</label>
+                                            <input type="checkbox" name="update_address" id="update-address" checked/>&nbsp;&nbsp;<label
+                                                for="update-address">Cập nhật thông tin trên làm địa chỉ hiện tại của
+                                                tôi</label>
                                         </div>
                                     </div>
                                 </div>
@@ -664,41 +695,55 @@
                         <div class="panel-body" id="form_payment_method">
                             <div class="group">
                                 <div class="adr-oms radio select-method">
-                                    <input type="radio" id="payment-method-bank_transfer" name="payment_method" value="bank_transfer" />
+                                    <input type="radio" id="payment-method-bank_transfer" checked name="payment_method"
+                                           value="bank_transfer"/>
                                     <label for="payment-method-bank_transfer">
                                         <div class="adr-oms payment-method">
                                             <div class="thumbnail">
-                                                <img alt="Chuyển khoản" src="assets/images/bank_transfer.png" />
+                                                <img alt="Chuyển khoản" src="assets/images/bank_transfer.png"/>
                                             </div>
                                             <div class="description">
                                                 <div class="title">Chuyển khoản</div>
-                                                <div class="subtitle">Sử dụng thẻ ATM hoặc dịch vụ Internet Banking để tiến hành chuyển khoản cho chúng tôi</div>
+                                                <div class="subtitle">Sử dụng thẻ ATM hoặc dịch vụ Internet Banking để
+                                                    tiến hành chuyển khoản cho chúng tôi
+                                                </div>
                                                 <div class="tkz-selection-info"></div>
                                             </div>
                                         </div>
                                     </label>
-                                    <div class="payment-method-toggle box-installment installment-disabled" id="payment-method-info-bank_transfer">
+                                    <div class="payment-method-toggle box-installment installment-disabled"
+                                         id="payment-method-info-bank_transfer">
                                         <div class="disabled-cod-body">
-                                            <p><span style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">Tên tài khoản :<span style="background-color: transparent; color: #1c1e21; display: inline; float: none; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"> HÀ MỸ DUNG </span></span></p><br />
+                                            <p><span
+                                                    style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">Tên tài khoản :<span
+                                                        style="background-color: transparent; color: #1c1e21; display: inline; float: none; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"> HÀ MỸ DUNG </span></span>
+                                            </p><br/>
                                             <p>
-                                                <span style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">Số tài khoản : &nbsp; 10620596362016</span></p><br />
-                                            <p><span style="font-family: Helvetica,Arial,sans-serif;"><span >Ngân hàng: Techcombank - TPHCM
-                                                        <span style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"><span style="background-color: transparent; color: #1c1e21; display: inline; float: none; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"></span></span></span></span></p>
+                                                <span
+                                                    style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">Số tài khoản : &nbsp; 10620596362016</span>
+                                            </p><br/>
+                                            <p><span style="font-family: Helvetica,Arial,sans-serif;"><span>Ngân hàng: Techcombank - TPHCM
+                                                        <span
+                                                            style="display: inline !important; float: none; background-color: transparent; color: #1c1e21; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"><span
+                                                                style="background-color: transparent; color: #1c1e21; display: inline; float: none; font-family: Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"></span></span></span></span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="group">
                                 <div class="adr-oms radio select-method">
-                                    <input type="radio" id="payment-method-cod" name="payment_method" value="cod" />
+                                    <input type="radio" id="payment-method-cod" name="payment_method" value="cod"/>
                                     <label for="payment-method-cod">
                                         <div class="adr-oms payment-method">
                                             <div class="thumbnail">
-                                                <img alt="Thu tiền tại nhà (COD)" src="assets/images/cod.png" />
+                                                <img alt="Thu tiền tại nhà (COD)" src="assets/images/cod.png"/>
                                             </div>
                                             <div class="description">
                                                 <div class="title">Thu tiền tại nhà (COD)</div>
-                                                <div class="subtitle">Khách hàng thanh toán bằng tiền mặt cho nhân viên giao hàng khi sản phẩm được chuyển tới địa chỉ nhận hàng</div>
+                                                <div class="subtitle">Khách hàng thanh toán bằng tiền mặt cho nhân viên
+                                                    giao hàng khi sản phẩm được chuyển tới địa chỉ nhận hàng
+                                                </div>
                                                 <div class="tkz-selection-info"></div>
                                             </div>
                                         </div>
@@ -711,7 +756,8 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <div class="adr-oms checkbox">
-                                    <input type="checkbox" name="invoice" id="request-invoice" onclick="showHideInvoice();" />
+                                    <input type="checkbox" name="invoice" id="request-invoice"
+                                           onclick="showHideInvoice();"/>
                                     <label for="request-invoice">Yêu cầu xuất hoá đơn GTGT</label>
                                 </div>
                             </h3>
@@ -720,19 +766,24 @@
                             <div class="form-group">
                                 <label class="control-label col-md-2" for="input-taxcode">Mã số thuế</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="tax_code" id="input-taxcode" value="" placeholder="Ví dụ: 398473094385" class="form-control" />
+                                    <input type="text" name="tax_code" id="input-taxcode" value=""
+                                           placeholder="Ví dụ: 398473094385" class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-2" for="input-company">Tên công ty</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="company" id="input-company" value="" placeholder="Ví dụ: Công ty Cổ phần ASIA" class="form-control" />
+                                    <input type="text" name="company" id="input-company" value=""
+                                           placeholder="Ví dụ: Công ty Cổ phần ASIA" class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2" for="input-company-address">Địa chỉ công ty</label>
+                                <label class="control-label col-md-2" for="input-company-address">Địa chỉ công
+                                    ty</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="company_address" id="input-company-address" value="" placeholder="Ví dụ: 247 Cầu Giấy, Hà Nội, P. Dịch Vọng, Q. Cầu Giấy, TP. Hà Nội" class="form-control" />
+                                    <input type="text" name="company_address" id="input-company-address" value=""
+                                           placeholder="Ví dụ: 247 Cầu Giấy, Hà Nội, P. Dịch Vọng, Q. Cầu Giấy, TP. Hà Nội"
+                                           class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -770,7 +821,8 @@
                                                 <div><strong>Phí giao hàng tận nơi</strong></div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="shipping_method" onclick="updateFee()" value="geo.geo" checked />
+                                                        <input type="radio" name="shipping_method" onclick="updateFee()"
+                                                               value="geo.geo" checked/>
                                                         Phí giao hàng tận nơi - 0đ </label>
                                                 </div>
                                             </span>
@@ -780,23 +832,28 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-tag" aria-hidden="true"></i> Sử dụng mã giảm giá</h3>
+                            <h3 class="panel-title"><i class="fa fa-tag" aria-hidden="true"></i> Sử dụng mã giảm giá
+                            </h3>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <span id="show_notice_coupon"></span>
                                     <div class="input-group">
-                                        <input type="text" name="coupon" value="" placeholder="Nhập mã giảm giá" id="input-coupon" class="form-control" />
+                                        <input type="text" name="coupon_code" value="" placeholder="Nhập mã giảm giá"
+                                               id="input-coupon" class="form-control"/>
                                         <span class="input-group-btn">
-                                                    <input class="btn btn-primary" type="button" value="Áp dụng" id="button-coupon" data-loading-text="Đang áp dụng" />
-                                                </span>
+                                            <input class="btn btn-primary" type="button" value="Áp dụng"
+                                                           id="btn-check-coupon" data-loading-text="Đang áp dụng"/>
+                                            <input type="button" class="btn btn-danger" value="Cancel" style="display: none;" id="btn-cancel-coupon"></input>
+                                        </span>
                                     </div>
+                                    <span class="form-text text-muted" id="coupon_desc"></span>
                                     <span id="load-input-hidden"></span>
                                 </div>
                             </div>
                             <script type="text/javascript">
-                                $('#button-coupon').on('click', function() {
+                                $('#button-coupon').on('click', function () {
                                     var coupon_submit = '<input type="hidden" name="submit_coupon" value="1">';
                                     $('#load-input-hidden').html(coupon_submit);
 
@@ -805,13 +862,13 @@
                                         type: 'post',
                                         data: 'coupon=' + encodeURIComponent($('input[name=\'coupon\']').val()),
                                         dataType: 'json',
-                                        beforeSend: function() {
+                                        beforeSend: function () {
                                             $('#button-coupon').button('loading');
                                         },
-                                        complete: function() {
+                                        complete: function () {
                                             $('#button-coupon').button('reset');
                                         },
-                                        success: function(json) {
+                                        success: function (json) {
                                             $('.console.log').remove();
 
                                             if (json['error']) {
@@ -854,12 +911,143 @@
                     <div class="text-center">
                         <a class="pull-left" href="/gio-hang.html" title="Quay lại giỏ hàng">
                             <i class="fa fa-mail-reply-all" aria-hidden="true"></i> Quay lại giỏ hàng </a>
-                        <button class="btn btn-primary pull-right btn_checkout" type="button" id="submit_form_button">Đặt hàng <i class="fa fa-angle-right"></i></button>
+                        <button class="btn btn-primary pull-right btn_checkout" type="button" id="submit_form_button">
+                            Đặt hàng <i class="fa fa-angle-right"></i></button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 @endsection
-
+@section('scriptsAfterJs')
+    <script>
+        $(document).ready(function () {
+            // 监听 移除 按钮的点击事件
+            $('.btn-remove').click(function () {
+                // $(this) 可以获取到当前点击的 移除 按钮的 jQuery 对象
+                // closest() 方法可以获取到匹配选择器的第一个祖先元素，在这里就是当前点击的 移除 按钮之上的 <tr> 标签
+                // data('id') 方法可以获取到我们之前设置的 data-id 属性的值，也就是对应的 SKU id
+                var id = $(this).closest('tr').data('id');
+                swal({
+                    title: "确认要将该商品移除？",
+                    icon: "warning",
+                    buttons: ['取消', '确定'],
+                    dangerMode: true,
+                })
+                    .then(function(willDelete) {
+                        // 用户点击 确定 按钮，willDelete 的值就会是 true，否则为 false
+                        if (!willDelete) {
+                            return;
+                        }
+                        axios.delete('/cart/' + id)
+                            .then(function () {
+                                location.reload();
+                            })
+                    });
+            });
+            // 监听 全选/取消全选 单选框的变更事件
+            $('#select-all').change(function() {
+                // 获取单选框的选中状态
+                // prop() 方法可以知道标签中是否包含某个属性，当单选框被勾选时，对应的标签就会新增一个 checked 的属性
+                var checked = $(this).prop('checked');
+                // 获取所有 name=select 并且不带有 disabled 属性的勾选框
+                // 对于已经下架的商品我们不希望对应的勾选框会被选中，因此我们需要加上 :not([disabled]) 这个条件
+                $('input[name=select][type=checkbox]:not([disabled])').each(function() {
+                    // 将其勾选状态设为与目标单选框一致
+                    $(this).prop('checked', checked);
+                });
+            });
+            // 监听创建订单按钮的点击事件
+            $('.btn-create-order').click(function () {
+                // 构建请求参数，将用户选择的地址的 id 和备注内容写入请求参数
+                var req = {
+                    address_id: $('#order-form').find('select[name=address]').val(),
+                    items: [],
+                    remark: $('#order-form').find('textarea[name=remark]').val(),
+                    coupon_code: $('input[name=coupon_code]').val(), // 从优惠码输入框中获取优惠码
+                };
+                // 遍历 <table> 标签内所有带有 data-id 属性的 <tr> 标签，也就是每一个购物车中的商品 SKU
+                $('table tr[data-id]').each(function () {
+                    // 获取当前行的单选框
+                    var $checkbox = $(this).find('input[name=select][type=checkbox]');
+                    // 如果单选框被禁用或者没有被选中则跳过
+                    if ($checkbox.prop('disabled') || !$checkbox.prop('checked')) {
+                        return;
+                    }
+                    // 获取当前行中数量输入框
+                    var $input = $(this).find('input[name=amount]');
+                    // 如果用户将数量设为 0 或者不是一个数字，则也跳过
+                    if ($input.val() == 0 || isNaN($input.val())) {
+                        return;
+                    }
+                    // 把 SKU id 和数量存入请求参数数组中
+                    req.items.push({
+                        sku_id: $(this).data('id'),
+                        amount: $input.val(),
+                    })
+                });
+                axios.post('{{ route('orders.store') }}', req)
+                    .then(function (response) {
+                        swal('订单提交成功', '', 'success')
+                            .then(() => {
+                                location.href = '/orders/' + response.data.id;
+                            });
+                    }, function (error) {
+                        if (error.response.status === 422) {
+                            // http 状态码为 422 代表用户输入校验失败
+                            var html = '<div>';
+                            _.each(error.response.data.errors, function (errors) {
+                                _.each(errors, function (error) {
+                                    html += error+'<br>';
+                                })
+                            });
+                            html += '</div>';
+                            swal({content: $(html)[0], icon: 'error'})
+                        } else if (error.response.status === 403) { // 这里判断状态 403
+                            swal(error.response.data.msg, '', 'error');
+                        }  else {
+                            // 其他情况应该是系统挂了
+                            swal('系统错误', '', 'error');
+                        }
+                    });
+            });
+            // 检查按钮点击事件
+            $('#btn-check-coupon').click(function () {
+                // 获取用户输入的优惠码
+                var code = $('input[name=coupon_code]').val();
+                // 如果没有输入则弹框提示
+                if(!code) {
+                    swal('Please enter the coupon code', '', 'warning');
+                    return;
+                }
+                // 调用检查接口
+                axios.get('/coupon_codes/' + encodeURIComponent(code))
+                    .then(function (response) {  // then 方法的第一个参数是回调，请求成功时会被调用
+                        $('#coupon_desc').text(response.data.description); // 输出优惠信息
+                        $('input[name=coupon_code]').prop('readonly', true); // 禁用输入框
+                        $('#btn-cancel-coupon').show(); // 显示 取消 按钮
+                        $('#btn-check-coupon').hide(); // 隐藏 检查 按钮
+                    }, function (error) {
+                        // 如果返回码是 404，说明优惠券不存在
+                        if(error.response.status === 404) {
+                            swal('Coupon code does not exist', '', 'error');
+                        } else if (error.response.status === 403) {
+                            // 如果返回码是 403，说明有其他条件不满足
+                            swal(error.response.data.msg, '', 'error');
+                        } else {
+                            // 其他错误
+                            swal('Internal System Error', '', 'error');
+                        }
+                    })
+            });
+            // 隐藏 按钮点击事件
+            $('#btn-cancel-coupon').click(function () {
+                $('#coupon_desc').text(''); // 隐藏优惠信息
+                $('input[name=coupon_code]').prop('readonly', false);  // 启用输入框
+                $('#btn-cancel-coupon').hide(); // 隐藏 取消 按钮
+                $('#btn-check-coupon').show(); // 显示 检查 按钮
+            });
+        });
+    </script>
+@endsection
 

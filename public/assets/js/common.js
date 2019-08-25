@@ -760,15 +760,53 @@ async function updateCartPage() {
 
 async function thanhtoan(argument) {
     let data = $('form#checkout_form').serializeArray();
-    let params = []
+    let params = [];
+    let error = false;
+    let fieldRequire = ['fullname','email','telephone','address_1'];
     data.forEach(item => {
+        if (fieldRequire.indexOf(item.name) > -1 && item.value === ''){
+            error = true;
+        }
         params[item.name] = item.value
-    })
+    });
     let cart = await getCart();
     params['cart'] = cart;
-    console.log(params)
-    let res = await $.post('/api/cart/add', { ...params }, 'json');
-    console.log(res)
+    params['coupon_code'] = $('input[name=coupon_code]').val();
+
+    if (error){
+        showAlert('Vui Lòng Nhập đầy đủ thông tin đơn hàng','alert')
+        return ;
+    }
+    console.log(params);
+    let res = await axios.post('/api/cart/add', { ...params });
+    console.log(res);
+    if (res.status === 200){
+        let order = res.data;
+        showAlert(`Chúc Mừng Bạn đã tạo đơn hàng thành công <a href='${order['link']}'>#${order['no']}</a>`);
+        await localStorage.setItem(CONST_KEY_CART, JSON.stringify({ items: [], count: 0, total: 0 }));
+        await updateCartButton();
+        await updateCartCheckout();
+        await updateCartPage();
+    } else {
+        alert('Add cart Error!')
+    }
+}
+
+function showAlert(message = '', type='success'){
+
+    let icon = 'fa-check-circle';
+    if (type === 'alert'){
+         icon = 'fa-exclamation-circle';
+    }
+    let html = `<div class="alert alert-success" style="position: relative">
+                    <i class="fa ${icon}"></i>
+                  ${message}
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                </div>`;
+    $('#message-alert').html(html);
+    var offset = 0;
+    offset =  $('#message-alert').offset().top - 50;
+    $('html, body').animate({ scrollTop: offset}, 'slow');
 }
 $(document).ready(function() {
 

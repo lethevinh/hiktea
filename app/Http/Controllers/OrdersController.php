@@ -43,7 +43,7 @@ class OrdersController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate();
 
-        return view('orders.index', ['orders' => $orders,'categories' => $this->getCategories(),]);
+        return view('orders.index', ['orders' => $orders,'categories' => $this->getCategories()]);
     }
     public function page(Request $request)
     {
@@ -54,6 +54,15 @@ class OrdersController extends Controller
     {
         $this->authorize('own', $order);
         return view('orders.show', ['categories' => $this->getCategories(), 'order' => $order->load(['items.productSku', 'items.product']),'categories' => $this->getCategories(),]);
+    }
+
+    public function viewOrder($no)
+    {
+        $order = Order::where('no',$no)->first();
+        if ($order){
+            return view('orders.view', ['order' => $order->load(['items.productSku', 'items.product']),'categories' => $this->getCategories(),]);
+        }
+
     }
 
     public function received(Order $order, Request $request)

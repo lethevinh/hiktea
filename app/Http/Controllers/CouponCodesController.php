@@ -18,4 +18,14 @@ class CouponCodesController extends Controller
 
         return $record;
     }
+
+
+    public function check($code)
+    {
+        if (!$record = CouponCode::where('code', $code)->first()) {
+            throw new CouponCodeUnavailableException('Coupon does not exist');
+        }
+
+        return $record;
+    }
 }

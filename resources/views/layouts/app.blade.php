@@ -23,6 +23,7 @@
     <link href="{{ url('assets/css/jquery.jgrowl.min.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/clockdown.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/checkout.css')}}" rel="stylesheet">
+    <link href="{{ url('assets/css/sweetalert.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/stylesheet.css')}}" rel="stylesheet">
     <link href="{{ url('assets/css/stylesheet_1.css')}}" rel="stylesheet">
@@ -30,6 +31,7 @@
     <!-- Script -->
     <script type="text/javascript" src="{{ url('assets/js/jquery-3.3.1.min.js')}}"></script>
     <script type="text/javascript" src="{{ url('assets/js/countries.js')}}"></script>
+    <script type="text/javascript" src="{{ url('assets/js/sweetalert.js')}}"></script>
     <script type="text/javascript" src="{{ url('assets/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{ url('assets/js/imagesloaded.pkgd.min.js')}}"></script>
     <script type="text/javascript" src="{{ url('assets/js/masonry.pkgd.min.js')}}"></script>
