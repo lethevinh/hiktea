@@ -47,7 +47,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-10 col-xs-10">
                         <div class="row">
                             <ul class="list-inline welcome-msg toplinks">
                                 <li>
@@ -79,7 +79,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-2 col-xs-2">
                         <div class="row">
                             <div class="toplinks">
                                 <div class="links">

@@ -1,23 +1,32 @@
 @extends('layouts.page')
-@section('title', '收货地址列表')
-
+@section('title', 'Receiving address list')
+@section('breadcrumb')
+    <div class="bg_breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><span>Receiving address list</span></li>
+            </ul>
+        </div>
+    </div>
+@stop
 @section('content')
   <div class="row">
     <div class="col-md-10 offset-md-1">
       <div class="card panel-default">
         <div class="card-header">
-          收货地址列表
-          <a href="{{ route('user_addresses.create') }}" class="float-right">新增收货地址</a>
+            Receiving address list
+          <a href="{{ route('user_addresses.create') }}" class="float-right">New shipping address</a>
         </div>
         <div class="card-body">
           <table class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>收货人</th>
-              <th>地址</th>
-              <th>邮编</th>
-              <th>电话</th>
-              <th>操作</th>
+              <th>Receiver</th>
+              <th>Address</th>
+              <th>Zip code</th>
+              <th>Phone</th>
+              <th>Operating</th>
             </tr>
             </thead>
             <tbody>
@@ -28,9 +37,13 @@
                 <td>{{ $address->zip }}</td>
                 <td>{{ $address->contact_phone }}</td>
                 <td>
-                  <a href="{{ route('user_addresses.edit', ['user_address' => $address->id]) }}" class="btn btn-primary">修改</a>
+                  <a href="{{ route('user_addresses.edit', ['user_address' => $address->id]) }}" class="btn btn-primary">
+                      Edit
+                  </a>
                   <!-- 把之前删除按钮的表单替换成这个按钮，data-id 属性保存了这个地址的 id，在 js 里会用到 -->
-                  <button class="btn btn-danger btn-del-address" type="button" data-id="{{ $address->id }}">删除</button>
+                  <button class="btn btn-danger btn-del-address" type="button" data-id="{{ $address->id }}">
+                      Delete
+                  </button>
                 </td>
               </tr>
             @endforeach

@@ -13,3 +13,6 @@
 .hidden-md {
     display: none;
 }
+.dropdown-menu{
+    z-index: 9999;
+}

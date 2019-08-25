@@ -47,13 +47,13 @@ class OrdersController extends Controller
     }
     public function page(Request $request)
     {
-        return view('orders.page', ['categories' => $this->getCategories(),]);
+        return view('orders.page', ['categories' => $this->getCategories()]);
     }
 
     public function show(Order $order, Request $request)
     {
         $this->authorize('own', $order);
-        return view('orders.show', ['order' => $order->load(['items.productSku', 'items.product']),'categories' => $this->getCategories(),]);
+        return view('orders.show', ['categories' => $this->getCategories(), 'order' => $order->load(['items.productSku', 'items.product']),'categories' => $this->getCategories(),]);
     }
 
     public function received(Order $order, Request $request)
@@ -82,7 +82,7 @@ class OrdersController extends Controller
             throw new InvalidRequestException('该订单未支付，不可评价');
         }
         // 使用 load 方法加载关联数据，避免 N + 1 性能问题
-        return view('orders.review', ['order' => $order->load(['items.productSku', 'items.product'])]);
+        return view('orders.review', ['categories' => $this->getCategories(), 'order' => $order->load(['items.productSku', 'items.product'])]);
     }
 
     public function sendReview(Order $order, SendReviewRequest $request)
