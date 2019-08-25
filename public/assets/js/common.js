@@ -990,7 +990,9 @@ $(document).ready(function() {
 
 
     $('.home.owl-carousel').owlCarousel({
-        autoPlay: 3000,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         stopOnHover: true,
         navigation: true,
         paginationSpeed: 1000,
@@ -1000,8 +1002,8 @@ $(document).ready(function() {
         transitionStyle: "fade",
         items: 1,
         loop: true,
-        margin :0,
-        padding :0
+        margin: 0,
+        padding: 0
     });
 });
 
