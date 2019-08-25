@@ -119,4 +119,8 @@ class Order extends Model
 
         return $no;
     }
+
+    public function getContactNameAttribute($value){
+        return 'sdsd';
+    }
 }

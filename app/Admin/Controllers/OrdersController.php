@@ -11,6 +11,7 @@ use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
+use function foo\func;
 
 class OrdersController extends Controller
 {
@@ -42,9 +43,22 @@ class OrdersController extends Controller
 
         $grid->no('No');
         // 展示关联关系的字段时，使用 column 方法
-        $grid->column('user.name', 'Owner');
+//        $grid->column('user.name', 'Owner');
+        $grid->column('Owner')->display(function (){
+            if ($this->user){
+                return $this->user->name;
+            }
+            return $this->address['contact_name'];
+        });
+        $grid->column('Address')->display(function (){
+            return $this->address['address'];
+        });
+        $grid->column('Phone')->display(function (){
+            return $this->address['contact_phone'];
+        });
         $grid->total_amount('total_amount')->sortable();
-        $grid->paid_at('paid_at')->sortable();
+        $grid->updated_at()->sortable();
+//        $grid->paid_at('paid_at')->sortable();
         $grid->ship_status('ship_status')->display(function($value) {
             return Order::$shipStatusMap[$value];
         });
