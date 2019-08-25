@@ -45,6 +45,10 @@ class OrdersController extends Controller
 
         return view('orders.index', ['orders' => $orders,'categories' => $this->getCategories(),]);
     }
+    public function page(Request $request)
+    {
+        return view('orders.page', ['categories' => $this->getCategories(),]);
+    }
 
     public function show(Order $order, Request $request)
     {

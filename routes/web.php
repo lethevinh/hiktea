@@ -12,13 +12,19 @@
 */
 
 //Route::redirect('/', '/san-pham.html')->name('root');
+use App\Http\Requests\Request;
+
 Route::get('/', 'PagesController@home')->name('pages.home');
 Route::get('/lien-he.html', 'PagesController@contact')->name('pages.contact');
 Route::get('san-pham.html', 'ProductsController@index')->name('products.index');
 Route::get('san-pham/{category}.html', 'ProductsController@category')->name('products.category');
 Route::get('san-pham/{category}/{product}.html', 'ProductsController@product')->name('products.product');
-Route::get('{page}.html', 'PagesController@page')->name('pages.page');
+
 Auth::routes(['verify' => true]);
+
+
+Route::get('thanh-toan.html', 'OrdersController@page')->name('orders.guest');
+Route::get('gio-hang.html', 'CartController@page')->name('carts.guest');
 
 Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
@@ -32,10 +38,12 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
     Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
     Route::post('cart', 'CartController@add')->name('cart.add');
+//    Route::get('gio-hang-user.html', 'CartController@index')->name('carts.index');
     Route::get('cart', 'CartController@index')->name('cart.index');
     Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
     Route::post('orders', 'OrdersController@store')->name('orders.store');
-    Route::get('orders', 'OrdersController@index')->name('orders.index');
+    Route::get('don-hang.html', 'OrdersController@index')->name('orders.index');
+//    Route::get('orders', 'OrdersController@index')->name('orders.index');
     Route::get('orders/{order}', 'OrdersController@show')->name('orders.show');
     Route::post('orders/{order}/received', 'OrdersController@received')->name('orders.received');
     Route::get('orders/{order}/review', 'OrdersController@review')->name('orders.review.show');
@@ -51,3 +59,4 @@ Route::get('san-pham/{product}', 'ProductsController@show')->name('products.show
 Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('payment.alipay.notify');
 Route::post('payment/wechat/notify', 'PaymentController@wechatNotify')->name('payment.wechat.notify');
 Route::post('payment/wechat/refund_notify', 'PaymentController@wechatRefundNotify')->name('payment.wechat.refund_notify');
+Route::get('{page}.html', 'PagesController@page')->name('pages.page');

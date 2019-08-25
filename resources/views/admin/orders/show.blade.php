@@ -14,9 +14,13 @@
       <tbody>
       <tr>
         <td> Buyer：</td>
-        <td>{{ $order->user->name }}</td>
+        @if($order->user)
+            <td>{{$order->user->name}}</td>
+        @else
+        <td>{{ $order->address['contact_name'] }} / {{ $order->address['contact_phone'] }} /  @if(!empty($order->address['contact_email'])){{ $order->address['contact_email'] }} @endif </td>
+        @endif
         <td>Payment time ：</td>
-        <td>{{ $order->paid_at->format('Y-m-d H:i:s') }}</td>
+        <td></td>
       </tr>
       <tr>
         <td> Payment method：</td>
@@ -29,23 +33,26 @@
         <td colspan="3">{{ $order->address['address'] }} {{ $order->address['zip'] }} {{ $order->address['contact_name'] }} {{ $order->address['contact_phone'] }}</td>
       </tr>
       <tr>
-        <td rowspan="{{ $order->items->count() + 1 }}">Product list	</td>
-        <td>Product name</td>
-        <td>unit price</td>
-        <td>Quantity</td>
+        <td class="text-bold" rowspan="{{ $order->items->count() + 1 }}">Product list	</td>
+        <td class="text-bold">Product name</td>
+        <td class="text-bold">Unit price</td>
+        <td class="text-bold">Quantity</td>
+        <td class="text-bold">Total</td>
       </tr>
       @foreach($order->items as $item)
         <tr>
           <td>{{ $item->product->title }} {{ $item->productSku->title }}</td>
-          <td>￥{{ $item->price }}</td>
-          <td>{{ $item->amount }}</td>
+          <td>{{ number_format($item->price) }} vnd</td>
+          <td>{{number_format( $item->amount) }}</td>
+          <td>{{number_format( $item->amount * $item->price) }} vnd</td>
         </tr>
       @endforeach
       <tr>
-        <td>order amount：</td>
-        <td>{{ $order->total_amount }} vnd</td>
+        <td class="text-bold">Order amount：</td>
+        <td class="text-bold text-red">{{ number_format($order->total_amount,0) }} vnd</td>
         <td>Delivery status：</td>
         <td>{{ \App\Models\Order::$shipStatusMap[$order->ship_status] }}</td>
+        <td></td>
       </tr>
       <!-- 订单发货开始 -->
       <!-- 如果订单未发货，展示发货表单 -->
@@ -53,7 +60,7 @@
         <!-- 加上这个判断条件 -->
         @if($order->refund_status !== \App\Models\Order::REFUND_STATUS_SUCCESS)
         <tr>
-          <td colspan="4">
+          <td colspan="5">
             <form action="{{ route('admin.orders.ship', [$order->id]) }}" method="post" class="form-inline">
               <!-- 别忘了 csrf token 字段 -->
               {{ csrf_field() }}

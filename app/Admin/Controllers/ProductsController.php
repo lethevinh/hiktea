@@ -70,7 +70,9 @@ class ProductsController extends Controller
             return $value ? 'Yes' : 'No';
         });
         $grid->code('Code');
-        $grid->price('price');
+        $grid->price('price')->display(function ($value){
+            return number_format($value, 0);
+        });
         $grid->rating('rating');
 //        $grid->sold_count('sold_count');
         $grid->review_count('review_count');
@@ -100,7 +102,8 @@ class ProductsController extends Controller
 
         // 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
         $form->text('title', 'title')->rules('required');
-        $form->text('code', 'Code')->rules('required');
+        $form->text('slug', 'Slug')->readonly()->placeholder('Auto ...');
+        $form->text('code', 'Code')->readonly()->placeholder('Auto ...');
         $form->currency('price', 'Price')->symbol('VND')->rules('required');
 
         // 创建一个选择图片的框

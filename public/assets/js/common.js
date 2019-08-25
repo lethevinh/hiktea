@@ -715,7 +715,7 @@ async function updateCartPage() {
     let cartContent = $('#cart_content tbody');
     cartContent.html('');
     cart.items.forEach(item => {
-        cartContent.append(`<tr data-id="${item.id}">
+        cartContent.append(`<tr data-id="${item.id}" data-sku="${item.sku_id}">
     <td class="text-center">
         <img src="${item.image}" alt="${item.name} " title="${item.name} " width="100">
     </td>
@@ -767,7 +767,7 @@ async function thanhtoan(argument) {
     let cart = await getCart();
     params['cart'] = cart;
     console.log(params)
-    let res = await $.post('http://api.osa.vn/api/order', { ...params }, 'json');
+    let res = await $.post('/api/cart/add', { ...params }, 'json');
     console.log(res)
 }
 $(document).ready(function() {
@@ -778,6 +778,7 @@ $(document).ready(function() {
         let product = $('.product-view');
         let image = product.find('.large-image img').attr('src');
         let id = product.find('input[name="product_id"]').val();
+        let sku_id = product.find('input[name="sku_id"]').val();
         let name = product.find('.product-name h1').html();
         let price = product.find('.regular-price .price').html().replace(',', '').replace("đ", '');
         let qty = parseInt(product.find('#input-quantity').val());
@@ -789,7 +790,8 @@ $(document).ready(function() {
             total: parseFloat(price) * qty,
             image,
             qty,
-            link
+            link,
+            sku_id
         };
         await addToCart(product1);
     });
@@ -804,6 +806,7 @@ $(document).ready(function() {
         e.stopPropagation();
         e.preventDefault();
         let linkProduct = $(this);
+        let sku_id = linkProduct.data('sku');
         let elProduct = $(this).parents('.item-inner');
         let id = linkProduct.attr('href').split('&')[1].replace('product_id=', '')
         let price = elProduct.find('.price').html().replace(',', '').replace("đ", '');
@@ -818,7 +821,8 @@ $(document).ready(function() {
             total: parseFloat(price),
             image,
             qty: 1,
-            link
+            link,
+            sku_id
         };
 
         await addToCart(product);
@@ -829,6 +833,7 @@ $(document).ready(function() {
         e.preventDefault();
         let product = $(this).parents('tr');
         let id = product.data('id')
+        let sku_id = product.data('sku')
         let price = product.find('td:nth-child(3)').html().replace('.', '').replace(" đ", '');
         let name = product.find('td:nth-child(2) a').html();
         let image = product.find('td:first img').attr('src');
@@ -841,7 +846,8 @@ $(document).ready(function() {
             total: parseFloat(price) * qty,
             image,
             qty,
-            link
+            link,
+            sku_id
         };
         updateToCart(product1);
     });
@@ -855,6 +861,23 @@ $(document).ready(function() {
     updateCartPage();
 });
 
+$(document).ready(function() {
+    if ($('#request-invoice').is(":checked") == true) {
+        $('#container-form-invoice').show();
+    } else {
+        $('#container-form-invoice').hide();
+    }
+});
+
+function showHideInvoice() {
+    var toggle_invoice = $('#request-invoice').is(":checked");
+
+    if (toggle_invoice == true) {
+        $('#container-form-invoice').css('display', 'block');
+    } else {
+        $('#container-form-invoice').css('display', 'none');
+    }
+}
 
 $(document).ready(function() {
 
@@ -1044,6 +1067,22 @@ function getWard() {
         $('#load-ajax-ward').html('<select name="ward_id" onchange="loadListShipping()" id="input-wardid" class="form-control"></select>');
     }
 }
+$(document).ready(function() {
+    if ($('#is-delivery-address').is(":checked") == true) {
+        $('#container-form-address-ship').css('display', 'none');
+    } else {
+        $('#container-form-address-ship').css('display', 'block');
+    }
+});
 
+function showHideDeliveryAddress() {
+    var toggle_info_payment = $('#is-delivery-address').is(":checked");
+
+    if (toggle_info_payment == true) {
+        $('#container-form-address-ship').css('display', 'none');
+    } else {
+        $('#container-form-address-ship').css('display', 'block');
+    }
+}
 //
 console.log($('#content .owl-carousel'))

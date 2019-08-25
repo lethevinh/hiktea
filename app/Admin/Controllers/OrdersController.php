@@ -34,9 +34,11 @@ class OrdersController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Order);
-
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('no', $query);
+        });
         // 只展示已支付的订单，并且默认按支付时间倒序排序
-        $grid->model()->whereNotNull('paid_at')->orderBy('paid_at', 'desc');
+//        $grid->model()->whereNotNull('paid_at')->orderBy('paid_at', 'desc');
 
         $grid->no('No');
         // 展示关联关系的字段时，使用 column 方法

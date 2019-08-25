@@ -50,6 +50,7 @@
                                     <input type="radio" name="skus" autocomplete="off" value="{{ $sku->id }}"> {{ $sku->title }}
                                 </label>-->
                             @endforeach
+                            <input type="hidden" name="sku_id" autocomplete="off" value="{{ $product->skus[0]->id }}"/>
                             <div class="price-block" itemscope itemtype="http://schema.org/Offer">
                                 <div class="qv_price">
                                 <span class="regular-price">

@@ -106,7 +106,7 @@
                                     </div>
                                     <div class="actions">
                                         <form class="variants">
-                                            <a type="button" class="button btn-cart add_to_cart" title="Mua ngay" href="index.php?route=checkout/cart/add&amp;product_id=1046&amp;redirect=true">
+                                            <a type="button" data-sku="{{ $product->skus[0]->id }}" class="button btn-cart add_to_cart" title="Mua ngay" href="index.php?route=checkout/cart/add&amp;product_id={{$product->id}}&amp;redirect=true">
                                                 <span>Mua ngay</span>
                                             </a>
                                         </form>
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="actions">
                                     <form class="variants">
-                                        <button type="button" class="button btn-cart btn-more" title="Mua ngay" href="index.php?route=checkout/cart/add&amp;product_id=1046&amp;redirect=true">
+                                        <button type="button" data-sku="{{ $product->skus[0]->id }}" class="button btn-cart btn-more" title="Mua ngay" href="index.php?route=checkout/cart/add&amp;{{$product->id}}&amp;redirect=true">
                                             <span>Mua ngay</span>
                                         </button>
                                     </form>
