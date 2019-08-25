@@ -63,12 +63,14 @@ class CategoriesController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Category);
-
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('id', $query)->orWhere('code', $query)->orWhere('title', 'like', "%{$query}%") ;
+        });
         $grid->id('ID')->sortable();
         $grid->title('Title');
         $grid->slug('Slug');
         $grid->code('Code');
-
+        $grid->created_at()->sortable();
         $grid->actions(function ($actions) {
             $actions->disableView();
             $actions->disableDelete();

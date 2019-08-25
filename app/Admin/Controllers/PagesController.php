@@ -62,11 +62,13 @@ class PagesController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Page);
-
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('id', $query)->orWhere('title', 'like', "%{$query}%") ;
+        });
         $grid->id('ID')->sortable();
         $grid->title('title');
         $grid->slug('slug');
-
+        $grid->created_at()->sortable();
         $grid->actions(function ($actions) {
             $actions->disableView();
             $actions->disableDelete();

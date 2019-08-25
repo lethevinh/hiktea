@@ -63,7 +63,9 @@ class ProductsController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Product);
-
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('id', $query)->orWhere('code', $query)->orWhere('title', 'like', "%{$query}%") ;
+        });
         $grid->id('ID')->sortable();
         $grid->title('title');
         $grid->on_sale('on_sale')->display(function ($value) {
@@ -76,7 +78,7 @@ class ProductsController extends Controller
         $grid->rating('rating');
 //        $grid->sold_count('sold_count');
         $grid->review_count('review_count');
-
+        $grid->created_at()->sortable();
         $grid->actions(function ($actions) {
             $actions->disableView();
             $actions->disableDelete();

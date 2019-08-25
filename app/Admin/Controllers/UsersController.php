@@ -35,7 +35,9 @@ class UsersController extends Controller
     protected function grid()
     {
         $grid = new Grid(new User);
-
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('id', $query)->orWhere('name', 'like', "%{$query}%")->orWhere('email', 'like', "%{$query}%") ;
+        });
         // 创建一个列名为 ID 的列，内容是用户的 id 字段
         $grid->id('ID');
 
@@ -45,7 +47,7 @@ class UsersController extends Controller
         $grid->email('email');
 
         $grid->email_verified_at('email verified at')->display(function ($value) {
-            return $value ? '是' : '否';
+            return $value ? 'Yes' : 'No';
         });
 
         $grid->created_at('created_at');
