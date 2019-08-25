@@ -96,7 +96,7 @@ class CategoriesController extends Controller
         $form->text('title', 'Title')->rules('required');
         $form->text('slug', 'Slug')->rules('required');
         $form->text('code', 'Code')->rules('required');
-
+        $form->select('parent_id','Parent')->options(Category::all()->pluck('title', 'id'));
         // 创建一个选择图片的框
         $form->image('image', 'image')->rules('required|image');
 

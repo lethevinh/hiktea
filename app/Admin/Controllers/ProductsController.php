@@ -69,9 +69,10 @@ class ProductsController extends Controller
         $grid->on_sale('on_sale')->display(function ($value) {
             return $value ? 'Yes' : 'No';
         });
+        $grid->code('Code');
         $grid->price('price');
         $grid->rating('rating');
-        $grid->sold_count('sold_count');
+//        $grid->sold_count('sold_count');
         $grid->review_count('review_count');
 
         $grid->actions(function ($actions) {

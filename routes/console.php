@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Foundation\Inspiring;
 
 /*
@@ -16,3 +17,15 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+Artisan::command('data:update', function () {
+    $products = Product::all();
+    foreach ($products as $product) {
+        if ($product->categories){
+            if (!empty($product->categories()->get()[0]->code)){
+                $product->code = $product->categories()->get()[0]->code.str_pad($product->id, 6, '0', STR_PAD_LEFT);
+                $product->save();
+            }
+        }
+    }
+})->describe('Update Data');

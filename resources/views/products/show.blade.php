@@ -36,11 +36,11 @@
                                 <h1 itemprop="name">{{ $product->title }}</h1>
                             </div>
                             <ul class="list-unstyled">
-                                <li>Mã sản phẩm: {{ $product->title }}</li>
+                                <li>Mã sản phẩm: {{ $product->code }}</li>
                                 <li>Tình trạng: Còn trong kho</li>
                             </ul>
                             @foreach($product->skus as $sku)
-                                <label
+                                <!--<label
                                     class="btn sku-btn"
                                     data-price="{{ $sku->price }}"
                                     data-stock="{{ $sku->stock }}"
@@ -48,7 +48,7 @@
                                     title="{!! $sku->description !!}"
                                     data-placement="bottom">
                                     <input type="radio" name="skus" autocomplete="off" value="{{ $sku->id }}"> {{ $sku->title }}
-                                </label>
+                                </label>-->
                             @endforeach
                             <div class="price-block" itemscope itemtype="http://schema.org/Offer">
                                 <div class="qv_price">
