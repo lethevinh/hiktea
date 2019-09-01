@@ -852,34 +852,6 @@
                                     <span id="load-input-hidden"></span>
                                 </div>
                             </div>
-                            <script type="text/javascript">
-                                $('#button-coupon').on('click', function () {
-                                    var coupon_submit = '<input type="hidden" name="submit_coupon" value="1">';
-                                    $('#load-input-hidden').html(coupon_submit);
-
-                                    $.ajax({
-                                        url: '/index.php?route=extension/total/coupon/coupon',
-                                        type: 'post',
-                                        data: 'coupon=' + encodeURIComponent($('input[name=\'coupon\']').val()),
-                                        dataType: 'json',
-                                        beforeSend: function () {
-                                            $('#button-coupon').button('loading');
-                                        },
-                                        complete: function () {
-                                            $('#button-coupon').button('reset');
-                                        },
-                                        success: function (json) {
-                                            $('.console.log').remove();
-
-                                            if (json['error']) {
-                                                $('#show_notice_coupon').html('<div class="console.log console.log-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '<button type="button" class="close" data-dismiss="console.log">&times;</button></div>');
-                                            } else {
-                                                $("form#checkout_form").submit();
-                                            }
-                                        }
-                                    });
-                                });
-                            </script>
                         </div>
                     </div>
                     <div class="panel panel-default" id="ajax-load-total">

@@ -34,6 +34,8 @@ class Order extends Model
     protected $fillable = [
         'no',
         'address',
+        'payment',
+        'tax',
         'total_amount',
         'remark',
         'paid_at',
@@ -52,6 +54,8 @@ class Order extends Model
         'closed'    => 'boolean',
         'reviewed'  => 'boolean',
         'address'   => 'json',
+        'payment'   => 'json',
+        'tax'   => 'json',
         'ship_data' => 'json',
         'extra'     => 'json',
     ];

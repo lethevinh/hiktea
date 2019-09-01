@@ -24,3 +24,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+.owl-stage-outer {
+     margin: 0 0px;
+     padding: 0px;
+}

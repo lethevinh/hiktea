@@ -4,7 +4,7 @@
 
 @stop
 @section('content')
-    <div class="main-col fadeOut owl-carousel home owl-theme">
+    <div class=" fadeOut owl-carousel home owl-theme">
         <div class="item">
             <img src="assets/images/banner-1.jpg"></div>
         <div class="item">
