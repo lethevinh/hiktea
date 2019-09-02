@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="footer_logo"><a href="index.html"><img alt="logo" src="assets/images/logo_dark.png"></a></div>
+                    <div class="footer_logo"><a href="index.html"><img alt="logo" src="{{url('assets/images/logo_dark.png')}}"></a></div>
                     <div class="footer_desc">
                         <p>Phasellus blandit massa enim. elit id varius nunc. Lorems ipsum dolor sit consectetur industry. If you are going to use a passage of Lorem Ipsum.</p>
                     </div>
@@ -40,14 +40,14 @@
                 <div class="col-lg-4 col-md-6 col-sm-4">
                     <h5 class="widget_title">Instagram</h5>
                     <ul class="list_none instafeed">
-                        <li><a href="#"><img src="assets/images/insta_img1.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img2.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img3.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img4.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img5.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img6.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img7.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="assets/images/insta_img8.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img1.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img2.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img3.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img4.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img5.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img6.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img7.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/insta_img8.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -70,11 +70,11 @@
                 </div>
                 <div class="col-lg-4 order-lg-first">
                     <ul class="list_none footer_payment text-center text-lg-left">
-                        <li><a href="#"><img src="assets/images/visa.png" alt="visa"></a></li>
-                        <li><a href="#"><img src="assets/images/discover.png" alt="discover"></a></li>
-                        <li><a href="#"><img src="assets/images/master_card.png" alt="master_card"></a></li>
-                        <li><a href="#"><img src="assets/images/paypal.png" alt="paypal"></a></li>
-                        <li><a href="#"><img src="assets/images/amarican_express.png" alt="amarican_express"></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/visa.png')}}" alt="visa"></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/discover.png')}}" alt="discover"></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/master_card.png')}}" alt="master_card"></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/paypal.png')}}" alt="paypal"></a></li>
+                        <li><a href="#"><img src="{{url('assets/images/amarican_express.png')}}" alt="amarican_express"></a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
@@ -91,16 +91,16 @@
     </div>
     <div class="overlap_shape">
         <div class="ol_shape21">
-            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="assets/images/shape36.png" alt="shape36"></div>
+            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="{{url('assets/images/shape36.png')}}" alt="shape36"></div>
         </div>
         <div class="ol_shape22">
-            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="assets/images/shape37.png" alt="shape37"></div>
+            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="{{url('assets/images/shape37.png')}}" alt="shape37"></div>
         </div>
         <div class="ol_shape23">
-            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="assets/images/shape38.png" alt="shape38"></div>
+            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="{{url('assets/images/shape38.png')}}" alt="shape38"></div>
         </div>
         <div class="ol_shape24">
-            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="assets/images/shape39.png" alt="shape39"></div>
+            <div class="animation"><img data-parallax="{'y': 20, 'smoothness': 20}" src="{{url('assets/images/shape39.png')}}" alt="shape39"></div>
         </div>
     </div>
 </footer><!-- END FOOTER-->

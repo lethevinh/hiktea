@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Post extends Model {
 
@@ -11,5 +12,19 @@ class Post extends Model {
 	public function categories() {
 		return $this->belongsToMany(PostCategory::class, 'category_post', 'post_id', 'category_id')->withTimestamps();
 	}
+	public function link() {
+		return url('bai-viet/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
+	}
 
+	public function getImageUrlAttribute() {
+
+		if (Str::startsWith($this->attributes['image'], ['http://', 'https://'])) {
+			return $this->attributes['image'];
+		}
+		return \Storage::disk('public')->url($this->attributes['image']);
+	}
+
+	public function getLinkAttribute() {
+		return url('bai-viet/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
+	}
 }

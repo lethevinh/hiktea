@@ -64,9 +64,9 @@ class ProductsController extends Controller {
 			$q->where('slug', $category);
 		});
 		$cat = Category::where('slug', $category)->first();
-        if (!$cat){
-            return view('pages.error',['msg'=>'find not found Category']);
-        }
+		if (!$cat) {
+			return view('pages.error', ['msg' => 'find not found Category']);
+		}
 		// 判断是否有提交 search 参数，如果有就赋值给 $search 变量
 		// search 参数用来模糊搜索商品
 		if ($search = $request->input('search', '')) {
@@ -99,7 +99,7 @@ class ProductsController extends Controller {
 
 		return view('products.index', [
 			'products' => $products,
-            'categories' => $this->getCategories(),
+			'categories' => $this->getCategories(),
 			"category" => $cat,
 			'filters' => [
 				'search' => $search,
@@ -112,10 +112,10 @@ class ProductsController extends Controller {
 
 		$product = Product::where('slug', $product)->where('on_sale', true)->first();
 
-		if (!$product){
-		    return view('pages.error',['msg'=>'find not found Product']);
-        }
-		$category = Category::where('slug',$category)->first();
+		if (!$product) {
+			return view('pages.error', ['msg' => 'find not found Product']);
+		}
+		$category = Category::where('slug', $category)->first();
 
 		$favored = false;
 		// 用户未登录时返回的是 null，已登录时返回的是对应的用户对象
@@ -136,7 +136,6 @@ class ProductsController extends Controller {
 		return view('products.show', [
 			'product' => $product,
 			'category' => $category,
-            'categories' => $this->getCategories(),
 			'favored' => $favored,
 			'reviews' => $reviews,
 		]);
@@ -165,7 +164,7 @@ class ProductsController extends Controller {
 
 		return view('products.show', [
 			'product' => $product,
-            'categories' => $this->getCategories(),
+			'categories' => $this->getCategories(),
 			'favored' => $favored,
 			'reviews' => $reviews,
 		]);
@@ -192,6 +191,6 @@ class ProductsController extends Controller {
 	public function favorites(Request $request) {
 		$products = $request->user()->favoriteProducts()->paginate(16);
 
-		return view('products.favorites', ['products' => $products,'categories' => $this->getCategories()]);
+		return view('products.favorites', ['products' => $products, 'categories' => $this->getCategories()]);
 	}
 }

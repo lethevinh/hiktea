@@ -30,10 +30,10 @@ Route::get('menu/{category}.html', 'ProductsController@category')
 Route::get('menu/{category}/{product}.html', 'ProductsController@product')
 	->name('products.product');
 // Post
-Route::get('bai-viet.html', 'PostsController@index')->name('posts.index');
-Route::get('bai-viet/{category}.html', 'PostsController@category')
+Route::get('bai-viet.html', 'PostController@index')->name('posts.index');
+Route::get('bai-viet/{category}.html', 'PostController@category')
 	->name('posts.category');
-Route::get('bai-viet/{category}/{product}.html', 'PostsController@product')
+Route::get('bai-viet/{category}/{post}.html', 'PostController@post')
 	->name('posts.view');
 
 Auth::routes(['verify' => true]);

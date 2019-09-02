@@ -77,9 +77,12 @@ class Product extends Model {
 	public function getImagesAttribute($images) {
 		return json_decode($images, true);
 	}
+	public function getLinkAttribute() {
+		return url('menu/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
+	}
 
 	public function toLink() {
-		return url('san-pham/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
+		return url('menu/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
 	}
 
 	/**

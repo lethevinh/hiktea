@@ -27,16 +27,18 @@ class Category extends Model {
 		return $this->belongsToMany(Product::class)->withTimestamps();
 	}
 
-    public function children()
-    {
-        return $this->hasMany(Category::class, 'parent_id', 'id');
-    }
-    public function parent()
-    {
-        return $this->belongsTo(Category::class, 'parent_id');
-    }
+	public function children() {
+		return $this->hasMany(Category::class, 'parent_id', 'id');
+	}
+	public function parent() {
+		return $this->belongsTo(Category::class, 'parent_id');
+	}
 
-	public function toLink(){
-	    return url('san-pham/'.$this->slug.'.html');
-    }
+	public function toLink() {
+		return url('menu/' . $this->slug . '.html');
+	}
+
+	public function getLinkAttribute() {
+		return url('menu/' . $this->slug . '.html');
+	}
 }
