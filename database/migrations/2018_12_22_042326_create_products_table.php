@@ -1,42 +1,41 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateProductsTable extends Migration
-{
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->string('slug')->unique();
-            $table->string('code')->unique();
-            $table->text('description');
-            $table->text('content');
-            $table->string('image')->nullable();
-            $table->boolean('on_sale')->default(true);
-            $table->float('rating')->default(5);
-            $table->unsignedInteger('sold_count')->default(0);
-            $table->unsignedInteger('review_count')->default(0);
-            $table->decimal('price', 10, 2);
-            $table->timestamps();
-        });
-    }
+class CreateProductsTable extends Migration {
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up() {
+		Schema::create('products', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('title');
+			$table->string('slug')->unique();
+			$table->string('code')->unique()->nullable();
+			$table->text('description')->nullable();
+			$table->text('content')->nullable();
+			$table->text('time');
+			$table->integer('quatity')->nullable();
+			$table->text('images')->nullable();
+			$table->boolean('on_sale')->default(true);
+			$table->float('rating')->default(5);
+			$table->unsignedInteger('sold_count')->default(0);
+			$table->unsignedInteger('review_count')->default(0);
+			$table->decimal('price', 10, 2);
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('products');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down() {
+		Schema::dropIfExists('products');
+	}
 }

@@ -12,70 +12,40 @@
     <title>@yield('title', 'Shop US Mart Cindy') - Shop US Mart Cindy </title>
     <!-- 样式 -->
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
-    <link href="{{ url('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/blogmate.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/kiti.scss.css')}}" rel="stylesheet">
-    <!--<link href="catalog/view/theme/maxstore/stylesheet/style.css?v=1522720225" rel="stylesheet" />-->
-    <link href="{{ url('assets/css/flexslider.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/owl.theme.default.min.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/animate.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/jquery.jgrowl.min.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/clockdown.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/checkout.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/sweetalert.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/stylesheet.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/stylesheet_1.css')}}" rel="stylesheet">
-    <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet">
+    <!-- <link href="{{ url('assets/css/app.min.css')}}" rel="stylesheet"> -->
+    <!-- <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet"> -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Script -->
-    <script type="text/javascript" src="{{ url('assets/js/jquery-3.3.1.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/countries.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/sweetalert.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/imagesloaded.pkgd.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/masonry.pkgd.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/double_tab_togo.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/owl.carousel.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/common_base.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/common.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/jquery.flexslider-min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/cloud-zoom.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/parallax.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/jquery.jgrowl.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/cs.script.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/api.jquery.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/jquery.countdown.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/axios.min.js')}}"></script>
+    <script src="{{ url('assets/js/jquery-1.12.4.min.js')}}"> </script>
+    <script src="{{ url('assets/js/jquery-ui.js')}}"></script>
+    <script src="{{ url('assets/js/popper.min.js')}}"></script>
+    <script src="{{ url('assets/js/bootstrap.min.js')}}"> </script>
+    <script src="{{ url('assets/js/owl.carousel.min.js')}}"> </script>
+    <script src="{{ url('assets/js/magnific-popup.min.js')}}"> </script>
+    <script src="{{ url('assets/js/waypoints.min.js')}}"> </script>
+    <script src="{{ url('assets/js/parallax.js')}}"> </script>
+    <script src="{{ url('assets/js/jquery.dd.min.js')}}"></script>
+    <script src="{{ url('assets/js/jquery.countdown.min.js')}}"> </script>
+    <script src="{{ url('assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{ url('assets/js/jquery.parallax-scroll.js')}}"></script>
+    <script src="{{ url('assets/js/jquery.elevatezoom.js')}}"></script>
+    <script src="{{ url('assets/js/jquery.fitvids.js')}}"></script>
+    <script src="{{ url('assets/js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{ url('assets/js/isotope.min.js')}}"></script>
+    <script src="{{ url('assets/js/js.cookie.js')}}"></script>
+    <script src="{{ url('assets/js/scripts.js')}}"></script>
+    <script type="text/javascript" src="{{ url('assets/js/vendor.42ed3a.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>
 
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v4.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    </script>
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="642873192843355">
-    </div>
 </head>
 
-<body id="revo" class="cms-index-index cms-home-page product-productall">
+<body class="hik_skin home-page" id="page-top">
+        @include('layouts._loading')
         @include('layouts._header')
-        @yield('container')
+        <main>
+            @yield('container')
+        </main>
         @include('layouts._footer')
     <!-- JS 脚本 -->
     <!-- <script src="{{ mix('js/app.js') }}"></script> -->

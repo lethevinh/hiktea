@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
+
 class CategoriesSeeder extends Seeder {
 	/**
 	 * Run the database seeds.
@@ -12,25 +12,26 @@ class CategoriesSeeder extends Seeder {
 		$categories = config('categories');
 		foreach ($categories as $categoryData) {
 			$category = \App\Models\Category::create([
-				'title' => $categoryData['name'],
-				'description' => $categoryData['name'],
-				'content' => $categoryData['name'],
+				'title' => $categoryData['dish_type_name'],
+				'description' => $categoryData['dish_type_name'],
+				'content' => $categoryData['dish_type_name'],
 				'image' => '',
 				'status' => true,
 				'rating' => 1,
 				'sold_count' => 0,
 				'review_count' => 0,
 			]);
-			foreach ($categoryData['products'] as $item) {
-				$price = str_replace(',', '', $item['price']);
-				$price = str_replace('đ', '', $price);
+			foreach ($categoryData['dishes'] as $item) {
+				$price = $item['price']['value'];
 				$product = \App\Models\Product::create([
 					'title' => $item['name'],
-					'description' => $item['name'],
-					'content' => $item['name'],
-					'image' => $item['image'],
-					'on_sale' => true,
+					'description' => $item['description'],
+					'content' => $item['description'],
+					'images' => json_encode($item['photos']),
+					'time' => json_encode($item['time']),
+					'on_sale' => $item['is_available'],
 					'rating' => 2,
+					'quatity' => 100000,
 					'sold_count' => 0,
 					'review_count' => 0,
 					'price' => $price,
@@ -43,17 +44,41 @@ class CategoriesSeeder extends Seeder {
 					'stock' => rand(),
 				]);
 				$product->categories()->attach($category->id);
-				$product->update(['price' => $sku->price]);
+				foreach ($item['options'] as $keyOption => $option) {
+					foreach ($option['option_items']['items'] as $key => $optionItem) {
+						$priceItem = $optionItem['price']['value'];
+						$option = \App\Models\Option::create([
+							'title' => $optionItem['name'],
+							'description' => $optionItem['name'],
+							'content' => $optionItem['name'],
+							'is_default' => $optionItem['is_default'],
+							'price' => $priceItem,
+							'max_quantity' => $optionItem['max_quantity'],
+							'weight' => $optionItem['weight'],
+							'top_order' => 0,
+						]);
+						$product->options()->attach($option->id, [
+							'title' => $option['name'],
+							'min_select' => $option['option_items']['min_select'],
+							'max_select' => $option['option_items']['max_select'],
+						]);
+					}
+				}
 				// upload file
-                try{
-                    $fileContents =  file_get_contents($item['image']);
-                    $nameFile = "image-".$product->slug.'.jpg';
-                    Storage::put('uploads/'.$nameFile, $fileContents);
-                    $product->update(['image' => 'uploads/'.$nameFile]);
-                }catch (Exception $e) {
+				try {
+					$images = [];
+					foreach ($item['photos'] as $key => $photo) {
+						$fileContents = file_get_contents($photo['value']);
+						$nameFile = "image-" . $product->slug . '.jpg';
+						Storage::put('uploads/' . $nameFile, $fileContents);
+						$images[] = 'uploads/' . $nameFile;
+					}
+					$product->update(['images' => json_encode($images)]);
+
+				} catch (Exception $e) {
 //                    throwException($e);
-                }
-                // update content
+				}
+				// update content
 			}
 			echo $category['name'];
 		}
