@@ -37,6 +37,18 @@ Route::group([
 	$router->get('galleries/{id}/edit', 'GalleriesController@edit');
 	$router->put('galleries/{id}', 'GalleriesController@update');
 
+	$router->get('sliders', 'SlidersController@index');
+	$router->get('sliders/create', 'SlidersController@create');
+	$router->post('sliders', 'SlidersController@store');
+	$router->get('sliders/{id}/edit', 'SlidersController@edit');
+	$router->put('sliders/{id}', 'SlidersController@update');
+
+	$router->get('branchs', 'BranchsController@index');
+	$router->get('branchs/create', 'BranchsController@create');
+	$router->post('branchs', 'BranchsController@store');
+	$router->get('branchs/{id}/edit', 'BranchsController@edit');
+	$router->put('branchs/{id}', 'BranchsController@update');
+
 	$router->get('pages', 'PagesController@index');
 	$router->get('pages/create', 'PagesController@create');
 	$router->post('pages', 'PagesController@store');

@@ -18,5 +18,5 @@
  *
  */
 
-Encore\Admin\Form::forget(['map']);
-Encore\Admin\Form::extend('editor',  Encore\Admin\Form\Field\Editor::class);
+// Encore\Admin\Form::forget(['map']);
+Encore\Admin\Form::extend('editor', Encore\Admin\Form\Field\Editor::class);

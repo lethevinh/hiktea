@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branch;
 use App\Models\Gallery;
 use App\Models\Page;
 use App\Models\Post;
@@ -14,8 +15,10 @@ class PagesController extends Controller {
 
 	public function home() {
 		$posts = Post::orderBy('updated_at', 'desc')->take(5)->get();
+		$branchs = Branch::orderBy('updated_at', 'desc')->take(5)->get();
 		return view('pages.home', [
 			'posts' => $posts,
+			'branch' => $branchs,
 			'categories' => $this->getCategories(),
 		]);
 	}
@@ -29,6 +32,12 @@ class PagesController extends Controller {
 	public function gallery() {
 		return view('pages.gallery', [
 			'galleries' => Gallery::get(),
+		]);
+	}
+
+	public function branch() {
+		return view('pages.branch', [
+			'branchs' => Branch::get(),
 		]);
 	}
 

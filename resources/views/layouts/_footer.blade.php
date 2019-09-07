@@ -3,7 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="footer_logo"><a href="index.html"><img alt="logo" src="{{url('assets/images/logo_dark.png')}}"></a></div>
+                    <div class="footer_logo">
+                        <a href="{{url('/')}}">
+                            <img alt="logo" src="{{url('assets/images/logo_dark.png')}}"></a>
+                        </div>
                     <div class="footer_desc">
                         <p>Phasellus blandit massa enim. elit id varius nunc. Lorems ipsum dolor sit consectetur industry. If you are going to use a passage of Lorem Ipsum.</p>
                     </div>

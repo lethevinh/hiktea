@@ -2,7 +2,7 @@
 <header class="header_wrap dark_skin main_menu_uppercase bg_black">
     <div class="container">
         <nav class="navbar navbar-expand-lg txt_white">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img class="logo_light" src="{{url('assets/images/logo_white.png')}}" alt="logo">
                 <img class="logo_dark" src="{{url('assets/images/logo_dark.png')}}" alt="logo">
                 <img class="logo_default" src="{{url('assets/images/logo_dark.png')}}" alt="logo">
