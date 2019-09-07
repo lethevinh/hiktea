@@ -2,7 +2,7 @@
 @if($category)
 @section('title', $category->title)
 @else
-@section('title', "Bai Viet")
+@section('title', "Bài Viết")
 @endif
 @section('breadcrumb')
 @section('breadcrumb')
@@ -11,7 +11,14 @@
         <div class="row align-items-center">
             <div class="col-sm-12 text-center">
                 <div class="page-title">
-                    <h1>Bài Viết </h1>
+                    <h1>
+
+                        @if($category)
+                            {{$category->title}}
+                        @else
+                            Bài Viết
+                        @endif
+                    </h1>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
@@ -21,7 +28,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item" aria-current="page">
-                           <a href="{{url('bai-viet.html')}}"> Bài Viết</a>
+                            <a href="{{url('bai-viet.html')}}"> Bài Viết</a>
                         </li>
                         @if($category)
                         <li class="breadcrumb-item active" aria-current="page">

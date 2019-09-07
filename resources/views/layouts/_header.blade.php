@@ -20,7 +20,7 @@
                             Menu
                         </a>
                     </li>
-                    <li><a class="nav-link" href="{{url('khuyen-mai.html')}}">
+                    <li><a class="nav-link" href="{{url('bai-viet/khuyen-mai.html')}}">
                             Khuyến Mãi
                         </a>
                         </li>
@@ -28,11 +28,11 @@
                             Hình Ảnh
                         </a>
                         </li>
-                    <li><a class="nav-link" href="{{url('bai-viet.html')}}">
+                    <li><a class="nav-link" href="{{url('bai-viet/tin-tuc.html')}}">
                             Blog
                         </a>
                     </li>
-                    <li><a class="nav-link" href="{{url('tuyen-dung.html')}}">
+                    <li><a class="nav-link" href="{{url('bai-viet/tuyen-dung.html')}}">
                             Tuyển Dụng
                         </a>
                     </li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\Page;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -18,9 +19,16 @@ class PagesController extends Controller {
 			'categories' => $this->getCategories(),
 		]);
 	}
+
 	public function contact() {
 		return view('pages.contact', [
 			'categories' => $this->getCategories(),
+		]);
+	}
+
+	public function gallery() {
+		return view('pages.gallery', [
+			'galleries' => Gallery::get(),
 		]);
 	}
 

@@ -25,6 +25,12 @@ class Post extends Model {
 	}
 
 	public function getLinkAttribute() {
-		return url('bai-viet/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
+		$category = $this->categories()->first();
+		$categoryLink = "danh-muc";
+		if ($category) {
+			$categoryLink = $this->categories()->first()->slug;
+		}
+
+		return url('bai-viet/' . $categoryLink . '/' . $this->slug . '.html');
 	}
 }
