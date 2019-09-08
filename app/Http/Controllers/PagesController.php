@@ -35,6 +35,15 @@ class PagesController extends Controller {
 		]);
 	}
 
+	public function galleryDetail($gallery) {
+
+		$gallery = Gallery::where('slug', $gallery)->first();
+
+		return view('pages.gallery-detail', [
+			'gallery' => $gallery,
+		]);
+	}
+
 	public function branch() {
 		return view('pages.branch', [
 			'branchs' => Branch::get(),

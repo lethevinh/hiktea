@@ -17,6 +17,7 @@ Route::get('/', 'PagesController@home')->name('pages.home');
 // Page
 Route::get('/lien-he.html', 'PagesController@contact')->name('pages.contact');
 Route::get('/hinh-anh.html', 'PagesController@gallery')->name('pages.gallery');
+Route::get('/hinh-anh/{gallery}.html', 'PagesController@galleryDetail')->name('pages.gallery-detail');
 Route::get('/cua-hang.html', 'PagesController@branch')->name('pages.branch');
 Route::get('thanh-toan.html', 'OrdersController@page')->name('orders.guest');
 Route::get('gio-hang.html', 'CartController@page')->name('carts.guest');

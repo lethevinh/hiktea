@@ -25,4 +25,8 @@ class Gallery extends Model {
 	public function getImagesAttribute($pictures) {
 		return json_decode($pictures, true);
 	}
+
+	public function getLinkAttribute() {
+		return url('hinh-anh/' . $this->slug . '.html');
+	}
 }
