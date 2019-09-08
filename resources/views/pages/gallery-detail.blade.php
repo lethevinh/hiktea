@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', $gallery->title)
 @section('breadcrumb')
-<section class="bg_light_orange breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="{{url('assets/images/breadcrumb_bg.png')}}">
+<section class="bg_light_orange background_breadcrumb breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="{{url('assets/images/breadcrumb_bg.png')}}">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-12 text-center">

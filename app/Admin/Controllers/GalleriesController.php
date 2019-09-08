@@ -95,7 +95,7 @@ class GalleriesController extends Controller {
 		// $form->text('media-link', 'Link Video');
 		// $form->list('media-link');
 		$form->select('type', "Type")
-			->options(['image' => 'Hình Ảnh', 'video' => 'video'])
+			->options(['image' => 'Hình Ảnh', 'video' => 'Video'])
 			->default('image');
 
 		$form->table('media-link', function ($table) {
