@@ -5,17 +5,17 @@ return [
 	/*
 		     * 站点标题
 	*/
-	'name' => 'US Mart Cindy Shop',
+	'name' => 'HIK Tea ',
 
 	/*
 		     * 页面顶部 Logo
 	*/
-	'logo' => '<b>US Mart Cindy</b> Shop',
+	'logo' => '<b>HIK Tea</b>',
 
 	/*
 		     * 页面顶部小 Logo
 	*/
-	'logo-mini' => '<b>US</b>',
+	'logo-mini' => '<b>HIK</b>',
 
 	/*
 		     * 路由配置
