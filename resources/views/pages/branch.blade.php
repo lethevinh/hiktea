@@ -52,7 +52,7 @@
             </div>
             <div id="info" style="display: none"></div>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="heading_s2 mb-3 animation" data-animation="fadeInUp" data-animation-delay="0.1s">
                     <h3>Get In touch</h3>
@@ -82,7 +82,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </section>
 @stop
