@@ -780,7 +780,7 @@ PAGE JS
         });
     });
 
-    $('.grid_item .image_popup').on('click', function() {
+    /* $('.grid_item .image_popup').on('click', function() {
         $(this).find('.link_container').magnificPopup('open');
     });
     $('.link_container').each(function() {
@@ -791,7 +791,7 @@ PAGE JS
                 enabled: true
             }
         });
-    });
+    }); */
 
     /*===================================*
     23. PROGRESS BAR JS

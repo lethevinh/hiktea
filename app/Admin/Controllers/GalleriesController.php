@@ -62,6 +62,7 @@ class GalleriesController extends Controller {
 		$grid->id('ID')->sortable();
 		$grid->title('Title');
 		$grid->path('Path');
+		$grid->type('Type');
 		$grid->created_at()->sortable();
 		$grid->actions(function ($actions) {
 			$actions->disableView();
@@ -91,13 +92,21 @@ class GalleriesController extends Controller {
 		// 创建一个选择图片的框
 		// $form->image('path', 'Path')->rules('required|image');
 		$form->multipleImage('images')->sortable()->removable();
+		// $form->text('media-link', 'Link Video');
+		// $form->list('media-link');
+		$form->select('type', "Type")
+			->options(['image' => 'Hình Ảnh', 'video' => 'video'])
+			->default('image');
 
+		$form->table('media-link', function ($table) {
+			$table->url('link', "Link");
+			$table->text('title', "Title");
+		});
 		// 创建一个富文本编辑器
 		$form->textarea('description', 'Description');
 
 		// 定义事件回调，当模型即将保存时会触发这个回调
 		$form->saving(function (Form $form) {
-//            $form->model()->price = collect($form->input('skus'))->where(Form::REMOVE_FLAG_NAME, 0)->min('price') ?: 0;
 		});
 
 		return $form;

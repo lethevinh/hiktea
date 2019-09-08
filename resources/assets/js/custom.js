@@ -15,11 +15,9 @@ $(document).ready(function() {
         $(this).magnificPopup({
             delegate: '.image_popup',
             type: 'iframe',
-            disableOn: 700, 
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
+            gallery: {
+                enabled: true
+            }
         });
     });
 });

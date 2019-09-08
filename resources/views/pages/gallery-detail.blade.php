@@ -43,27 +43,53 @@
                 <div class="col-md-12">
                     <ul class="grid_container gutter_medium work_col3">
                         <li class="grid-sizer"></li><!-- START GALLERY ITEM-->
-                        @foreach($gallery->images as $image)
-                        <li class="grid_item {{$gallery->slug}}">
-                            <div class="gallery_item">
-                                <a class="image_link" href="#">
-                                    <img src="{{url('storage/'.$image)}}" alt="image"></a>
-                                <div class="gallery_content">
-                                    <div class="link_container">
-                                        <a class="image_popup" href="{{url('storage/'.$image)}}">
-                                            <i class="ion-image"></i>
-                                        </a>
+                        @if($gallery->type == 'image')
+                            @foreach($gallery->images as $image)
+                            <li class="grid_item {{$gallery->slug}}">
+                                <div class="gallery_item">
+                                    <a class="image_link" href="#">
+                                        <img src="{{url('storage/'.$image)}}" alt="image"></a>
+                                    <div class="gallery_content">
+                                        <div class="link_container link_popup link_container_{{$gallery->type}}">
+                                            <a class="image_popup" href="{{url('storage/'.$image)}}">
+                                                <i class="ion-{{$gallery->type}}"></i>
+                                            </a>
+                                        </div>
+                                       {{--<h5>
+                                            <a href="#">Grapes</a>
+                                        </h5>
+                                        <div class="pr_categories">
+                                            <a href="#">Fruits</a>
+                                        </div>--}}
                                     </div>
-                                   {{--<h5>
-                                        <a href="#">Grapes</a>
-                                    </h5>
-                                    <div class="pr_categories">
-                                        <a href="#">Fruits</a>
-                                    </div>--}}
                                 </div>
-                            </div>
-                        </li>
-                        @endforeach
+                            </li>
+                            @endforeach
+                        @else
+                            @foreach($gallery->medias as $video)
+                            <li class="grid_item {{$gallery->slug}}">
+                                <div class="gallery_item">
+                                    <a class="image_link" href="#">
+                                        @if($video['thumbnail'])
+                                            <img src="{{$video['thumbnail']}}" alt="image">
+                                        @else
+                                        <img src="{{url('storage/'.$gallery->images[0])}}" alt="image">
+                                        @endif
+                                    </a>
+                                    <div class="gallery_content">
+                                        <div class="link_container link_popup link_container_{{$gallery->type}}">
+                                            <a class="image_popup" href="https://www.facebook.com/v2.3/plugins/video.php?allowfullscreen=true&autoplay=true&container_width=800&href={{$video['link']}}">
+                                                <i class="ion-play"></i>
+                                            </a>
+                                        </div>
+                                       <h5 data-i="{{$video['thumbnail']}}">
+                                            <a href="#">{{$video['title']}}</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>

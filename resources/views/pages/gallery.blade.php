@@ -31,7 +31,6 @@
         <div>
             <div class="row">
                 <div class="col-md-12 text-center">
-
                 </div>
             </div>
             <div class="row">
@@ -45,9 +44,13 @@
                                     <img src="{{url('storage/'.$gallery->images[0])}}" alt="image">
                                 </a>
                                 <div class="gallery_content">
-                                    <div class="link_container">
+                                    <div class="link_container link_popup link_container_{{$gallery->type}}">
                                         <a class="image_popup" href="{{url('storage/'.$gallery->images[0])}}">
-                                            <i class="ion-image"></i>
+                                            @if($gallery->type=="image")
+                                                <i class="ion-image"></i>
+                                            @else
+                                                <i class="ion-play"></i>
+                                            @endif
                                         </a>
                                     </div>
                                     <h5>
@@ -55,9 +58,6 @@
                                             {{$gallery->title}}
                                         </a>
                                     </h5>
-                                    {{--<div class="pr_categories">
-                                        <a href="{{$gallery->link}}">Fruits</a>
-                                    </div>--}}
                                 </div>
                             </div>
                         </li>

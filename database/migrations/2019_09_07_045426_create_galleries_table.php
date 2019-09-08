@@ -16,6 +16,8 @@ class CreateGalleriesTable extends Migration {
 			$table->string('title');
 			$table->string('slug')->unique();
 			$table->text('seo')->nullable();
+			$table->string('type')->nullable()->default('image');
+			$table->string('link')->nullable();
 			$table->text('description')->nullable();
 			$table->text('images')->nullable();
 			$table->timestamps();
