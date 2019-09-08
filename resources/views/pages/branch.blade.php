@@ -30,46 +30,27 @@
     <div class="container">
         <div class="row">
             <div class="map-info">
-                <div class="map-content">
-                    <strong> Showroom Cách Mạng Tháng 8 </strong>
-                    <p>
-                        ĐịaChỉ : 33 Cách Mạng 8, P. Bến Thành, Q.1 <br>
-                        SĐT : 0906 741 331 <br>
-                        OPEN : Mon - Sat : 8:30AM - 17:30 PM
-                    </p>
-                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 col-xs-6 col-sm-6 col-lg-3 padding-r-0">
-                <ul class="map-list">
+                <h6>Chi Nhánh Gần Nhất </h6>
+                <ul class="map-list" id="side_bar">
                     @foreach($branchs as $branch)
-                    <li class="map-item" data-lng='{{$branch->lng}}' data-lat='{{$branch->lat}}' data-address="{{$branch->address}}" data-map-link="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5371665222715!2d106.68968411472937!3d10.770108862255489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3db1bf2759%3A0xfc1de3021d627482!2zTWlzc2hhIE5ndXnhu4VuIFRyw6Np!5e0!3m2!1sen!2s!4v1523167721891">
-                        <p>
-                            <strong> {{$branch->title}}</strong>
-                        </p>
-                        <div class="map-content">
-                            <strong> {{$branch->title}} </strong>
-                            <p>
-                                Địa Chỉ: {{$branch->address}} <br>
-                                SĐT : 0906 741 221 <br>
-                                OPEN : Mon - Sun: 8:30am - 10:00pm
-                            </p>
-                        </div>
+                    <li class="map-item" data-lng='{{$branch->lng}}' data-lat='{{$branch->lat}}' data-address="{{$branch->address}}">
+                        <a href="javascript:google.maps.event.trigger(closest[{{$loop->index}}],'click');">
+                            <strong>{{$branch->title}}</strong>
+                        </a>
+                        <p>{{$branch->address}}(<i></i>)</p>
+                        <a style="color:#007bff" target="_blank" href="https://www.google.com/maps/dir//{{$branch->lat}},{{$branch->lng}}/@ {{$branch->lat}},{{$branch->lng}},13z?hl=vi">chỉ đường</a>
                     </li>
                     @endforeach
                 </ul>
             </div>
             <div class="col-md-9 col-xs-6 col-sm-6 col-lg-9 padding-f-0">
-                <div id="side_bar"></div>
-                <div id="imap" style="height: 500px">
-                    <!--<iframe id="iframeid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5371665222715!2d106.68968411472937!3d10.770108862255489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3db1bf2759%3A0xfc1de3021d627482!2zTWlzc2hhIE5ndXnhu4VuIFRyw6Np!5e0!3m2!1sen!2s!4v1523167721891" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-                    <!--<iframe id="iframeid" width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{$branchs[0]->address}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>-->
-                </div>
+                <div id="imap" style="height: 500px"></div>
             </div>
-            <div id="info"></div>
-            <input id="address" type="text" value="Palo Alto, CA"></input>
-            <input type="button" value="Search" onclick="codeAddress();"></input>
+            <div id="info" style="display: none"></div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -113,20 +94,19 @@ var map = null;
 var customerMarker = null;
 var gmarkers = [];
 var closest = [];
-let markers = {!!$branchs!! }
+let markers = {!! $branchs !!}
 
 function initialize() {
     // alert("init");
     geocoder = new google.maps.Geocoder();
     map = new google.maps.Map(document.getElementById('imap'), {
-        zoom: 9,
+        zoom: 17,
         center: new google.maps.LatLng(52.6699927, -0.7274620),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
     var bounds = new google.maps.LatLngBounds();
-    document.getElementById('info').innerHTML = "found " + locations.length + " locations<br>";
     for (i = 0; i < markers.length; i++) {
         let geo = markers[i]
         var pt = new google.maps.LatLng(parseFloat(geo.lat), parseFloat(geo.lng));
@@ -135,12 +115,14 @@ function initialize() {
             position: pt,
             map: map,
             title: geo.title,
-            address: geo.address
+            address: geo.address,
+            geo: geo,
+            html: geo.title + "<br>" + geo.address
         });
         gmarkers.push(marker);
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                    infowindow.setContent(marker.html);
+                    infowindow.setContent(geo.address);
                     infowindow.open(map, marker);
                 }
             })
@@ -148,32 +130,40 @@ function initialize() {
     }
     map.fitBounds(bounds);
 
-}
 
-function codeAddress() {
-    var numberOfResults = 25;
-    var numberOfDrivingResults = 5;
-    var address = document.getElementById('address').value;
-    geocoder.geocode({
-        'address': address
-    }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            var numberOfResults = 25;
+            var numberOfDrivingResults = 5;
+            var myLatlng = new google.maps.LatLng(pos.lat, pos.lng);
+            /*map.setCenter(myLatlng);
             if (customerMarker) customerMarker.setMap(null);
             customerMarker = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
+                position: myLatlng
             });
-            console.log(results[0].geometry.location.lat(), results[0].geometry.location.lng())
-            closest = findClosestN(results[0].geometry.location, numberOfResults);
-            console.log(closest)
+
+            infoWindow = new google.maps.InfoWindow;
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Vị trí của bạn');
+            infoWindow.open(map);
+            map.setCenter(pos);
+            map.setZoom(17)*/
+
+            closest = findClosestN(myLatlng, numberOfResults);
             // get driving distance
             closest = closest.splice(0, numberOfResults);
-            calculateDistances(results[0].geometry.location, closest, numberOfDrivingResults);
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
+            calculateDistances(myLatlng, closest, numberOfDrivingResults, pos);
+
+        }, function() {
+            console.log('1')
+        });
+    }
+
 }
 
 function findClosestN(pt, numberOfResults) {
@@ -193,7 +183,7 @@ function sortByDist(a, b) {
     return (a.distance - b.distance)
 }
 
-function calculateDistances(pt, closest, numberOfResults) {
+function calculateDistances(pt, closest, numberOfResults, current = null) {
     var service = new google.maps.DistanceMatrixService();
     var request = {
         origins: [pt],
@@ -216,7 +206,7 @@ function calculateDistances(pt, closest, numberOfResults) {
             outputDiv.innerHTML = '';
 
             var results = response.rows[0].elements;
-            console.log(results)
+
             // save title and address in record for sorting
             for (var i = 0; i < closest.length; i++) {
                 results[i].title = closest[i].title;
@@ -228,7 +218,18 @@ function calculateDistances(pt, closest, numberOfResults) {
             for (var i = 0;
                 ((i < numberOfResults) && (i < closest.length)); i++) {
                 closest[i].setMap(map);
-                outputDiv.innerHTML += "<a href='javascript:google.maps.event.trigger(closest[" + results[i].idx_closestMark + "],\"click\");'>" + results[i].title + '</a><br>' + results[i].address + "<br>" + results[i].distance.text + ' appoximately ' + results[i].duration.text + '<br><hr>';
+                let linkMap = 'javascript:google.maps.event.trigger(closest[' + results[i].idx_closestMark + '],"click");';
+                let form = current.lat + "," + current.lng;
+                let to = closest[i].geo.lat + "," + closest[i].geo.lng;
+                let linkRedirect = "https://www.google.com/maps/dir/" + form + "/" + to + "/@" + closest[i].geo.lat + "," + closest[i].geo.lng + ",13z?hl=vi";
+                let html = "";
+                html += "<li class='map-item'>";
+                html += "<a href='" + linkMap + "'><strong>" + results[i].title + "</strong></a>";
+                html += '<p>' + results[i].address + "";
+                html += "(<i>" + results[i].distance.text + " đi đến trong " + results[i].duration.text + "</i>)</p>"
+                html += "<a style='color:#007bff' target='_blank' href='" + linkRedirect + "'>chỉ đường</a>"
+                html += "</li>";
+                outputDiv.innerHTML += html
             }
         }
     });
@@ -241,6 +242,7 @@ function sortByDistDM(a, b) {
 google.maps.event.addDomListener(window, 'load', initialize);
 $(document).ready(() => {
     $('.map-item').click(function() {
+        return;
         let address = $(this).data('address');
         var numberOfResults = 25;
         var numberOfDrivingResults = 5;
@@ -260,49 +262,9 @@ $(document).ready(() => {
         // get driving distance
         closest = closest.splice(0, numberOfResults);
         calculateDistances(myLatlng, closest, numberOfDrivingResults);
-
-        // var address = document.getElementById('address').value;
-        /* geocoder.geocode({
-             'address': address
-         }, function(results, status) {
-             if (status == google.maps.GeocoderStatus.OK) {
-                 map.setCenter(results[0].geometry.location);
-                 if (customerMarker) customerMarker.setMap(null);
-                 customerMarker = new google.maps.Marker({
-                     map: map,
-                     position: results[0].geometry.location
-                 });
-                 closest = findClosestN(results[0].geometry.location, numberOfResults);
-                 // get driving distance
-                 closest = closest.splice(0, numberOfResults);
-                 calculateDistances(results[0].geometry.location, closest, numberOfDrivingResults);
-             } else {
-                 alert('Geocode was not successful for the following reason: ' + status);
-             }
-         });*/
     });
 })
 let locations = []
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        };
-
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos);
-    }, function() {
-       console.log('1')
-    });
-} else {
-    // Browser doesn't support Geolocation
-       console.log('2')
-
-}
-
 </script>
 <style type="text/css" media="screen">
 iframe {
@@ -316,9 +278,9 @@ iframe {
 }
 
 .map-list {
-    border: 1px solid #acd6d6;
+    /*border: 1px solid #acd6d6;*/
     height: 500px;
-    overflow: scroll;
+    overflow-y: scroll;
     list-style-type: circle;
 }
 
@@ -327,16 +289,24 @@ iframe {
     border-bottom: 1px solid #acd6d6;
     cursor: pointer;
 }
-
+.map-item p{
+    margin: 0
+}
 .map-item:hover,
 .map-active {
 
-    background: #d7dbdd;
+    /*background: #d7dbdd;*/
 }
 
 .map-content {
     display: none;
 }
+.padding-f-0 {
+    padding-left: 0px;
+}
 
+.padding-r-0 {
+    padding-right: 0px;
+}
 </style>
 @stop
