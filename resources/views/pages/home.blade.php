@@ -140,12 +140,12 @@
                                 <div class="col-xl-4 col-lg-4 col-sm-6">
                                     <div class="product"><span class="pr_flash bg_orange">-10%</span>
                                         <div class="product_img">
-                                            <a href="{{$post->link}}">
+                                            <a href="{{$product->link}}">
                                                 <img src="{{$product->image_url}}" alt="product_img2">
                                             </a>
                                             <div class="product_action_box">
                                                 <ul class="list_none pr_action_btn">
-                                                    <li><a href="{{$post->link}}"><i class="ti-heart"></i></a></li>
+                                                    <li><a href="{{$product->link}}"><i class="ti-heart"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
