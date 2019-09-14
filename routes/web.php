@@ -12,7 +12,12 @@
  */
 
 //Route::redirect('/', '/san-pham.html')->name('root');
-
+Route::get('/admin/file-manager/app/public/uploads/{filePath}', function ($filePath){
+    if (!Storage::disk('public')->exists('uploads/'.$filePath)){
+        abort('404');
+    }
+    return response()->file(storage_path('app/public/uploads/'.DIRECTORY_SEPARATOR.($filePath)));
+})->name('storage.gallery.image');
 Route::get('/', 'PagesController@home')->name('pages.home');
 // Page
 Route::get('/lien-he.html', 'PagesController@contact')->name('pages.contact');
