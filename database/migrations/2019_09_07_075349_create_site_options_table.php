@@ -14,7 +14,7 @@ class CreateSiteOptionsTable extends Migration {
 		Schema::create('siteoptions', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('key')->nullable();
-			$table->string('value')->nullable();
+			$table->text('value')->nullable();
 			$table->boolean('active')->default(true);
 			$table->timestamps();
 		});

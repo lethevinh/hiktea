@@ -8,14 +8,24 @@
                             <img alt="logo" src="{{url('assets/images/logo_dark.png')}}"></a>
                         </div>
                     <div class="footer_desc">
-                        <p>Phasellus blandit massa enim. elit id varius nunc. Lorems ipsum dolor sit consectetur industry. If you are going to use a passage of Lorem Ipsum.</p>
+                        <p>@option('description')</p>
                     </div>
                     <ul class="contact_info list_none">
                         <li><span class="ti-mobile"></span>
-                            <p>+123 456 7890</p>
+                            <p>@option('phone')</p>
                         </li>
-                        <li><span class="ti-email"></span><a href="mailto:info@yourmail.com">info@yourmail.com</a></li>
-                        <li><span class="ti-location-pin"></span><address>123 Street, Old Trafford, NewYork, USA</address></li>
+                        <li>
+                            <span class="ti-email"></span>
+                            <a href="mailto:@option('email')">
+                                @option('email')
+                            </a>
+                        </li>
+                        <li>
+                            <span class="ti-location-pin"></span>
+                            <address>
+                                @option('address')
+                            </address>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4">
@@ -43,14 +53,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-4">
                     <h5 class="widget_title">Instagram</h5>
                     <ul class="list_none instafeed">
-                        <li><a href="#"><img src="{{url('assets/images/insta_img1.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img2.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img3.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img4.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img5.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img6.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img7.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                        <li><a href="#"><img src="{{url('assets/images/insta_img8.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0950591034643!2d106.65065331456312!3d10.727151263035145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f172f3b8cb5%3A0xcdede9cedcb8bca1!2zVFLDgCBT4buuQSBISUtURUEgQsOsbmggSMawbmc!5e0!3m2!1svi!2s!4v1568455694485!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </ul>
                 </div>
             </div>
@@ -82,11 +85,9 @@
                 </div>
                 <div class="col-lg-4">
                     <ul class="list_none social_icons radius_social text-center text-lg-right">
-                        <li><a class="sc_facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a class="sc_twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a class="sc_google" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a class="sc_instagram" href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a class="sc_pinterest" href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a class="sc_facebook" href="@option('facebook')"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="sc_twitter" href="@option('youtube')"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="sc_instagram" href="@option('foody')"><i class="fab fa-dribbble"></i></a></li>
                     </ul>
                 </div>
             </div>

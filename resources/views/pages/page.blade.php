@@ -35,13 +35,12 @@
                     <div class="row align-items-center">
                         <div class="order-md-first animation" data-animation="bounceInUp" data-animation-delay="0.4s">
                             <div class="heading_s2">
-                                <span class="sub_heading">
-                                  With Happy Life
-                                </span>
                                 <h2>{{$page->title}}</h2>
+                                <span class="sub_heading">
+                                </span>
                             </div>
                             <p>
-                              {!! $page->content !!}
+                                {!! $page->content !!}
                             </p>
                         </div>
                     </div>

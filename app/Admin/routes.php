@@ -19,6 +19,12 @@ Route::group([
 	$router->get('products/{id}/edit', 'ProductsController@edit');
 	$router->put('products/{id}', 'ProductsController@update');
 
+	$router->get('options', 'OptionsController@index');
+	$router->get('options/create', 'OptionsController@create');
+	$router->post('options', 'OptionsController@store');
+	$router->get('options/{id}/edit', 'OptionsController@edit');
+	$router->put('options/{id}', 'OptionsController@update');
+
 	$router->get('posts', 'PostsController@index');
 	$router->get('posts/create', 'PostsController@create');
 	$router->post('posts', 'PostsController@store');
