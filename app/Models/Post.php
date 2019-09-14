@@ -30,7 +30,13 @@ class Post extends Model {
 		if ($category) {
 			$categoryLink = $this->categories()->first()->slug;
 		}
-
 		return url('bai-viet/' . $categoryLink . '/' . $this->slug . '.html');
 	}
+	public function getNextAttribute(){
+        return $this->categories()->first()->posts()->first();
+    }
+
+    public function getPrevAttribute(){
+       return $this->categories()->first()->posts()->last();
+    }
 }

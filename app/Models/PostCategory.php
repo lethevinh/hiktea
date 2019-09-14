@@ -20,4 +20,8 @@ class PostCategory extends Model {
 	public function getLinkAttribute() {
 		return url('bai-viet/' . $this->slug . '.html');
 	}
+
+	public function posts() {
+        return $this->belongsToMany(Post::class, 'category_post','category_id')->withTimestamps();
+    }
 }

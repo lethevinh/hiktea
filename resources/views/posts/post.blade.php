@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', "Bai Viet")
 @section('breadcrumb')
-<section class="bg_light_orange breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
+<section class="bg_light_orange breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="{{url('assets/images/breadcrumb_bg.png')}}">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-12 text-center">
@@ -34,7 +34,7 @@
                 <div class="single_post">
                     <div class="blog_img">
                         <a href="#">
-                            <img src="{{url('assets/images/blog_img1.jpg')}}" alt="blog_img1">
+                            <img src="{{$post->image_url}}" alt="blog_img1">
                         </a>
                     </div>
                     <div class="single_post_content">
@@ -48,7 +48,7 @@
                                 <li><a href="#"><i class="far fa-comments"></i>4 Comment</a></li>
                             </ul>
                             <p>
-                                {{$post->content}}
+                                {!! $post->content !!}
                             </p>
                             <div class="border-top border-bottom blog_post_footer">
                                 <div class="row justify-content-between align-items-center">
@@ -64,11 +64,8 @@
                                     <div class="col-md-4 text-md-right">
                                         <div class="share">
                                             <ul class="list_none social_icons">
-                                                <li><a href="#" class="sc_facebook"><i class="ion-social-facebook"></i></a></li>
-                                                <li><a href="#" class="sc_twitter"><i class="ion-social-twitter"></i></a></li>
-                                                <li><a href="#" class="sc_gplus"><i class="ion-social-googleplus"></i></a></li>
-                                                <li><a href="#" class="sc_youtube"><i class="ion-social-youtube-outline"></i></a></li>
-                                                <li><a href="#" class="sc_instagram"><i class="ion-social-instagram-outline"></i></a></li>
+                                                <li><a href="https://www.facebook.com/sharer.php?u=https{{$post->link}}}" class="sc_facebook"><i class="ion-social-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com/intent/tweet?text={{$post->title}}&url={{$post->link}}" class="sc_twitter"><i class="ion-social-twitter"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -79,11 +76,11 @@
                     <div class="post_navigation">
                         <div class="row align-items-center justify-content-between">
                             <div class="col-auto">
-                                <a href="#">
+                                <a href="{{$post->next->link}}">
                                     <div class="d-flex align-items-center">
                                         <i class="ion-ios-arrow-thin-left mr-2"></i>
                                         <div>
-                                            <span>previous Post</span>
+{{--                                            <span>previous Post</span>--}}
                                         </div>
                                     </div>
                                 </a>
@@ -93,7 +90,7 @@
                                     <div class="d-flex align-items-center flex-row-reverse text-right">
                                         <i class="ion-ios-arrow-thin-right ml-2"></i>
                                         <div>
-                                            <span>Next Post</span>
+{{--                                            <span>Next Post</span>--}}
                                         </div>
                                     </div>
                                 </a>
@@ -111,7 +108,7 @@
                     </div>
                     <div class="widget">
                         <h5 class="widget_title">About Me</h5>
-                        <div class="about_widget"><a href="#"><img src="assets/images/about_author.jpg" alt="about_author"></a>
+                        <div class="about_widget"><a href="#"><img src="{{url('assets/images/about_author.jpg')}}" alt="about_author"></a>
                             <h5 class="about_author">Calvin William</h5><span class="author_email">info@yourmail.com</span>
                             <p>Lorem ipsum dolor sit amet elit adipiscing elit. Praesent id dolor dui dapibus gravida elit.</p>
                         </div>
@@ -131,7 +128,7 @@
                         <ul class="recent_post border_bottom_dash list_none">
                             <li>
                                 <div class="post_content">
-                                    <div class="post_img"><a href="#"><img src="assets/images/letest_post1.jpg" alt="letest_post1"></a></div>
+                                    <div class="post_img"><a href="#"><img src="{{url('assets/images/letest_post1.jpg')}}" alt="letest_post1"></a></div>
                                     <div class="post_info">
                                         <h6><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h6>
                                         <p class="small m-0">April 14, 2018</p>
@@ -140,7 +137,7 @@
                             </li>
                             <li>
                                 <div class="post_content">
-                                    <div class="post_img"><a href="#"><img src="assets/images/letest_post2.jpg" alt="letest_post2"></a></div>
+                                    <div class="post_img"><a href="#"><img src="{{url('assets/images/letest_post2.jpg')}}" alt="letest_post2"></a></div>
                                     <div class="post_info">
                                         <h6><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h6>
                                         <p class="small m-0">April 14, 2018</p>
@@ -149,7 +146,7 @@
                             </li>
                             <li>
                                 <div class="post_content">
-                                    <div class="post_img"><a href="#"><img src="assets/images/letest_post3.jpg" alt="letest_post3"></a></div>
+                                    <div class="post_img"><a href="#"><img src="{{url('assets/images/letest_post3.jpg')}}" alt="letest_post3"></a></div>
                                     <div class="post_info">
                                         <h6><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h6>
                                         <p class="small m-0">April 14, 2018</p>
@@ -165,14 +162,14 @@
                     <div class="widget">
                         <h5 class="widget_title">Instagram Feeds</h5>
                         <ul class="list_none instafeed">
-                            <li><a href="#"><img src="assets/images/insta_img1.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img2.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img3.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img4.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img5.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img6.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img7.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                            <li><a href="#"><img src="assets/images/insta_img8.jpg" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img1.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img2.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img3.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img4.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img5.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img6.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img7.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
+                            <li><a href="#"><img src="{{url('assets/images/insta_img8.jpg')}}" alt="insta_img"><span class="insta_icon"><i class="ti-instagram"></i></span></a></li>
                         </ul>
                     </div>
                     <div class="widget">
