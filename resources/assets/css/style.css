@@ -26,6 +26,134 @@ Version      : 1.0
 /*===================================*
   01. GENERAL STYLE
 *===================================*/
+/*======================= Loto font =======================*/
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 100;
+    src: local('Lato Thin Italic'), local('Lato-ThinItalic'), url(../fonts/lato-thinitalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Lato Light Italic'), local('Lato-LightItalic'), url(../fonts/lato-lightitalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(../fonts/lato-italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url(../fonts/lato-mediumitalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Lato SemiBold Italic'), local('Lato-SemiBoldItalic'), url(../fonts/lato-semibolditalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(../fonts/lato-bolditalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(../fonts/lato-blackitalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Thin'), local('Lato-Thin'), url(../fonts/lato-thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(../fonts/lato-light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato-regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Lato Medium'), local('Lato-Medium'), url(../fonts/lato-medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Lato SemiBold'), local('Lato-SemiBold'), url(../fonts/lato-semibold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/lato-bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(../fonts/lato-black.ttf) format('truetype');
+}
+
+/*======================= Bebasneue font =======================*/
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), url(../fonts/svn-bebas_neue_thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Bebas Neue Light'), local('BebasNeue-Light'), url(../fonts/svn-bebas_neue_light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bebas Neue Regular'), local('BebasNeue-Regular'), url(../fonts/svn-bebas_neue_regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bebas Neue Bold'), local('BebasNeue-Bold'), url(../fonts/svn-bebas_neue_bold1.ttf) format('truetype');
+}
+
 body {
 	background: #ffffff none repeat scroll 0 0;
     color: #636363;
@@ -42,8 +170,10 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Lobster Two', cursive;
 }
 p {
-	color:#636363;
-	line-height: 26px;
+	color:#000000;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 30px;
 }
 a {
 	color: #2f303c;
@@ -382,7 +512,7 @@ button:focus {
 }
 .text_uppercase * {
 	text-transform: uppercase;
-}	
+}
 .form-control,
 .form-control:focus,
 .custom-file-input:focus ~ .custom-file-label {
@@ -807,31 +937,31 @@ button:focus {
 @-webkit-keyframes bounceimg {
 0% {
     -webkit-transform: translateY(-20px);
-    transform: translateY(-20px); 
+    transform: translateY(-20px);
 }
 50% {
    -webkit-transform: translateY(-10px);
-     transform: translateY(-10px); 
-} 
+     transform: translateY(-10px);
+}
 100% {
    -webkit-transform: translateY(-20px);
-     transform: translateY(-20px); 
-} 
+     transform: translateY(-20px);
+}
 }
 
 @keyframes bounceimg {
 0% {
     -webkit-transform: translateY(-20px);
-    transform: translateY(-20px); 
+    transform: translateY(-20px);
 }
 50% {
    -webkit-transform: translateY(-10px);
-     transform: translateY(-10px); 
-} 
+     transform: translateY(-10px);
+}
 100% {
    -webkit-transform: translateY(-20px);
-     transform: translateY(-20px); 
-} 
+     transform: translateY(-20px);
+}
 }
 
 /*Loader Css*/
@@ -970,13 +1100,13 @@ button:focus {
 .dark_skin .cart_list li {
 	border-color: #ddd;
 }
-.dark_skin .navbar .navbar-nav .dropdown-menu li a.active, 
-.dark_skin .navbar .navbar-nav .dropdown-menu li a:hover, 
-.dark_skin .navbar .navbar-nav .dropdown-menu > ul > li:hover > a, 
+.dark_skin .navbar .navbar-nav .dropdown-menu li a.active,
+.dark_skin .navbar .navbar-nav .dropdown-menu li a:hover,
+.dark_skin .navbar .navbar-nav .dropdown-menu > ul > li:hover > a,
 .dark_skin .navbar .navbar-nav .dropdown-menu > ul > .mega-menu-col ul > li:hover > a {
 	color: #07d765;
 }
-.dark_skin .navbar .navbar-nav .dropdown-item, 
+.dark_skin .navbar .navbar-nav .dropdown-item,
 .dark_skin .navbar .navbar-nav .dropdown-header,
 .dark_skin .cart_quantity,
 .dark_skin .cart_total {
@@ -1019,7 +1149,7 @@ button:focus {
 	text-transform: capitalize;
 	font-size: 14px;
 }
-.navbar .navbar-nav > li > a.active, 
+.navbar .navbar-nav > li > a.active,
 .navbar .navbar-nav > li:hover > a {
 	color: #07d765;
 }
@@ -1086,14 +1216,14 @@ button:focus {
 .dropdown-item.active, .dropdown-item:active {
 	background-color: transparent;
 }
-.navbar .navbar-nav.attr-nav .dropdown-menu li a.active, 
-.navbar .navbar-nav.attr-nav .dropdown-menu li a:hover, 
+.navbar .navbar-nav.attr-nav .dropdown-menu li a.active,
+.navbar .navbar-nav.attr-nav .dropdown-menu li a:hover,
 .navbar .navbar-nav.attr-nav .dropdown-menu > ul > li:hover > a {
 	background-color: rgba(0,0,0,0);
 }
 .navbar .navbar-nav .dropdown-menu li a.active,
 .navbar .navbar-nav .dropdown-menu li a:hover,
-.navbar .navbar-nav .dropdown-menu > ul > li:hover > a, 
+.navbar .navbar-nav .dropdown-menu > ul > li:hover > a,
 .navbar .navbar-nav .dropdown-menu > ul > .mega-menu-col ul > li:hover > a {
 	color: #07d765;
 }
@@ -2879,7 +3009,7 @@ body.active {
 .testimonial_img img {
 	max-width: 76px;
 }
-.testi_user span, 
+.testi_user span,
 .author_intro span {
 	font-style: italic;
 	color: #07d765;
@@ -5078,7 +5208,7 @@ blockquote::before {
 	margin: 0;
 }
 .related_post,
-.comment-area, 
+.comment-area,
 .comment_form {
 	margin-top: 50px;
 }
@@ -5159,7 +5289,7 @@ from {
 }
 to {
    background-position: -400px 0;
-} 
+}
 }
 @-webkit-keyframes bounce_bg_img {
 from {
@@ -5167,7 +5297,7 @@ from {
 }
 to {
    background-position: -400px 0;
-}   
+}
 }
 
 .cs_content_box {
@@ -5232,7 +5362,7 @@ to {
 	-o-transition: all 2s ease-in-out;
 	transition: all 2s ease-in-out;
 }
-.pr_white span, 
+.pr_white span,
 .pr_white.progress_content.pr_style1 .count_pr {
 	color: #fff;
 }

@@ -190,7 +190,7 @@
     </aside>
 </div>--}}
 <!-- START SECTION SHOP DETAIL -->
-<section>
+<section class="layout-content">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
