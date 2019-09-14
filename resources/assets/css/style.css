@@ -3294,7 +3294,7 @@ body.active {
 }
 .blog_content p {
 	margin-bottom: 10px;
-	font-size: 14px;
+	font-size: 17px;
 }
 .blog_post .blog_img a {
 	display: block;
@@ -3305,7 +3305,7 @@ body.active {
     width: 100%;
 }
 .blog_link {
-	font-size: 14px;
+	font-size: 17px;
 }
 .blog_link i {
 	vertical-align: middle;
@@ -3574,7 +3574,7 @@ footer {
 	margin-bottom: 15px;
 }
 .footer_desc p {
-	font-size: 14px;
+	font-size: 17px;
 }
 .top_footer {
 	padding: 100px 0;
@@ -3587,7 +3587,7 @@ footer {
 }
 .widget_links li a {
 	color: #636363;
-	font-size: 14px;
+	font-size: 17px;
 	position: relative;
 }
 .widget_links.links_style1 li a:hover,
@@ -3638,7 +3638,7 @@ footer {
 }
 .contact_info i + *,
 .contact_info span + * {
-	font-size: 14px;
+	font-size: 17px;
 	color: #636363;
 	margin: 0;
 	vertical-align: top;
@@ -3705,7 +3705,7 @@ footer .widget_title2 {
 	content: normal;
 }
 .footer_link li a {
-	font-size: 14px;
+	font-size: 17px;
 	padding: 0 10px;
 	color: #888;
 }
@@ -3818,11 +3818,11 @@ footer .widget_title2 {
 }
 .footer_payment li {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 17px;
 	margin-left: 2px;
 }
 .copyright {
-	font-size: 14px;
+	font-size: 17px;
 }
 .footer_dark h1,.footer_dark h2,.footer_dark h3,.footer_dark h4,.footer_dark h5,.footer_dark h6,
 .footer_dark p,
@@ -3987,7 +3987,7 @@ footer .widget_title2 {
 	float: left;
 	border-radius: 50px;
 	padding: 0 10px;
-	font-size: 14px;
+	font-size: 17px;
 	line-height: normal;
 	margin-right: 4px;
 }
@@ -4051,7 +4051,7 @@ footer .widget_title2 {
 	font-family: 'Poppins', sans-serif;
 }
 .intro_desc p {
-	font-size: 14px;
+	font-size: 17px;
 }
 .intro_desc p:last-child {
 	margin: 0;
@@ -4429,7 +4429,7 @@ footer .widget_title2 {
 	padding: 9px 30px 9px 10px;
 	width: 100%;
 	color: #666;
-	font-size: 14px;
+	font-size: 17px;
 	line-height: normal;
 }
 .custome-checkbox .form-check-label {
@@ -4828,7 +4828,7 @@ footer .widget_title2 {
 }
 .tags a {
 	background-color: #f4f4f4;
-	font-size: 14px;
+	font-size: 17px;
 	padding: 5px 15px;
 	float: left;
 	margin-bottom: 5px;
@@ -4904,7 +4904,7 @@ footer .widget_title2 {
 .accordion .card-header a::after {
 	content: "\f126";
 	font-family: "Ionicons";
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: normal;
 	position: absolute;
 	right: 20px;
