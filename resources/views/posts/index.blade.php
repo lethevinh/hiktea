@@ -56,13 +56,13 @@
                         <div class="col-12">
                             <div class="blog_post">
                                 <div class="blog_img">
-                                    <a href="#">
+                                    <a href="{{$post->link}}">
                                         <img src="{{ $post->image_url }}" alt=" {{$post->title}}">
                                     </a>
                                 </div>
                                 <div class="blog_content">
                                     <h5 class="blog_title">
-                                        <a href="#">
+                                        <a href="{{$post->link}}">
                                             {{$post->title}}
                                         </a>
                                     </h5>

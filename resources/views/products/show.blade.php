@@ -6,7 +6,7 @@
         <div class="row align-items-center">
             <div class="col-sm-12 text-center">
                 <div class="page-title">
-                    <h1>MENU </h1>
+                    <h1>Thực Đơn </h1>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
@@ -16,7 +16,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item ">
-                            <a href="{{url('san-pham.html')}}">Menu</a>
+                            <a href="{{url('thuc-don.html')}}">Thực Đơn</a>
                         </li>
                         <li class="breadcrumb-item ">
                             <a href="{{$category->toLink()}}">{{$category->title}}</a>
@@ -314,17 +314,17 @@
                         <div class="product">
                             <span class="pr_flash bg_green">Sale</span>
                             <div class="product_img">
-                                <a href="#">
+                                <a href="{{$productLike->link}}">
                                     <img src="{{$productLike->image_url}}" alt="{{$productLike->title}}">
                                 </a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
+                                        <li><a href="{{$productLike->link}}"><i class="ti-heart"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="product_info">
-                                <h6><a href="#">{{$productLike->title}}</a></h6>
+                                <h6><a href="{{$productLike->link}}">{{$productLike->title}}</a></h6>
                                 <p class="price">
                                     {{number_format($product->price,0)}}
                                 </p>

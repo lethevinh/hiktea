@@ -16,8 +16,8 @@
                             Về HIK TEA
                         </a>
                     </li>
-                    <li><a class="nav-link" href="{{url('menu.html')}}">
-                            Menu
+                    <li><a class="nav-link" href="{{url('thuc-don.html')}}">
+                            Thực Đơn
                         </a>
                     </li>
                     <li><a class="nav-link" href="{{url('bai-viet/khuyen-mai.html')}}">

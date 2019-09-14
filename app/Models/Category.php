@@ -35,10 +35,10 @@ class Category extends Model {
 	}
 
 	public function toLink() {
-		return url('menu/' . $this->slug . '.html');
+		return url('thuc-don/' . $this->slug . '.html');
 	}
 
 	public function getLinkAttribute() {
-		return url('menu/' . $this->slug . '.html');
+		return url('thuc-don/' . $this->slug . '.html');
 	}
 }

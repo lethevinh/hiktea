@@ -32,10 +32,10 @@ Route::get('coupon_codes/{code}', 'CouponCodesController@check')
 	->name('coupon_codes.check');
 
 // Menu
-Route::get('menu.html', 'ProductsController@index')->name('products.index');
-Route::get('menu/{category}.html', 'ProductsController@category')
+Route::get('thuc-don.html', 'ProductsController@index')->name('products.index');
+Route::get('thuc-don/{category}.html', 'ProductsController@category')
 	->name('products.category');
-Route::get('menu/{category}/{product}.html', 'ProductsController@product')
+Route::get('thuc-don/{category}/{product}.html', 'ProductsController@product')
 	->name('products.product');
 // Post
 Route::get('bai-viet.html', 'PostController@index')->name('posts.index');

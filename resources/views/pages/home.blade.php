@@ -123,14 +123,9 @@
             <div class="col-12">
                 <div class="product_content">
                     <ul class="nav nav-tabs justify-content-center animation" data-animation="fadeInUp" data-animation-delay="0.04s" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="tab0" data-toggle="tab" href="#tab-0" role="tab" aria-controls="tab-0" aria-selected="true">
-                                <span class="pr_icon1"></span>TẤT CẢ
-                            </a>
-                        </li>
                         @foreach($categories as $category)
                         <li class="nav-item">
-                            <a class="nav-link" id="tab_{{$category->id}}" data-toggle="tab" href="#tab-{{$category->id}}" role="tab" aria-controls="tab-{{$category->id}}" aria-selected="false">
+                            <a class="nav-link @if($loop->index == 0) active @endif" id="tab_{{$category->id}}" data-toggle="tab" href="#tab-{{$category->id}}" role="tab" aria-controls="tab-{{$category->id}}" aria-selected="false">
                                 <span class="pr_icon{{$category->id}}"></span>{{$category->title}}
                             </a>
                         </li>
@@ -138,113 +133,19 @@
                     </ul>
                     <div class="small_divider clearfix"></div>
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab-0" role="tabpanel" aria-labelledby="tab0">
-                            <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.05s">
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product"><span class="pr_flash bg_green">Sale</span>
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img1.jpg" alt="product_img1"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">Fresh Organic Strawberry</a></h6>
-                                            <p class="price">$35.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product"><span class="pr_flash bg_orange">-10%</span>
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img2.jpg" alt="product_img2"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">Fresh Organic Grapes</a></h6>
-                                            <p class="price">$40.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img3.jpg" alt="product_img3"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">Fresh Organic Cucumber</a></h6>
-                                            <p class="price">$52.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product"><span class="pr_flash bg_green">Sale</span>
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img4.jpg" alt="product_img4"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">Fresh Organic Orange</a></h6>
-                                            <p class="price">$39.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img5.jpg" alt="product_img5"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">100% Organic Juices</a></h6>
-                                            <p class="price">$33.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="product_img"><a href="#"><img src="assets/images/product_img6.jpg" alt="product_img6"></a>
-                                            <div class="product_action_box">
-                                                <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_info">
-                                            <h6><a href="#">Fresh Organic Banana</a></h6>
-                                            <p class="price">$42.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a><a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         @foreach($categories as $category)
-                        <div class="tab-pane fade" id="tab-{{$category->id}}" role="tabpanel" aria-labelledby="tab{{$category->id}}">
+                        <div class="tab-pane fade @if($loop->index == 0) show active  @endif" id="tab-{{$category->id}}" role="tabpanel" aria-labelledby="tab{{$category->id}}">
                             <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.05s">
                                 @foreach($category->products as $product)
                                 <div class="col-xl-4 col-lg-4 col-sm-6">
                                     <div class="product"><span class="pr_flash bg_orange">-10%</span>
                                         <div class="product_img">
-                                            <a href="#">
+                                            <a href="{{$post->link}}">
                                                 <img src="{{$product->image_url}}" alt="product_img2">
                                             </a>
                                             <div class="product_action_box">
                                                 <ul class="list_none pr_action_btn">
-                                                    <li><a href="#"><i class="ti-heart"></i></a></li>
+                                                    <li><a href="{{$post->link}}"><i class="ti-heart"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -311,7 +212,7 @@
             <div class="col-lg-8 col-md-8">
                 <div class="blog_post">
                     <div class="blog_img">
-                        <a href="#">
+                        <a href="{{$posts[0]->link}}">
                             <img src="assets/images/blog_small_img1.jpg" alt="blog_small_img1">
                         </a>
                         <div class="blog_date style1">
@@ -338,7 +239,10 @@
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="blog_post">
-                    <div class="blog_img"><a href="#"><img src="assets/images/blog_small_img2.jpg" alt="blog_small_img2"></a>
+                    <div class="blog_img">
+                        <a href="{{$posts[1]->link}}">
+                            <img src="assets/images/blog_small_img2.jpg" alt="blog_small_img2">
+                        </a>
                         <div class="blog_date style1">
                             <h4>02</h4><span>May</span>
                         </div>
@@ -365,7 +269,10 @@
             @if($loop->index > 1)
             <div class="col-lg-4 col-md-6">
                 <div class="blog_post">
-                    <div class="blog_img"><a href="#"><img src="assets/images/blog_small_img3.jpg" alt="blog_small_img3"></a>
+                    <div class="blog_img">
+                        <a href="{{$post->link}}">
+                            <img src="assets/images/blog_small_img3.jpg" alt="blog_small_img3">
+                        </a>
                         <div class="blog_date style1">
                             <h4>02</h4><span>May</span>
                         </div>

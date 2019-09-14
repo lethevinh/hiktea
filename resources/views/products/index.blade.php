@@ -2,7 +2,7 @@
 @if($category)
 @section('title', $category->title)
 @else
-@section('title', "Menu")
+@section('title', "Thực Đơn")
 @endif
 @section('breadcrumb')
 <section class="bg_light_orange breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
@@ -10,7 +10,7 @@
         <div class="row align-items-center">
             <div class="col-sm-12 text-center">
                 <div class="page-title">
-                    <h1>MENU </h1>
+                    <h1>Thực  </h1>Đơn
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
@@ -20,7 +20,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            MENU
+                            Thực Đơn
                         </li>
                     </ol>
                 </nav>
@@ -36,149 +36,6 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="row shop_container grid_view">
-                    <div class="clearfix heading_s2" id="NOIBAT">
-                        <h2>NỔI BẬT</h2>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product"><span class="pr_flash bg_green">Sale</span>
-                            <div class="product_img"><a href="#">
-                                    <img src="assets/images/product.jpg" alt="product_img1"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">Fresh Organic Strawberry</a></h6>
-                                <p class="price">$35.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product"><span class="pr_flash bg_orange">-10%</span>
-                            <div class="product_img"><a href="#"><img src="assets/images/product.jpg" alt="product_img2"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">Fresh Organic Grapes</a></h6>
-                                <p class="price">$40.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product">
-                            <div class="product_img"><a href="#"><img src="assets/images/product.jpg" alt="product_img3"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">Fresh Organic Cucumber</a></h6>
-                                <p class="price">$52.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product"><span class="pr_flash bg_green">Sale</span>
-                            <div class="product_img"><a href="#"><img src="assets/images/product.jpg" alt="product_img4"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">Fresh Organic Orange</a></h6>
-                                <p class="price">$39.00</p>
-                                <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product">
-                            <div class="product_img"><a href="#"><img src="assets/images/product.jpg" alt="product_img5"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">100% Organic Juices</a></h6>
-                                <p class="price">$33.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="product">
-                            <div class="product_img"><a href="#"><img src="assets/images/product.jpg" alt="product_img6"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product_info">
-                                <h6><a href="#">Fresh Organic Banana</a></h6>
-                                <p class="price">$42.00</p><a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
-                                <div class="pr_desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     @foreach($categories as $category)
                     <div class="clearfix heading_s2" id="CAT_{{$category->id}}">
                         <h2>{{$category->title}} </h2>
@@ -233,12 +90,8 @@
             <div class="col-lg-3 order-lg-first mt-5 mt-lg-0">
                 <div class="sidebar stikySidebar">
                     <div class="widget menu">
-                        <h5 class="widget_title">MENU</h5>
+                        <h5 class="widget_title">Thực Đơn</h5>
                         <ul class="list_none widget_categories border_bottom_dash menu_sidebar">
-                            <li><a href="#NOIBAT">
-                                    <span class="categories_name">MÓN NỔI BẬT</span>
-                                    <span class="categories_num">(9)</span></a>
-                            </li>
                             @foreach($categories as $category)
                             <li>
                                 <a href="#CAT_{{$category->id}}">
