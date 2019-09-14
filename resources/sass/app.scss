@@ -448,3 +448,10 @@ h5 {
 .post_navigation a{
     background-color: #000000;
 }
+.layout-content {
+    padding-top: 0;
+    .container {
+        background: white;
+        padding: 50px;
+    }
+}

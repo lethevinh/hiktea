@@ -27,7 +27,7 @@
 @stop
 @section('content')
 <!-- START SECTION BLOG-->
-<section>
+<section class="layout-content">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
