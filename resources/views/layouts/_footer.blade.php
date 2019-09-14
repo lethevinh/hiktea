@@ -28,30 +28,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-4 col-md-6 col-sm-8">
                     <h5 class="widget_title">Vế HIK TEA</h5>
                     <ul class="list_none widget_links">
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Secure Payment</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Top Sellers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Our Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
-                    <h5 class="widget_title">Delivery</h5>
-                    <ul class="list_none widget_links">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Shopping Cart</a></li>
-                        <li><a href="#">Addresses</a></li>
-                        <li><a href="#">Discount</a></li>
-                        <li><a href="#">Orders History</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                    </ul>
+                        <li><a href="{{url('ve-hik-tea.html')}}">Về HIK Tea</a></li>
+                        <li><a href="{{url('menu.html')}}">Menu</a></li>
+                        <li><a href="{{url('bai-viet/khuyen-mai.html')}}">  Khuyến Mãi</a></li>
+                        <li><a href="{{url('hinh-anh.html')}}">  Hình Ảnh</a></li>
+                        <li><a href="{{url('bai-viet/tuyen-dung.html')}}">Tuyển Dụng</a></li>
+                </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-4">
-                    <h5 class="widget_title">Instagram</h5>
                     <div class="google-maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0950591034643!2d106.65065331456312!3d10.727151263035145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f172f3b8cb5%3A0xcdede9cedcb8bca1!2zVFLDgCBT4buuQSBISUtURUEgQsOsbmggSMawbmc!5e0!3m2!1svi!2s!4v1568455694485!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
@@ -72,7 +59,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <p class="copyright m-lg-0 text-center">Copyright © 2019 All Rights Reserved </p>
+                    <p class="copyright m-lg-0 text-center">Copyright © {{ now()->year }} All Rights Reserved </p>
                 </div>
                 <div class="col-lg-4 order-lg-first">
                     <ul class="list_none footer_payment text-center text-lg-left">
