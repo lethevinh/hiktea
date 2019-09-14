@@ -52,9 +52,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-4">
                     <h5 class="widget_title">Instagram</h5>
-                    <ul class="list_none instafeed">
+                    <div class="google-maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0950591034643!2d106.65065331456312!3d10.727151263035145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f172f3b8cb5%3A0xcdede9cedcb8bca1!2zVFLDgCBT4buuQSBISUtURUEgQsOsbmggSMawbmc!5e0!3m2!1svi!2s!4v1568455694485!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
