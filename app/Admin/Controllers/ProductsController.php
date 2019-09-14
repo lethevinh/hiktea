@@ -114,7 +114,7 @@ class ProductsController extends Controller {
 		// 直接添加一对多的关联模型
 		$form->hasMany('skus', 'SKU ', function (Form\NestedForm $form) {
 			$form->text('title', 'SKU title')->rules('required');
-			$form->text('description', 'SKU description')->rules('required');
+			$form->textarea('description', 'SKU description')->rules('required');
 			$form->text('price', 'price')->rules('required|numeric|min:0.01');
 			$form->text('stock', 'stock')->rules('required|integer|min:0');
 			$form->text('sku_code', 'SKU')->rules('required|string');

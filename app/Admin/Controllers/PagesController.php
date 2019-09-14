@@ -100,7 +100,7 @@ class PagesController extends Controller
         $form->image('image', 'Image')->rules('required|image');
 
         // 创建一个富文本编辑器
-        $form->editor('description', 'Description')->rules('required');
+        $form->textarea('description', 'Description')->rules('required');
         $form->editor('content', 'Content')->rules('required');
 
         // 定义事件回调，当模型即将保存时会触发这个回调

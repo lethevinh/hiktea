@@ -103,7 +103,7 @@ class CategoriesController extends Controller
         $form->image('image', 'image')->rules('image');
 
         // 创建一个富文本编辑器
-        $form->editor('description', 'description')->rules('required');
+        $form->textarea('description', 'description')->rules('required');
         $form->editor('content', 'content')->rules('required');
 
         // 定义事件回调，当模型即将保存时会触发这个回调
