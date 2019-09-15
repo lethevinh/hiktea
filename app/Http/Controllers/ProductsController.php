@@ -110,7 +110,7 @@ class ProductsController extends Controller {
 
 	public function product(Request $request, $category, $product) {
 
-		$product = Product::where('slug', $product)->where('on_sale', true)->first();
+		$product = Product::where('slug', $product)->where('on_sale', true)->with('options')->first();
 
 		if (!$product) {
 			return view('pages.error', ['msg' => 'find not found Product']);

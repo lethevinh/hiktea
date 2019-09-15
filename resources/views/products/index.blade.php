@@ -61,7 +61,7 @@
                             <div class="product_info">
                                 <h6><a href="{{$product->link}}">{{$product->title}}</a></h6>
                                 <p class="price">{{number_format($product->price,0)}}</p>
-                                <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">
+                                <a class="btn btn-default rounded-0 btn-borderd btn-sm"  href="{{ route('cart.page') }}">
                                     Đặt Ngay
                                 </a>
                                 <div class="pr_desc">

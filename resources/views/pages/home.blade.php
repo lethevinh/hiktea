@@ -157,7 +157,7 @@
                                             <p class="price">
                                                 {{number_format($product->price,0) }} Đ
                                             </p>
-                                            <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="#">Đặt Ngay</a>
+                                            <a class="btn btn-default rounded-0 btn-borderd btn-sm"  href="{{ route('cart.page') }}">Đặt Ngay</a>
                                             <a class="btn btn-default rounded-0 btn-borderd btn-outline-default btn-sm infor" href="#">Tìm Hiểu</a>
                                         </div>
                                     </div>

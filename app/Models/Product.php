@@ -98,4 +98,23 @@ class Product extends Model {
             ])
             ->withTimestamps();
 	}
+	public function getOptions()
+    {
+        $product = parent::toArray();
+        $options = [];
+        if (!empty($product['options'])){
+
+            foreach ($product['options'] as $option) {
+                $productOption = $option['pivot'];
+                $slug = Str::slug($productOption['title']);
+                if (!empty($options[$slug])) {
+                    $options[$slug]['items'][] = $option;
+                } else {
+                    $productOption['items'][] = $option;
+                    $options[$slug] = $productOption;
+                }
+            }
+        }
+        return $options;
+    }
 }

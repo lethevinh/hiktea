@@ -37,6 +37,8 @@ Route::get('thuc-don/{category}.html', 'ProductsController@category')
 	->name('products.category');
 Route::get('thuc-don/{category}/{product}.html', 'ProductsController@product')
 	->name('products.product');
+//Order
+Route::get('order.html', 'CartController@page')->name('cart.page');
 // Post
 Route::get('bai-viet.html', 'PostController@index')->name('posts.index');
 Route::get('bai-viet/{category}.html', 'PostController@category')
