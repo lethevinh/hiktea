@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class CategoriesSeeder extends Seeder {
@@ -9,6 +11,13 @@ class CategoriesSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
+	    $categories = Category::all();
+	    foreach ($categories as $category){
+	        foreach ($category->products as $product){
+                $product->delete();
+            }
+            $category->delete();
+        }
 		$categories = config('categories');
 		foreach ($categories as $categoryData) {
 			$category = \App\Models\Category::create([
@@ -47,7 +56,7 @@ class CategoriesSeeder extends Seeder {
 				foreach ($item['options'] as $keyOption => $option) {
 					foreach ($option['option_items']['items'] as $key => $optionItem) {
 						$priceItem = $optionItem['price']['value'];
-						$option = \App\Models\Option::create([
+						$optionModel = \App\Models\Option::create([
 							'title' => $optionItem['name'],
 							'description' => $optionItem['name'],
 							'content' => $optionItem['name'],
@@ -57,7 +66,8 @@ class CategoriesSeeder extends Seeder {
 							'weight' => $optionItem['weight'],
 							'top_order' => 0,
 						]);
-						$product->options()->attach($option->id, [
+						$product->options()->attach($optionModel->id);
+						$product->options()->updateExistingPivot($optionModel->id, [
 							'title' => $option['name'],
 							'min_select' => $option['option_items']['min_select'],
 							'max_select' => $option['option_items']['max_select'],

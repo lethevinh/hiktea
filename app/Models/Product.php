@@ -11,7 +11,7 @@ class Product extends Model {
 	use Sluggable, PivotEventTrait;
 
 	protected $fillable = [
-		'title', 'slug', 'code', 'description', 'content', 'image', 'on_sale',
+		'title', 'slug', 'code', 'description', 'content', 'image', 'on_sale','time',
 		'rating', 'sold_count', 'review_count', 'price',
 	];
 	protected $casts = [
@@ -43,8 +43,6 @@ class Product extends Model {
 	}
 
 	public function getImageUrlAttribute() {
-
-		// 如果 image 字段本身就已经是完整的 url 就直接返回
 		$images = json_decode($this->attributes['images']);
 		if (!empty($images) && Str::startsWith($images[0], ['http://', 'https://'])) {
 			return $images[0];
@@ -77,6 +75,7 @@ class Product extends Model {
 	public function getImagesAttribute($images) {
 		return json_decode($images, true);
 	}
+
 	public function getLinkAttribute() {
 		return url('thuc-don/' . $this->categories()->first()->slug . '/' . $this->slug . '.html');
 	}
@@ -89,6 +88,14 @@ class Product extends Model {
 	 * The options that belong to the role.
 	 */
 	public function options() {
-		return $this->belongsToMany(Option::class, 'product_option')->withTimestamps();
+        return $this->belongsToMany(Option::class,  'product_option', 'product_id', 'option_id')
+            ->using(ProductOption::class)
+            ->withPivot([
+                'title',
+                'slug',
+                'min_select',
+                'max_select',
+            ])
+            ->withTimestamps();
 	}
 }
