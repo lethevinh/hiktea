@@ -26,7 +26,7 @@
     </section>
 @stop
 @section('content')
-    <div class="container">
+    <div class="container layout-order">
         <div class="row">
             <div class="col-lg-3 order-lg-first mt-5 mt-lg-0">
                 <div class="sidebar stikySidebar">
@@ -50,47 +50,59 @@
             <div class="col-lg-6">
                 <div class="row shop_container grid_view">
                     @foreach($categories as $category)
-                        <div class="clearfix heading_s2" id="CAT_{{$category->id}}">
-                            <h2>{{$category->title}} </h2>
+                        <div class="clearfix list-order-title" id="CAT_{{$category->id}}">
+                            <h5>{{$category->title}} </h5>
                         </div>
+                        <ul class="list-order-product">
                         @foreach($category->products as $product)
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product">
-                                    <span class="pr_flash bg_red">Hot</span>
-                                    <div class="product_img">
-                                        <a href="{{$product->link}}">
-                                            <img src="{{$product->image_url}}">
-                                        </a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li>
-                                                    <a href="{{$product->link}}">
-                                                        <i class="ti-heart"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="{{$product->link}}">{{$product->title}}</a></h6>
-                                        <p class="price">{{number_format($product->price,0)}}</p>
-                                        <a class="btn btn-default rounded-0 btn-borderd btn-sm"  href="{{ route('cart.page') }}">
-                                            Đặt Ngay
-                                        </a>
-                                        <div class="pr_desc">
-                                            <p>{{$product->description}}</p>
-                                        </div>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="{{$product->link}}">
-                                                        <i class="ti-heart"></i></a>
-                                                </li>
-                                            </ul>
+                            <li class="row">
+                                <div class="col-md-2">
+                                    <img style="width: 100px;height: auto" src="{{$product->image_url}}">
+                                </div>
+                                <div class="col-md-8">
+                                    <title>{{$product->title}}</title>
+                                    <p class="description">{{$product->description}}</p>
+                                    <price class="price" >{{number_format($product->price,0)}} đ</price>
+                                </div>
+                                <div class="col-md-2">
+                                    <input data-toggle="modal" data-target="#product{{$product->id}}" data-product="{{json_encode($product->printData())}}" type="button" value="+" class="btn-plus add-to-cart">
+                                </div>
+                            </li>
+                                <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">{{$product->title}}</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                @foreach($product->getOptions() as $option)
+                                                    <h5>{{$option['title']}}</h5>
+                                                    @foreach($option['items'] as $item)
+                                                        <label for="{{$item['id']}}">
+                                                            <input type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
+                                                            <span>{{$item['title']}}</span>
+                                                        </label>
+                                                    @endforeach
+                                                @endforeach
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="quantity">
+                                                    <input type="button" value="-" class="minus">
+                                                    <input minlength="1" min="1" type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
+                                                    <input type="button" value="+" class="plus">
+                                                </div>
+                                                <button type="button" class="btn btn-default btn-primary btn-sm">Thêm Vào Giỏ</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         @endforeach
+                        </ul>
                     @endforeach
                 </div>
                 <div class="row">

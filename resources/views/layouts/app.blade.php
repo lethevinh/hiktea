@@ -15,6 +15,7 @@
     <!-- <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet"> -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"> </script>
     <script src="{{ url('assets/js/jquery-1.12.4.min.js')}}"> </script>
     <script src="{{ url('assets/js/jquery-ui.js')}}"></script>
     <script src="{{ url('assets/js/popper.min.js')}}"></script>
@@ -50,6 +51,7 @@
     <!-- JS 脚本 -->
     <!-- <script src="{{ mix('js/app.js') }}"></script> -->
     <script src="{{ url('assets/js/scripts.js')}}"></script>
+    <script src="{{ url('assets/js/order.js')}}"></script>
     @yield('scriptsAfterJs')
 </body>
 

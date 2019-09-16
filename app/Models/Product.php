@@ -100,21 +100,29 @@ class Product extends Model {
 	}
 	public function getOptions()
     {
-        $product = parent::toArray();
         $options = [];
-        if (!empty($product['options'])){
-
-            foreach ($product['options'] as $option) {
-                $productOption = $option['pivot'];
+        if (!empty($this->options)){
+            foreach ($this->options as $option) {
+                $productOption = $option->pivot->toArray();
                 $slug = Str::slug($productOption['title']);
                 if (!empty($options[$slug])) {
-                    $options[$slug]['items'][] = $option;
+                    $options[$slug]['items'][] = $option->toArray();
                 } else {
-                    $productOption['items'][] = $option;
+                    $productOption['items'][] = $option->toArray();
                     $options[$slug] = $productOption;
                 }
             }
         }
-        return $options;
+        return array_values($options);
+    }
+
+    public function printData() {
+	    $product = $this->with('options');
+	    return [
+	        'id' => $this->id,
+	        'title' => $this->title,
+	        'price' => $this->price,
+            'options'=> $this->getOptions()
+        ];
     }
 }
