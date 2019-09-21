@@ -91,8 +91,13 @@ class SlidersController extends Controller {
 		// $form->text('slug', 'Slug')->rules('required');
 
 		// 创建一个选择图片的框
-		$form->multipleImage('images')->sortable()->removable();
-
+//		$form->multipleImage('images')->sortable()->removable();
+        $form->table('images', function ($table) {
+            $table->image('image', "Image");
+            $table->text('title', "Title");
+            $table->textarea('content', "Content");
+            $table->url('link', "Link");
+        });
 		// 创建一个富文本编辑器
 		$form->editor('description', 'Description');
 		// $form->editor('content', 'Content')->rules('required');

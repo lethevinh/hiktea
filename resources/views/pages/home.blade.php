@@ -5,18 +5,23 @@
 @section('content')
 <!-- START SECTION BANNER-->
 <section class="banner_slider p-0 full_screen">
+    @if($slider)
     <div class="owl-carousel owl-theme" id="owl_slide">
         @foreach($slider->photos as $image)
-        <div class="owl-slide d-flex align-items-center cover" style="background-image: url({{$image}});">
+        <div class="owl-slide d-flex align-items-center cover" style="background-image: url({{$image['photo']}});">
             <div class="container">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-10 col-md-6 static">
                         <div class="owl-slide-text">
-                            <h2 class="owl-slide-animated owl-slide-title">The bedding was hardly able to cover it</h2>
+                            <h2 class="owl-slide-animated owl-slide-title">{{$image['title']}}</h2>
                             <div class="owl-slide-animated owl-slide-subtitle mb-3">
-                                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+                                {{$image['content']}}
                             </div>
-                            <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="https://unsplash.com/photos/pgR4yBMjum8" target="_blank" role="button">See Original Image</a>
+                            @if(!empty($image['link']))
+                            <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="{{$image['link']}}" target="_blank" role="button">
+                                Xem Ngay
+                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -24,6 +29,7 @@
         </div><!--/owl-slide-->
         @endforeach
      </div>
+    @endif
 </section>
 <!-- END SECTION BANNER-->
 <!-- START SECTION PRODUCT-->
@@ -245,6 +251,7 @@
                 </div>
                 <div class="blog_content">
                     <h6 class="blog_title"><a href="#">{{$branch->title}}</a></h6>
+                    <p>{{$branch->address}}</p>
                     <a class="blog_link" href="#">Xem Chi tiết<i class="ion-ios-arrow-right"></i></a>
                 </div>
             </div>

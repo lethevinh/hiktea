@@ -15,7 +15,7 @@ class PagesController extends Controller {
 	}
 
 	public function home() {
-		$slider = Slider::where('slug', 'home')->first();
+		$slider = Slider::where('slug', 'hom-home')->first();
 		$posts = Post::orderBy('updated_at', 'desc')->take(5)->get();
 		$branchs = Branch::orderBy('updated_at', 'desc')->take(5)->get();
 		return view('pages.home', [

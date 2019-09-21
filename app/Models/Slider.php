@@ -15,7 +15,7 @@ class Slider extends Model {
 			],
 		];
 	}
-	public function setImagesAttribute($pictures) {
+	/*public function setImagesAttribute($pictures) {
 		if (is_array($pictures)) {
 			$this->attributes['images'] = json_encode($pictures);
 		}
@@ -23,11 +23,20 @@ class Slider extends Model {
 
 	public function getImagesAttribute($pictures) {
 		return json_decode($pictures, true);
-	}
+	}*/
+
+    public function getImagesAttribute($extra) {
+        return json_decode($this->attributes['images'], true);
+    }
+
+    public function setImagesLinkAttribute($extra) {
+        $this->attributes['images'] = json_encode(array_values($extra));
+    }
 
     public function getPhotosAttribute() {
         return array_map(function ($image){
-            return \Storage::disk('public')->url($image);
+           $image['photo'] =  \Storage::disk('public')->url($image['image']);
+            return $image;
         }, $this->images);
     }
 }
