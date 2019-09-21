@@ -240,7 +240,7 @@
             <div class="blog_post blog_style1 radius_all_10 animation" data-animation="fadeInUp" data-animation-delay="0.04s">
                 <div class="blog_img">
                     <a href="#">
-                        <img src="{{$branch->images[0]}}" alt="blog_small_img1">
+                        <img src="{{$branch->photos[0]}}" alt="blog_small_img1">
                     </a>
                 </div>
                 <div class="blog_content">
