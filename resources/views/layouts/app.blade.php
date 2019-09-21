@@ -33,10 +33,8 @@
     <script src="{{ url('assets/js/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{ url('assets/js/isotope.min.js')}}"></script>
     <script src="{{ url('assets/js/js.cookie.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/vendor.42ed3a.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/custom.js')}}"></script>
+{{--    <script type="text/javascript" src="{{ url('assets/js/vendor.42ed3a.min.js')}}"></script>--}}
+{{--    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>--}}
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=135625333838087&autoLogAppEvents=1"></script>
 </head>
@@ -52,6 +50,7 @@
     <!-- <script src="{{ mix('js/app.js') }}"></script> -->
     <script src="{{ url('assets/js/scripts.js')}}"></script>
     <script src="{{ url('assets/js/order.js')}}"></script>
+    <script type="text/javascript" src="{{ url('assets/js/custom.js')}}"></script>
     @yield('scriptsAfterJs')
 </body>
 

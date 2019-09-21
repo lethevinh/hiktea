@@ -87,6 +87,7 @@ class SlidersController extends Controller {
 
 		// 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
 		$form->text('title', 'Title')->rules('required');
+		$form->text('slug', 'Slug');
 		// $form->text('slug', 'Slug')->rules('required');
 
 		// 创建一个选择图片的框

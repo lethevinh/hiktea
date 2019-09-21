@@ -6,6 +6,7 @@ use App\Models\Branch;
 use App\Models\Gallery;
 use App\Models\Page;
 use App\Models\Post;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller {
@@ -14,11 +15,13 @@ class PagesController extends Controller {
 	}
 
 	public function home() {
+		$slider = Slider::where('slug', 'home')->first();
 		$posts = Post::orderBy('updated_at', 'desc')->take(5)->get();
 		$branchs = Branch::orderBy('updated_at', 'desc')->take(5)->get();
 		return view('pages.home', [
 			'posts' => $posts,
-			'branch' => $branchs,
+			'slider' => $slider,
+			'branchs' => $branchs,
 			'categories' => $this->getCategories(),
 		]);
 	}
