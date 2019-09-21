@@ -25,7 +25,9 @@ class Slider extends Model {
 
     public function getPhotosAttribute() {
         return array_map(function ($image){
-           $image['photo'] =  \Storage::disk('public')->url($image['image']);
+            if (!empty($image['image'])) {
+                $image['photo'] =  \Storage::disk('public')->url($image['image']);
+            }
             return $image;
         }, $this->images);
     }
