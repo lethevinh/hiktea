@@ -85,8 +85,9 @@
                                                     @foreach($option['items'] as $item)
                                                         <label for="{{$item['id']}}">
                                                             <input type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
-                                                            <span>{{$item['title']}}</span>
+                                                            <span>{{$item['title']}}  {{number_format($item['price'],0)}} đ</span>
                                                         </label>
+                                                        <br>
                                                     @endforeach
                                                 @endforeach
                                             </div>
