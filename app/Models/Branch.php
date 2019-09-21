@@ -24,4 +24,10 @@ class Branch extends Model {
 	public function getImagesAttribute($pictures) {
 		return json_decode($pictures, true);
 	}
+
+    public function getPhotosAttribute() {
+        return array_map(function ($image){
+            return \Storage::disk('public')->url($image);
+        }, $this->images);
+    }
 }
