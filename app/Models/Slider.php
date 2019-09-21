@@ -15,23 +15,13 @@ class Slider extends Model {
 			],
 		];
 	}
-	/*public function setImagesAttribute($pictures) {
-		if (is_array($pictures)) {
-			$this->attributes['images'] = json_encode($pictures);
-		}
+	public function setImagesAttribute($pictures) {
+        $this->attributes['images'] = json_encode(array_values($pictures));
 	}
 
 	public function getImagesAttribute($pictures) {
-		return json_decode($pictures, true);
-	}*/
-
-    public function getImagesAttribute($extra) {
-        return json_decode($this->attributes['images'], true);
-    }
-
-    public function setImagesLinkAttribute($extra) {
-        $this->attributes['images'] = json_encode(array_values($extra));
-    }
+		return array_values(json_decode($pictures, true) ?: []);
+	}
 
     public function getPhotosAttribute() {
         return array_map(function ($image){

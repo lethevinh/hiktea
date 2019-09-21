@@ -48,6 +48,7 @@ Route::group([
 	$router->post('sliders', 'SlidersController@store');
 	$router->get('sliders/{id}/edit', 'SlidersController@edit');
 	$router->put('sliders/{id}', 'SlidersController@update');
+	$router->delete('sliders/{id}', 'SlidersController@delete');
 
 	$router->get('branchs', 'BranchsController@index');
 	$router->get('branchs/create', 'BranchsController@create');

@@ -132,24 +132,6 @@ console.log('ssssss')
     /*if there isn't content underneath the carousel*/
 //$owlCarousel.trigger("refresh.owl.carousel");
 
-    setOwlDotsPosition();
-
-    function setOwlDotsPosition() {
-        const $target = $(".owl-item.active .owl-slide-text");
-        doDotsCalculations($target);
-    }
-
-    function doDotsCalculations(el) {
-        const height = el.height();
-        const {top, left} = el.position();
-        const res = height + top + 20;
-
-        $(".owl-carousel .owl-dots").css({
-            top: `${res}px`,
-            left: `${left}px`
-        });
-    }
-
     owlSliderHome.on('changed.owl.carousel translated.owl.carousel initialized.owl.carousel', function(event) {
         $("#owl_slide .owl-item .hrv-banner-caption").css('display','none');
         $("#owl_slide .owl-item .hrv-banner-caption").removeClass('hrv-caption')
@@ -213,5 +195,20 @@ console.log('ssssss')
             }
         });
     });
+    function setOwlDotsPosition() {
+        const $target = $(".owl-item.active .owl-slide-text");
+        doDotsCalculations($target);
+    }
 
+    function doDotsCalculations(el) {
+        const height = el.height();
+        const {top, left} = el.position();
+        const res = height + top + 20;
+
+        $(".owl-carousel .owl-dots").css({
+            top: `${res}px`,
+            left: `${left}px`
+        });
+    }
+    setOwlDotsPosition();
 });

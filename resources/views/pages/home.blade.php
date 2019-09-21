@@ -12,17 +12,17 @@
             <div class="container">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-10 col-md-6 static">
-                        <div class="owl-slide-text">
-                            <h2 class="owl-slide-animated owl-slide-title">{{$image['title']}}</h2>
-                            <div class="owl-slide-animated owl-slide-subtitle mb-3">
-                                {{$image['content']}}
-                            </div>
-                            @if(!empty($image['link']))
-                            <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="{{$image['link']}}" target="_blank" role="button">
-                                Xem Ngay
-                            </a>
-                            @endif
-                        </div>
+                       <div data-animation="fadeIn" data-animation-delay="0.4s" data-parallax="{'y': 30, 'smoothness': 10}" class="banner_content banner_content_pad animation">
+                                <h2 data-animation="fadeInDown" data-animation-delay="0.5s" class="animation font_style1">{{$image['title']}}</h2>
+                               <p data-animation="fadeInUp" data-animation-delay="0.6s" class="animation">
+                                   {{$image['content']}}
+                               </p>
+                                @if(!empty($image['link']))
+                                <a class="btn btn-default rounded-0 btn-borderd btn-sm" href="{{$image['link']}}" target="_blank" role="button">
+                                    Xem Ngay
+                                </a>
+                                @endif
+                       </div>
                     </div>
                 </div>
             </div>

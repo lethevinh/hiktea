@@ -37,6 +37,14 @@ class SlidersController extends Controller {
 			->body($this->form()->edit($id));
 	}
 
+	public function delete($id) {
+	    $slider = Slider::find($id);
+		 if ($slider->delete()) {
+             return response()->json(['status' => 'success']);
+         }
+        return response()->json(['status' => 'error'])->status(400);
+    }
+
 	/**
 	 * Create interface.
 	 *
@@ -65,12 +73,12 @@ class SlidersController extends Controller {
 		$grid->created_at()->sortable();
 		$grid->actions(function ($actions) {
 			$actions->disableView();
-			$actions->disableDelete();
+//			$actions->disableDelete();
 		});
 		$grid->tools(function ($tools) {
 			// 禁用批量删除按钮
 			$tools->batch(function ($batch) {
-				$batch->disableDelete();
+//				$batch->disableDelete();
 			});
 		});
 
@@ -85,25 +93,17 @@ class SlidersController extends Controller {
 	protected function form() {
 		$form = new Form(new Slider);
 
-		// 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
 		$form->text('title', 'Title')->rules('required');
 		$form->text('slug', 'Slug');
-		// $form->text('slug', 'Slug')->rules('required');
-
-		// 创建一个选择图片的框
-//		$form->multipleImage('images')->sortable()->removable();
         $form->table('images', function ($table) {
             $table->image('image', "Image");
             $table->text('title', "Title");
             $table->textarea('content', "Content");
             $table->url('link', "Link");
         });
-		// 创建一个富文本编辑器
+
 		$form->editor('description', 'Description');
-		// $form->editor('content', 'Content')->rules('required');
-		// 定义事件回调，当模型即将保存时会触发这个回调
 		$form->saving(function (Form $form) {
-//            $form->model()->price = collect($form->input('skus'))->where(Form::REMOVE_FLAG_NAME, 0)->min('price') ?: 0;
 		});
 
 		return $form;
