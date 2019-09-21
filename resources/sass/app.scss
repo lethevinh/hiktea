@@ -9,6 +9,7 @@
 @import "../assets/css/magnific-popup.css";
 @import "../assets/css/jquery-ui.css";
 @import "../assets/css/style.css";
+@import "../assets/css/custom.css";
 @import "../assets/css/responsive.css";
 @import "../assets/css/theme-default.css";
 
@@ -521,4 +522,19 @@ h5 {
     line-height: 1.5;
     color: #ff7300;
     font-weight: 500;
+}
+.product .product_info h6 a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 22px;
+    min-height: 64px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-size: 17px;
+}
+
+.product .product_info .price{
+    text-transform: uppercase;
+    font-size: 24px;
 }
