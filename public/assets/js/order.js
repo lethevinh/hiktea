@@ -12,15 +12,17 @@ $(document).ready(function () {
         "name": "",
         "phone": ""
     };
-    let orderItem = {
+    let orderItemObject = {
         "quantity": 0,
         "extra": [],
         "options": [],
         "product_name": "",
         "product_id": 0,
-        "price": 0
+        "price": 0,
+        "total": 0,
+        "note": ''
     };
-    let order = {
+    let orderObject = {
         "src": "HIK-WEB",
         "customer": customer,
         "deliveryAddress": deliveryAddress,
@@ -59,7 +61,7 @@ $(document).ready(function () {
 
     async function getCart() {
         let cart = await localStorage.getItem(CONST_KEY_CART);
-        cart = cart !== null ? JSON.parse(cart) : {items: [], count: 0, total: 0};
+        cart = cart !== null ? JSON.parse(cart) : orderObject;
         return cart;
     }
 
@@ -82,8 +84,8 @@ $(document).ready(function () {
         if (item) {
             items = items.map((item) => {
                 if (item.id === product.id) {
-                    item.qty = parseInt(item.qty) + parseInt(product.qty);
-                    item.total = parseFloat(item.price) * parseInt(item.qty);
+                    item.quantity = parseInt(item.quantity) + parseInt(product.quantity);
+                    item.total = parseFloat(item.subtotal) * parseInt(item.quantity);
                 }
                 return item;
             })
@@ -114,8 +116,98 @@ $(document).ready(function () {
         };
         await updateCart(cart);
     }
-    $('.add-to-cart').click(function () {
-        console.log($(this).data('product'))
+    function getProductId(el) {
+        let parentProduct = $(el).parents('.row.product');
+        let elProduct = parentProduct.find('.btn-plus.add-to-cart');
+        if (elProduct.length > 0) {
+            return $(elProduct[0]).data('product');
+        }
+        return null;
+    }
+
+    async function updatePriceCartProduct(el, isAddCart = false){
+        let orderItem = orderItemObject;
+        let product = getProductId(el);
+        let elProduct = $('#product' + product.id);
+        let qty = $('#product' + product.id + ' .form_cart-qty').val();
+        let totalOption = 0;
+        orderItem.options = [];
+        elProduct.find('.ip-option:checked').each(function () {
+            let option  = $(this).data('option');
+            orderItem.options.push({
+                title: option.title,
+                price: option.price,
+                id: option.id,
+            });
+            totalOption += parseFloat(option.price);
+        });
+        let subtotal = (parseFloat(product.price) + totalOption);
+        let total = subtotal * parseInt(qty);
+        orderItem.id = product.id;
+        orderItem.product_id = product.id;
+        orderItem.product_name = product.title;
+        orderItem.quantity = parseInt(qty);
+        orderItem.price = product.price;
+        orderItem.total = total;
+        orderItem.subtotal = subtotal;
+        orderItem.note = elProduct.find('textarea').val();
+        elProduct.find(' .form_cart-total').html(currency(total))
+        if (isAddCart){
+           await addToCart(orderItem);
+           await updateViewCart();
+           $('.modal.show').modal('hide');
+        }
+    }
+
+    async function updateViewCart() {
+        let cart = await getCart();
+        let htmlCartItem = '';
+
+        if (cart.items.length === 0){
+            return ;
+        }
+        let elCart = $('.stickySidebar.cart');
+        cart.items.forEach(function (item) {
+            let textOption = '';
+            if (item.options.length > 0) {
+                textOption = '- ';
+                item.options.forEach(function (option, i) {
+                    textOption += ' ' + option.title;
+                    if (i < item.options.length - 1) {
+                        textOption += ', ';
+                    }
+                });
+            }
+            if (item.note) {
+                if (textOption){
+                    textOption += '<br>';
+                }
+                textOption +='- ' + item.note
+            }
+            htmlCartItem += '<div class="item">';
+            htmlCartItem += '<div class="title"><span class="ti-plus"></span><span>'+ item.quantity +'</span><span class="ti-trash"></span>' + item.product_name + '</div>';
+            htmlCartItem += '<div class="description">' + textOption + '</div>';
+            htmlCartItem += '<div class="price">' + currency(item.total) + ' </div>';
+            htmlCartItem += '</div>';
+        });
+        elCart.find('.cart_sidebar').html(htmlCartItem);
+        let elSubTotal = elCart.find('.subtotal-price span:nth-child(2)');
+        let elTotal = elCart.find('.total-price span:nth-child(2)');
+        console.log(elSubTotal, elTotal,  cart.total)
+        elSubTotal.html(currency(cart.total));
+        elTotal.html(currency(cart.total));
+    }
+    updateViewCart();
+
+    $('.list-order-product .product .modal .add-cart').click(function () {
+        updatePriceCartProduct(this, true);
     });
-    console.log(order)
+
+    $('.list-order-product .product .modal .quantity input.btn-qty').click(function () {
+        updatePriceCartProduct(this);
+    });
+
+    $('.list-order-product .product .modal .ip-option').click(function () {
+        updatePriceCartProduct(this);
+    });
 });

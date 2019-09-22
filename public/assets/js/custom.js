@@ -195,13 +195,12 @@ console.log('ssssss')
             }
         });
     });
-    $('.ip-checkbox[type=radio]').click(function () {
+    $('.ip-option[type=radio]').click(function () {
         let el = $(this);
         let parent = el.parents('.option-category-item');
-        parent.find('.ip-checkbox[type=radio]').attr('checked', false);
-        parent.find('.ip-checkbox[type=radio]').prop('checked', false);
+        parent.find('.ip-option[type=radio]').attr('checked', false);
+        parent.find('.ip-option[type=radio]').prop('checked', false);
         el.attr('checked', true);
         el.prop('checked', true);
-        console.log(el.data('option-price'))
     })
 });

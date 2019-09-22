@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="col-lg-3 order-lg-first mt-5 mt-lg-0">
-                <div class="sidebar stikySidebar">
+                <div class="sidebar stickySidebar">
                     <div class="widget menu">
                         <h5 class="widget_title">Thực Đơn</h5>
                         <ul class="list_none widget_categories border_bottom_dash menu_sidebar">

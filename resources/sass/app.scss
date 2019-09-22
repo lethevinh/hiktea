@@ -276,7 +276,7 @@ a:hover,
     background-position: -153px -175px;
 }
 
-.stikySidebar {
+.stickySidebar {
     top: 105px;
     position: -webkit-sticky;
     position: sticky;
@@ -287,7 +287,7 @@ body {
     background: #f5f5f5;
 }
 
-.stikySidebar .widget.menu {}
+.stickySidebar .widget.menu {}
 
 .widget_categories a {
     font-size: 16px;
@@ -299,7 +299,7 @@ body {
     text-transform: uppercase;
 }
 
-.stikySidebar .widget.menu {
+.stickySidebar .widget.menu {
     background: #fff;
     padding: 15px;
     text-transform: uppercase;
@@ -492,7 +492,7 @@ h5 {
     font-weight: 600;
     color: #ff7300;
 }
-.stikySidebar {
+.stickySidebar {
     top: 105px;
     position: -webkit-sticky;
     position: sticky;
@@ -762,13 +762,27 @@ section.pt_0, .pt_0{
             font-size: 15px;
             font-weight: 400;
             color: #959595;
+            margin-bottom: -5px;
         }
-
+        .price {
+            margin-bottom: 5px;
+        }
         .product-title {
             margin-bottom: 0;
             line-height: 1.5;
             color: #ff7300;
             font-weight: 600;
+        }
+        .modal-content{
+            border-radius: 0;
+            border: 3px solid #ff7300;
+        }
+        button.close{
+            padding: 0.8rem;
+            span{
+                font-size: 25px;
+                color: black;
+            }
         }
         .modal-body {
             max-height: 250px;
@@ -789,6 +803,13 @@ section.pt_0, .pt_0{
             display: block;
             background-color: #f9f9f9;
             padding: 20px;
+            .add-cart {
+                span{
+                    font-size: 16px;
+                    margin-left: 20px;
+                    text-transform: uppercase;
+                }
+            }
         }
         .modal-header:after {
             content: "";
@@ -824,15 +845,19 @@ section.pt_0, .pt_0{
         .quantity .minus, .quantity .plus{
             border: 1px solid #dee2e6;
         }
+        textarea{
+            width: 100%;
+            border: 1px solid #dee2e6;
+        }
     }
 }
-.ip-checkbox[checked='checked'],
-.ip-checkbox:checked,
-.ip-checkbox:indeterminate {
+.ip-option[checked='checked'],
+.ip-option:checked,
+.ip-option:indeterminate {
     background-color: #ea8025;
     border-color: transparent;
 }
-.ip-checkbox {
+.ip-option {
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -850,8 +875,8 @@ section.pt_0, .pt_0{
     -webkit-transition-property: background-color, border;
     transition-property: background-color, border;
 }
-input.ip-checkbox[checked]::after,
-input.ip-checkbox:checked::after {
+input.ip-option[checked]::after,
+input.ip-option:checked::after {
     position: absolute;
     width: 1.2ex;
     height: 0.4ex;
@@ -868,5 +893,59 @@ input.ip-checkbox:checked::after {
     font-weight: 100;
 }
 .text-bold{
+    font-weight: bold;
+}
+.stickySidebar.cart {
+    .widget_title{
+        margin-bottom: 0;
+    }
+    .cart_sidebar{
+        overflow: auto;
+        height: 400px;
+        //padding: 10px;
+    }
+    .item{
+        border-bottom: 1px solid #dee2e6;
+        text-transform: capitalize;
+        padding: 2px 0px;
+        .title{
+            font-size: 16px;
+            font-weight: 600;
+            span{
+                margin: 0 2px;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+                padding: 3px;
+                font-size: 12px;
+                background: #ff7300;
+            }
+            span:nth-child(2){
+                background-color: transparent;
+                color: black;
+            }
+        }
+    }
+    .description{
+        font-size: 12px;
+    }
+    .price{
+        font-size: 14px;
+        font-weight: 800;
+        span{
+            font-size: 10px;
+            cursor: pointer;
+            color: red;
+            width: 55px;
+            height: 40px;
+            border: 1px solid red;
+        }
+    }
+}
+.total-price,
+.subtotal-price{
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #ff7300 !important;
     font-weight: bold;
 }

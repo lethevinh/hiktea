@@ -26,10 +26,10 @@
     </section>
 @stop
 @section('content')
-    <div class="container layout-order">
+    <div class="container layout-order" style="padding-top: 20px">
         <div class="row">
             <div class="col-lg-3 order-lg-first mt-5 mt-lg-0">
-                <div class="sidebar stikySidebar">
+                <div class="sidebar stickySidebar">
                     <div class="widget menu">
                         <h5 class="widget_title">Thực Đơn</h5>
                         <ul class="list_none widget_categories border_bottom_dash menu_sidebar">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="row shop_container grid_view">
                     @foreach($categories as $category)
                         <div class="clearfix list-order-title" id="CAT_{{$category->id}}">
@@ -55,7 +55,7 @@
                         </div>
                         <ul class="list-order-product">
                         @foreach($category->products as $product)
-                            <li class="row">
+                            <li class="row product">
                                 <div class="col-md-2">
                                     <img style="width: 100px;height: auto" src="{{$product->image_url}}">
                                 </div>
@@ -67,8 +67,7 @@
                                 <div class="col-md-2">
                                     <input data-toggle="modal" data-target="#product{{$product->id}}" data-product="{{json_encode($product->printData())}}" type="button" value="+" class="btn-plus add-to-cart">
                                 </div>
-                            </li>
-                            <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"
                                      aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
@@ -82,7 +81,6 @@
                                                         <p class="product-desc">{{$product->description}}</p>
                                                         <p class="price">{{number_format($product->price,0)}} đ</p>
                                                     </div>
-
                                                 </div>
 
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -92,39 +90,43 @@
                                             </div>
                                             <div class="modal-body">
                                                 @foreach($product->getOptions() as $option)
-                                                    <div class="option-category-item">
-                                                    <span class="name">{{$option['title']}}</span>
-                                                    @if($option['min_select'] > 0)<span class="note">(BẮT BUỘC)</span>@endif
-                                                    <div class="row">
-                                                    @foreach($option['items'] as $item)
-                                                        <div class="col-md-6">
-                                                        <label for="{{$item['id']}}">
-                                                            @if($option['max_select'] == 1)
-                                                                <input class="ip-checkbox" data-option-price="{{$item['price']}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="radio" id="{{$item['id']}}" value="{{$item['id']}}">
-                                                            @else
-                                                                <input class="ip-checkbox" data-option-price="{{$item['price']}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
-                                                            @endif
-                                                                <span>{{$item['title']}}  {{number_format($item['price'],0)}} đ</span>
-                                                        </label>
+                                                    <div class="option-category-item" data-option="">
+                                                        <span class="name">{{$option['title']}}</span>
+                                                        @if($option['min_select'] > 0)<span class="note">(BẮT BUỘC)</span>@endif
+                                                        <div class="row">
+                                                            @foreach($option['items'] as $item)
+                                                                <div class="col-md-6">
+                                                                    <label for="{{$item['id']}}">
+                                                                        @if($option['max_select'] == 1)
+                                                                            <input class="ip-option form_cart-option" data-option="{{json_encode($item)}}" data-option-price="{{$item['price']}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="radio" id="{{$item['id']}}" value="{{$item['id']}}">
+                                                                        @else
+                                                                            <input class="ip-option form_cart-option" data-option="{{json_encode($item)}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
+                                                                        @endif
+                                                                        <span>{{$item['title']}}  {{number_format($item['price'],0)}} đ</span>
+                                                                    </label>
+                                                                </div>
+                                                            @endforeach
                                                         </div>
-                                                    @endforeach
-                                                    </div>
                                                     </div>
                                                 @endforeach
+                                                <div>
+                                                    <textarea name="form_cart-note" id="form_cart-note" placeholder="Thêm ghi chú ..." rows="3"></textarea>
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <div class="quantity">
-                                                    <input type="button" value="-" class="minus">
-                                                    <input minlength="1" min="1" type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
-                                                    <input type="button" value="+" class="plus">
+                                                    <input type="button" value="-" class="btn-qty minus">
+                                                    <input minlength="1" min="1" type="text" name="quantity" value="1" title="Qty" class="qty form_cart-qty" size="4">
+                                                    <input type="button" value="+" class="btn-qty plus">
                                                 </div>
-                                                <button type="button" class="btn btn-default rounded-0 btn-borderd btn-sm">
-                                                    Thêm Vào Giỏ <span class="text-bold text-white">50.000 Đ</span>
+                                                <button type="button" class="btn btn-default rounded-0 btn-borderd btn-sm add-cart">
+                                                    Thêm Vào Giỏ <span class="text-bold text-white form_cart-total">{{number_format($product->price,0)}} Đ</span>
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </li>
                         @endforeach
                         </ul>
                     @endforeach
@@ -136,13 +138,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="sidebar stikySidebar">
+            <div class="col-lg-4">
+                <div class="sidebar stickySidebar cart">
                     <div class="widget menu">
                         <h5 class="widget_title">Giỏ Hàng</h5>
-                        <ul class="list_none widget_categories border_bottom_dash menu_sidebar">
+                        <div class="list_none widget_categories border_bottom_dash cart_sidebar list">
 
-                        </ul>
+                        </div>
+                        <div class="row subtotal-price">
+                            <span class="text-left col-md-6">cộng:</span>
+                            <span class="text-right col-md-6">0 đ</span>
+                        </div>
+                        <div class="row total-price">
+                            <span class="text-left col-md-6">Tổng cộng:</span>
+                            <span class="text-right col-md-6">0 đ</span>
+                        </div>
                     </div>
                 </div>
             </div>
