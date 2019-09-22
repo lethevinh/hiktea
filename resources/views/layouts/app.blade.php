@@ -15,10 +15,11 @@
     <!-- <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet"> -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"> </script>
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"> </script>--}}
     <script src="{{ url('assets/js/jquery-1.12.4.min.js')}}"> </script>
     <script src="{{ url('assets/js/jquery-ui.js')}}"></script>
     <script src="{{ url('assets/js/popper.min.js')}}"></script>
+    <script src="{{ url('assets/js/moment.min.js')}}"></script>
     <script src="{{ url('assets/js/bootstrap.min.js')}}"> </script>
     <script src="{{ url('assets/js/owl.carousel.min.js')}}"> </script>
     <script src="{{ url('assets/js/magnific-popup.min.js')}}"> </script>

@@ -68,12 +68,23 @@
                                     <input data-toggle="modal" data-target="#product{{$product->id}}" data-product="{{json_encode($product->printData())}}" type="button" value="+" class="btn-plus add-to-cart">
                                 </div>
                             </li>
-                                <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"
                                      aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">{{$product->title}}</h5>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-2">
+                                                        <img src="{{$product->image_url}}" alt="">
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <h5 class="product-title" id="exampleModalLongTitle">{{$product->title}}</h5>
+                                                        <p class="product-desc">{{$product->description}}</p>
+                                                        <p class="price">{{number_format($product->price,0)}} đ</p>
+                                                    </div>
+
+                                                </div>
+
                                                 <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -81,14 +92,24 @@
                                             </div>
                                             <div class="modal-body">
                                                 @foreach($product->getOptions() as $option)
-                                                    <h5>{{$option['title']}}</h5>
+                                                    <div class="option-category-item">
+                                                    <span class="name">{{$option['title']}}</span>
+                                                    @if($option['min_select'] > 0)<span class="note">(BẮT BUỘC)</span>@endif
+                                                    <div class="row">
                                                     @foreach($option['items'] as $item)
+                                                        <div class="col-md-6">
                                                         <label for="{{$item['id']}}">
-                                                            <input type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
-                                                            <span>{{$item['title']}}  {{number_format($item['price'],0)}} đ</span>
+                                                            @if($option['max_select'] == 1)
+                                                                <input class="ip-checkbox" data-option-price="{{$item['price']}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="radio" id="{{$item['id']}}" value="{{$item['id']}}">
+                                                            @else
+                                                                <input class="ip-checkbox" data-option-price="{{$item['price']}}" name="{{str_slug($option['title'])}}" @if($item['is_default']) checked="checked" @endif type="checkbox" id="{{$item['id']}}" value="{{$item['id']}}">
+                                                            @endif
+                                                                <span>{{$item['title']}}  {{number_format($item['price'],0)}} đ</span>
                                                         </label>
-                                                        <br>
+                                                        </div>
                                                     @endforeach
+                                                    </div>
+                                                    </div>
                                                 @endforeach
                                             </div>
                                             <div class="modal-footer">
@@ -97,7 +118,9 @@
                                                     <input minlength="1" min="1" type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
                                                     <input type="button" value="+" class="plus">
                                                 </div>
-                                                <button type="button" class="btn btn-default btn-primary btn-sm">Thêm Vào Giỏ</button>
+                                                <button type="button" class="btn btn-default rounded-0 btn-borderd btn-sm">
+                                                    Thêm Vào Giỏ <span class="text-bold text-white">50.000 Đ</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
