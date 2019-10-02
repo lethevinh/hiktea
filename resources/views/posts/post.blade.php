@@ -30,34 +30,25 @@
 <section class="layout-content">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-12">
                 <div class="single_post">
-                    <div class="blog_img">
-                        <a href="#">
-                            <img src="{{$post->image_url}}" alt="blog_img1">
-                        </a>
-                    </div>
-                    <div class="single_post_content">
+                    <div class="single_post_content bg-white">
                         <div class="blog_text">
-                            <h2 class="blog_title">
-                              {{$post->title}}
-                            </h2>
-                            <strong>{{$post->description}}</strong>
+                            <h2 class="blog_title">{{$post->title}}</h2>
                             <ul class="list_none blog_meta">
                                 <li><a href="#"><i class="far fa-user"></i>by <span class="text_default">admin</span></a></li>
                                 <li><a href="#"><i class="far fa-comments"></i>4 Comment</a></li>
                             </ul>
-                            <p>
-                                {!! $post->content !!}
-                            </p>
+                            <strong>{{$post->description}}</strong>
+                            <p> {!! $post->content !!}</p>
                             <div class="border-top border-bottom blog_post_footer">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-md-8 mb-3 mb-md-0">
                                         <div class="tags">
                                             @foreach($post->categories as $category)
-                                            <a href="{{ $category->link }}">
-                                                {{$category->title}}
-                                            </a>
+                                                <a href="{{ $category->link }}">
+                                                    {{$category->title}}
+                                                </a>
                                             @endforeach
                                         </div>
                                     </div>
@@ -73,27 +64,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post_navigation">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <a href="{{$post->next->link}}">
-                                    <div class="d-flex align-items-center">
-                                        <i class="ion-ios-arrow-thin-left mr-2"></i>
-                                        <div>
-{{--                                            <span>previous Post</span>--}}
+                    <div class="related_post">
+                        <div class="posts-title">
+                            <h4 class="text-center text-bold">Bài Viết Liên Quan</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="carousel_slide3 owl-carousel owl-theme" data-dots="false" data-margin="30">
+                                    @foreach($category->posts as $p)
+                                    <div class="item">
+                                        <div class="blog_post">
+                                            <div class="blog_img">
+                                                <a href="{{$p->link}}">
+                                                    <img src="{{$p->image_url}}" alt="{{$p->title}}">
+                                                </a>
+                                            </div>
+                                            <div class="blog_content">
+                                                <h3 class="blog_title text-uppercase">
+                                                    <a href="{{$p->link}}">{{$p->title}}</a>
+                                                </h3>
+                                                <time>{{date('d-m-Y', strtotime($p->created_at))}}</time>
+                                                <p>{{str_limit($p->description, 150, '...')}}</p>
+                                                <a href="{{$p->link}}" class="blog_link">Xem Thêm <i class="ion-ios-arrow-right"></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#">
-                                    <div class="d-flex align-items-center flex-row-reverse text-right">
-                                        <i class="ion-ios-arrow-thin-right ml-2"></i>
-                                        <div>
-{{--                                            <span>Next Post</span>--}}
-                                        </div>
-                                    </div>
-                                </a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +98,8 @@
             </div>
         </div>
     </div>
-</section><!-- END SECTION BLOG-->
+</section>
+<!-- END SECTION BLOG-->
 @endsection
 @section('scriptsAfterJs')
 @endsection

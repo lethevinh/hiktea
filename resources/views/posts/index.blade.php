@@ -49,50 +49,34 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="blog_list">
-                    <div class="row">
-                        @foreach($posts as $post)
-                        <div class="col-12">
-                            <div class="blog_post">
-                                <div class="blog_img">
-                                    <a href="{{$post->link}}">
-                                        <img src="{{ $post->image_url }}" alt=" {{$post->title}}">
-                                    </a>
-                                </div>
-                                <div class="blog_content">
-                                    <h5 class="blog_title">
-                                        <a href="{{$post->link}}">
-                                            {{$post->title}}
-                                        </a>
-                                    </h5>
-                                    <ul class="list_none blog_meta">
-                                        <li><a href="#"><i class="far fa-user"></i>by <span class="text_default">admin</span></a></li>
-                                        <li><a href="#"><i class="far fa-calendar"></i>February 15, 2014</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i>4 Comment</a></li>
-                                    </ul>
-                                    <p>
-                                        {{ $post->description }}
-                                    </p>
-                                    <a class="blog_link" href="{{$post->link}}">
-                                        Xem Chi tiết
-                                        <i class="ion-ios-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
+            @foreach($posts as $post)
+            <div class="col-lg-4 col-md-6">
+                <div class="blog_post bg-white">
+                    <div class="blog_img">
+                        <a href="{{$post->link}}">
+                            <img src="{{ $post->image_url }}" alt=" {{$post->title}}">
+                        </a>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mt-3 mt-lg-4">
-                        {{ $posts->appends($filters)->render() }}
+                    <div class="blog_content">
+                        <h3 class="blog_title text-uppercase">
+                            <a href="{{$post->link}}">{{$post->title}}</a>
+                        </h3>
+                        <time>{{date('d-m-Y', strtotime($post->created_at))}}</time>
+                        <p>{{str_limit($post->description, 150, '...')}}</p>
+                        <a href="{{$post->link}}" class="blog_link">Xem Thêm <i class="ion-ios-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+            @endforeach
+        </div>
+        <div class="row">
+            <div class="col-12 mt-4">
+                {{ $posts->appends($filters)->render() }}
+            </div>
         </div>
     </div>
-</section><!-- END SECTION BLOG-->
+</section>
+<!-- END SECTION BLOG-->
 @endsection
 @section('scriptsAfterJs')
 @endsection
