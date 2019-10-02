@@ -146,13 +146,8 @@
                         <h6 class="blog_title">
                             <a href="{{$posts[0]->link}}">{{$posts[0]->title}}</a>
                         </h6>
-                        <ul class="list_none blog_meta">
-                            <li><a href="#"><i class="far fa-calendar"></i>February 15, 2014</a></li>
-                            <li><a href="#"><i class="far fa-comments"></i>4 Comment</a></li>
-                        </ul>
-                        <p>
-                            {{$posts[0]->description}}
-                        </p>
+                        <time>{{date('d-m-Y', strtotime($posts[0]->created_at))}}</time>
+                        <p>{{str_limit($posts[0]->description, 150, '...')}}</p>
                         <a class="blog_link" href="{{$posts[0]->link}}">
                             Xem chi tiết
                             <i class="ion-ios-arrow-right"></i>
@@ -174,13 +169,8 @@
                         <h6 class="blog_title">
                             <a href="{{$posts[1]->link}}">{{$posts[1]->title}}</a>
                         </h6>
-                        <ul class="list_none blog_meta">
-                            <li><a href="#"><i class="far fa-calendar"></i>February 15, 2014</a></li>
-                            <li><a href="#"><i class="far fa-comments"></i>3 Comment</a></li>
-                        </ul>
-                        <p>
-                            {{$posts[1]->description}}
-                        </p>
+                        <time>{{date('d-m-Y', strtotime($posts[1]->created_at))}}</time>
+                        <p>{{str_limit($posts[1]->description, 150, '...')}}</p>
                         <a class="blog_link" href="{{$posts[1]->link}}">
                             Xem chi tiết
                             <i class="ion-ios-arrow-right"></i>
@@ -204,12 +194,9 @@
                         <h6 class="blog_title">
                             <a href="{{$post->link}}">{{$post->title}}</a>
                         </h6>
-                        <ul class="list_none blog_meta">
-                            <li><a href="#"><i class="far fa-calendar"></i>February 15, 2014</a></li>
-                            <li><a href="#"><i class="far fa-comments"></i>5 Comment</a></li>
-                        </ul>
-                        <p>{{$post->description}}</p>
-                        <a class="blog_link" href="{$post->link}}">
+                        <time>{{date('d-m-Y', strtotime($post->created_at))}}</time>
+                        <p>{{str_limit($post->description, 150, '...')}}</p>
+                        <a class="blog_link" href="{{$post->link}}">
                             Xem Chi tiết <i class="ion-ios-arrow-right"></i>
                         </a>
                     </div>
