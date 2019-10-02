@@ -8,14 +8,13 @@
     <meta name="theme-color" content="#FFFFFF" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Shop US Mart Cindy') - Shop US Mart Cindy </title>
+    <title>@yield('title', 'HIK TEA') - HIK TEA </title>
     <!-- 样式 -->
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
     <!-- <link href="{{ url('assets/css/app.min.css')}}" rel="stylesheet"> -->
     <!-- <link href="{{ url('assets/css/custom.css')}}" rel="stylesheet"> -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Script -->
-{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"> </script>--}}
     <script src="{{ url('assets/js/jquery-3.4.1.min.js')}}"> </script>
     <script src="{{ url('assets/js/jquery-ui.js')}}"></script>
     <script src="{{ url('assets/js/popper.min.js')}}"></script>
@@ -34,8 +33,6 @@
     <script src="{{ url('assets/js/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{ url('assets/js/isotope.min.js')}}"></script>
     <script src="{{ url('assets/js/js.cookie.js')}}"></script>
-{{--    <script type="text/javascript" src="{{ url('assets/js/vendor.42ed3a.min.js')}}"></script>--}}
-{{--    <script type="text/javascript" src="{{ url('assets/js/app.42ed3a.min.js')}}"></script>--}}
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=135625333838087&autoLogAppEvents=1"></script>
 </head>

@@ -918,7 +918,7 @@ input.ip-option:checked::after {
                 font-weight: bold;
                 padding: 3px;
                 font-size: 12px;
-                background: #ff7300;
+                background: red;
             }
             span:nth-child(2){
                 background-color: transparent;
@@ -939,6 +939,15 @@ input.ip-option:checked::after {
             width: 55px;
             height: 40px;
             border: 1px solid red;
+        }
+    }
+    .checkbox{
+        margin-top: 20px;
+        border-top: 1px solid #ebebeb;
+        padding-top: 12px;
+        button{
+            float: right;
+            font-size: 14px;
         }
     }
 }

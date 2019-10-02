@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(async function () {
     let customer = {
         "name": "",
         "phone": ""
@@ -197,7 +197,7 @@ $(document).ready(function () {
         elSubTotal.html(currency(cart.total));
         elTotal.html(currency(cart.total));
     }
-    updateViewCart();
+    await updateViewCart();
 
     $('.list-order-product .product .modal .add-cart').click(function () {
         updatePriceCartProduct(this, true);
@@ -209,5 +209,11 @@ $(document).ready(function () {
 
     $('.list-order-product .product .modal .ip-option').click(function () {
         updatePriceCartProduct(this);
+    });
+    $(".stickySidebar.cart .item .ti-trash").on("click", function(){
+        alert("clicked");
+    });
+    $(".stickySidebar.cart .item .ti-plus").on("click", function(){
+        alert("clicked");
     });
 });

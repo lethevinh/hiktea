@@ -37,7 +37,7 @@ return [
 	/*
 		     * Laravel-Admin 页面标题
 	*/
-	'title' => 'Shop US Mart Cindy',
+	'title' => 'HIK TEA',
 
 	/*
 		     * 是否使用 https

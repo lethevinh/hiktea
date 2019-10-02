@@ -33,11 +33,11 @@
                     <h3 class="cat-heading">Địa chỉ của chúng tôi</h3>
                     <div class="form-contact">
                         <div class="lien-he">
-                            <img src="assets/images/logo.png" alt="Siêu Thị Hàng Mỹ US Mart Cindy" title="Siêu Thị Hàng Mỹ US Mart Cindy" class="img-thumbnail">
+                            <img src="assets/images/logo.png" alt="HIK TEA" title="HIK TEA" class="img-thumbnail">
                         </div>
                         <div class="lien-he">
                             <img src="assets/images/icon.png" alt="Revo">
-                            132 Bến Vân Đồn, phường 6, Quận 4, Hồ Chí Minh
+                            38 Đường Số 10, P. Bình Hưng, Bình Chánh, TP. HCM
                         </div>
                         <div class="lien-he">
                             <img src="assets/images/phone-receiver.png" alt="Revo">

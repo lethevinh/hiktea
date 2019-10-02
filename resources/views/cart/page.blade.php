@@ -153,6 +153,11 @@
                             <span class="text-left col-md-6">Tổng cộng:</span>
                             <span class="text-right col-md-6">0 đ</span>
                         </div>
+                        <div class="checkbox">
+                            <button type="button" class="btn btn-default rounded-0 btn-borderd btn-sm btn-checkout">
+                                Thanh Toán
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
