@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown cart_wrap">
+                <!--<li class="dropdown cart_wrap">
                     <a class="nav-link" href="#" data-toggle="dropdown">
                         <i class="ion-bag"></i><span class="cart_count">2</span>
                     </a>
@@ -70,7 +70,7 @@
                             <p class="cart_buttons"><a class="btn btn-default btn-radius view-cart" href="cart.html">View Cart</a><a class="btn btn-dark btn-radius checkout" href="checkout.html">Checkout</a></p>
                         </div>
                     </div>
-                </li>
+                </li>-->
             </ul>
         </nav>
     </div>
